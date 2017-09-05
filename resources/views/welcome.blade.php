@@ -9,9 +9,9 @@
 
 @section('content')
     <!--preloader-->
-    <div id="spinner-wrapper">
+    <!-- <div id="spinner-wrapper">
       <div class="spinner"></div>
-    </div>
+    </div> -->
 
     <!-- Header
     ================================================= -->
@@ -27,21 +27,21 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index-register.html"><img src="images/logo.png" alt="logo" /></a>
+            <a class="navbar-brand" href="index-register.html"><img src="/assets/img/logo.png" alt="logo" /></a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right main-menu">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span><img src="images/down-arrow.png" alt="" /></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span><img src="/assets/img/down-arrow.png" alt="" /></span></a>
                 <ul class="dropdown-menu newsfeed-home">
                   <li><a href="index.html">Landing Page 1</a></li>
                   <li><a href="index-register.html">Landing Page 2</a></li>
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Newsfeed <span><img src="images/down-arrow.png" alt="" /></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Newsfeed <span><img src="/assets/img/down-arrow.png" alt="" /></span></a>
                 <ul class="dropdown-menu newsfeed-home">
                   <li><a href="newsfeed.html">Newsfeed</a></li>
                   <li><a href="newsfeed-people-nearby.html">Poeple Nearly</a></li>
@@ -52,7 +52,7 @@
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Timeline <span><img src="images/down-arrow.png" alt="" /></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Timeline <span><img src="/assets/img/down-arrow.png" alt="" /></span></a>
                 <ul class="dropdown-menu login">
                   <li><a href="timeline.html">Timeline</a></li>
                   <li><a href="timeline-about.html">Timeline About</a></li>
@@ -66,7 +66,7 @@
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Pages <span><img src="images/down-arrow.png" alt="" /></span></a>
+                <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Pages <span><img src="/assets/img/down-arrow.png" alt="" /></span></a>
                 <ul class="dropdown-menu page-list">
                   <li><a href="index.html">Landing Page 1</a></li>
                   <li><a href="index-register.html">Landing Page 2</a></li>
@@ -101,12 +101,26 @@
     <!-- Top Banner
     ================================================= -->
 		<section id="banner">
-			<div class="container">
+      <div class="homepage-hero-module">
+        <div class="video-container">
+            <div class="filter"></div>
+            <video autoplay loop class="fillWidth">
+                <source src="/assets/video/sadrone2.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="/assets/video/sadrone2.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <div class="poster hidden">
+                <img src="PATH_TO_JPEG" alt="">
+            </div>
+        </div>
+      </div>
+
+      <div class="container">
+
 
         <!-- Sign Up Form
         ================================================= -->
         <div class="sign-up-form">
-					<a href="index.html" class="logo"><img src="images/logo.png" alt="Friend Finder"/></a>
+					<a href="index.html" class="logo"><img src="/assets/img/logo.png" alt="Friend Finder"/></a>
 					<h2 class="text-white">Find My Friends</h2>
 					<div class="line-divider"></div>
 					<div class="form-wrapper">
@@ -126,7 +140,7 @@
 						<button class="btn-secondary">Signup</button>
 					</div>
 					<a href="#">Already have an account?</a>
-					<img class="form-shadow" src="images/bottom-shadow.png" alt="" />
+					<img class="form-shadow" src="/assets/img/bottom-shadow.png" alt="" />
 				</div><!-- Sign Up Form End -->
 
         <svg class="arrows hidden-xs hidden-sm">
@@ -163,7 +177,7 @@
 				<h2 class="sub-title">find awesome people like you</h2>
 				<div id="incremental-counter" data-value="101242"></div>
 				<p>People Already Signed Up</p>
-				<img src="images/face-map.png" alt="" class="img-responsive face-map slideUp hidden-sm hidden-xs" />
+				<img src="/assets/img/face-map.png" alt="" class="img-responsive face-map slideUp hidden-sm hidden-xs" />
 			</div>
 
 		</section>
@@ -308,7 +322,7 @@
       	<div class="row">
           <div class="footer-wrapper">
             <div class="col-md-3 col-sm-3">
-              <a href=""><img src="images/logo-black.png" alt="" class="footer-logo" /></a>
+              <a href=""><img src="/assets/img/logo-black.png" alt="" class="footer-logo" /></a>
               <ul class="list-inline social-icons">
               	<li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
               	<li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
