@@ -19,8 +19,13 @@ class CreateEventsTable extends Migration
 			$table->string('description');
 			$table->string('date');
 			$table->string('location');
+			$table->integer('created_by')->unsigned();
 			$table->timestamps();
+			$table->foreign('created_by')
+				->references('id')
+				->on('users');
 		});
+
     }
 
     /**
@@ -30,6 +35,13 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
+		Schema::table('events', function($table)
+		{
+			$table->dropForeign(['created_by']);
+
+		});
+
         Schema::drop('events');
+
     }
 }
