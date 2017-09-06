@@ -21,8 +21,6 @@
     {{ (Auth::check()) ? "User is logged in!" : "User is logged out!" }}
     {{ Auth::user() }}
 
-    @include('resources.assets.analyticstracking.php')
-   
     @if (session()->has('successMessage'))
         <div class="alert alert-success">{{ session('successMessage') }}</div>
     @endif
