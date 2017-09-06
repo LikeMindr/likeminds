@@ -3,7 +3,7 @@
 
 
 @section('title')
-    <title> Like Minds At </title>
+    <title>Like Minds | You can't be the only one</title>
 @stop
 
 
