@@ -15,11 +15,7 @@
 </head>
 <body>
 	@yield('content')
-	<script
-		src="http://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		crossorigin="anonymous">
-	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="/assets/js/bootstrap.min.js"></script>
 	<script src="/assets/js/jquery.appear.min.js"></script>
     <script src="/assets/js/jquery.incremental-counter.js"></script>
