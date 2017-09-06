@@ -27,7 +27,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index-register.html"><img src="/assets/img/logo.png" alt="logo" /></a>
+            <a class="navbar-brand" href="index-register.html"><img src="/assets/img/logoh.png" alt="logo" /></a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -120,12 +120,12 @@
         <!-- Sign Up Form
         ================================================= -->
         <div class="sign-up-form">
-					<a href="index.html" class="logo"><img src="/assets/img/logo.png" alt="Friend Finder"/></a>
+					<a href="index.html" class="logo"><img src="/assets/img/logov.png" alt="Friend Finder"/></a>
 					<h2 class="text-white">Find My Friends</h2>
 					<div class="line-divider"></div>
 					<div class="form-wrapper">
 						<p class="signup-text">Signup now and meet awesome people around the world</p>
-						<form action="#">
+						<!-- <form action="#">
 							<fieldset class="form-group">
 								<input type="text" class="form-control" id="example-name" placeholder="Enter name">
 							</fieldset>
@@ -135,7 +135,7 @@
 							<fieldset class="form-group">
 								<input type="password" class="form-control" id="example-password" placeholder="Enter a password">
 							</fieldset>
-						</form>
+						</form> -->
 						<p>By signning up you agree to the terms</p>
 						<button class="btn-secondary">Signup</button>
 					</div>
