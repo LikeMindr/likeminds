@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The place on the internet for people to
-        find adventure and connect with their communities." />
-    <meta name="keywords" content="Social Network, Social Media, Make Friends,
-        Newsfeed, Profile Page, Make Friends, Like Minds" />
-    <meta name="robots" content="index, follow" />
-    @yield('title')
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/css/ionicons.min.css">
-    <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-        <link rel="stylesheet" href="/assets/css/herohead.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="The place on the internet for people to find adventure and connect with their communities." />
+		<meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page, Make Friends, Like Minds" />
+		<meta name="robots" content="index, follow" />
+		<title>Like Minds | You can't be the only one</title>
 
-</head>
-<body>
-   <!--  ////////////////////////////////////////////////
-                    Navigation
-    //////////////////////////////////////////////// -->
-    <header id="header" class="lazy-load">
+    <!-- Stylesheets
+    ================================================= -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Montserrat" rel="stylesheet">
+
+   <!--  font-family: 'Lobster Two', cursive;
+    font-family: 'Montserrat', sans-serif; -->
+    
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/png" href="images/fav.png"/>
+	</head>
+	<body>
+  
+    <!--preloader-->
+    <div id="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Header
+    ================================================= -->
+		<header id="header" class="lazy-load">
       <nav class="navbar navbar-default navbar-fixed-top menu">
         <div class="container">
 
@@ -105,24 +116,5 @@
         </div><!-- /.container -->
       </nav>
     </header>
+    <!--Header End-->
 
-    @yield('content')
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/jquery.appear.min.js"></script>
-    <script src="/assets/js/jquery.incremental-counter.js"></script>
-    <script src="/assets/js/script.js"></script>
-    <script src="/assets/js/herohead.js"></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-106000460-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script src="/assets/js/main.js"></script>
-
-
-</body>
-</html>
