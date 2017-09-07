@@ -422,7 +422,7 @@ textarea{
   ==================================================*/
 
 #banner{
-	background: url("../img/banner2.jpg") fixed no-repeat;
+	/*background: url("../img/banner2.jpg") fixed no-repeat;*/
   background-position: center;
 	background-size: cover;
 	width: 100%;
