@@ -10,11 +10,14 @@
     <meta name="robots" content="index, follow" />
     @yield('title')
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/ionicons.min.css">
     <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/assets/css/herohead.css">
+	<link rel="stylesheet" href="/assets/css/idangerous.swiper.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-        <link rel="stylesheet" href="/assets/css/herohead.css">
+	<link rel="stylesheet" href="/assets/css/stylesheet.css">
     <link rel="stylesheet" href="/assets/css/main.css">
 
 </head>
@@ -107,9 +110,16 @@
 
     @yield('content')
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="/assets/js/jquery-2.1.4.min.js"></script>
+	<script src="/assets/js/jquery-ui.min.js"></script>
+	<script src="/assets/js/jquery.viewportchecker.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/jquery.appear.min.js"></script>
     <script src="/assets/js/jquery.incremental-counter.js"></script>
+	<script src="/assets/js/jquery.mixitup.js"></script>
+	<script src="/assets/js/idangerous.swiper.min.js"></script>
+	<script src="/assets/js/filters.js"></script>
+	<script src="/assets/js/global.js"></script>
     <script src="/assets/js/script.js"></script>
 
     <script src="/assets/js/herohead.js"></script>
@@ -122,7 +132,5 @@
         ga('send', 'pageview');
     </script>
     <script src="/assets/js/main.js"></script>
-
-
 </body>
 </html>
