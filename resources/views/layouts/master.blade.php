@@ -20,7 +20,7 @@
 	<script src="/assets/js/jquery.appear.min.js"></script>
     <script src="/assets/js/jquery.incremental-counter.js"></script>
     <script src="/assets/js/script.js"></script>
-		<script src="/assets/js/herohead.js"></script>
+		<!-- <script src="/assets/js/herohead.js"></script> -->
     <script src="/assets/js/main.js"></script>
 
 
