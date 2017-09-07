@@ -23,4 +23,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('posts', 'EventsController');
+Route::resource('events', 'EventsController');
+
+Route::resource('accounts', 'AccountsController');
