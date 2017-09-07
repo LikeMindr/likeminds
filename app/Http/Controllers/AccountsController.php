@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Event;
+use App\User;
 
-class EventsController extends Controller
+class AccountsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        return view('events/index');
+        //
     }
 
     /**
@@ -27,7 +27,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -38,13 +38,7 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-        $event = new Event();
-
-		$event->title = $request->title;
-		$event->description = $request->description;
-		$event->date = $request->date;
-		$event->location = $request->location;
-		$event->save();
+        //
     }
 
     /**
@@ -66,7 +60,7 @@ class EventsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('/account/edit');
     }
 
     /**
