@@ -1,21 +1,16 @@
 /*/////////////////////////////////////////////////////////////////////////
                              Navigation Bar
 /////////////////////////////////////////////////////////////////////////*/
-/* 1. General Links */
-/* 1. General Links */
-img {
-  width: 100%;
-  display: block; /* To remove background color under images */
-}
+/* 1. General Links */ 
 
 li {
-  list-style-type: none;
+  list-style-type: none; 
 }
 
-a,
-a:link,
+a, 
+a:link, 
 a:visited {
-  color: #fff;
+  color: white;
   display: block;
   font-size: 1.25em;
   font-weight: 500;
@@ -23,61 +18,61 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover,
-a:focus,
+a:hover, 
+a:focus, 
 a:active {
-  background: #ffd800;
+  background: #35AD81;
 }
 
-/* Removes border around images in menu for IE10 */
-a img {
-	border: 0;
-}
+
 
 /* 2. Desktop Nav Menu */
 .desktop-menu {
-  background: #3E6617;
+  background: #17FFA6;
   margin: 0;
   padding: .75em 0;
   position: absolute; /* Prevents parent ul from collapsing because of floated children li's. Alternative to overflow: auto/none; */
   top: 0;
   width: 100%;
   z-index: 1; /* Allows desktop menu to show over slider */
+  font-family: 'Montserrat', sans-serif;
 }
 
 .desktop-link {
   float: left;
-  margin-top: 1.75em;
+  margin-top: 1.00em;
   text-align: center;
 }
 
   /* 2.1 Desktop Home Link */
   #home {
-    border: 1px solid #fff;
+    border: 0px solid #35AD81;
     float: left;
-    font-size: 1em;
+    font-size: 1em; 
     margin: .5em 1em .5em 1em;
     padding: .75em;
   }
 
-  #home,
-  #home:link,
-  #home:visited,
-  #home:hover,
-  #home:focus,
+  #home, 
+  #home:link, 
+  #home:visited, 
+  #home:hover, 
+  #home:focus, 
   #home:active {
-    color: #fff;
+    color: #35AD81;
     background: none;
   }
 
   .yonsei-logo {
     margin: -.5em auto .5em auto;
     width: 4em;
+    width: 100%;
+    display: block; /* To remove background color under images */
   }
 
   /* 2.2 Desktop Dropdown-menu */
   a.caret,
-  #mobile-menu,
+  #mobile-menu, 
   .dropdown-menu {
     display: none; /* Removes mobile menu, caret links, and dropdown menu (when menu items are not hovered) on large screens */
   }
@@ -87,10 +82,10 @@ a img {
   }
 
   .dropdown-menu {
-    background: #fff;
+    background: #35AD81;
     box-shadow: 2px 2px 10px #777;
     font-size: .7em;
-    padding: 0;
+    padding: 0; 
     position: absolute;
     text-align: left;
     width: 20em;
@@ -99,8 +94,8 @@ a img {
   .dropdown-menu a,
   .dropdown-menu a:link,
   .dropdown-menu a:visited {
-    border-top: 1px solid #3E6617;
-    color: #3E6617;
+    border-top: 1px solid #17FFA6;
+    color: white;
     font-size: 1.5em;
     font-weight: 600;
   }
@@ -108,43 +103,43 @@ a img {
   .dropdown-menu a:hover,
   .dropdown-menu a:focus,
   .dropdown-menu a:active {
-    color: #fff;
+    color: white;
   }
 
-/* 3. Tablet/Mobile Nav Menu */
+/* 3. Tablet/Mobile Nav Menu */ 
 @media screen and (max-width: 1200px) {
   body {
     padding-top: 5.9em; /*  is not covered by menu bar */
   }
-
+  
   .desktop-menu {
     padding: 0; /* Stops mobile nav from jumping up when mobile icon is clicked */
   }
-
+  
   .desktop-link {
     text-align: left;
   }
-
+  
   #mobile-menu {
-    background: #3E6617;
+    background: #17FFA6;
     display: block; /* Shows mobile-menu on small screen menu */
     position: absolute;
     width: 100%;
-  }
-
+  } 
+  
   #mobile-icon-container {
     background: none;
     float: right;
     width: .35em;
   }
-
-    /* 3.1 Tablet/Mobile Home2 Link */
+  
+    /* 3.1 Tablet/Mobile Home2 Link */ 
     #home {
       display: none; /* 연세대학교 desktop-link disappears from small screen menu */
     }
      #mobile-menu #home2 { /* Inherits from "Styles for mobile menu icon" */
       background: none;
-      border: 1px solid #fff;
+      border: 0px solid #35AD81;
       font-size: .8em;
       left: 1em;
       position: absolute;
@@ -172,28 +167,28 @@ a img {
       top: .35em;
       width: 2.5em;
     }
-
+  
     /* 3.2 Tablet/Mobile Dropdown Menu  */
     a.caret { /* a.caret to beat specificity of styles for general a links */
       background: #193658;
-      border-bottom: 1px solid #3E6617;
-      border-left: 1px solid #3E6617;
+      border-bottom: 1px solid #17FFA6;
+      border-left: 1px solid #17FFA6;
       bottom: 0;
-      color: #fff;
+      color: white;
       display: block; /* Shows caret link on small screen menu */
       position: absolute;
       right: 0;
       top: 0;
     }
 
-    .caret:hover,
-    .caret:focus,
+    .caret:hover, 
+    .caret:focus, 
     .caret:active {
-      background: #ffd800;
+      background: #35AD81;
     }
-
+  
     .desktop-link {
-      border-top: 1px solid #193658;
+      border-top: 1px solid #193658; 
       display: none; /* Javascript menu is removed when mobile menu is inactive */
       font-size: .85em;
       margin-top: 0;
@@ -202,19 +197,19 @@ a img {
     .desktop-link:hover .dropdown-menu {
       display: none; /* Makes dropdown menu disappear on small screens. AFFECTS ".desktop-link:hover .caretDropdown" ! */
     }
-
-    #last-desktop-link {
-      border-bottom: 1px solid #3E6617;
+  
+    #last-desktop-link { 
+      border-bottom: 1px solid #17FFA6;
     }
 
-    /* 3.3 Tablet/Mobile Javascript Onclick Menu */
+    /* 3.3 Tablet/Mobile Javascript Onclick Menu */ 
     .responsive {
       padding: 0;
       position: absolute; /* Allows scrolling */
     }
 
     .responsive .desktop-link {
-      background: #3E6617;
+      background: #17FFA6;
       display: block; /* Javascript menu is shown when mobile menu is active */
       width: 100%;
       position: relative;
@@ -223,7 +218,7 @@ a img {
     }
 
     .caretDropdown {
-      display: block;
+      display: block; 
       width: 100%;
       position: relative;
     }
@@ -231,10 +226,6 @@ a img {
     .desktop-link:hover .caretDropdown {
       display: block; /* Allows dropdown menu to remain on screen when other mobile menu items are hovered. AFFECTED BY ".desktop-link:hover .dropdown-menu"! */
     }
-
-    .navbar-text {
-        color: white;
-        margin: auto;
-    }
 }
+
 

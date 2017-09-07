@@ -22,32 +22,33 @@
 
 </head>
 <body>
-   <!--  ////////////////////////////////////////////////
+     <!--  ////////////////////////////////////////////////
                     Navigation
     //////////////////////////////////////////////// -->
-   <header id="header" class="lazy-load">
+ <header id="header" class="lazy-load">
     <nav>
         <ul class="desktop-menu" id="desktopMenu">
 
             <li>
                 <a id="home" href="/">
-                    <img src="/assets/img/logoh.png" class="yonsei-logo">
+                    <img src="/assets/img/logoh.png" class="yonsei-logo" style="width:50px; height:50px;">
                 </a>
             </li>
 
             <li class="desktop-link">
-                <a href="/home">Profile
+                <a href="/home">PROFILE
                 </a>
-                    <ul>
+                    <a class="caret" href="#" onclick="caretDropdownOne(); return false;">&or;</a>
+                    <ul class="dropdown-menu" id="caretDropdownOne">
                         @if(Auth::check())
                          <li>
-                            <a href= "account/edit"> Edit 
+                            <a href= "account/edit">EDIT 
                             </a> 
                         </li>
                          @else
 
                         <li>
-                            <a href= "/login"> Login
+                            <a href= "/login">LOGIN
                             </a> 
                         </li>
 
@@ -57,7 +58,7 @@
             </li>
 
             <li class="desktop-link">
-                <a href="/events/show">Events 
+                <a href="/events">EVENTS 
                 </a>
                               
             </li>
@@ -66,12 +67,12 @@
 
             <li class="desktop-link">
 
-                <a href="/events/create"> Create
+                <a href="/events/create">CREATE
                 </a>
             </li>
             
             <li class="desktop-link">
-                <a href="/auth/logout">Logout
+                <a href="/auth/logout">LOGOUT
                 </a>
             </li>
 
@@ -82,27 +83,25 @@
             @else
             
             <li class="desktop-link">
-                <a href="/auth/login">Register/Login
+                <a href="/auth/login">REGISTER/LOGIN
                 </a>
             </li>
 
             @endif
                         
+            <li id="mobile-menu">
+            <a id="home2" href="index.html">
+             <img src="/assets/img/logoh.png" class="yonsei-logo" alt="Yonsei Univeristy Logo">
             
+             </a>
 
-                <li id="mobile-menu">
-                    <a id="home2" href="index.html">
-                        <img src="broccolilogo.png" class="yonsei-logo">
-                    </a>
-
-              
-                </a>
-
-                <a id="mobile-icon-container" href="#" onclick="responsiveMenu(); return false;">
-                    <img id="mobile-icon" src="https://eliya33.github.io/church/images/mobile-menu-icon-125x125.png" alt="Mobile Menu Icon">
-                </a>
-        
+            <a id="mobile-icon-container" href="#" onclick="responsiveMenu(); return false;">
+            <img id="mobile-icon" src="https://eliya33.github.io/church/images/mobile-menu-icon-125x125.png" alt="Mobile Menu Icon">
+            </a>
             </li>
+
+    </ul>
+  </nav>
 
         </ul>
         </nav>
