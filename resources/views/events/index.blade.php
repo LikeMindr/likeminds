@@ -14,24 +14,6 @@
 			</p>
 		</div>
     </div>
-	<!-- THE HEADER -->
-	<header>
-		<div class="container-fluid custom-container">
-			<div class="row no_row row-header">
-				<div class="brand-be">
-					<a href="index.html">
-						<img class="logo-c active be_logo"  src="img/logo.png" alt="logo">
-						
-					</a>
-				</div>
-				
-				<div class="login-header-block">
-						
-				</div>
-			</div>
-		</div>
-	</header>
-		
 	<!-- MAIN CONTENT -->
 	<div id="content-block">
 		<div class="head-bg">
