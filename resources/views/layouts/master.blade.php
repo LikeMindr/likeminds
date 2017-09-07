@@ -22,89 +22,89 @@
    <!--  ////////////////////////////////////////////////
                     Navigation
     //////////////////////////////////////////////// -->
-    <header id="header" class="lazy-load">
-      <nav class="navbar navbar-default navbar-fixed-top menu">
-        <div class="container">
+   <nav>
+    <ul class="desktop-menu" id="desktopMenu">
 
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index-register.html"><img src="images/logo.png" alt="logo" /></a>
-          </div>
+        <li>
+            <a id="home" href="/">
+                <img src="/assets/img/logoh.png" class="yonsei-logo">
+            </a>
+        </li>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right main-menu">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home 
-                </a>
-              </li>
-              
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Profile 
-                  <ul class="dropdown-menu page-list">
-                    <?php if (Auth::check()) : ?>
-                    <li>
-                      <a href="/users/account?id=<?= Auth::id(); ?>">Edit
-                      </a>
+        <li class="desktop-link">
+            <a href="/home">Profile
+            </a>
+                <ul>
+                    @if(Auth::check()):
+                     <li>
+                        <a href= "account/edit"> Edit 
+                        </a> 
                     </li>
-                </a>
-                  </ul>
-              </li>
-              
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Events
-               
-                  <ul class="dropdown-menu page-list">
-                   <?php if (Auth::check()) : ?>
+                     @else
+
                     <li>
-                      <a href="/users/account?id=<?= Auth::id(); ?>">My Events
-                      </a>
+                        <a href= "/login"> Login
+                        </a> 
                     </li>
-                </a> 
-                  </ul>
-              </li>
-               
-               <?php if (Auth::check()) : ?>
-               <li class="dropdown">
-                <a href="/users/account?id=<?= Auth::id(); ?>" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Create
+
+                    @endif
+                      
+                </ul>
+        </li>
+
+        <li class="desktop-link">
+            <a href="/events/show">Events 
+            </a>
+                          
+        </li>
+
+        @if(Auth::check()):
+
+        <li class="desktop-link">
+
+            <a href="/events/create"> Create
+            </a>
+        </li>
+        
+        <li class="desktop-link">
+            <a href="/auth/logout">Logout
+            </a>
+        </li>
+
+        <ul class="desktopMenu hidden-xs desktop-link">
+                 <span class="navbar-text">WELCOME <?= Auth::user()->name; ?></span>
+        </ul>
+
+        @else
+        
+        <li class="desktop-link">
+            <a href="/auth/login">Register/Login
+            </a>
+        </li>
+
+        @endif
+
+        
+        <?php else : ?>
+                    
+        
+
+            <li id="mobile-menu">
+                <a id="home2" href="index.html">
+                    <img src="broccolilogo.png" class="yonsei-logo">
                 </a>
-              </li>
-  
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign-Up 
-                </a>
-              </li>
-             
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login 
-                </a>
-             
-              <li class="dropdown"><a href="contact.html">Contact</a>
-              </li>
-              <?php if (Auth::check()) : ?>
-              <li class="dropdown">
-                <a href="/users/account?id=<?= Auth::id(); ?>"  class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logout 
-                </a>
-            </ul>
-            <form class="navbar-form navbar-right hidden-sm">
-              <div class="form-group">
-                <i class="icon ion-android-search"></i>
-                <input type="text" class="form-control" placeholder="Search friends, photos, videos">
-              </div>
-            </form>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container -->
-      </nav>
-    </header>
+
+          
+            </a>
+
+            <a id="mobile-icon-container" href="#" onclick="responsiveMenu(); return false;">
+                <img id="mobile-icon" src="https://eliya33.github.io/church/images/mobile-menu-icon-125x125.png" alt="Mobile Menu Icon">
+            </a>
+    
+        </li>
+
+    </ul>
+</nav>
 
     @yield('content')
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
