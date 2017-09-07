@@ -22,89 +22,88 @@
    <!--  ////////////////////////////////////////////////
                     Navigation
     //////////////////////////////////////////////// -->
-   <nav>
-    <ul class="desktop-menu" id="desktopMenu">
+   <header id="header" class="lazy-load">
+    <nav>
+        <ul class="desktop-menu" id="desktopMenu">
 
-        <li>
-            <a id="home" href="/">
-                <img src="/assets/img/logoh.png" class="yonsei-logo">
-            </a>
-        </li>
+            <li>
+                <a id="home" href="/">
+                    <img src="/assets/img/logoh.png" class="yonsei-logo">
+                </a>
+            </li>
 
-        <li class="desktop-link">
-            <a href="/home">Profile
-            </a>
-                <ul>
-                    @if(Auth::check()):
-                     <li>
-                        <a href= "account/edit"> Edit 
-                        </a> 
-                    </li>
-                     @else
+            <li class="desktop-link">
+                <a href="/home">Profile
+                </a>
+                    <ul>
+                        @if(Auth::check())
+                         <li>
+                            <a href= "account/edit"> Edit 
+                            </a> 
+                        </li>
+                         @else
 
-                    <li>
-                        <a href= "/login"> Login
-                        </a> 
-                    </li>
+                        <li>
+                            <a href= "/login"> Login
+                            </a> 
+                        </li>
 
-                    @endif
-                      
-                </ul>
-        </li>
-
-        <li class="desktop-link">
-            <a href="/events/show">Events 
-            </a>
+                        @endif
                           
-        </li>
+                    </ul>
+            </li>
 
-        @if(Auth::check()):
+            <li class="desktop-link">
+                <a href="/events/show">Events 
+                </a>
+                              
+            </li>
 
-        <li class="desktop-link">
+            @if(Auth::check())
 
-            <a href="/events/create"> Create
-            </a>
-        </li>
-        
-        <li class="desktop-link">
-            <a href="/auth/logout">Logout
-            </a>
-        </li>
+            <li class="desktop-link">
 
-        <ul class="desktopMenu hidden-xs desktop-link">
-                 <span class="navbar-text">WELCOME <?= Auth::user()->name; ?></span>
-        </ul>
+                <a href="/events/create"> Create
+                </a>
+            </li>
+            
+            <li class="desktop-link">
+                <a href="/auth/logout">Logout
+                </a>
+            </li>
 
-        @else
-        
-        <li class="desktop-link">
-            <a href="/auth/login">Register/Login
-            </a>
-        </li>
+            <ul class="desktopMenu hidden-xs desktop-link">
+                     <span class="navbar-text">WELCOME <?= Auth::user()->name; ?></span>
+            </ul>
 
-        @endif
+            @else
+            
+            <li class="desktop-link">
+                <a href="/auth/login">Register/Login
+                </a>
+            </li>
 
-        
-        <?php else : ?>
-                    
-        
+            @endif
+                        
+            
 
-            <li id="mobile-menu">
-                <a id="home2" href="index.html">
-                    <img src="broccolilogo.png" class="yonsei-logo">
+                <li id="mobile-menu">
+                    <a id="home2" href="index.html">
+                        <img src="broccolilogo.png" class="yonsei-logo">
+                    </a>
+
+              
                 </a>
 
-          
-            </a>
+                <a id="mobile-icon-container" href="#" onclick="responsiveMenu(); return false;">
+                    <img id="mobile-icon" src="https://eliya33.github.io/church/images/mobile-menu-icon-125x125.png" alt="Mobile Menu Icon">
+                </a>
+        
+            </li>
 
-            <a id="mobile-icon-container" href="#" onclick="responsiveMenu(); return false;">
-                <img id="mobile-icon" src="https://eliya33.github.io/church/images/mobile-menu-icon-125x125.png" alt="Mobile Menu Icon">
-            </a>
-    
-        </li>
-
-    </ul>
-</nav>
+        </ul>
+        </nav>
+    </header>
 
     @yield('content')
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
