@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    <title>Like Minds | You can't be the only one</title>
+<title> Like Minds At </title>
 @stop
 @section('content')
 <!--preloader-->
