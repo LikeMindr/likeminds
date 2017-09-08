@@ -50,7 +50,7 @@ html, body {
 }
 
 body{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
   line-height: 26px;
 	color: #6d6e71;
 	font-size: 13px;
@@ -276,11 +276,11 @@ textarea{
 }
 
 
-/*==================================================
+/*/*/*/*==================================================
   Header
   ==================================================*/
 
-#header{
+/*#header{
   min-height: 50px;
 }
 
@@ -363,7 +363,7 @@ textarea{
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
   border: 0;
-}
+}*/
 
 /*For Homepage Header | Display on Scroll*/
 
@@ -382,9 +382,9 @@ textarea{
 }
 
 
-/*Transparent Background Header for Landing Page-2*/
+/*/*Transparent Background Header for Landing Page-2*/
 
-#header-inverse nav.menu{
+/*#header-inverse nav.menu{
   background: transparent;
   margin-top: 15px;
   z-index: 1030;
@@ -407,7 +407,7 @@ textarea{
 	border-top: 10px solid transparent;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
-}
+}*/
 
 
 /*==================================================
@@ -429,7 +429,8 @@ textarea{
   ==================================================*/
 
 .sign-up-form{
-  background: linear-gradient(to bottom, rgba(43,57,144,.8), rgba(159,65,66,1) 65%);
+  /*background: linear-gradient(to bottom, rgba(43,57,144,.8), rgba(159,65,66,1) 65%);*/
+  background-color: #FF6417;
   position: absolute;
   width: 340px;
   min-height: 600px;
@@ -452,9 +453,9 @@ textarea{
   width: 0;
 }
 
-.sign-up-form h2{
-  font-family:'Agency FB', sans-serif;
-  margin: 100px 0 20px;
+.sign-up-form h1{
+  font-family: 'Grand Hotel', cursive;
+  margin: 50px 0 20px;
 }
 
 .sign-up-form .line-divider{
@@ -475,6 +476,7 @@ textarea{
 
 .sign-up-form .form-wrapper .signup-text{
   font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .sign-up-form .form-wrapper .form-group{
@@ -538,7 +540,7 @@ textarea{
 }
 
 #features .feature-item .feature-icon:hover{
-  background: #27aae1;
+  background: #FFC517;
   transition: all 1s;
 }
 
@@ -551,7 +553,7 @@ textarea{
   background: #f8f8f8 none repeat scroll 0 0;
   border: 1px solid #fff;
   border-radius: 4px;
-  color: #27aae1;
+  color: #FFC517;
   display: inline-block;
   height: 64px;
   line-height: 62px;
@@ -625,7 +627,7 @@ textarea{
   ==================================================*/
 
 .img-divider{
-  background: url("http://placehold.it/1920x460") no-repeat;
+  background: url("/assets/img/fireside.jpeg") no-repeat;
   background-size: cover;
   text-align: center;
   min-height: 460px;
@@ -638,7 +640,7 @@ textarea{
   ==================================================*/
 
 #site-facts{
-	background: radial-gradient(rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 1) 100%), url("http://placehold.it/1920x1280") fixed no-repeat;
+	background: radial-gradient(rgba(255,197,23) 40%, rgba(255,197,23) 100%), url("http://placehold.it/1920x1280") fixed no-repeat;
 	background-size: cover;
 	height: 500px !important;
 	text-align: center;
@@ -646,7 +648,7 @@ textarea{
 }
 
 #site-facts .circle{
-  background: #27aae1;
+  background: #FFC517;
   width: 660px;
   height: 660px;
   border-radius: 50%;
@@ -714,6 +716,7 @@ textarea{
 
 #site-facts .circle .fact-icon{
   font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -2041,7 +2044,11 @@ ul.contact li i{
 }
 
 .copyright{
-  background: #231F20;
+  background: #17FFA6; /* For browsers that do not support gradients */    
+  background: -webkit-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#AEFF17, #17FFA6, #35AD81); /* Standard syntax (must be last) */
   text-align: center;
   color: #fff;
   padding: 12px 0 4px;

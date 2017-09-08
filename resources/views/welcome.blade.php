@@ -24,10 +24,10 @@
          ================================================= -->
       <div class="sign-up-form">
          <a href="index.html" class="logo"><img src="/assets/img/logov.png" alt="Friend Finder"/></a>
-         <h2 class="text-white">Find My Friends</h2>
+         <h1 class="text-white">Find My Friends</h2>
          <div class="line-divider"></div>
          <div class="form-wrapper">
-            <p class="signup-text">Signup now and meet awesome people around the world</p>
+            <p class="signup-text">Register now and meet like-minded people in your area</p>
             <!-- <form action="#">
                <fieldset class="form-group">
                	<input type="text" class="form-control" id="example-name" placeholder="Enter name">
@@ -39,10 +39,10 @@
                	<input type="password" class="form-control" id="example-password" placeholder="Enter a password">
                </fieldset>
                </form> -->
-            <p>By signning up you agree to the terms</p>
-            <button class="btn-secondary">Signup</button>
+            <p>*By signing up you agree to the terms and conditions</p>
+            <button class="btn-secondary">Register</button>
          </div>
-         <a href="#">Already have an account?</a>
+         <button class="btn-secondary">Login</button>
          <img class="form-shadow" src="/assets/img/bottom-shadow.png" alt="" />
       </div>
       <!-- Sign Up Form End -->
@@ -63,24 +63,20 @@
       <div class="row slideUp">
          <div class="feature-item col-md-2 col-sm-6 col-xs-6 col-md-offset-2">
             <div class="feature-icon"><i class="icon ion-person-add"></i></div>
-            <h3>Make Friends</h3>
+            <h3>Create Events </h3>
          </div>
          <div class="feature-item col-md-2 col-sm-6 col-xs-6">
             <div class="feature-icon"><i class="icon ion-images"></i></div>
-            <h3>Create Events</h3>
-         </div>
-         <div class="feature-item col-md-2 col-sm-6 col-xs-6">
-            <div class="feature-icon"><i class="icon ion-chatbox-working"></i></div>
-            <h3>Meet Like Minded People</h3>
+            <h3>Meet Like-Minded People</h3>
          </div>
          <div class="feature-item col-md-2 col-sm-6 col-xs-6">
             <div class="feature-icon"><i class="icon ion-compose"></i></div>
             <h3>Connect</h3>
          </div>
       </div>
-      <h2 class="sub-title">find awesome people like you</h2>
+      <h2 class="sub-title">you're not the only one</h2>
       <div id="incremental-counter" data-value="101242"></div>
-      <p>People Already Signed Up</p>
+      <p>People Already Registered</p>
       <img src="/assets/img/face-map.png" alt="" class="img-responsive face-map slideUp hidden-sm hidden-xs" />
    </div>
 </section>
@@ -104,12 +100,12 @@
             <li>
                <div class="fact-icon"><i class="icon ion-ios-people-outline"></i></div>
                <h3 class="text-white">1,01,242</h3>
-               <p>People registered</p>
+               <p>Users registered</p>
             </li>
             <li>
                <div class="fact-icon"><i class="icon ion-images"></i></div>
                <h3 class="text-white">21,01,242</h3>
-               <p>Posts published</p>
+               <p>Events published</p>
             </li>
             <li>
                <div class="fact-icon"><i class="icon ion-checkmark-round"></i></div>
@@ -120,9 +116,9 @@
       </div>
    </div>
 </section>
-<!-- Live Feed Section
+<!-- <!-- Live Feed Section
    ================================================= -->
-<section id="live-feed">
+<!-- <section id="live-feed">
    <div class="container wrapper">
       <h1 class="section-title slideDown">live feed</h1>
       <ul class="online-users list-inline slideUp">
@@ -211,10 +207,10 @@
          </div>
       </div>
    </div>
-</section>
+</section>  -->-->
 <!-- Footer
    ================================================= -->
-<footer id="footer">
+<!-- <footer id="footer">
    <div class="container">
       <div class="row">
          <div class="footer-wrapper">
@@ -270,9 +266,9 @@
             </div>
          </div>
       </div>
-   </div>
+   </div> -->
    <div class="copyright">
-      <p>copyright @thunder-team 2016. All rights reserved</p>
+      <p>copyright @likeminds.dev 2016. All rights reserved</p>
    </div>
 </footer>
 @stop
