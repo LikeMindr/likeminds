@@ -443,7 +443,7 @@ textarea{
 
 .sign-up-form:after{
   content: "";
-  border-color: #9f4142 transparent transparent;
+  border-color: #ff6417 transparent transparent;
   border-style: solid;
   border-width: 40px 170px 0;
   bottom: -40px;
@@ -524,7 +524,7 @@ textarea{
 }
 
 #features .feature-item .feature-icon{
-  background: linear-gradient(to bottom, rgba(43,57,144,.8), rgba(39,170,225,.8) 65%), url("../img/blur.png") no-repeat;
+  background: linear-gradient(to bottom, rgba(255,238,186,.8), rgba(255,197,23,.8) 65%), url("../img/blur.png") no-repeat;
   background-size: cover;
   background-position: center;
   width: 110px;
@@ -2044,7 +2044,7 @@ ul.contact li i{
 }
 
 .copyright{
-  background: #17FFA6; /* For browsers that do not support gradients */    
+  background: #17FFA6; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Firefox 3.6 to 15 */
