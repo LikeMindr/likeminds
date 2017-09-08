@@ -39,14 +39,12 @@ class Event extends Model
 		$trends = Event::select('category')
 					->get();
 
-		$str = "";
+		$arr = [];
 
 		foreach($trends as $trend) {
-			$str .= $trend['category'];
-			$str .= " ";
+			$arr[] = $trend['category'];
 		}
 
-		$arr = explode(" ", $str);
 		$trendsArr = [];
 		$count = array_count_values($arr);
 		asort($count);
