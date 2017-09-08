@@ -32,7 +32,7 @@
 				</div>			
 				<div class="col-md-10 ">
 					<div class="for-be-dropdowns">
-						<div class="be-drop-down">
+						<div class="be-drop-down"> 
 							<i class="icon-projects"></i>
 							<span class="be-dropdown-content"> Categories </span>
 							<ul class="drop-down-list">
@@ -72,8 +72,7 @@
 									data-type="category-3">DEALS</a></li>
 							</ul>
 						</div>
-						
-					</div>				
+							<a href="/events">Reset</a>
 				</div>
 			</div>
 		</div>		
@@ -85,15 +84,14 @@
 						<h3 class="letf-menu-article">
 							Popular Categories
 						</h3>
-						<div class="creative_filds_block">
-							<div class="ul">
-								<a  data-filter=".category-1" class="filter">Graphic Design		</a>
-								<a data-filter=".category-2" class="filter">Photography			</a>
+								@foreach($trends as $trend)
+								<a href="/events?q={{$trend}}">{{ $trend }}</a>
+								@endforeach
+						<!--		<a data-filter=".category-2" class="filter">Photography			</a>
 								<a data-filter=".category-3" class="filter">Interaction Design	</a>
 								<a data-filter=".category-4" class="filter">Art Direction		</a>
 								<a data-filter=".category-5" class="filter">Illustration		</a>
-							</div>
-						</div>
+						-->
 					</div>
 					<div class="be-vidget">
 						
@@ -118,6 +116,8 @@
 								</a>
 								<a href="page1.html" class="be-post-title">{{ $event->title }}</a>
 								<span>
+									<a href="blog-detail-2.html" class="be-post-tag">
+										{{ $event->category }}</a>, 
 									<a href="blog-detail-2.html" class="be-post-tag">
 										{{ $event->date }}</a>, 
 									<a href="blog-detail-2.html" class="be-post-tag">
