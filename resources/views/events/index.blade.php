@@ -15,24 +15,28 @@
 		</div>
     </div>
 	<!-- MAIN CONTENT -->
+
+
+<br>
+<br>
 	<div id="content-block">
 		<div class="head-bg">
 			<div class="head-bg-img"></div>
-				
+
 		</div>
 		<div class="container-fluid cd-main-content custom-container">
 			<div class="row">
 				<div class="col-md-2 left-feild">
-					<form method="GET" action="{{ action('EventsController@index') }}" 
+					<form method="GET" action="{{ action('EventsController@index') }}"
 						class="input-search">
 						<input type="text" required="" name="q" placeholder="Enter keyword">
 							<i class="fa fa-search"></i>
 							<input type="submit" value="">
-					</form>				
-				</div>			
+					</form>
+				</div>
 				<div class="col-md-10 ">
 					<div class="for-be-dropdowns">
-						<div class="be-drop-down"> 
+						<div class="be-drop-down">
 							<i class="icon-projects"></i>
 							<span class="be-dropdown-content"> Categories </span>
 							<ul class="drop-down-list">
@@ -72,13 +76,13 @@
 									data-type="category-3">DEALS</a></li>
 							</ul>
 						</div>
-							<a href="/events">Reset</a>
+							<div><a href="/events">Reset</a></div>
 				</div>
 			</div>
-		</div>		
+		</div>
 		<div class="container-fluid custom-container">
 			<div class="row">
-				
+
 				<div class="col-md-2 left-feild">
 					<div class="be-vidget">
 						<h3 class="letf-menu-article">
@@ -94,13 +98,13 @@
 						-->
 					</div>
 					<div class="be-vidget">
-						
+
 						<div class="filter-block">
 							<ul>
-								
-								
-								
-								
+
+
+
+
 							</ul>
 						</div>
 					</div>
@@ -117,11 +121,11 @@
 								<a href="page1.html" class="be-post-title">{{ $event->title }}</a>
 								<span>
 									<a href="blog-detail-2.html" class="be-post-tag">
-										{{ $event->category }}</a>, 
+										{{ $event->category }}</a>,
 									<a href="blog-detail-2.html" class="be-post-tag">
-										{{ $event->date }}</a>, 
+										{{ $event->date }}</a>,
 									<a href="blog-detail-2.html" class="be-post-tag">
-										{{ $event->location }}</a>,  
+										{{ $event->location }}</a>,
 									<a href="blog-detail-2.html" class="be-post-tag">
 										{{ $event->description }}</a>
 								</span>
@@ -144,5 +148,5 @@
 			</div>
 		</div>
 	</div>
-	
+
 @stop

@@ -32,7 +32,7 @@
 
             <li>
                 <a id="home" href="/">
-                    <img src="/assets/img/logoh.png" class="yonsei-logo" style="width:50px; height:50px;">
+                    <img src="/assets/img/logoh.png" class="yonsei-logo" style="width:103px; height:30px;">
                 </a>
             </li>
 
@@ -43,25 +43,25 @@
                     <ul class="dropdown-menu" id="caretDropdownOne">
                         @if(Auth::check())
                          <li>
-                            <a href= "/account/edit">EDIT 
-                            </a> 
+                            <a href= "/account/edit">EDIT
+                            </a>
                         </li>
                          @else
 
                         <li>
                             <a href= "/auth/login">LOGIN
-                            </a> 
+                            </a>
                         </li>
 
                         @endif
-                          
+
                     </ul>
             </li>
 
             <li class="desktop-link">
-                <a href="/events">EVENTS 
+                <a href="/events">EVENTS
                 </a>
-                              
+
             </li>
 
             @if(Auth::check())
@@ -71,7 +71,7 @@
                 <a href="/events/create">CREATE
                 </a>
             </li>
-            
+
             <li class="desktop-link">
                 <a href="/auth/logout">LOGOUT
                 </a>
@@ -82,18 +82,18 @@
             </ul>
 
             @else
-            
+
             <li class="desktop-link">
                 <a href="/auth/login">REGISTER/LOGIN
                 </a>
             </li>
 
             @endif
-                        
+
             <li id="mobile-menu">
             <a id="home2" href="index.html">
              <img src="/assets/img/logoh.png" class="yonsei-logo" alt="Yonsei Univeristy Logo">
-            
+
              </a>
 
             <a id="mobile-icon-container" href="#" onclick="responsiveMenu(); return false;">
