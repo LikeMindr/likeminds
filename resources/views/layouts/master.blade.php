@@ -36,13 +36,13 @@
             </li>
 
             <li class="desktop-link">
-                <a href="/home">PROFILE
+                <a href="/auth/login">PROFILE
                 </a>
                     <a class="caret" href="#" onclick="caretDropdownOne(); return false;">&or;</a>
                     <ul class="dropdown-menu" id="caretDropdownOne">
                         @if(Auth::check())
                          <li>
-                            <a href= "account/edit">EDIT 
+                            <a href= "/account/edit">EDIT 
                             </a> 
                         </li>
                          @else
