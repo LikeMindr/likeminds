@@ -16,8 +16,10 @@ class EventsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('events/index');
+    {   $events = Event::with('user')->get();
+
+
+        return view('events/index', ['events' => $events]);
     }
 
     /**
