@@ -33,33 +33,42 @@
 					<div class="for-be-dropdowns">
 						<div class="be-drop-down">
 							<i class="icon-projects"></i>
-							<span class="be-dropdown-content"> Projects	</span>
+							<span class="be-dropdown-content"> Categories </span>
 							<ul class="drop-down-list">
-								<li class="filter" data-filter=".category-1"><a data-type="category-1">Projects</a></li>
-								<li class="filter" data-filter=".category-2"><a data-type="category-2">Work in Progress</a></li>
-								<li class="filter" data-filter=".category-3"><a data-type="category-3">People</a></li>
-							</ul>
-						</div>
-						<div class="be-drop-down">
-							<i class="icon-creative"></i>
-							<span class="be-dropdown-content">All Creative Filds
-							</span>
-							<ul class="drop-down-list">
-								<li class="filter" data-filter=".category-4"><a>Item - 1</a></li>
-								<li class="filter" data-filter=".category-5"><a>Item - 2</a></li>
-								<li class="filter" data-filter=".category-1"><a>Item - 3</a></li>
-							</ul>
-						</div>
-						<div class="be-drop-down">
-							<i class="icon-features"></i>
-							<span class="be-dropdown-content">Features
-							</span>
-							<ul class="drop-down-list">
-								<li class="filter" data-filter=".category-2"><a>Featured</a></li>
-								<li class="filter" data-filter=".category-3"><a>Most Appreciated</a></li>
-								<li class="filter" data-filter=".category-4"><a>Most Viewed</a></li>
-								<li class="filter" data-filter=".category-5"><a>Most Discussed</a></li>
-								<li class="filter" data-filter=".category-1"><a>Most Recent</a></li>
+								<li class="filter" data-filter=".category-1"><a
+									data-type="category-1">MUSIC</a></li>
+								<li class="filter" data-filter=".category-2"><a
+									data-type="category-2">HAPPY HOURS</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">ART</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">FILM & THEATER</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">DANCE</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">COMEDY</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">SPORTS & FITNESS</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">SPECIAL EVENTS</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">FASHION</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">SOCIAL</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">FOOD & DRINK</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">BOOKS / POETRY / WRITING</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">OUTDOORS / NATURE</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">HEALTH & WELLNESS</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">BUSINESS / TECH</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">CIVIC ENGAGEMENT</a></li>
+								<li class="filter" data-filter=".category-3"><a
+									data-type="category-3">DEALS</a></li>
 							</ul>
 						</div>
 						
@@ -83,25 +92,6 @@
 								<a data-filter=".category-4" class="filter">Art Direction		</a>
 								<a data-filter=".category-5" class="filter">Illustration		</a>
 							</div>
-						</div>
-					</div>
-					<div class="be-vidget">
-						<h3 class="letf-menu-article">
-							Popular Tags
-						</h3>
-						<div class="tags_block clearfix">
-							<ul>
-								<li><a data-filter=".category-6" class="filter">photoshop</a></li>
-								<li><a data-filter=".category-1" class="filter">graphic</a></li>
-								<li><a data-filter=".category-2" class="filter">art</a></li>
-								<li><a data-filter=".category-3" class="filter">website</a></li>
-								<li><a data-filter=".category-4" class="filter">logo</a></li>
-								<li><a data-filter=".category-5" class="filter">identity</a></li>
-								<li><a data-filter=".category-6" class="filter">logo design</a></li>
-								<li><a data-filter=".category-1" class="filter">interactive</a></li>
-								<li><a data-filter=".category-2" class="filter">blue</a></li>
-								<li><a data-filter=".category-3" class="filter">branding</a></li>
-							</ul>
 						</div>
 					</div>
 					<div class="be-vidget">
