@@ -61,12 +61,16 @@
      <br>
       <h1 class="section-title slideDown">like minds</h1>
       <div class="row slideUp">
-         <div class="feature-item col-md-2 col-sm-6 col-xs-6 col-md-offset-2">
-            <div class="feature-icon"><i class="icon ion-person-add"></i></div>
+        <div class="feature-item col-md-2 col-sm-6 col-xs-6 col-md-offset-2">
+						<div class="feature-icon"><i class="icon ion-person-add"></i></div>
+						<h3>Make Friends</h3>
+					</div>
+         <div class="feature-item col-md-2 col-sm-6 col-xs-6">
+            <div class="feature-icon"><i class="icon ion-images"></i></div>
             <h3>Create Events </h3>
          </div>
          <div class="feature-item col-md-2 col-sm-6 col-xs-6">
-            <div class="feature-icon"><i class="icon ion-images"></i></div>
+            <div class="feature-icon"><i class="con ion-chatbox-working"></i></div>
             <h3>Meet Like-Minded People</h3>
          </div>
          <div class="feature-item col-md-2 col-sm-6 col-xs-6">
@@ -116,7 +120,7 @@
       </div>
    </div>
 </section>
-<!-- <!-- Live Feed Section
+<!-- <! Live Feed Section
    ================================================= -->
 <!-- <section id="live-feed">
    <div class="container wrapper">
