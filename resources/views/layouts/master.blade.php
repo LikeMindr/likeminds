@@ -48,7 +48,7 @@
                          @else
 
                         <li>
-                            <a href= "/login">LOGIN
+                            <a href= "/auth/login">LOGIN
                             </a> 
                         </li>
 
