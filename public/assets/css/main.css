@@ -28,7 +28,11 @@ a:active {
 
 /* 2. Desktop Nav Menu */
 .desktop-menu {
-  background: #17FFA6;
+  background: #17FFA6; /* For browsers that do not support gradients */    
+  background: -webkit-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#AEFF17, #17FFA6, #35AD81); /* Standard syntax (must be last) */
   margin: 0;
   padding: .75em 0;
   position: absolute; /* Prevents parent ul from collapsing because of floated children li's. Alternative to overflow: auto/none; */

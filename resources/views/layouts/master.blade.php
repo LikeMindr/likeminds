@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 	<link rel="stylesheet" href="/assets/css/stylesheet.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Montserrat" rel="stylesheet">
 
 </head>
 <body>
