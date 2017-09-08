@@ -368,12 +368,12 @@ textarea{
 /*For Homepage Header | Display on Scroll*/
 
 #header.lazy-load{
-  visibility: hidden;
+  /*visibility: hidden;*/
   position: fixed;
   left: 0;
   right: 0;
-  transition: .5s ease-in-out;
-  transform: translateY(-50px);
+  /*transition: .5s ease-in-out;
+  transform: translateY(-50px);*/
   z-index: 99999;
 }
 #header.lazy-load.visible{
@@ -1457,20 +1457,21 @@ ul.online-users li span.online-dot{
 
 .timeline-cover{
   background: url("http://placehold.it/1030x360") no-repeat;
-  background-position: center;
-  background-size: cover;
   min-height: 360px;
-  border-radius: 0 0 4px 4px;
+  width:100%;
   position: relative;
+  margin-top: 106px;
 }
 
 /*Timeline Menu for Large Screens*/
 
-.timeline-cover .timeline-nav-bar{
-  background: rgba(0,0,0, .7);
+.timeline-nav-bar{
+  background: #FFC517;
   width: 100%;
   position: absolute;
   bottom: 25px;
+
+
 }
 
 .timeline-cover .timeline-nav-bar .profile-info{
@@ -1523,6 +1524,11 @@ ul.online-users li span.online-dot{
 .timeline-cover .timeline-nav-bar .follow-me li{
   padding: 6px 15px;
   color: #fff;
+}
+
+.profile-navbar-text {
+  margin-left: 25%;
+  width: 75%;
 }
 
 /*Timeline Menu for Small Screens*/

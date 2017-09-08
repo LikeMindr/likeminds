@@ -49,7 +49,7 @@ class AccountsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('accounts.profile');
     }
 
     /**
@@ -60,7 +60,7 @@ class AccountsController extends Controller
      */
     public function edit($id)
     {
-        return view('/account/edit');
+        return view('/accounts.edit');
     }
 
     /**
