@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Event;
+use App\Http\Controllers\Input;
 
 class EventsController extends Controller
 {
@@ -15,11 +16,19 @@ class EventsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {   $events = Event::with('user')->get();
+    public function index(Request $request)
+    {   
+		if ($request->has('q')) {
+			$q = Input::escape($request->q);
+			$events = Event::search($q);
+		}
+		else {
+			$events = Event::with('user')->paginate(20);
+		}
+		
+		$trends = Event::trends();
 
-
-        return view('events/index', ['events' => $events]);
+        return view('events/index', ['events' => $events, 'trends' => $trends]);
     }
 
     /**
@@ -29,7 +38,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-        
+       return view('events/create'); 
     }
 
     /**

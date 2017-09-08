@@ -239,3 +239,7 @@ a:active {
 div#content-block {
 	margin-top: 0;
 }
+
+div.custom-container {
+	margin-top: 1em;
+}

@@ -23,8 +23,9 @@
 		<div class="container-fluid cd-main-content custom-container">
 			<div class="row">
 				<div class="col-md-2 left-feild">
-					<form action="./" class="input-search">
-						<input type="text" required="" placeholder="Enter keyword">
+					<form method="GET" action="{{ action('EventsController@index') }}" 
+						class="input-search">
+						<input type="text" required="" name="q" placeholder="Enter keyword">
 							<i class="fa fa-search"></i>
 							<input type="submit" value="">
 					</form>				
@@ -82,7 +83,7 @@
 				<div class="col-md-2 left-feild">
 					<div class="be-vidget">
 						<h3 class="letf-menu-article">
-							Popular Creative Filds
+							Popular Categories
 						</h3>
 						<div class="creative_filds_block">
 							<div class="ul">
@@ -137,6 +138,7 @@
 						</div>
 						@endforeach
 					</div>
+						{!! $events->render() !!}
 				</div>
 
 			</div>
