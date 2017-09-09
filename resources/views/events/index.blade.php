@@ -35,49 +35,29 @@
 					</form>
 				</div>
 				<div class="col-md-10 ">
-					<div class="for-be-dropdowns">
-						<div class="be-drop-down">
-							<i class="icon-projects"></i>
-							<span class="be-dropdown-content"> Categories </span>
-							<ul class="drop-down-list">
-								<li class="filter" data-filter=".category-1"><a
-									data-type="category-1">MUSIC</a></li>
-								<li class="filter" data-filter=".category-2"><a
-									data-type="category-2">HAPPY HOURS</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">ART</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">FILM & THEATER</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">DANCE</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">COMEDY</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">SPORTS & FITNESS</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">SPECIAL EVENTS</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">FASHION</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">SOCIAL</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">FOOD & DRINK</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">BOOKS / POETRY / WRITING</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">OUTDOORS / NATURE</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">HEALTH & WELLNESS</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">BUSINESS / TECH</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">CIVIC ENGAGEMENT</a></li>
-								<li class="filter" data-filter=".category-3"><a
-									data-type="category-3">DEALS</a></li>
-							</ul>
+						<div class="dropdown">
+							<button class="dropbtn"> Categories </button>
+							<div class="dropdown-content">
+								<a href="/events?q=music">MUSIC</a>
+								<a href="/events?q=happy hours">HAPPY HOURS</a>
+								<a href="/events?q=art">ART</a>
+								<a href="/events?q=film theater">FILM & THEATER</a>
+								<a href="/events?q=dance">DANCE</a>
+								<a href="/events?q=comedy">COMEDY</a>
+								<a href="/events?q=sports fitness">SPORTS & FITNESS</a>
+								<a href="/events?q=special events">SPECIAL EVENTS</a>
+								<a href="/events?q=fashion">FASHION</a>
+								<a href="/events?q=social">SOCIAL</a>
+								<a href="/events?q=food drink">FOOD & DRINK</a>
+								<a href="/events?q=books poetry writing">BOOKS / POETRY / WRITING</a>
+								<a href="/events?q=outdoors nature">OUTDOORS / NATURE</a>
+								<a href="/events?q=health wellness">HEALTH & WELLNESS</a>
+								<a href="/events?q=business tech">BUSINESS / TECH</a>
+								<a href="/events?q=civic engagement">CIVIC ENGAGEMENT</a>
+								<a href="/events?q=deals">DEALS</a>
+							</div>
 						</div>
-							<div><a href="/events">Reset</a></div>
-				</div>
+							<div class="clearbtn"><a href="/events">Clear</a></div>
 			</div>
 		</div>
 		<div class="container-fluid custom-container">
@@ -89,7 +69,7 @@
 							Popular Categories
 						</h3>
 								@foreach($trends as $trend)
-								<a href="/events?q={{$trend}}">{{ $trend }}</a>
+								<a href="/events?q={{$trend}}" class="trendbtn">{{ $trend }}</a>
 								@endforeach
 						<!--		<a data-filter=".category-2" class="filter">Photography			</a>
 								<a data-filter=".category-3" class="filter">Interaction Design	</a>

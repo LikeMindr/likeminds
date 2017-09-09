@@ -51,7 +51,7 @@ class Event extends Model
 		$reverse = array_reverse($count);
 
 		foreach($reverse as $key => $value) {
-			if (!in_array($key, $trendsArr) && strlen($key) > 4) {
+			if (!in_array($key, $trendsArr)) {
 				$trendsArr[] = $key;
 			}
 			if (count($trendsArr) >= 5) {
