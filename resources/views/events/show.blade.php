@@ -51,13 +51,13 @@
 							<a class="be-ava-user" href="blog-detail-2.html">
 								<img src="img/ava.png" alt="">
 							</a>
-							<p class="be-use-name">{{ $event->user->name }}</p>
+							<p class="be-use-name">{{ $event['user']['name'] }}</p>
 							<span class="be-user-info">
 								{{ $event->location }}
 							</span>
 						</div>
 						<h5 class="be-title">
-							About {{ $event->user->name }}
+							About {{ $event['user']['name'] }}
 						</h5>
 						<p class="be-text-userblock">
 							

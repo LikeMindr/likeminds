@@ -100,7 +100,7 @@
 								</span>
 								<div class="author-post">
 									<img src="img/a1.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">{{ $event->user->name }}</a></span>
+									<span>by <a href="page1.html">{{ $event['user']['name'] }}</a></span>
 								</div>
 								<div class="info-block">
 									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
