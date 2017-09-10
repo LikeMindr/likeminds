@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-<title> Login </title>
+<title> Like Minds At </title>
 @stop
 @section('content')
 
@@ -24,6 +24,7 @@
 
               <div class="reg-form-container">
                 <!-- Register/Login Tabs-->
+
                   <style>
                       #inner {
 display: table;
@@ -38,7 +39,10 @@ js = d.createElement(s); js.id = id;
 js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=781692095343244";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-                  <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true" style="width:100%"></div> 
+			 <div class="fb-login-button" data-max-rows="1"
+				data-size="large" data-button-type="login_with" data-show-faces="false"
+				data-auto-logout-link="false" data-use-continue-as="true"
+				style="width:100%"{{ action('Auth\AuthController@redirectToFacebook') }}></div>
                 <!--Registration Form Contents-->
              </div>
                   </div>
