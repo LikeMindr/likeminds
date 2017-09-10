@@ -49,7 +49,8 @@ class AccountsController extends Controller
      */
     public function show($id)
     {
-        return view('accounts.profile');
+		$user = User::findOrFail($id);
+        return view('accounts.show', ['user' => $user]);
     }
 
     /**
