@@ -24,9 +24,6 @@ class CreateEventsTable extends Migration
 			$table->integer('num_people')->unsigned();
 			$table->integer('created_by')->unsigned();
 			$table->timestamps();
-			$table->foreign('created_by')
-				->references('id')
-				->on('users');
 		});
 
     }
