@@ -35,4 +35,12 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+	'facebook' => [
+
+	],
+
+	'google' => [
+
+	],
+
 ];
