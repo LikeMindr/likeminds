@@ -14,11 +14,9 @@
 			</p>
 		</div>
     </div>
+
 	<!-- MAIN CONTENT -->
 
-
-<br>
-<br>
 	<div id="content-block">
 		<div class="head-bg">
 			<div class="head-bg-img"></div>
@@ -71,11 +69,6 @@
 								@foreach($trends as $trend)
 								<a href="/events?q={{$trend}}" class="trendbtn">{{ $trend }}</a>
 								@endforeach
-						<!--		<a data-filter=".category-2" class="filter">Photography			</a>
-								<a data-filter=".category-3" class="filter">Interaction Design	</a>
-								<a data-filter=".category-4" class="filter">Art Direction		</a>
-								<a data-filter=".category-5" class="filter">Illustration		</a>
-						-->
 					</div>
 					<div class="be-vidget">
 
@@ -95,19 +88,15 @@
 						@foreach($events as $event)
 						<div class="category-1 mix custom-column-5">
 							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="img/p1.jpg" alt="omg">
+								<a href="/events/{{$event->id}}" class="be-img-block">
+								<img src="img/p1.jpg" alt="Checkout this event">
 								</a>
 								<a href="page1.html" class="be-post-title">{{ $event->title }}</a>
 								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">
-										{{ $event->category }}</a>,
-									<a href="blog-detail-2.html" class="be-post-tag">
-										{{ $event->date }}</a>,
-									<a href="blog-detail-2.html" class="be-post-tag">
-										{{ $event->location }}</a>,
-									<a href="blog-detail-2.html" class="be-post-tag">
-										{{ $event->description }}</a>
+									<p>	{{ $event->category }} </p>
+									<p>	{{ $event->date }} </p>
+									<p>	{{ $event->location }} </p>
+									<p>	{{ $event->description }} </p>
 								</span>
 								<div class="author-post">
 									<img src="img/a1.png" alt="" class="ava-author">
