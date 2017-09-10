@@ -91,7 +91,7 @@
 								<a href="/events/{{$event->id}}" class="be-img-block">
 								<img src="img/p1.jpg" alt="Checkout this event">
 								</a>
-								<a href="page1.html" class="be-post-title">{{ $event->title }}</a>
+								<a href="/events/{{$event->id}}" class="be-post-title">{{ $event->title }}</a>
 								<span>
 									<p>	{{ $event->category }} </p>
 									<p>	{{ $event->date }} </p>
@@ -100,7 +100,7 @@
 								</span>
 								<div class="author-post">
 									<img src="img/a1.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">{{ $event['user']['name'] }}</a></span>
+									<span>by <a href="/accounts/{{$event['user']['id']}}">{{ $event['user']['name'] }}</a></span>
 								</div>
 								<div class="info-block">
 									<span><i class="fa fa-thumbs-o-up"></i> 360</span>

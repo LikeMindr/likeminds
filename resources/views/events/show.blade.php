@@ -51,7 +51,8 @@
 							<a class="be-ava-user" href="blog-detail-2.html">
 								<img src="img/ava.png" alt="">
 							</a>
-							<p class="be-use-name">{{ $event['user']['name'] }}</p>
+							<a href="/accounts/{{$event['user']['id']}}">
+							<p class="be-use-name">{{ $event['user']['name'] }}</p></a>
 							<span class="be-user-info">
 								{{ $event->location }}
 							</span>
