@@ -54,7 +54,10 @@ class EventsController extends Controller
 		$event->title = $request->title;
 		$event->description = $request->description;
 		$event->date = $request->date;
+		$event->time = $request->time;
 		$event->location = $request->location;
+		$event->category = $request->category;
+		$event->num_people = $request->num_people;
 		$event->save();
     }
 
@@ -66,7 +69,8 @@ class EventsController extends Controller
      */
     public function show($id)
     {
-        //
+		$event = Event::findOrFail($id);
+		return view('events.show', ['event' => $event]);
     }
 
     /**
