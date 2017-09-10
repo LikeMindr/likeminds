@@ -35,13 +35,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-		Schema::table('events', function($table)
-		{
-			$table->dropForeign(['created_by']);
-
-		});
-
         Schema::drop('events');
-
     }
 }
