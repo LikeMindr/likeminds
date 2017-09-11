@@ -7,9 +7,9 @@ li {
   list-style-type: none;
 }
 
-a,
-a:link,
-a:visited {
+a.nav-buttons,
+a.nav-buttons:link,
+a.nav-buttons:visited {
   color: white;
   display: block;
   font-size: 1.25em;
@@ -18,9 +18,9 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover,
-a:focus,
-a:active {
+a.nav-buttons:hover,
+a.nav-buttons:focus,
+a.nav-buttons:active {
   background: #35AD81;
 }
 
@@ -29,10 +29,10 @@ a:active {
 /* 2. Desktop Nav Menu */
 .desktop-menu {
   background: #17FFA6; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#AEFF17, #17FFA6, #35AD81); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#AEFF17, #17FFA6, #35AD81); /* Standard syntax (must be last) */
+  background: -webkit-linear-gradient(#35AD81, #17FFA6, #35AD81); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#35AD81, #17FFA6, #35AD81); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#35AD81, #17FFA6, #35AD81); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#35AD81, #17FFA6, #35AD81); /* Standard syntax (must be last) */
   margin: 0;
   padding: .75em 0;
   position: absolute; /* Prevents parent ul from collapsing because of floated children li's. Alternative to overflow: auto/none; */
@@ -95,18 +95,18 @@ a:active {
     width: 20em;
   }
 
-  .dropdown-menu a,
-  .dropdown-menu a:link,
-  .dropdown-menu a:visited {
+  .dropdown-menu a.nav-buttons,
+  .dropdown-menu a.nav-buttons:link,
+  .dropdown-menu a.nav-buttons:visited {
     border-top: 1px solid #17FFA6;
     color: white;
     font-size: 1.5em;
     font-weight: 600;
   }
 
-  .dropdown-menu a:hover,
-  .dropdown-menu a:focus,
-  .dropdown-menu a:active {
+  .dropdown-menu a.nav-buttons:hover,
+  .dropdown-menu a.nav-buttons:focus,
+  .dropdown-menu a.nav-buttons:active {
     color: white;
   }
 
@@ -283,7 +283,7 @@ div.custom-container {
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a.nav-buttons:hover {background-color: #f1f1f1}
 
 .dropdown:hover .dropdown-content {
     display: block;
