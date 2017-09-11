@@ -302,6 +302,11 @@ div.custom-container {
     cursor: pointer;
 }
 
+
+
+#profile-page-bg{
+  background-color: #FFC517;
+
 .footer-links{
   color: #f2f2f2;
   text-decoration: none;
@@ -372,4 +377,5 @@ div.custom-container {
   font: 10pt verdana;
   line-height: 2em;
   padding: 40px 0 0 0;
+
 }
