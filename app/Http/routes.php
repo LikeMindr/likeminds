@@ -34,3 +34,5 @@ Route::get('/privacy', function() {
 Route::resource('events', 'EventsController');
 
 Route::resource('accounts', 'AccountsController');
+
+Route::resource('attends', 'AttendsController');

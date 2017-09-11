@@ -40,8 +40,16 @@
 						<h5>{{ $event->num_people }}</h5>
 						<div class="clear"></div>
 						<div class="post-text">
-						<h6>{{ $event->description }}</h6>
+							<h6>{{ $event->description }}</h6>
 						</div>
+						@if (Auth::check())
+						<form method="POST" action="{{ action('AttendsController@store') }}">
+							{!! csrf_field() !!}
+							<input type="hidden" value="{{Auth::id()}}" name="user_id">
+							<input type="hidden" value="{{$event->id}}" name="event_id">
+							<button>Sign Up For This Event</button>
+						</form>
+						@endif
 					</div>
 				</div>
 </div>
