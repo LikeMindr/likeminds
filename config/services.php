@@ -36,11 +36,16 @@ return [
     ],
 
 	'facebook' => [
-
+		'client_id' => '781692095343244',
+		'client_secret' => '',
+		'redirect' =>
+			'https://www.facebook.com/v2.10/dialog/oauth?client_id=781692095343244&redirect_uri=/',
 	],
 
 	'google' => [
-
+		'client_id' => '',
+		'client_secret' => '',
+		'redirect' => '',
 	],
 
 ];
