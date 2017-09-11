@@ -41,19 +41,19 @@ include './../bootstrap.php';
             </li>
 
             <li class="desktop-link">
-                <a href="/auth/login">PROFILE
+                <a href="/auth/login" class="login-buttons">PROFILE
                 </a>
-                    <a class="caret" href="#" onclick="caretDropdownOne(); return false;">&or;</a>
+                    <a class="caret login-buttons href="#" onclick="caretDropdownOne(); return false;">&or;</a>
                     <ul class="dropdown-menu" id="caretDropdownOne">
                         @if(Auth::check())
                          <li>
-                            <a href= "/account/edit">EDIT
+                            <a href= "/account/edit" class="login-buttons">EDIT
                             </a>
                         </li>
                          @else
 
                         <li>
-                            <a href= "/auth/login">LOGIN
+                            <a href= "/auth/login" class="login-buttons">LOGIN
                             </a>
                         </li>
 
@@ -63,7 +63,7 @@ include './../bootstrap.php';
             </li>
 
             <li class="desktop-link">
-                <a href="/events">EVENTS
+                <a href="/events" class="login-buttons">EVENTS
                 </a>
 
             </li>
@@ -72,12 +72,12 @@ include './../bootstrap.php';
 
             <li class="desktop-link">
 
-                <a href="/events/create">CREATE
+                <a href="/events/create" class="login-buttons">CREATE
                 </a>
             </li>
 
             <li class="desktop-link">
-                <a href="/auth/logout">LOGOUT
+                <a href="/auth/logout" class="login-buttons">LOGOUT
                 </a>
             </li>
 
@@ -88,7 +88,7 @@ include './../bootstrap.php';
             @else
 
             <li class="desktop-link">
-                <a href="/auth/login">REGISTER/LOGIN
+                <a href="/auth/login" class="login-buttons">REGISTER/LOGIN
                 </a>
             </li>
 
@@ -100,7 +100,7 @@ include './../bootstrap.php';
 
              </a>
 
-            <a id="mobile-icon-container" href="#" onclick="responsiveMenu(); return false;">
+            <a id="mobile-icon-container" class="login-buttons" href="#" onclick="responsiveMenu(); return false;">
             <img id="mobile-icon" src="https://eliya33.github.io/church/images/mobile-menu-icon-125x125.png" alt="Mobile Menu Icon">
             </a>
             </li>

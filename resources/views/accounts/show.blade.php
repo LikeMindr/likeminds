@@ -46,10 +46,8 @@
 							<div class="be-user-social">							
 								<a class="social-btn color-1" href="page1.html"><i class="fa fa-facebook"></i></a>
 								<a class="social-btn color-2" href="page1.html"><i class="fa fa-twitter"></i></a>
-								<a class="social-btn color-3" href="page1.html"><i class="fa fa-google-plus"></i></a>
 								<a class="social-btn color-4" href="page1.html"><i class="fa fa-pinterest-p"></i></a>
 								<a class="social-btn color-5" href="page1.html"><i class="fa fa-instagram"></i></a>
-								<a class="social-btn color-6" href="page1.html"><i class="fa fa-linkedin"></i></a>
 							</div>
 						</div>
 						<div class="be-user-statistic">
@@ -78,15 +76,18 @@
                     <div class="tab-wrapper style-1">
                         <div class="tab-nav-wrapper">
                             <div  class="nav-tab  clearfix">
-                                <div class="nav-tab-item active">
-                                    <span>EVENTS</span>
-                                </div>
+                            	@if(Auth::check())
                                 <div class="nav-tab-item ">
                                     <span>MY EVENTS</span>
                                 </div>
                                 <div class="nav-tab-item ">
                                     <span>EDIT PROFILE</span>
-                                </div>                                                               
+                                </div> 
+                            	@else
+                                <div class="nav-tab-item active">
+                                    <span>EVENTS</span>
+                                </div> 
+                                @endif                                                              
                             </div>
                         </div>
                         <div class="tabs-content clearfix">
