@@ -2,14 +2,71 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Socialite;
+use Illuminate\Routing\Controller;
+
 use App\User;
 use Validator;
-use App\Http\Controllers\Controller;
+//use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+	/**
+     * Redirect the user to the Facebook authentication page.
+     *
+     * @return Response
+     */
+    public function redirectToFacebook()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return Response
+     */
+    public function handleFacebookCallback()
+    {
+        $user = Socialite::driver('facebook')->user();
+
+        // $user->token;
+		$user->getId();
+		$user->getName();
+		$user->getEmail();
+		$user->getAvatar();
+    }
+
+
+	/**
+     * Redirect the user to the Google authentication page.
+     *
+     * @return Response
+     */
+    public function redirectToGoogle()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    /**
+     * Obtain the user information from Google.
+     *
+     * @return Response
+     */
+    public function handleGoogleCallback()
+    {
+        $user = Socialite::driver('google')->user();
+
+        // $user->token;
+		$user->getId();
+		$user->getName();
+		$user->getEmail();
+		$user->getAvatar();
+    }
+
+
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
