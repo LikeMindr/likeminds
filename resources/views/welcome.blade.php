@@ -120,6 +120,11 @@
       </div>
    </div>
 </section>
+<br>
+<br>
+<br>
+<br>
+<br>
 <!-- <! Live Feed Section
    ================================================= -->
 <!-- <section id="live-feed">
@@ -211,7 +216,7 @@
          </div>
       </div>
    </div>
-</section>  -->-->
+</section>  -->
 <!-- Footer
    ================================================= -->
 <!-- <footer id="footer">
@@ -271,8 +276,8 @@
          </div>
       </div>
    </div> -->
-   <div class="copyright">
+   <!-- <div class="copyright">
       <p>copyright @likeminds.dev 2016. All rights reserved</p>
    </div>
-</footer>
+</footer> -->
 @stop

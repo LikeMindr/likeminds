@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
+<html lang="en"> -->
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,18 +14,18 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/ionicons.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
-    
+
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Montserrat" rel="stylesheet">
 
    <!--  font-family: 'Lobster Two', cursive;
     font-family: 'Montserrat', sans-serif; -->
-    
+
     <!--Favicon-->
     <link rel="shortcut icon" type="image/png" href="images/fav.png"/>
 	</head>
 	<body>
-  
+
     <!--preloader-->
     <div id="spinner-wrapper">
       <div class="spinner"></div>
@@ -52,13 +52,13 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right main-menu">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home 
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home
                 </a>
               </li>
-              
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Profile 
+                Profile
                   <ul class="dropdown-menu page-list">
                     <?php if (Auth::check()) : ?>
                     <li>
@@ -68,42 +68,42 @@
                 </a>
                   </ul>
               </li>
-              
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 Events
-               
+
                   <ul class="dropdown-menu page-list">
                    <?php if (Auth::check()) : ?>
                     <li>
                       <a href="/users/account?id=<?= Auth::id(); ?>">My Events
                       </a>
                     </li>
-                </a> 
+                </a>
                   </ul>
               </li>
-               
+
                <?php if (Auth::check()) : ?>
                <li class="dropdown">
                 <a href="/users/account?id=<?= Auth::id(); ?>" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 Create
                 </a>
               </li>
-  
+
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign-Up 
+                <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign-Up
                 </a>
               </li>
-             
+
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login 
+                <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login
                 </a>
-             
+
               <li class="dropdown"><a href="contact.html">Contact</a>
               </li>
               <?php if (Auth::check()) : ?>
               <li class="dropdown">
-                <a href="/users/account?id=<?= Auth::id(); ?>"  class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logout 
+                <a href="/users/account?id=<?= Auth::id(); ?>"  class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logout
                 </a>
             </ul>
             <form class="navbar-form navbar-right hidden-sm">
@@ -117,4 +117,3 @@
       </nav>
     </header>
     <!--Header End-->
-
