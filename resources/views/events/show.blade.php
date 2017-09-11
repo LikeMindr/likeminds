@@ -42,7 +42,7 @@
 						<div class="post-text">
 							<h6>{{ $event->description }}</h6>
 						</div>
-						@if (Auth::check())
+						    @if(Auth::check())
 						<form method="POST" action="{{ action('AttendsController@store') }}">
 							{!! csrf_field() !!}
 							<input type="hidden" value="{{Auth::id()}}" name="user_id">
@@ -56,8 +56,8 @@
 				<div class="col-md-3 col-md-pull-9 left-feild">
 					<div class="be-user-block">
 						<div class="be-user-detail">
-							<a class="be-ava-user" href="blog-detail-2.html">
-								<img src="img/ava.png" alt="">
+							<a class="be-ava-user" href="/accounts/{{$event['user']['id']}}">
+								<img src="/assets/img/default-avatar.jpg" alt="">
 							</a>
 							<a href="/accounts/{{$event['user']['id']}}">
 							<p class="be-use-name">{{ $event['user']['name'] }}</p></a>
@@ -69,7 +69,7 @@
 							About {{ $event['user']['name'] }}
 						</h5>
 						<p class="be-text-userblock">
-							
+						<?php echo $event['user']['bio'] ?> 	
 						</p>
 					</div>
 @stop
