@@ -13,6 +13,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+	protected $redirectPath = '/';
 	/**
      * Redirect the user to the Facebook authentication page.
      *
