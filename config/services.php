@@ -36,10 +36,10 @@ return [
     ],
 
 	'facebook' => [
-		'client_id' => '214631275274336',
-		'client_secret' => '255cbd20446efef7398849df39567f1e',
+		'client_id' => env('FACEBOOK_APP_ID'),
+		'client_secret' => env('FACEBOOK_SECRET'),
 		'redirect' =>
-			'https://www.facebook.com/v2.10/dialog/oauth?client_id=214631275274336&redirect_uri=/',
+			'https://www.facebook.com/v2.4/dialog/oauth?client_id=214631275274336&redirect_uri=/',
 	],
 
 	'google' => [
