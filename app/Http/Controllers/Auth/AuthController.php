@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Socialite;
-use Illuminate\Routing\Controller;
+//use Socialite;
+//use Illuminate\Routing\Controller;
 
 use App\User;
 use Validator;
-//use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
