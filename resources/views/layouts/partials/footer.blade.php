@@ -33,11 +33,11 @@
             <a href="#">TESTIMONIALS</a>
             <a href="#">THE TEAM</a>
          </div>
+         <div class="legality">
+            <img src="/assets/img/logoh.png" alt="Likeminds.at" style="width:15%"><br><br>
+            © Copyright 2017 LikeMinds.At
+         </div>
       </div>
    </div>
-   <div class="legality">
-      <img src="assets/img/logoh.png
-         " alt="Likeminds.at" style="width:15%"><br>
-      © Copyright 2017 LikeMinds.At
-   </div>
+
 </div>
