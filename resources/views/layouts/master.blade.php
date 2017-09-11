@@ -113,6 +113,7 @@ include './../bootstrap.php';
     </header>
 	<div id="space-for-nav"></div>
     @yield('content')
+    @include('layouts.partials.footer')
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="/assets/js/jquery-2.1.4.min.js"></script>
 	<script src="/assets/js/jquery-ui.min.js"></script>
