@@ -36,23 +36,23 @@
 						<div class="dropdown">
 							<button class="dropbtn"> Categories </button>
 							<div class="dropdown-content">
-								<a href="/events?q=music">MUSIC</a>
-								<a href="/events?q=happy hours">HAPPY HOURS</a>
-								<a href="/events?q=art">ART</a>
-								<a href="/events?q=film theater">FILM & THEATER</a>
-								<a href="/events?q=dance">DANCE</a>
-								<a href="/events?q=comedy">COMEDY</a>
-								<a href="/events?q=sports fitness">SPORTS & FITNESS</a>
-								<a href="/events?q=special events">SPECIAL EVENTS</a>
-								<a href="/events?q=fashion">FASHION</a>
-								<a href="/events?q=social">SOCIAL</a>
-								<a href="/events?q=food drink">FOOD & DRINK</a>
-								<a href="/events?q=books poetry writing">BOOKS / POETRY / WRITING</a>
-								<a href="/events?q=outdoors nature">OUTDOORS / NATURE</a>
-								<a href="/events?q=health wellness">HEALTH & WELLNESS</a>
-								<a href="/events?q=business tech">BUSINESS / TECH</a>
-								<a href="/events?q=civic engagement">CIVIC ENGAGEMENT</a>
-								<a href="/events?q=deals">DEALS</a>
+								<a href="/events?q=MUSIC">MUSIC</a>
+								<a href="/events?q=HAPPY HOURS">HAPPY HOURS</a>
+								<a href="/events?q=ART">ART</a>
+								<a href="/events?q=FILM & THEATER">FILM & THEATER</a>
+								<a href="/events?q=DANCE">DANCE</a>
+								<a href="/events?q=COMEDY">COMEDY</a>
+								<a href="/events?q=SPORTS & FITNESS">SPORTS & FITNESS</a>
+								<a href="/events?q=SPECIAL EVENTS">SPECIAL EVENTS</a>
+								<a href="/events?q=FASHION">FASHION</a>
+								<a href="/events?q=SOCIAL">SOCIAL</a>
+								<a href="/events?q=FOOD & DRINK">FOOD & DRINK</a>
+								<a href="/events?q=BOOKS / POETRY / WRITING">BOOKS / POETRY / WRITING</a>
+								<a href="/events?q=OUTDOORS & NATURE">OUTDOORS / NATURE</a>
+								<a href="/events?q=HEALTH & WELLNESS">HEALTH & WELLNESS</a>
+								<a href="/events?q=BUSINESS & TECH">BUSINESS / TECH</a>
+								<a href="/events?q=CIVIC ENAGEMENT">CIVIC ENGAGEMENT</a>
+								<a href="/events?q=DEALS">DEALS</a>
 							</div>
 						</div>
 							<div class="clearbtn"><a href="/events">Clear</a></div>
@@ -91,7 +91,7 @@
 								<a href="/events/{{$event->id}}" class="be-img-block">
 								<img src="img/p1.jpg" alt="Checkout this event">
 								</a>
-								<a href="page1.html" class="be-post-title">{{ $event->title }}</a>
+								<a href="/events/{{$event->id}}" class="be-post-title">{{ $event->title }}</a>
 								<span>
 									<p>	{{ $event->category }} </p>
 									<p>	{{ $event->date }} </p>
@@ -100,7 +100,7 @@
 								</span>
 								<div class="author-post">
 									<img src="img/a1.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">{{ $event['user']['name'] }}</a></span>
+									<span>by <a href="/accounts/{{$event['user']['id']}}">{{ $event['user']['name'] }}</a></span>
 								</div>
 								<div class="info-block">
 									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
