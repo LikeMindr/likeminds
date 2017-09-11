@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use User;
-user Event;
+use Event;
 
 class Attend extends Model
 {

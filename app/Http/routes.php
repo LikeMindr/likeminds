@@ -18,6 +18,10 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+Route::get('auth/facebook', 'Auth\AuthController@redirectToFacebook');
+Route::get('auth/facebook/callback', 'Auth\AuthController@handleFacebookCallback');
+Route::get('auth/google', 'Auth\AuthController@redirectToGoogle');
+Route::get('auth/google/callback', 'Auth\AuthController@handleGoogleCallback');
 
 Route::get('/', function () {
     return view('welcome');

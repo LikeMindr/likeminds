@@ -23,7 +23,7 @@ class EventsController extends Controller
 			$events = Event::search($q);
 		}
 		else {
-			$events = Event::with('user')->paginate(20);
+			$events = Event::with('user')->orderBy('id', 'desc')->paginate(20);
 		}
 		
 		$trends = Event::trends();
@@ -59,6 +59,8 @@ class EventsController extends Controller
 		$event->category = $request->category;
 		$event->num_people = $request->num_people;
 		$event->save();
+
+		return \Redirect::action('EventsController@index');
     }
 
     /**
