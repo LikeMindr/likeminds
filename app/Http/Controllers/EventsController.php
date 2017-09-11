@@ -11,6 +11,10 @@ use App\Http\Controllers\Input;
 
 class EventsController extends Controller
 {
+	public function __construct() 
+	{
+		$this->middleware("auth", ['except' => ["show", "index"]]);
+	}
     /**
      * Display a listing of the resource.
      *
