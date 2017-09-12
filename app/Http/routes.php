@@ -39,3 +39,4 @@ Route::resource('attends', 'AttendsController');
 
 Route::any('attends/cancel/{event_id}/{user_id}', 
 	['as' => 'attends.cancel', 'uses' => 'AttendsController@cancel']);
+
