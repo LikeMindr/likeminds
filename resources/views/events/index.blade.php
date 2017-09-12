@@ -17,7 +17,7 @@
 
 	<!-- MAIN CONTENT -->
 
-	<div id="content-block">
+	<div id="profile-page-bg">
 		<div class="head-bg">
 			<div class="head-bg-img"></div>
 
@@ -27,32 +27,32 @@
 				<div class="col-md-2 left-feild">
 					<form method="GET" action="{{ action('EventsController@index') }}"
 						class="input-search">
-						<input type="text" required="" name="q" placeholder="Enter keyword">
+						<input type="text" required="" name="q" placeholder="SEARCH EVENTS">
 							<i class="fa fa-search"></i>
 							<input type="submit" value="">
 					</form>
 				</div>
-				<div class="col-md-10 ">
+			<div class="row">
+				<div class="col-md-2 left-feild">
 						<div class="dropdown">
-							<button class="dropbtn"> Categories </button>
+							<button class="dropbtn"> CATEGORIES </button>
 							<div class="dropdown-content">
-								<a href="/events?q=MUSIC">MUSIC</a>
-								<a href="/events?q=HAPPY HOURS">HAPPY HOURS</a>
 								<a href="/events?q=ART">ART</a>
-								<a href="/events?q=FILM & THEATER">FILM & THEATER</a>
-								<a href="/events?q=DANCE">DANCE</a>
-								<a href="/events?q=COMEDY">COMEDY</a>
-								<a href="/events?q=SPORTS & FITNESS">SPORTS & FITNESS</a>
-								<a href="/events?q=SPECIAL EVENTS">SPECIAL EVENTS</a>
-								<a href="/events?q=FASHION">FASHION</a>
-								<a href="/events?q=SOCIAL">SOCIAL</a>
-								<a href="/events?q=FOOD & DRINK">FOOD & DRINK</a>
 								<a href="/events?q=BOOKS / POETRY / WRITING">BOOKS / POETRY / WRITING</a>
-								<a href="/events?q=OUTDOORS & NATURE">OUTDOORS / NATURE</a>
-								<a href="/events?q=HEALTH & WELLNESS">HEALTH & WELLNESS</a>
 								<a href="/events?q=BUSINESS & TECH">BUSINESS / TECH</a>
 								<a href="/events?q=CIVIC ENAGEMENT">CIVIC ENGAGEMENT</a>
+								<a href="/events?q=COMEDY">COMEDY</a>
+								<a href="/events?q=DANCE">DANCE</a>
 								<a href="/events?q=DEALS">DEALS</a>
+								<a href="/events?q=FASHION">FASHION</a>
+								<a href="/events?q=FILM & THEATER">FILM & THEATER</a>
+								<a href="/events?q=FOOD & DRINK">FOOD & DRINK</a>
+								<a href="/events?q=HAPPY HOURS">HAPPY HOURS</a>
+								<a href="/events?q=HEALTH & WELLNESS">HEALTH & WELLNESS</a>
+								<a href="/events?q=OUTDOORS & NATURE">OUTDOORS / NATURE</a>
+								<a href="/events?q=SOCIAL">SOCIAL</a>
+								<a href="/events?q=SPECIAL EVENTS">SPECIAL EVENTS</a>
+								<a href="/events?q=SPORTS & FITNESS">SPORTS & FITNESS</a>
 							</div>
 						</div>
 							<div class="clearbtn"><a href="/events">Clear</a></div>

@@ -20,7 +20,7 @@
 
 	<!-- MAIN CONTENT -->
 
-<div id="content-block">
+<div id="profile-page-bg">
 	<div class="container custom-container be-detail-container">
 		<div class="row">
 			<div class="col-md-9 col-md-push-3">
