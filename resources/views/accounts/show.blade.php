@@ -34,7 +34,7 @@
 								</div>
 							</div>
   							<img src="/assets/img/usericon.png" width="300px" height="300px">
-							<p class="be-use-name">FIRST, LAST</p>
+							<p class="be-use-name">{{$user->name}}</p>
 							<div class="be-user-info">
 								San Antonio, Tx
 							</div>

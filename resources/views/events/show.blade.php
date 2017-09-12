@@ -42,14 +42,34 @@
 						<div class="post-text">
 							<h6>{{ $event->description }}</h6>
 						</div>
-						    @if(Auth::check())
+
+						<?php $user = App\User::find(Auth::id());
+							$attending = false;
+							foreach($user->attends as $element) {
+								if($element['event_id'] == $event->id) {
+									$attending = true;
+								}
+							}
+							if(Auth::check() && $attending && Auth::id() != $event['user']['id']): ?>
+							<a href="/attends/cancel/{{$event->id}}/{{Auth::id()}}">
+								<button>Cancel</button>
+							</a>
+							<?php elseif(Auth::check() && Auth::id() != $event['user']['id']): ?>
 						<form method="POST" action="{{ action('AttendsController@store') }}">
 							{!! csrf_field() !!}
 							<input type="hidden" value="{{Auth::id()}}" name="user_id">
 							<input type="hidden" value="{{$event->id}}" name="event_id">
 							<button>Sign Up For This Event</button>
 						</form>
-						@endif
+						<?php endif;  ?>
+
+						<?php if(Auth::check() && Auth::id() == $event['user']['id']): ?>
+						<form method="GET" 
+							action="{{ action('EventsController@edit', array($event->id)) }}">
+							{!! csrf_field() !!}
+							<button>Edit This Event</button>
+						</form>
+						<?php endif;  ?>
 					</div>
 				</div>
 </div>
