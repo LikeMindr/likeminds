@@ -10,10 +10,10 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Auth;
 
 class AuthController extends Controller
 {
-	protected $redirectPath = '/';
 	/**
      * Redirect the user to the Facebook authentication page.
      *
@@ -120,4 +120,8 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+	public function authenticated($request, $user) {
+		return redirect('/accounts/' . $user->id);
+	}
 }
