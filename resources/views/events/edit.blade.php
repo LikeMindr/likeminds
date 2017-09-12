@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-<title> Create Event </title>
+<title> Edit This Event </title>
 @stop
 @section('content')
 <div class="be-loader">
@@ -26,12 +26,12 @@
 					<div class="form-group">
 						<h2>Title</h2>
 						<input class="form-control" type="text" name="title"
-						value="{{ old('title') }}" autofocus>
+						value="{{ $event->title }}" autofocus>
 					</div>
 					<div class="form-group">
 						<h2>Category</h2>
 						<select class="form-control" type="text" name="category"
-						value="{{ old('category') }}">
+						value="{{ $event->category }}">
 							<option value="MUSIC">MUSIC</option>
 							<option value="HAPPY HOURS">HAPPY HOURS</option>
 							<option value="ART">ART</option>
@@ -54,27 +54,27 @@
 					<div class="form-group">
 						<h2>Location</h2>
 						<input class="form-control" type="text" name="location"
-						value="{{ old('location') }}">
+						value="{{ $event->location }}">
 					</div>
 					<div class="form-group">
 						<h2>Date</h2>
 						<input class="form-control" type="date" name="date"
-						value="{{ old('date') }}">
+						value="{{ $event->date }}">
 					</div>
 					<div class="form-group">
 						<h2>Time</h2>
 						<input class="form-control" type="time" name="time"
-						value="{{ old('time') }}">
+						value="{{ $event->time }}">
 					</div>
 					<div class="form-group">
 						<h2>Number of Guests</h2>
 						<input class="form-control" type="number" name="num_people"
-						value="{{ old('num_people') }}">
+						value="{{ $event->num_people }}">
 					</div>
 					<div class="form-group">
 						<h2>Description</h2>
 						<textarea class="form-control text-form" rows="15"
-						name="description">{{ old('description') }}</textarea>
+						name="description">{{ $event->description }}</textarea>
 					</div>
 					{{ method_field('PUT') }}
 					<button class="btn btn-primary right" id="submit">Submit</button>
