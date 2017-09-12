@@ -164,9 +164,9 @@ section h2.sub-title{
     float: left;
     display: inline;
     width: 160px;
-    margin: 0 15px 15px 0;
-    font: 8pt Montserrat;
-    line-height: 1.3em;
+    margin: 0 10px 10px 0;
+    font: 10pt Montserrat;
+    line-height: 1.8em;
   }
 
   .section h3{
@@ -185,7 +185,7 @@ section h2.sub-title{
     width: 700px;
     text-align: center;
     clear: both;
-    font: 10pt verdana;
+    font: 10pt Montserrat;
     line-height: 2em;
     padding: 40px 0 0 0;
   }
