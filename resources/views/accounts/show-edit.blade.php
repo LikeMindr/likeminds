@@ -44,24 +44,27 @@
 
 
 	<!-- MAIN CONTENT -->
-	<div id="profile-page-bg">
+	<div id="content-block">
 		<div class="container be-detail-container">
 			<div class="row">
 				<div class="col-xs-12 col-md-3 left-feild">
 					<div class="be-vidget back-block">
-						<a class="btn full color-1 size-1 hover-1" href="/accounts/{{Auth::id()}}"><i class="fa fa-chevron-left"></i>BACK TO PROFILE</a>
+						<a class="btn full color-1 size-1 hover-1" href="author.html"><i class="fa fa-chevron-left"></i>back to profile</a>
 					</div>
 					<div class="be-vidget hidden-xs hidden-sm" id="scrollspy">
 						<h3 class="letf-menu-article">
-							CHOOSE CATEGORY
+							Choose Category
 						</h3>
 						<div class="creative_filds_block">
 							<ul class="ul nav">
-								<li class="edit-ln"><a href="#basic-information">BASIC INFORMATION</a></li>
-								<li class="edit-ln"><a href="#edit-password">EDIT PASSWORD</a></li>
-								<li class="edit-ln"><a href="#about-me">ABOUT ME</a></li>
+								<li class="edit-ln"><a href="#basic-information">Basic Information</a></li>
+								<li class="edit-ln"><a href="#edit-password">Edit Password</a></li>
+								<li class="edit-ln"><a href="#on-the-web">On The Web</a></li>
+								<li class="edit-ln"><a href="#about-me">About Me</a></li>
+								<li class="edit-ln"><a href="#web-references">Web References</a></li>
 							</ul>
 						</div>
+						<a class="btn full color-1 size-1 hover-1 add_section"><i class="fa fa-plus"></i>add sections</a>	
 					</div>
 
 				</div>
@@ -69,7 +72,7 @@
 					<div class="sec"  data-sec="basic-information">
 						<div class="be-large-post">
 							<div class="info-block style-2">
-								<div class="be-large-post-align "><h3 class="info-block-label">BASIC INFORMATION</h3></div>
+								<div class="be-large-post-align "><h3 class="info-block-label">Basic Information</h3></div>
 							</div>
 							<div class="be-large-post-align">
 								<div class="be-change-ava">
@@ -83,23 +86,35 @@
 								<div class="row">
 									<div class="input-col col-xs-12 col-sm-6">
 										<div class="form-group fg_icon focus-2">
-											<div class="form-label">FIRST NAME</div>
-											<input class="form-input" type="text" value="">
+											<div class="form-label">First Name</div>
+											<input class="form-input" type="text" value="Taylor">
 										</div>							
 									</div>
 									<div class="input-col col-xs-12 col-sm-6">
 										<div class="form-group focus-2">
-											<div class="form-label">LAST NAME</div>									
-											<input class="form-input" type="text" value="">
+											<div class="form-label">Last Name</div>									
+											<input class="form-input" type="text" value="Leight">
+										</div>								
+									</div>
+									<div class="input-col col-xs-12">
+										<div class="form-group focus-2">
+											<div class="form-label">Occupation</div>									
+											<input class="form-input" type="text" value="UI/UX, Web Design, Art Direction">
+										</div>								
+									</div>
+									<div class="input-col col-xs-12">
+										<div class="form-group focus-2">
+											<div class="form-label">Company</div>									
+											<input class="form-input" type="text" placeholder="">
 										</div>								
 									</div>
 									<div class="input-col col-xs-12 col-sm-6">
-										<div class="form-label">COUNTRY</div>
+										<div class="form-label">Country</div>
 										<div class="be-drop-down icon-none">
-											<span class="be-dropdown-content"> USA </span>
+											<span class="be-dropdown-content"> United Kingdom </span>
 											<ul class="drop-down-list">
 												<li><a>USA</a></li>
-												<li><a>United Kingdom</a></li>
+												<li><a>India</a></li>
 												<li><a>Mexica</a></li>
 												<li><a>Russia</a></li>
 												<li><a>Italy</a></li>
@@ -108,10 +123,16 @@
 									</div>
 									<div class="input-col col-xs-12 col-sm-6">
 										<div class="form-group focus-2">
-											<div class="form-label">CITY</div>									
-											<input class="form-input" type="text" value="">
+											<div class="form-label">City</div>									
+											<input class="form-input" type="text" value="Barnsley">
 										</div>								
-									</div>							
+									</div>
+									<div class="input-col col-xs-12">
+										<div class="form-group focus-2">
+											<div class="form-label">Website URL</div>									
+											<input class="form-input" type="text" value="http:// www.phoenix.cool">
+										</div>								
+									</div>								
 								</div>
 							</div>
 						</div>
@@ -119,30 +140,30 @@
 					<div class="sec"  data-sec="edit-password">
 						<div class="be-large-post">
 							<div class="info-block style-2">
-								<div class="be-large-post-align"><h3 class="info-block-label">PASSWORD</h3></div>
+								<div class="be-large-post-align"><h3 class="info-block-label">Password</h3></div>
 							</div>
 							<div class="be-large-post-align">
 								<div class="row">
 									<div class="input-col col-xs-12 col-sm-4">
 										<div class="form-group focus-2">
-											<div class="form-label">OLD PASSWORD</div>									
+											<div class="form-label">Old Password</div>									
 											<input class="form-input" type="password" placeholder="">
 										</div>								
 									</div>
 									<div class="input-col col-xs-12 col-sm-4">
 										<div class="form-group focus-2">
-											<div class="form-label">NEW PASSWORD</div>									
+											<div class="form-label">New Password</div>									
 											<input class="form-input" type="password" placeholder="">
 										</div>								
 									</div>
 									<div class="input-col col-xs-12 col-sm-4">
 										<div class="form-group focus-2">
-											<div class="form-label">REPEAT PASSWORD</div>									
+											<div class="form-label">Repeat Password</div>									
 											<input class="form-input" type="password" placeholder="">
 										</div>								
 									</div>
 									<div class="col-xs-12">
-										<a class="btn color-1 size-2 hover-1 btn-right">CHANGE PASSWORD</a>
+										<a class="btn color-1 size-2 hover-1 btn-right">change password</a>
 									</div>																
 								</div>
 							</div>
@@ -151,7 +172,7 @@
 					<div class="sec" data-sec="on-the-web">
 						<div class="be-large-post m-social">
 							<div class="info-block style-2">
-								<div class="be-large-post-align"><h3 class="info-block-label">ON THE WEB</h3></div>
+								<div class="be-large-post-align"><h3 class="info-block-label">On The Web</h3></div>
 							</div>
 							<div class="be-large-post-align">
 								<div class="social-input form-group focus-2">
@@ -160,7 +181,7 @@
 										<a class="social-btn color-1" href="blog-detail-2.html"><i class="fa fa-facebook"></i></a>
 									</div>
 									<div class="s_input">
-										<input class="form-input" type="text" value="http:// facebook.com/">
+										<input class="form-input" type="text" value="http:// facebook.com/taylor">
 									</div>
 								</div>
 								<div class="social-input form-group focus-2">
@@ -169,7 +190,16 @@
 										<a class="social-btn color-2" href="blog-detail-2.html"><i class="fa fa-twitter"></i></a>
 									</div>
 									<div class="s_input">
-										<input class="form-input" type="text" value="http:// twitter.com/">
+										<input class="form-input" type="text" value="http:// twitter.com/taylor">
+									</div>
+								</div>
+								<div class="social-input form-group focus-2">
+									<div class="s_icon">
+										<div class="social-bars"><i class="fa fa-bars"></i></div>
+										<a class="social-btn color-3" href="blog-detail-2.html"><i class="fa fa-google-plus"></i></a>
+									</div>
+									<div class="s_input">
+										<input class="form-input" type="text" value="http:// googleplus.com/taylor">
 									</div>
 								</div>
 								<div class="social-input form-group focus-2">
@@ -178,7 +208,7 @@
 										<a class="social-btn color-4" href="blog-detail-2.html"><i class="fa fa-pinterest-p"></i></a>
 									</div>
 									<div class="s_input">
-										<input class="form-input" type="text" value="http:// pinterest.com/">
+										<input class="form-input" type="text" value="http:// pinterest.com/taylor">
 									</div>
 								</div>
 								<div class="social-input form-group focus-2">
@@ -187,7 +217,7 @@
 										<a class="social-btn color-5" href="blog-detail-2.html"><i class="fa fa-instagram"></i></a>
 									</div>
 									<div class="s_input">
-										<input class="form-input" type="text" value="http:// instagram.com/">
+										<input class="form-input" type="text" value="http:// instagram.com/taylor">
 									</div>
 								</div>																													
 							</div>
@@ -197,13 +227,19 @@
 					<div class="sec"  data-sec="about-me" >
 						<div class="be-large-post">
 							<div class="info-block style-2">
-								<div class="be-large-post-align"><h3 class="info-block-label">ABOUT ME</h3></div>
+								<div class="be-large-post-align"><h3 class="info-block-label">About Me</h3></div>
 							</div>
 							<div class="be-large-post-align">
 								<div class="row">
 									<div class="input-col col-xs-12">
 										<div class="form-group focus-2">
-											<div class="form-label">DESCRIPTION</div>
+											<div class="form-label">Section Title</div>									
+											<input class="form-input" type="text" placeholder="About Me">
+										</div>								
+									</div>
+									<div class="input-col col-xs-12">
+										<div class="form-group focus-2">
+											<div class="form-label">Description</div>
 											<textarea class="form-input" required="" placeholder="Something about you"></textarea>
 										</div>
 									</div>
@@ -212,7 +248,33 @@
 						</div>
 					</div>
 
-					<a class="btn full color-1 size-1 hover-1 add_section"><i class="fa fa-plus"></i>UPDATE PROFILE</a>																				
+					<div class=" sec" data-sec="web-references">
+						<div class="be-large-post">
+							<div class="info-block style-2">
+								<div class="be-large-post-align"><h3 class="info-block-label">Web References</h3></div>
+							</div>
+							<div class="be-large-post-align">
+								<div class="row">
+									<div class="input-col col-xs-12 col-sm-5">
+										<div class="form-group focus-2">
+											<div class="form-label">Link Title</div>									
+											<input class="form-input" type="text" placeholder="Enter title">
+										</div>								
+									</div>
+									<div class="input-col col-xs-12 col-sm-5">
+										<div class="form-group focus-2">
+											<div class="form-label">Link descriprion</div>									
+											<input class="form-input" type="text" placeholder="Enter descriprion">
+										</div>								
+									</div>
+									<div class="col-xs-12 col-sm-2">								
+										<a href="blog-detail-2.html" class="btn full btn-input color-1 size-4 hover-1">add</a>
+									</div>
+								</div>							
+							</div>
+						</div>
+					</div>
+					<a class="btn full color-1 size-1 hover-1 add_section"><i class="fa fa-plus"></i>add sections</a>																				
 				</div>				
 			</div>
 		</div>

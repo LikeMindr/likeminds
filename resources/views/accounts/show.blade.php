@@ -12,24 +12,10 @@
 				<div class="col-xs-12 col-md-4 left-feild">
 					<div class="be-user-block style-3">
 						<div class="be-user-detail">
-							<a class="be-ava-user style-2" href="page1.html">
-								<img src="img/ava_10.jpg" alt=""> 
-							</a>
-							<a class="be-ava-left btn color-1 size-2 hover-1"><i class="fa fa-plus"></i>Follow</a>
-							<div class="be-ava-right btn btn-message color-4 size-2 hover-7">
-								<i class="fa fa-envelope-o"></i>message
+
+							<div class="be-ava-right btn">
 								<div class="message-popup">
-									<div class="message-popup-inner container">
-										<div class="row">
-											<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-												<i class="fa fa-times close-button"></i>
-												<h5 class="large-popup-title">Send Message To DaVinchi</h5>
-												<div class="form-group">
-													<textarea class="form-input" required="" placeholder="Your text"></textarea>
-												</div>
-												<a class="btn btn-right color-1 size-1 hover-1">send message</a>	
-											</div>
-										</div>
+									<div class="container">
 									</div>
 								</div>
 							</div>
@@ -38,16 +24,12 @@
 							<div class="be-user-info">
 								San Antonio, Tx
 							</div>
-							<!-- <div class="be-text-tags style-2">
-								<a href="page1.html">UI/UX</a>,
-								<a href="page1.html">Web Design</a>,
-								<a href="page1.html">Art Direction</a>
-							</div> -->
 							<div class="be-user-social">							
 								<a class="social-btn color-1" href="page1.html"><i class="fa fa-facebook"></i></a>
 								<a class="social-btn color-2" href="page1.html"><i class="fa fa-twitter"></i></a>
 								<a class="social-btn color-4" href="page1.html"><i class="fa fa-pinterest-p"></i></a>
 								<a class="social-btn color-5" href="page1.html"><i class="fa fa-instagram"></i></a>
+								<a class="btn color-1 size-2 hover-1"><i class="fa fa-plus"></i>MESSAGE</a>
 							</div>
 						</div>
 						<div class="be-user-statistic">
@@ -81,7 +63,7 @@
                                     <span>MY EVENTS</span>
                                 </div>
                                 <div class="nav-tab-item ">
-                                    <span>EDIT PROFILE</span>
+                                    <a href="/accounts/{{Auth::id()}}/edit" ><span>EDIT PROFILE</span></a>
                                 </div> 
                             	@else
                                 <div class="nav-tab-item active">
@@ -95,7 +77,6 @@
 								<div class="row">
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p1.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">The kitsch destruction of our world</a>
@@ -117,7 +98,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p2.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Treebeard</a>
@@ -139,7 +119,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p3.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Colors of Ramadan</a>
@@ -161,7 +140,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p13.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Fran Ewald for The Diaries Project</a>
@@ -183,7 +161,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p7.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">raindrops monochrome</a>
@@ -205,7 +182,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p8.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Racing Queensland</a>
@@ -227,7 +203,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p13.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Stay Ahead Series</a>
@@ -249,7 +224,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p14.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Faber-Castell / Psychological Problems</a>
@@ -271,7 +245,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p15.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Garry Simpson - Bridges - Intelligent Life Magazinen</a>
@@ -297,7 +270,6 @@
 								<div class="row">
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p8.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Racing Queensland</a>
@@ -319,7 +291,6 @@
 									</div>								
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p12.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Face</a>
@@ -341,7 +312,6 @@
 									</div>								
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p2.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Treebeard</a>
@@ -363,7 +333,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p3.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Colors of Ramadan</a>
@@ -385,7 +354,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p4.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Leaving Home - L'Officiel Ukraine</a>
@@ -407,7 +375,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p7.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">raindrops monochrome</a>
@@ -429,7 +396,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p9.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">NAHA Finalist Hairstylist of the Year Allen Ruiz</a>
@@ -451,7 +417,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p13.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Stay Ahead Series</a>
@@ -473,7 +438,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p14.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Faber-Castell / Psychological Problems</a>
@@ -499,7 +463,6 @@
 								<div class="row">
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p16.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Wisdom For My Children, Life Lessons Through</a>
@@ -513,7 +476,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p17.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Créations Namale</a>
@@ -526,7 +488,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p18.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Crossfit : 15.4 Open Workout</a>
@@ -539,7 +500,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p15.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Garry Simpson - Bridges - Intelligent Life Magazine</a>
@@ -552,7 +512,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p14.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Faber-Castell / Psychological Problems</a>
@@ -565,7 +524,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p13.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Stay Ahead Series</a>
@@ -578,7 +536,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p12.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Face</a>
@@ -591,7 +548,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p19.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Promoção Facas Extra</a>
@@ -604,7 +560,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p11.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Tropicalia</a>
@@ -617,7 +572,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p10.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">tomorrow</a>
@@ -630,7 +584,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p9.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">NAHA Finalist Hairstylist of the Year Allen Ruiz</a>
@@ -643,7 +596,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post style-4">
-											<a href="page1.html" class="be-img-block">
 											<img src="img/p8.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Racing Queensland</a>
