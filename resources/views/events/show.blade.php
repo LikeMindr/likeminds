@@ -43,12 +43,14 @@
 							<h6>{{ $event->description }}</h6>
 						</div>
 
-						<?php $user = App\User::find(Auth::id());
+						<?php if (Auth::check()) {
+							$user = App\User::find(Auth::id());
 							$attending = false;
 							foreach($user->attends as $element) {
 								if($element['event_id'] == $event->id) {
 									$attending = true;
 								}
+							}
 							}
 							if(Auth::check() && $attending && Auth::id() != $event['user']['id']): ?>
 							<a href="/attends/cancel/{{$event->id}}/{{Auth::id()}}">
@@ -69,7 +71,7 @@
 							{!! csrf_field() !!}
 							<button>Edit This Event</button>
 						</form>
-						<?php endif;  ?>
+						<?php endif; ?>
 					</div>
 				</div>
 </div>
