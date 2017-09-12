@@ -77,7 +77,6 @@
 								<div class="row">
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<img src="img/p1.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">The kitsch destruction of our world</a>
 											<span>
@@ -98,7 +97,6 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<img src="img/p2.jpg" alt="omg">
 											</a>
 											<a href="page1.html" class="be-post-title">Treebeard</a>
 											<span>
@@ -119,7 +117,7 @@
 									</div>
 									<div class="col-ml-12 col-xs-6 col-sm-4">
 										<div class="be-post">
-											<img src="img/p3.jpg" alt="omg">
+					
 											</a>
 											<a href="page1.html" class="be-post-title">Colors of Ramadan</a>
 											<span>
