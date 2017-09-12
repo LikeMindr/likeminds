@@ -20,12 +20,17 @@
 		<div class="be-large-post large-area">
 			<div class="info-block style-2">
 				<div class="be-large-post-align "><h3 class="info-block-label">Your Event</h3></div>
-				<form method="POST" action="{{ action('EventsController@store') }}">
+				<form method="POST" action="{{ action('EventsController@store') }}"
+					enctype="multipart/form-data">
 					{!! csrf_field() !!}
 					<div class="form-group">
 						<h2>Title</h2>
 						<input class="form-control" type="text" name="title"
 						value="{{ old('title') }}" autofocus>
+					</div>
+					<div class="form-group">
+						<h2>Image</h2>
+						<input type="file" name="file" id="file">
 					</div>
 					<div class="form-group">
 						<h2>Category</h2>
