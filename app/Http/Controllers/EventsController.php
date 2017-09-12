@@ -112,4 +112,16 @@ class EventsController extends Controller
     {
         //
     }
+
+	public function image($cat) 
+	{
+		switch($cat) {
+			case "MUSIC":
+				return "storage/app/cat-dance.jpg";
+				break;
+			case  "HAPPY HOURS":
+				return "storage/app/cat-happyhour.jpg";
+				break;
+		}
+	}
 }
