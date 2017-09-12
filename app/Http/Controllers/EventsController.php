@@ -11,6 +11,9 @@ use App\Http\Controllers\Input;
 use Auth;
 use App\Attend;
 
+use Storage;
+
+
 class EventsController extends Controller
 {
 	public function __construct() 
@@ -66,6 +69,21 @@ class EventsController extends Controller
 		$event->num_people = $request->num_people;
 		$event->created_by = Auth::id();
 		$event->save();
+
+	//	$imageName = $event->id . '.' .
+	//		$request->file('image')->getClientOriginalExtension();
+
+	//	$request->file('image')->move(
+	//		base_path() . '/public/assets/img/', $imageName);
+
+		$file = $request->file('file');
+		$filename = $event->id . '.' . $file->getClientOriginalExtension();
+		$filepath = '/public/assets/img/';
+		Storage::put(
+			'img/' . $filename,
+			file_get_contents($file->getRealPath())
+		);
+	//	$file->move($filepath, $filename);	
 
 		return \Redirect::action('EventsController@index');
     }
