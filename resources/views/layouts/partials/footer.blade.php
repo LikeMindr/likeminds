@@ -12,7 +12,9 @@
          <div class="section-foot">
             <h3>SUPPORT</h3>
             <a href="#">FAQS</a>
+            <br>
             <a href="#">CONTACT US</a>
+            <br>
             <a href="/privacy">PRIVACY POLICY</a>
          </div>
          <div class="section-foot">
@@ -24,17 +26,20 @@
          <div class="section-foot">
             <h3>FOLLOW US</h3>
             <a href="#">FACEBOOK</a>
+            <br>
             <a href="#">TWITTER</a>
             <a href="#">BLOG</a>
          </div>
          <div class="section-foot">
             <h3>ABOUT US</h3>
             <a href="#">ABOUT</a>
+            <br>
             <a href="#">TESTIMONIALS</a>
+            <br>
             <a href="#">THE TEAM</a>
          </div>
          <div class="legality">
-            <img src="/assets/img/logoh.png" alt="Likeminds.at" style="width:15%"><br><br>
+            <img src="/assets/img/logoh.png" alt="Likeminds.at" style="width:16%"><br>
             © Copyright 2017 LikeMinds.At
          </div>
       </div>
