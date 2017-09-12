@@ -89,4 +89,10 @@ class AttendsController extends Controller
     {
         //
     }
+
+	public function cancel(Request $request) {
+		Attend::cancel($request->event_id, $request->user_id);
+		return \Redirect::action('EventsController@index');
+	}
+
 }

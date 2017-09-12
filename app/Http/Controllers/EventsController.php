@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Event;
 use App\Http\Controllers\Input;
+use Auth;
+use App\Attend;
 
 class EventsController extends Controller
 {
@@ -62,6 +64,7 @@ class EventsController extends Controller
 		$event->location = $request->location;
 		$event->category = $request->category;
 		$event->num_people = $request->num_people;
+		$event->created_by = Auth::id();
 		$event->save();
 
 		return \Redirect::action('EventsController@index');
@@ -87,7 +90,8 @@ class EventsController extends Controller
      */
     public function edit($id)
     {
-        //
+		$event = Event::findOrFail($id);
+		return view('events.edit', ['event' => $event]);
     }
 
     /**
@@ -99,7 +103,19 @@ class EventsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+		$event = Event::findOrFail($id);
+		
+		$event->title = $request->title;
+		$event->description = $request->description;
+		$event->date = $request->date;
+		$event->time = $request->time;
+		$event->location = $request->location;
+		$event->category = $request->category;
+		$event->num_people = $request->num_people;
+		$event->created_by = Auth::id();
+		$event->save();
+
+		return \Redirect::action('EventsController@index');
     }
 
     /**
@@ -110,6 +126,10 @@ class EventsController extends Controller
      */
     public function destroy($id)
     {
-        //
+		$event = Event::findOrFail($id);
+		Attend::remove($id);
+		$event->delete();
+
+		return \Redirect::action('EventsController@index');
     }
 }
