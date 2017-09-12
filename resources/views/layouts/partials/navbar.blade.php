@@ -31,7 +31,7 @@
       Navigation
       //////////////////////////////////////////////// -->
    <header id="header" class="lazy-load">
-      <nav>
+      <!-- <nav>
          <ul class="desktop-menu" id="desktopMenu">
             <li>
                <a id="home" href="/">
@@ -70,7 +70,7 @@
                </a>
             </li>
             <ul class="desktopMenu hidden-xs desktop-link">
-               <span class="navbar-text">WELCOME <?= Auth::user()->name; ?></span>
+               <span class="navbar-text">WELCOME
             </ul>
             @else
             <li class="desktop-link">
@@ -91,41 +91,55 @@
 
 <br>
 <br>
-<br>
+<br> -->
 <!-- ================================================ -->
-
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					 <!-- Brand and toggle get grouped for better mobile display -->
-					 <div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-							<a class="navbar-brand" href="welcome.html">Volunteer Now</a>
-					 </div>
-					 <!-- Collect the nav links, forms, and other content for toggling -->
-					 <div class="collapse navbar-collapse" id="defaultNavbar1">
-							<ul class="nav navbar-nav">
-								 <li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Register<span class="caret"></span></a>
-										<ul class="dropdown-menu" role="menu">
-											 <li><a href="#">Register as a Nonprofit</a></li>
-											 <li><a href="#">Register as an Employer</a></li>
-											 <li><a href="#">Register as an employee</a></li>
-										</ul>
-								 </li>
-								 <li ><a href="masterCalendar.html">Opportunities<span class="sr-only">(current)</span></a>
-								 <li><a href="auth/login.html">Login</a></li>
-								 <li><a href="welcome.html">About Us</a></li>
-							</ul>
-							<form class="navbar-form navbar-right" role="search">
-								 <div class="form-group">
-										<input type="text" class="form-control" placeholder="Search">
-								 </div>
-								 <button type="submit" class="btn btn-default">Submit</button>
-							</form>
-					 </div>
-					 <!-- /.navbar-collapse -->
-				</div>
-				<!-- /.container-fluid -->
-		 </nav>
+			<style>
+         .lma-nav-color {
+         background-color: #32fda9;
+         }
+      </style>
+			<nav class="navbar navbar-default ">
+            <div class="container-fluid lma-nav-color">
+               <!-- Brand and toggle get grouped for better mobile display -->
+               <div class="navbar-header ">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+               </div>
+               <!-- Collect the nav links, forms, and other content for toggling -->
+               <div class="collapse navbar-collapse" id="defaultNavbar1">
+                  <ul class="nav navbar-nav">
+                     <li class=" navbar-btn "><a href="welcome.html"><img src="assets/img/logoh.png" class="" style="width:133px; height:30px;"></a></li>
+                     <li class="btn btn-default navbar-btn dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">EVENTS<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                           <li><a href="/events">ALL EVENTS</a></li>
+                           @if(Auth::check())
+                           <li><a href="/events/create">CREATE</a></li>
+                           @endif
+                        </ul>
+                     </li>
+                     <li type="button" class="btn btn-default navbar-btn dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">PROFILE<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                           @if(Auth::check())
+													 <li><a href="/accounts/{{Auth::id()}}/">VIEW</a></li>
+													 <li><a href="/accounts/{{Auth::id()}}/edit">EDIT</a></li>
+                           @else
+                           <li><a href="/auth/login">LOGIN</a></li>
+                           @endif
+                        </ul>
+                     </li>
+                     <!-- <li><a href="masterCalendar.html">Opportunities<span class="sr-only">(current)</span></a></li>-->
+                     @if(Auth::check())
+                     <li class="btn btn-default navbar-btn "><a href="/auth/logout">LOG OUT</a></li>
+                     <li  class="btn btn-default navbar-btn navbar-text">WELCOME <?= Auth::user()->name; ?></li>
+                     @else
+                     <li class="btn btn-default navbar-btn " ><a href="/auth/login">REGISTER/LOGIN</a></li>
+                     @endif
+                  </ul>
+               </div>
+               <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+         </nav>
    </header>
    <!--Header End-->

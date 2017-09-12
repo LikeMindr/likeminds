@@ -1,963 +1,165 @@
-
-
-
-
-
-Delivered-To: g@stm.pm
-Received: by 10.107.19.157 with SMTP id 29csp1707081iot;
-        Sat, 9 Sep 2017 20:32:50 -0700 (PDT)
-X-Google-Smtp-Source: ADKCNb4Z5OM8baSq0bbo4o/dpcH00trOnmlDpxuRjqG5mQdFSQVBuwEQMgCWtdtqg6l13o4WzWZr
-X-Received: by 10.101.71.193 with SMTP id f1mr1896788pgs.251.1505014370598;
-        Sat, 09 Sep 2017 20:32:50 -0700 (PDT)
-ARC-Seal: i=1; a=rsa-sha256; t=1505014370; cv=none;
-        d=google.com; s=arc-20160816;
-        b=PRxJVLlUUHAbGTsF+5xrLp/E6dOQU26C0jRXu7/hVvRw4A8ZvGXAZ1DtAbWBcCcu1h
-         A7r9ZZX04cp2jdJGxIOk9a5ha3fCeTPRBltKF/p2CX0dinYctHfeXafD+j+c3ZvqQamR
-         dB1JOqunYISy/y91327UcGui+91pWEtDAFtH4d7JNroPm1eQtaxH825i33ZQEUqA/Qd7
-         GPWh2Ie3vVUza22NePbg3iUy8IzuuudXwOYrRSY6PBdJm3ogMEOC75vD02xSZ0EGnLiS
-         D6IEDPHhKwSMqMS23XZSrz/7iE577xxi3viFouv73QojLrAqBjkpCHH/yFhz2Qppvnp9
-         LUOA==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
-        h=list-unsubscribe:content-transfer-encoding:mime-version:subject
-         :message-id:to:reply-to:from:date:dkim-signature
-         :arc-authentication-results;
-        bh=Rs42gmxdr/Lg6GGCL+TWK7n7cjr03Ypi5KyJEdCKwQg=;
-        b=dy2OstwIIT1Lg1aRHrcgL8Ul+EPGXbANudS0+YLF/9Daw6q7wSsqlSevNb1hghgBka
-         VeCCbMa/hqV92Bk07ioCOQsghOPzB42XXaR2Braru04MJGmROD6UJzkygwC2EQ/1QIVL
-         3jYUEdGqe/ZdUL9CrXIrn6pzqe6wdc322PLPSx7Avrr4vIs3G+yU684jC6pRB4hj90DQ
-         cdCyFm/7Ka/BCLe3EyjfRnNoVficHZxHHTcFNLOrIVFl7EDqqA5FsyXTurXuxOUy8W+T
-         o87G4ZqIrNm8WX5s04hXZ4mYwckMuo8q41ZgQ8c71Fksik/3dgyZXKiBFVT6Gl/gkY3K
-         WVpg==
-ARC-Authentication-Results: i=1; mx.google.com;
-       dkim=pass header.i=@squareup.com header.s=201308 header.b=Pw7FM4LY;
-       spf=pass (google.com: domain of mjzofat3dnuu5gzj+noreply=messaging.squareup.com@bounces.squareup.com designates 74.122.190.36 as permitted sender) smtp.mailfrom=mJZoFAT3DnUU5gZJ+noreply=messaging.squareup.com@bounces.squareup.com;
-       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=squareup.com
-Return-Path: <mJZoFAT3DnUU5gZJ+noreply=messaging.squareup.com@bounces.squareup.com>
-Received: from mta.sip.sjc1.squareup.com (mta.sip.sjc1.squareup.com. [74.122.190.36])
-        by mx.google.com with ESMTPS id p9si201014pfj.474.2017.09.09.20.32.49
-        for <g@stm.pm>
-        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
-        Sat, 09 Sep 2017 20:32:50 -0700 (PDT)
-Received-SPF: pass (google.com: domain of mjzofat3dnuu5gzj+noreply=messaging.squareup.com@bounces.squareup.com designates 74.122.190.36 as permitted sender) client-ip=74.122.190.36;
-Authentication-Results: mx.google.com;
-       dkim=pass header.i=@squareup.com header.s=201308 header.b=Pw7FM4LY;
-       spf=pass (google.com: domain of mjzofat3dnuu5gzj+noreply=messaging.squareup.com@bounces.squareup.com designates 74.122.190.36 as permitted sender) smtp.mailfrom=mJZoFAT3DnUU5gZJ+noreply=messaging.squareup.com@bounces.squareup.com;
-       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=squareup.com
-Received: from mta.sip.sjc1.squareup.com (mta.sip.sjc1.squareup.com [74.122.190.36])
-	by cep4.sjc1b.square (Postfix) with ESMTPS id 431F5155
-	for <g@stm.pm>; Sun, 10 Sep 2017 03:32:49 +0000 (UTC)
-Received: from awa271.sjc2b.square (awa271.sjc2b.square [10.4.4.32])
-	by cep4.sjc1b.square (Postfix) with ESMTPS id 26EE38015858F
-	for <g@stm.pm>; Sun, 10 Sep 2017 03:32:49 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=squareup.com;
-	s=201308; t=1505014369;
-	bh=Rs42gmxdr/Lg6GGCL+TWK7n7cjr03Ypi5KyJEdCKwQg=;
-	h=Date:From:Reply-To:To:Message-ID:Subject:Mime-Version:
-	 Content-Type:List-Unsubscribe:From:Content-Type;
-	b=Pw7FM4LY7zOTHvlGgo5ThnUsieF1tAb2Pv6NmU0xWdH8pjKQw9uJvMivDt5Q8jryh
-	 ZUTlPFfgv3go0K+dHjz1wEVrv6PNEZk+OTNRYKqpnEKH2YyRBbJuZnD9kXrPpSijKo
-	 cCV/rgVfkv9bYL47ssDcJGEWxWTZGpZk7FsEsdpE1RdoHimwFABgjc2xqVJqsy+y4X
-	 hht7WHeeX32RKFmidxfwWYPPj6mrqd8L3d14a4f/9I0qnkMNgCA5xyakmptpvdaKKL
-	 SRLG4mksfvqIMvYZEqsox/2nutSGXhiUrdpkkM/uh8cVw04+uN/hoCTbM6zQLnlxoO
-	 jYjDF99DWYhIA==
-Received: from localhost.localdomain (localhost [127.0.0.1])
-	by awa271.sjc2b.square (Postfix) with ESMTP id 0D39661D66
-	for <g@stm.pm>; Sun, 10 Sep 2017 03:32:49 +0000 (UTC)
-Date: Sun, 10 Sep 2017 03:32:48 +0000
-From: Square <noreply@messaging.squareup.com>
-Reply-To: Square <noreply@messaging.squareup.com>
-To: g@stm.pm
-Message-ID: <mJZoFAT3DnUU5gZJ@squareup.com>
-Subject: How to Go Wireless with the Square Reader and Your iPhone 7
-Mime-Version: 1.0
-Content-Type: multipart/alternative;
- boundary="--==_mimepart_59b4b260a4f1c_34d2a57f05bc194678e5";
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-X-Metadata-campaign-id: 22301
-X-Metadata-template-id: 15239
-X-Metadata-translation-id: 7416
-X-Metadata-bandit-subject: 7C025M2GMRPX4
-X-Metadata-request-key: 2fe657981c252015
-X-Delivery-Token: mJZoFAT3DnUU5gZJ
-List-Unsubscribe: <mailto:mJZoFAT3DnUU5gZJ@unsubscribe.squareup.com>,
- <https://squareup.com/subscriptions/QZdHhyTOcOrL89aF?cid=4&dt=mJZoFAT3DnUU5gZJ>
-X-Reply-To-Service: 
-
-
-----==_mimepart_59b4b260a4f1c_34d2a57f05bc194678e5
-Content-Type: text/plain;
- charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
-
-# Business advice, right in your inbox.
-
-Gonzalo, here are some articles we think you'll like.
-
-How to Go Wireless with the Square Reader and Your iPhone 7
-No headphone jack? You can still use your Square Reader.
-https://squareup.com/townsquare/go-wireless-with-the-new-square-reader-an=
-d-your-iphone-7 =
-
-
-Never Miss a Pay Run Again with Automatic Payroll
-If you=E2=80=99re like most employers, you=E2=80=99ve been late with payr=
-oll a time or two.
-https://squareup.com/townsquare/introducing-automatic-payroll =
-
-
-Where to Look for Your Most Valuable Customers
-Clue: they are right in front of you.
-https://squareup.com/townsquare/where-to-look-for-your-most-valuable-cust=
-omers =
-
-
-4 Ways Your Business Can Grow with Appointments Software
-Online booking isn=E2=80=99t just convenient, it can change your business=
-.
-https://squareup.com/townsquare/how-to-grow-your-business-with-appointmen=
-ts-software =
-
-
-Here's Why You Should Reconsider Writing Down Customer Information
-You might be putting yourself at risk.
-https://squareup.com/townsquare/customer-management-for-your-business
-
-Don=E2=80=99t Underestimate the Power of After-Sale Marketing
-Your transaction should not end when you take payment.
-https://squareup.com/townsquare/the-importance-of-after-sale-marketing =
-
-
-3 Important Invoice Management Tips for Small Businesses
-Here=E2=80=99s how to make sure you get paid on time.
-https://squareup.com/townsquare/3-tips-to-manage-your-invoices-and-get-yo=
-u-paid
-
-See more articles:
-https://squareup.com/townsquare
-
-
------
-
-=C2=A9 2017 Square, Inc.
-1455 Market Street, Suite 600
-San Francisco, CA 94103
-
-Unsubscribe:
-https://squareup.com/subscriptions/QZdHhyTOcOrL89aF?cid=3D4&dt=3DmJZoFAT3=
-DnUU5gZJ
-
-Manage your preferences:
-https://squareup.com/subscriptions/QZdHhyTOcOrL89aF?dt=3DmJZoFAT3DnUU5gZJ=
-&t=3Ds=
-
-----==_mimepart_59b4b260a4f1c_34d2a57f05bc194678e5
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
-
 <!DOCTYPE html>
-<html>
+<meta charset="UTF-8">
+<html lang="en">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <head>
-      <meta name=3D"viewport" content=3D"width=3Ddevice-width">
-      <meta http-equiv=3D"Content-Type" content=3D"text/html;charset=3Dutf-8">
-      <title>Square</title>
-      <!--[if mso]>  
-      <style type=3D"text/css" data-premailer=3D"ignore">
-         .nomso { display: none; font-size: 0; line-height: 0 }  table { font-=
-         size: 1px; line-height:0; mso-margin-top-alt: 1px; }    table.MsoNormalTa=
-         ble { font-family: sqmarket, Helvetica, sans-serif }
-         .durv { line-height: 14px !important }
-      </style>
-      <![endif]--><!--[if !mso]><!--><link rel=3D"stylesheet" type=3D=
-      "text/css" href=3D"https://d1g145x70srn7h.cloudfront.net/images/email/mis=
-      c/sq-market.css" data-premailer=3D"ignore">
-      <style type=3D"text/css" data-premailer=3D"ignore"> a[x-apple-data-detect=
-         ors] { color: inherit !important; text-decoration: none !important; font-=
-         size: inherit !important; font-family: inherit !important; font-weight: i=
-         nherit !important; line-height: inherit !important; }
-         .invert a, .invert a[href^=3D"tel"], .invert a[href^=3D"mailto"], .invert=
-         a[href*=3D"//maps.apple.com"] { color: #ffffff; text-decoration: none; }=
-         b a { color: #2d394e; }
-         #hero a { color: #ffffff; }
-         #outlook a { padding: 0; }
-         body { width: 100% !important; margin: 0 auto !important; padding: 0; }
-         .ExternalClass { width: 100%; line-height: 100%; }
-         .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClas=
-         s td, .ExternalClass div { line-height: 100%; }
-         table, td { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-r=
-         space: 0pt; }
-         @media only screen and (min-width: 281px) { #container { position: relati=
-         ve; top: 0; left: 0; right: 0; bottom: 0; } }
-         div[style*=3D"margin: 16px 0"] { margin:0 !important; }
-         @media screen and (min-width: 281px) and (max-width: 569px) and (-webkit-=
-         min-device-pixel-ratio: 0) {#container .fullWidth a { display: block !imp=
-         ortant; }
-         #container .column { width: inherit !important; }
-         #container .column .embiggen { width: 420px !important; max-width: 420px =
-         !important; }
-         #container .column .embiggen .list td:first-child { width: inherit !impor=
-         tant; }
-         #container .column .embiggen .list td:last-child { widthx: 500px !importa=
-         nt; }
-         #container .column .embiggen .button td { width: inherit !important; }
-         #container .column .embiggen img { max-width: 100% !important; }
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="The place on the internet for people to find adventure and connect with their communities." />
+      <meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page, Make Friends, Like Minds" />
+      <meta name="robots" content="index, follow" />
+      <title>Like Minds | You can't be the only one</title>
+      <!--
+         <! Stylesheets
+            ================================================= 
+         -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="http://likeminds.dev/assets/css/style.css" />
+      <link rel="stylesheet" href="http://likeminds.dev/assets/css/main.css" />
+      <link rel="stylesheet" href="http://likeminds.dev/assets/css/ionicons.min.css" />
+      <link rel="stylesheet" href="http://likeminds.dev/assets/css/font-awesome.min.css" />
+      <!--   <!-Google Font-->
+      <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Montserrat" rel="stylesheet">
+      font-family: 'Lobster Two', cursive;
+      font-family: 'Montserrat', sans-serif; 
+      <!--Favicon-->
+      <link rel="shortcut icon" type="image/png" href="http://likeminds.dev/assets/images/fav.png"/>
+   </head>
+   <body>
+      <style>
+         .lma-nav-color {
+         background-color: #32fda9;
          }
       </style>
-      <!--<![endif]-->
-   </head>
-   <body style=3D"background: #f8f8f8">
-      <!--[if !mso]><!--><div id=3D"preheader" style=3D"font-size: 0;max-height=
-      : 0;overflow: hidden;display: none">No headphone jack? No problem.</div>
-      <!--<![endif]--><div id=3D"container" style=3D"-webkit-text-size-adjust: =
-      none;-ms-text-size-adjust: none;-webkit-font-smoothing: antialiased">
-      <table style=3D"table-layout: fixed;background: #ffffff" width=3D"100%" c=
-      lass=3D"single default" cellpadding=3D"0" cellspacing=3D"0">
-      <tr>
-         <td align=
-         =3D"center" style=3D"padding: 0 20px">
-         <table cellpadding=3D"0" cellspacin=
-            g=3D"0">
-            <tr>
-               <td width=3D"520" style=3D"padding: 20px 0 24px" class=3D"sin=
-               gleCell">
-               <table width=3D"100%" class=3D"center" style=3D"text-align: cent=
-                  er" cellpadding=3D"0" cellspacing=3D"0">
-                  <tr>
-                     <td width=3D"100%" class=3D"jewel">
-                        <table width=3D"100%" style=3D"tex=
-                           t-align: center" cellpadding=3D"0" cellspacing=3D"0">
-                           <tr><td style=3D"fon=
-                              t-size: 0;line-height: 0;padding: 0 0 16px"><a href=3D"https://squareup.c=
-                              om/subscriptions/r?ee=3D46a9b34cd2b66ce045834d21f8ac00e0d55c005591f0b5eee=
-                              e7f7a5c--ZD1tSlpvRkFUM0RuVVU1Z1pKJmU9JTIzamV3ZWwtaGVybyZtJTVCYmFuZGl0LXN1=
-                              YmplY3QlNUQ9N0MwMjVNMkdNUlBYNCZtJTVCY2FtcGFpZ24taWQlNUQ9MjIzMDEmbSU1QnJlc=
-                              XVlc3Qta2V5JTVEPTJmZTY1Nzk4MWMyNTIwMTUmbSU1QnRlbXBsYXRlLWlkJTVEPTE1MjM5Jm=
-                              0lNUJ0cmFuc2xhdGlvbi1pZCU1RD03NDE2Jm49ZW1haWxjbGljayZyPWh0dHBzJTNBJTJGJTJ=
-                              Gc3F1YXJldXAuY29tJTJG" id=3D"jewel-hero" style=3D"text-decoration: none">=
-                              <img src=3D"https://square-mailstrom-production-s.squarecdn.com/_shared/j=
-                              ewel/jewel-dark-22.png" width=3D"22" height=3D"22" border=3D"0" style=3D"=
-                              display: inline-block"></a></td>
-                           </tr>
-                        </table>
-                     </td>
-                  </tr>
-                  <tr><td style=3D"text-align: center;color: #2d394e;font-family: sqmarket,=
-                     Helvetica, sans-serif;font-weight: 300;font-size: 28px;line-height: 32px=
-                     " class=3D"h1" align=3D"center"><a href=3D"undefined?utm_source=3Demail&a=
-                     mp;utm_medium=3Dengagement&amp;utm_campaign=3Dus-en-GRMOPS-497" id=3D"h1-=
-                     1" style=3D"text-decoration: none;color: #2d394e">Business advice, right=C2=
-                     =A0in=C2=A0your=C2=A0inbox.</a></td>
-                  </tr>
-                  <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket,=
-                     Helvetica, sans-serif;font-weight: normal;color: #5f6a7d;padding: 9px 0 =
-                     0px" class=3D"p">Gonzalo, here are some articles we think you'll like. </=
-                     td>
-                  </tr>
-               </table>
-               </td>
-            </tr>
-         </table>
-         </td>
-      </tr>
-      </table>
-      <table style=3D"table-layout: fixed;background: #ffffff" width=3D"100%" c=
-      lass=3D"double default" cellpadding=3D"0" cellspacing=3D"0">
-      <tr>
-         <td align=
-            =3D"center">
-            <table cellpadding=3D"0" cellspacing=3D"0">
-               <tr>
-                  <td align=3D"c=
-                     enter" width=3D"600" class=3D"doubleCell">
-                     <table cellpadding=3D"0" cellsp=
-                        acing=3D"0">
-                        <tr><td align=3D"center" style=3D"padding: 0px 0px 18px"><tab=
-                           le cellpadding=3D"0" cellspacing=3D"0">
-                        <tr style=3D"font-size: 0">
-                           <td style=3D"text-align: center;padding: 0px 0=
-                           16px" align=3D"center">
-                           <table align=3D"center" class=3D"ltr" cellpadding=
-                              =3D"0" cellspacing=3D"0">
-                              <tr valign=3D"top">
-                                 <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-                                 16px" valign=3D"top">
-                                 <table class=3D"column" cellpadding=3D"0" cellspacin=
-                                    g=3D"0">
-                                    <tr>
-                                       <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                                          width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                                          " cellspacing=3D"0">
-                                    <tr>
-                                       <td align=3D"center">
-                                          <table style=3D"text-align: =
-                                             left" cellpadding=3D"0" cellspacing=3D"0">
-                                             <tr><td width=3D"520" align=3D"=
-                                                center" style=3D"padding: 0px 0;border: 1px solid #e0e0e0" class=3D"fluid=
-                                                Image"><a href=3D"https://squareup.com/townsquare/go-wireless-with-the-ne=
-                                                w-square-reader-and-your-iphone-7%20?utm_source=3Demail&amp;utm_medium=3D=
-                                                engagement&amp;utm_campaign=3Dus-en-GRMOPS-497" id=3D"image-1" style=3D"t=
-                                                ext-decoration: none"><img src=3D"https://square-mailstrom-production-s.s=
-                                                quarecdn.com/best-of-blog/us/2017/09/1.jpg" width=3D"520" alt=3D"How to G=
-                                                o Wireless with the Square Reader and Your iPhone 7" style=3D"width: 100%=
-                                                ;height: auto;-ms-interpolation-mode: bicubic;font-family: sans-serif;fon=
-                                                t-size: 14px;line-height: 22px;display: block" border=3D"0"></a></td></tr=
-                                                >
-                                          </table>
-                                       </td>
-                                    </tr>
-                                 </table>
-                                 </td>
-                              </tr>
-                           </table>
-                           </th>
-                           <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-                           16px" valign=3D"top">
-                           <table class=3D"column" cellpadding=3D"0" cellspacin=
-                              g=3D"0">
-                              <tr>
-                                 <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                                    width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                                    " cellspacing=3D"0">
-                              <tr><td style=3D"font-size: 14px;line-height: 22px;color: #2d394e;font-fa=
-                                 mily: sqmarket-medium, Helvetica, sans-serif;font-weight: bold" class=3D"=
-                                 h3"><a href=3D"https://squareup.com/townsquare/go-wireless-with-the-new-s=
-                                 quare-reader-and-your-iphone-7%20?utm_source=3Demail&amp;utm_medium=3Deng=
-                                 agement&amp;utm_campaign=3Dus-en-GRMOPS-497" id=3D"h3-1" style=3D"text-de=
-                                 coration: none;color: #2d394e">How to Go Wireless with the Square Reader =
-                                 and Your iPhone 7</a></td>
-                              </tr>
-                              <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket,=
-                                 Helvetica, sans-serif;font-weight: normal;color: #5f6a7d;padding: 0px 0 =
-                                 8px" class=3D"p">No headphone jack? You can still use your Square Reader.=
-                                 </td>
-                              </tr>
-                              <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket-=
-                                 medium, Helvetica, sans-serif;font-weight: bold;padding: 0px 0 3px" class=
-                                 =3D"boldLink"><a href=3D"https://squareup.com/townsquare/go-wireless-with=
-                                 -the-new-square-reader-and-your-iphone-7%20?utm_source=3Demail&amp;utm_me=
-                                 dium=3Dengagement&amp;utm_campaign=3Dus-en-GRMOPS-497" style=3D"color: #2=
-                                 996cc;text-decoration: none" id=3D"read-more-1">Read more=C2=A0=E2=80=BA<=
-                                 /a></td>
-                              </tr>
-                           </table>
-                           </td>
-                        </tr>
-                     </table>
-                     </th>
-               </tr>
-            </table>
-         </td>
-      </tr>
-      <tr style=3D"font-size: 0">
-         <td style=3D"text-align: center;padding: 0px 0=
-         16px" align=3D"center">
-         <table align=3D"center" class=3D"ltr" cellpadding=
-            =3D"0" cellspacing=3D"0">
-            <tr valign=3D"top">
-               <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-               16px" valign=3D"top">
-               <table class=3D"column" cellpadding=3D"0" cellspacin=
-                  g=3D"0">
-                  <tr>
-                     <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                        width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                        " cellspacing=3D"0">
-                  <tr>
-                     <td align=3D"center">
-                        <table style=3D"text-align: =
-                           left" cellpadding=3D"0" cellspacing=3D"0">
-                           <tr><td width=3D"520" align=3D"=
-                              center" style=3D"padding: 0px 0;border: 1px solid #e0e0e0" class=3D"fluid=
-                              Image"><a href=3D"https://squareup.com/townsquare/introducing-automatic-p=
-                              ayroll%20?utm_source=3Demail&amp;utm_medium=3Dengagement&amp;utm_campaign=
-                              =3Dus-en-GRMOPS-497" id=3D"image-2" style=3D"text-decoration: none"><img =
-                              src=3D"https://square-mailstrom-production-s.squarecdn.com/best-of-blog/u=
-                              s/2017/09/2.gif" width=3D"520" alt=3D"Never Miss a Pay Run Again with Aut=
-                              omatic Payroll" style=3D"width: 100%;height: auto;-ms-interpolation-mode:=
-                              bicubic;font-family: sans-serif;font-size: 14px;line-height: 22px;displa=
-                              y: block" border=3D"0"></a></td>
-                           </tr>
-                        </table>
-                     </td>
-                  </tr>
-               </table>
-               </td>
-            </tr>
-            =
-         </table>
-         </th>
-         <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-         16px" valign=3D"top">
-         <table class=3D"column" cellpadding=3D"0" cellspacin=
-            g=3D"0">
-            <tr>
-               <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                  width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                  " cellspacing=3D"0">
-            <tr><td style=3D"font-size: 14px;line-height: 22px;color: #2d394e;font-fa=
-               mily: sqmarket-medium, Helvetica, sans-serif;font-weight: bold" class=3D"=
-               h3"><a href=3D"https://squareup.com/townsquare/introducing-automatic-payr=
-               oll%20?utm_source=3Demail&amp;utm_medium=3Dengagement&amp;utm_campaign=3D=
-               us-en-GRMOPS-497" id=3D"h3-2" style=3D"text-decoration: none;color: #2d39=
-               4e">Never Miss a Pay Run Again with Automatic Payroll</a></td>
-            </tr>
-            <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket,=
-               Helvetica, sans-serif;font-weight: normal;color: #5f6a7d;padding: 0px 0 =
-               8px" class=3D"p">If you=E2=80=99re like most employers, you=E2=80=99ve be=
-               en late with payroll a time or two.</td>
-            </tr>
-            <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket-=
-               medium, Helvetica, sans-serif;font-weight: bold;padding: 0px 0 3px" class=
-               =3D"boldLink"><a href=3D"https://squareup.com/townsquare/introducing-auto=
-               matic-payroll%20?utm_source=3Demail&amp;utm_medium=3Dengagement&amp;utm_c=
-               ampaign=3Dus-en-GRMOPS-497" style=3D"color: #2996cc;text-decoration: none=
-               " id=3D"read-more-2">Read more=C2=A0=E2=80=BA</a></td>
-            </tr>
-         </table>
-         </td>
-      </tr>
-      </table></th>
-      </tr></table></td></tr>
-      <tr style=3D"font-size: 0">
-         <td style=3D"text-align: center;padding: 0px 0=
-         16px" align=3D"center">
-         <table align=3D"center" class=3D"ltr" cellpadding=
-            =3D"0" cellspacing=3D"0">
-            <tr valign=3D"top">
-               <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-               16px" valign=3D"top">
-               <table class=3D"column" cellpadding=3D"0" cellspacin=
-                  g=3D"0">
-                  <tr>
-                     <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                        width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                        " cellspacing=3D"0">
-                  <tr>
-                     <td align=3D"center">
-                        <table style=3D"text-align: =
-                           left" cellpadding=3D"0" cellspacing=3D"0">
-                           <tr><td width=3D"520" align=3D"=
-                              center" style=3D"padding: 0px 0;border: 1px solid #e0e0e0" class=3D"fluid=
-                              Image"><a href=3D"https://squareup.com/townsquare/where-to-look-for-your-=
-                              most-valuable-customers%20?utm_source=3Demail&amp;utm_medium=3Dengagement=
-                              &amp;utm_campaign=3Dus-en-GRMOPS-497" id=3D"image-3" style=3D"text-decora=
-                              tion: none"><img src=3D"https://square-mailstrom-production-s.squarecdn.c=
-                              om/best-of-blog/us/2017/09/3.jpg" width=3D"520" alt=3D"Where to Look for =
-                              Your Most Valuable Customers" style=3D"width: 100%;height: auto;-ms-inter=
-                              polation-mode: bicubic;font-family: sans-serif;font-size: 14px;line-heigh=
-                              t: 22px;display: block" border=3D"0"></a></td>
-                           </tr>
-                        </table>
-                     </td>
-                  </tr>
-                  </ta=
-                  ble></td></tr>
-               </table>
-               </th>
-               <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-               16px" valign=3D"top">
-               <table class=3D"column" cellpadding=3D"0" cellspacin=
-                  g=3D"0">
-                  <tr>
-                     <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                        width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                        " cellspacing=3D"0">
-                  <tr><td style=3D"font-size: 14px;line-height: 22px;color: #2d394e;font-fa=
-                     mily: sqmarket-medium, Helvetica, sans-serif;font-weight: bold" class=3D"=
-                     h3"><a href=3D"https://squareup.com/townsquare/where-to-look-for-your-mos=
-                     t-valuable-customers%20?utm_source=3Demail&amp;utm_medium=3Dengagement&am=
-                     p;utm_campaign=3Dus-en-GRMOPS-497" id=3D"h3-3" style=3D"text-decoration: =
-                     none;color: #2d394e">Where to Look for Your Most Valuable Customers</a></=
-                     td>
-                  </tr>
-                  <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket,=
-                     Helvetica, sans-serif;font-weight: normal;color: #5f6a7d;padding: 0px 0 =
-                     8px" class=3D"p">Clue: they are right in front of you.</td>
-                  </tr>
-                  <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket-=
-                     medium, Helvetica, sans-serif;font-weight: bold;padding: 0px 0 3px" class=
-                     =3D"boldLink"><a href=3D"https://squareup.com/townsquare/where-to-look-fo=
-                     r-your-most-valuable-customers%20?utm_source=3Demail&amp;utm_medium=3Deng=
-                     agement&amp;utm_campaign=3Dus-en-GRMOPS-497" style=3D"color: #2996cc;text=
-                     -decoration: none" id=3D"read-more-3">Read more=C2=A0=E2=80=BA</a></td></=
-                     tr>
-               </table>
-               </td>
-            </tr>
-         </table>
-         </th>
-      </tr>
-      </table></td></tr>
-      <tr style=3D"font-size: 0">
-         <td style=3D"text-align: center;padding: 0px 0=
-         16px" align=3D"center">
-         <table align=3D"center" class=3D"ltr" cellpadding=
-            =3D"0" cellspacing=3D"0">
-            <tr valign=3D"top">
-               <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-               16px" valign=3D"top">
-               <table class=3D"column" cellpadding=3D"0" cellspacin=
-                  g=3D"0">
-                  <tr>
-                     <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                        width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                        " cellspacing=3D"0">
-                  <tr>
-                     <td align=3D"center">
-                        <table style=3D"text-align: =
-                           left" cellpadding=3D"0" cellspacing=3D"0">
-                           <tr><td width=3D"520" align=3D"=
-                              center" style=3D"padding: 0px 0;border: 1px solid #e0e0e0" class=3D"fluid=
-                              Image"><a href=3D"https://squareup.com/townsquare/how-to-grow-your-busine=
-                              ss-with-appointments-software%20?utm_source=3Demail&amp;utm_medium=3Denga=
-                              gement&amp;utm_campaign=3Dus-en-GRMOPS-497" id=3D"image-4" style=3D"text-=
-                              decoration: none"><img src=3D"https://square-mailstrom-production-s.squar=
-                              ecdn.com/best-of-blog/us/2017/09/4.jpg" width=3D"520" alt=3D"4 Ways Your =
-                              Business Can Grow with Appointments Software" style=3D"width: 100%;height=
-                              : auto;-ms-interpolation-mode: bicubic;font-family: sans-serif;font-size:=
-                              14px;line-height: 22px;display: block" border=3D"0"></a></td>
-                           </tr>
-                           </tabl=
-                           e></td></tr>
-                        </table>
-                     </td>
-                  </tr>
-               </table>
-               </th>
-               <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-               16px" valign=3D"top">
-               <table class=3D"column" cellpadding=3D"0" cellspacin=
-                  g=3D"0">
-                  <tr>
-                     <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                        width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                        " cellspacing=3D"0">
-                  <tr><td style=3D"font-size: 14px;line-height: 22px;color: #2d394e;font-fa=
-                     mily: sqmarket-medium, Helvetica, sans-serif;font-weight: bold" class=3D"=
-                     h3"><a href=3D"https://squareup.com/townsquare/how-to-grow-your-business-=
-                     with-appointments-software%20?utm_source=3Demail&amp;utm_medium=3Dengagem=
-                     ent&amp;utm_campaign=3Dus-en-GRMOPS-497" id=3D"h3-4" style=3D"text-decora=
-                     tion: none;color: #2d394e">4 Ways Your Business Can Grow with Appointment=
-                     s Software</a></td>
-                  </tr>
-                  <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket,=
-                     Helvetica, sans-serif;font-weight: normal;color: #5f6a7d;padding: 0px 0 =
-                     8px" class=3D"p">Online booking isn=E2=80=99t just convenient, it can cha=
-                     nge your business.</td>
-                  </tr>
-                  <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket-=
-                     medium, Helvetica, sans-serif;font-weight: bold;padding: 0px 0 3px" class=
-                     =3D"boldLink"><a href=3D"https://squareup.com/townsquare/how-to-grow-your=
-                     -business-with-appointments-software%20?utm_source=3Demail&amp;utm_medium=
-                     =3Dengagement&amp;utm_campaign=3Dus-en-GRMOPS-497" style=3D"color: #2996c=
-                     c;text-decoration: none" id=3D"read-more-4">Read more=C2=A0=E2=80=BA</a><=
-                     /td>
-                  </tr>
-               </table>
-               </td>
-            </tr>
-         </table>
-         </th>
-      </tr>
-      </table></td></tr>
-      <tr style=3D"font-size: 0">
-         <td style=3D"text-align: center;padding: 0px 0=
-         16px" align=3D"center">
-         <table align=3D"center" class=3D"ltr" cellpadding=
-            =3D"0" cellspacing=3D"0">
-            <tr valign=3D"top">
-               <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-               16px" valign=3D"top">
-               <table class=3D"column" cellpadding=3D"0" cellspacin=
-                  g=3D"0">
-                  <tr>
-                     <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                        width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                        " cellspacing=3D"0">
-                  <tr>
-                     <td align=3D"center">
-                        <table style=3D"text-align: =
-                           left" cellpadding=3D"0" cellspacing=3D"0">
-                           <tr><td width=3D"520" align=3D"=
-                              center" style=3D"padding: 0px 0;border: 1px solid #e0e0e0" class=3D"fluid=
-                              Image"><a href=3D"https://squareup.com/subscriptions/r?ee=3D3c4952896c27a=
-                                 c04444343c3a68f7949f8c053de7365ccd98d311c4b--ZD1tSlpvRkFUM0RuVVU1Z1pKJmU9=
-                                 JTIzaW1hZ2UtNSZtJTVCYmFuZGl0LXN1YmplY3QlNUQ9N0MwMjVNMkdNUlBYNCZtJTVCY2Ftc=
-                                 GFpZ24taWQlNUQ9MjIzMDEmbSU1QnJlcXVlc3Qta2V5JTVEPTJmZTY1Nzk4MWMyNTIwMTUmbS=
-                                 U1QnRlbXBsYXRlLWlkJTVEPTE1MjM5Jm0lNUJ0cmFuc2xhdGlvbi1pZCU1RD03NDE2Jm49ZW1=
-                                 haWxjbGljayZyPWh0dHBzJTNBJTJGJTJGc3F1YXJldXAuY29tJTJGdG93bnNxdWFyZSUyRmN1=
-                                 c3RvbWVyLW1hbmFnZW1lbnQtZm9yLXlvdXItYnVzaW5lc3MlM0Z1dG1fc291cmNlJTNEZW1ha=
-                                 WwlMjZ1dG1fbWVkaXVtJTNEZW5nYWdlbWVudCUyNnV0bV9jYW1wYWlnbiUzRHVzLWVuLUdSTU=
-                                 9QUy00OTc" id=3D"image-5" style=3D"text-decoration: none"><img src=3D"htt=
-                              ps://square-mailstrom-production-s.squarecdn.com/best-of-blog/us/2017/09/=
-                              5.jpg" width=3D"520" alt=3D"Here's Why You Should Reconsider Writing Down=
-                              Customer Information" style=3D"width: 100%;height: auto;-ms-interpolatio=
-                              n-mode: bicubic;font-family: sans-serif;font-size: 14px;line-height: 22px=
-                              ;display: block" border=3D"0"></a></td>
-                           </tr>
-                        </table>
-                     </td>
-                  </tr>
-               </table>
-               </t=
-               d>
-            </tr>
-         </table>
-         </th>
-         <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-         16px" valign=3D"top">
-         <table class=3D"column" cellpadding=3D"0" cellspacin=
-            g=3D"0">
-            <tr>
-               <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                  width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                  " cellspacing=3D"0">
-            <tr><td style=3D"font-size: 14px;line-height: 22px;color: #2d394e;font-fa=
-               mily: sqmarket-medium, Helvetica, sans-serif;font-weight: bold" class=3D"=
-               h3"><a href=3D"https://squareup.com/subscriptions/r?ee=3Da80743963161be32=
-               338193f820a26f360c302ccca1cdaeaa4fe8d322--ZD1tSlpvRkFUM0RuVVU1Z1pKJmU9JTI=
-               zaDMtNSZtJTVCYmFuZGl0LXN1YmplY3QlNUQ9N0MwMjVNMkdNUlBYNCZtJTVCY2FtcGFpZ24t=
-               aWQlNUQ9MjIzMDEmbSU1QnJlcXVlc3Qta2V5JTVEPTJmZTY1Nzk4MWMyNTIwMTUmbSU1QnRlb=
-               XBsYXRlLWlkJTVEPTE1MjM5Jm0lNUJ0cmFuc2xhdGlvbi1pZCU1RD03NDE2Jm49ZW1haWxjbG=
-               ljayZyPWh0dHBzJTNBJTJGJTJGc3F1YXJldXAuY29tJTJGdG93bnNxdWFyZSUyRmN1c3RvbWV=
-               yLW1hbmFnZW1lbnQtZm9yLXlvdXItYnVzaW5lc3MlM0Z1dG1fc291cmNlJTNEZW1haWwlMjZ1=
-               dG1fbWVkaXVtJTNEZW5nYWdlbWVudCUyNnV0bV9jYW1wYWlnbiUzRHVzLWVuLUdSTU9QUy00O=
-               Tc" id=3D"h3-5" style=3D"text-decoration: none;color: #2d394e">Here's Why=
-               You Should Reconsider Writing Down Customer Information</a></td>
-            </tr>
-            <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket,=
-               Helvetica, sans-serif;font-weight: normal;color: #5f6a7d;padding: 0px 0 =
-               8px" class=3D"p">You might be putting yourself at risk.</td>
-            </tr>
-            <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket-=
-               medium, Helvetica, sans-serif;font-weight: bold;padding: 0px 0 3px" class=
-               =3D"boldLink"><a href=3D"https://squareup.com/subscriptions/r?ee=3D7c57e3=
-               8510bdd3e4f61d0ac7cbbc0732736eee21856896f5ea729bd8--ZD1tSlpvRkFUM0RuVVU1Z=
-               1pKJmU9JTIzcmVhZC1tb3JlLTUmbSU1QmJhbmRpdC1zdWJqZWN0JTVEPTdDMDI1TTJHTVJQWD=
-               QmbSU1QmNhbXBhaWduLWlkJTVEPTIyMzAxJm0lNUJyZXF1ZXN0LWtleSU1RD0yZmU2NTc5ODF=
-               jMjUyMDE1Jm0lNUJ0ZW1wbGF0ZS1pZCU1RD0xNTIzOSZtJTVCdHJhbnNsYXRpb24taWQlNUQ9=
-               NzQxNiZuPWVtYWlsY2xpY2smcj1odHRwcyUzQSUyRiUyRnNxdWFyZXVwLmNvbSUyRnRvd25zc=
-               XVhcmUlMkZjdXN0b21lci1tYW5hZ2VtZW50LWZvci15b3VyLWJ1c2luZXNzJTNGdXRtX3NvdX=
-               JjZSUzRGVtYWlsJTI2dXRtX21lZGl1bSUzRGVuZ2FnZW1lbnQlMjZ1dG1fY2FtcGFpZ24lM0R=
-               1cy1lbi1HUk1PUFMtNDk3" style=3D"color: #2996cc;text-decoration: none" id=3D=
-               "read-more-5">Read more=C2=A0=E2=80=BA</a></td>
-            </tr>
-         </table>
-         </td>
-      </tr>
-      </table></th>
-      </tr></table></td></tr>
-      <tr style=3D"font-size: 0">
-         <td style=3D"text-align: center;padding: 0px 0=
-         16px" align=3D"center">
-         <table align=3D"center" class=3D"ltr" cellpadding=
-            =3D"0" cellspacing=3D"0">
-            <tr valign=3D"top">
-               <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-               16px" valign=3D"top">
-               <table class=3D"column" cellpadding=3D"0" cellspacin=
-                  g=3D"0">
-                  <tr>
-                     <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                        width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                        " cellspacing=3D"0">
-                  <tr>
-                     <td align=3D"center">
-                        <table style=3D"text-align: =
-                           left" cellpadding=3D"0" cellspacing=3D"0">
-                           <tr><td width=3D"520" align=3D"=
-                              center" style=3D"padding: 0px 0;border: 1px solid #e0e0e0" class=3D"fluid=Image"><a href=3D"https://squareup.com/townsquare/the-importance-of-after=
-                              -sale-marketing%20?utm_source=3Demail&amp;utm_medium=3Dengagement&amp;utm=
-                              _campaign=3Dus-en-GRMOPS-497" id=3D"image-6" style=3D"text-decoration: no=
-                              ne"><img src=3D"https://square-mailstrom-production-s.squarecdn.com/best-=
-                              of-blog/us/2017/09/6.jpg" width=3D"520" alt=3D"Don=E2=80=99t Underestimat=
-                              e the Power of After-Sale Marketing" style=3D"width: 100%;height: auto;-m=
-                              s-interpolation-mode: bicubic;font-family: sans-serif;font-size: 14px;lin=
-                              e-height: 22px;display: block" border=3D"0"></a></td>
-                           </tr>
-                        </table>
-                     </td>
-                     </=
-                     tr>
-               </table>
-               </td>
-            </tr>
-         </table>
-         </th>
-         <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-         16px" valign=3D"top">
-         <table class=3D"column" cellpadding=3D"0" cellspacin=
-            g=3D"0">
-            <tr>
-               <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                  width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                  " cellspacing=3D"0">
-            <tr><td style=3D"font-size: 14px;line-height: 22px;color: #2d394e;font-fa=
-               mily: sqmarket-medium, Helvetica, sans-serif;font-weight: bold" class=3D"=
-               h3"><a href=3D"https://squareup.com/townsquare/the-importance-of-after-sa=
-               le-marketing%20?utm_source=3Demail&amp;utm_medium=3Dengagement&amp;utm_ca=
-               mpaign=3Dus-en-GRMOPS-497" id=3D"h3-6" style=3D"text-decoration: none;col=
-               or: #2d394e">Don=E2=80=99t Underestimate the Power of After-Sale Marketin=
-               g</a></td>
-            </tr>
-            <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket,=
-               Helvetica, sans-serif;font-weight: normal;color: #5f6a7d;padding: 0px 0 =
-               8px" class=3D"p">Your transaction should not end when you take payment.</=
-               td>
-            </tr>
-            <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket-=
-               medium, Helvetica, sans-serif;font-weight: bold;padding: 0px 0 3px" class=
-               =3D"boldLink"><a href=3D"https://squareup.com/townsquare/the-importance-o=
-               f-after-sale-marketing%20?utm_source=3Demail&amp;utm_medium=3Dengagement&=
-               amp;utm_campaign=3Dus-en-GRMOPS-497" style=3D"color: #2996cc;text-decorat=
-               ion: none" id=3D"read-more-6">Read more=C2=A0=E2=80=BA</a></td>
-            </tr>
-         </table>
-         </td>
-      </tr>
-      </table></th>
-      </tr></table></td></tr>
-      <tr style=3D"font-size: 0">
-         <td style=3D"text-align: center;padding: 0px 0=
-         16px" align=3D"center">
-         <table align=3D"center" class=3D"ltr" cellpadding=
-            =3D"0" cellspacing=3D"0">
-            <tr valign=3D"top">
-               <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-               16px" valign=3D"top">
-               <table class=3D"column" cellpadding=3D"0" cellspacin=
-                  g=3D"0">
-                  <tr>
-                     <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                        width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                        " cellspacing=3D"0">
-                  <tr>
-                     <td align=3D"center">
-                        <table style=3D"text-align: =
-                           left" cellpadding=3D"0" cellspacing=3D"0">
-                           <tr><td width=3D"520" align=3D"=
-                              center" style=3D"padding: 0px 0;border: 1px solid #e0e0e0" class=3D"fluid=
-                              Image"><a href=3D"https://squareup.com/subscriptions/r?ee=3D60e9b2b1d7561=
-                                 c4610e47faca90a4e84c1fe08694089f9670e8117db--ZD1tSlpvRkFUM0RuVVU1Z1pKJmU9=
-                                 JTIzaW1hZ2UtNyZtJTVCYmFuZGl0LXN1YmplY3QlNUQ9N0MwMjVNMkdNUlBYNCZtJTVCY2Ftc=
-                                 GFpZ24taWQlNUQ9MjIzMDEmbSU1QnJlcXVlc3Qta2V5JTVEPTJmZTY1Nzk4MWMyNTIwMTUmbS=
-                                 U1QnRlbXBsYXRlLWlkJTVEPTE1MjM5Jm0lNUJ0cmFuc2xhdGlvbi1pZCU1RD03NDE2Jm49ZW1=
-                                 haWxjbGljayZyPWh0dHBzJTNBJTJGJTJGc3F1YXJldXAuY29tJTJGdG93bnNxdWFyZSUyRjMt=
-                                 dGlwcy10by1tYW5hZ2UteW91ci1pbnZvaWNlcy1hbmQtZ2V0LXlvdS1wYWlkJTNGdXRtX3Nvd=
-                                 XJjZSUzRGVtYWlsJTI2dXRtX21lZGl1bSUzRGVuZ2FnZW1lbnQlMjZ1dG1fY2FtcGFpZ24lM0=
-                                 R1cy1lbi1HUk1PUFMtNDk3" id=3D"image-7" style=3D"text-decoration: none"><i=
-                              mg src=3D"https://square-mailstrom-production-s.squarecdn.com/best-of-blo=
-                              g/us/2017/09/7.jpg" width=3D"520" alt=3D"3 Important Invoice Management T=
-                              ips for Small Businesses" style=3D"width: 100%;height: auto;-ms-interpola=
-                              tion-mode: bicubic;font-family: sans-serif;font-size: 14px;line-height: 2=
-                              2px;display: block" border=3D"0"></a></td>
-                           </tr>
-                        </table>
-                     </td>
-                  </tr>
-               </table>
-               =
-               </td>
-            </tr>
-         </table>
-         </th>
-         <th style=3D"display: inline-block;vertical-align: top;padding: 0px 20px =
-         16px" valign=3D"top">
-         <table class=3D"column" cellpadding=3D"0" cellspacin=
-            g=3D"0">
-            <tr>
-               <td align=3D"center" width=3D"240" class=3D"embiggen"><table =
-                  width=3D"100%" class=3D"left" style=3D"text-align: left" cellpadding=3D"0=
-                  " cellspacing=3D"0">
-            <tr><td style=3D"font-size: 14px;line-height: 22px;color: #2d394e;font-fa=
-               mily: sqmarket-medium, Helvetica, sans-serif;font-weight: bold" class=3D"=
-               h3"><a href=3D"https://squareup.com/subscriptions/r?ee=3D8adba1f68c3f6363=
-               876c9b1e272b8bd84f772c81699dac88cb7d937a--ZD1tSlpvRkFUM0RuVVU1Z1pKJmU9JTI=
-               zaDMtNyZtJTVCYmFuZGl0LXN1YmplY3QlNUQ9N0MwMjVNMkdNUlBYNCZtJTVCY2FtcGFpZ24t=
-               aWQlNUQ9MjIzMDEmbSU1QnJlcXVlc3Qta2V5JTVEPTJmZTY1Nzk4MWMyNTIwMTUmbSU1QnRlb=
-               XBsYXRlLWlkJTVEPTE1MjM5Jm0lNUJ0cmFuc2xhdGlvbi1pZCU1RD03NDE2Jm49ZW1haWxjbG=
-               ljayZyPWh0dHBzJTNBJTJGJTJGc3F1YXJldXAuY29tJTJGdG93bnNxdWFyZSUyRjMtdGlwcy1=
-               0by1tYW5hZ2UteW91ci1pbnZvaWNlcy1hbmQtZ2V0LXlvdS1wYWlkJTNGdXRtX3NvdXJjZSUz=
-               RGVtYWlsJTI2dXRtX21lZGl1bSUzRGVuZ2FnZW1lbnQlMjZ1dG1fY2FtcGFpZ24lM0R1cy1lb=
-               i1HUk1PUFMtNDk3" id=3D"h3-7" style=3D"text-decoration: none;color: #2d394=
-               e">3 Important Invoice Management Tips for Small Businesses</a></td>
-            </tr>
-            =
-            <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket,=
-               Helvetica, sans-serif;font-weight: normal;color: #5f6a7d;padding: 0px 0 =
-               8px" class=3D"p">Here=E2=80=99s how to make sure you get paid on time.</t=
-               d>
-            </tr>
-            <tr><td style=3D"font-size: 14px;line-height: 22px;font-family: sqmarket-=
-               medium, Helvetica, sans-serif;font-weight: bold;padding: 0px 0 3px" class=
-               =3D"boldLink"><a href=3D"https://squareup.com/subscriptions/r?ee=3D7868b4=
-               07f8a2c2651d672c56b0f6f94bfd525d4ab4df69fc8518de23--ZD1tSlpvRkFUM0RuVVU1Z=
-               1pKJmU9JTIzcmVhZC1tb3JlLTcmbSU1QmJhbmRpdC1zdWJqZWN0JTVEPTdDMDI1TTJHTVJQWD=
-               QmbSU1QmNhbXBhaWduLWlkJTVEPTIyMzAxJm0lNUJyZXF1ZXN0LWtleSU1RD0yZmU2NTc5ODF=
-               jMjUyMDE1Jm0lNUJ0ZW1wbGF0ZS1pZCU1RD0xNTIzOSZtJTVCdHJhbnNsYXRpb24taWQlNUQ9=
-               NzQxNiZuPWVtYWlsY2xpY2smcj1odHRwcyUzQSUyRiUyRnNxdWFyZXVwLmNvbSUyRnRvd25zc=
-               XVhcmUlMkYzLXRpcHMtdG8tbWFuYWdlLXlvdXItaW52b2ljZXMtYW5kLWdldC15b3UtcGFpZC=
-               UzRnV0bV9zb3VyY2UlM0RlbWFpbCUyNnV0bV9tZWRpdW0lM0RlbmdhZ2VtZW50JTI2dXRtX2N=
-               hbXBhaWduJTNEdXMtZW4tR1JNT1BTLTQ5Nw" style=3D"color: #2996cc;text-decorat=
-               ion: none" id=3D"read-more-7">Read more=C2=A0=E2=80=BA</a></td>
-            </tr>
-         </table>
-         </td>
-      </tr>
-      </table></th>
-      </tr></table></td></tr>
-      <tr>
-         <td colspan=3D"2">
-            <table width=3D"100%" cellpadding=3D"0" cellspacing=
-               =3D"0">
-               <tr>
-                  <td style=3D"padding: 8px 0 24px" align=3D"center" class=3D"bu=
-                  tton ">
-                  <table width=3D"inherit" class=3D"buttonTable" cellpadding=3D"0" c=
-                     ellspacing=3D"0">
-                     <tr>
-                        <td>
-                           <table cellpadding=3D"0" cellspacing=3D"0">
-                              <tr>
-                                 <=
-                                 td style=3D"width: 100%;background: #2996cc;text-align: center;font-famil=
-                                 y: sqmarket-bold, Helvetica, sans-serif;font-weight: bold;-webkit-border-=
-                                 radius: 4px;-moz-border-radius: 4px;border-radius: 4px;font-size: 11px;li=
-                                 ne-height: 15px;text-transform: uppercase;letter-spacing: 1px" align=3D"c=
-                                 enter"><a href=3D"undefined" style=3D"color: #ffffff;background: #2996cc;=
-                                 padding: 13px 28px;border: 1px solid #2996cc;text-decoration: none;-webki=
-                                 t-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;display: =
-                                 inline-block" id=3D"button-see-more-articles-1"><!--[if gte mso 9]>&#160;=
-                                 <![endif]-->See more articles<!--[if gte mso 9]>&#160;<![endif]--></a></t=
-                                 d>
-                              </tr>
-                           </table>
-                        </td>
-                     </tr>
-                  </table>
-                  </td>
-               </tr>
-            </table>
-         </td>
-      </tr>
-      </table></td></tr></table></td></tr></table></td></tr></table>
-      <table width=3D"100%" class=3D"footer" style=3D"table-layout: fixed;backg=
-      round: #f8f8f8" cellpadding=3D"0" cellspacing=3D"0">
-      <tr>
-         <td align=3D"cent=
-         er" style=3D"padding: 46px 20px 50px">
-         <table cellpadding=3D"0" cellspacin=
-            g=3D"0">
-            <tr>
-               <td align=3D"center" width=3D"420">
-                  <table id=3D"social" cellpadding=3D=
-                     "0" cellspacing=3D"0">
-                     <tr>
-                        <td style=3D"padding: 6px 5px 26px"><a id=3D"social-facebook-en-us" href=3D=
-                        "https://squareup.com/subscriptions/r?ee=3D44a30fd1eb74378493226dcc2a8850=
-                        9fbd615788bc540b61dfb05aaf--ZD1tSlpvRkFUM0RuVVU1Z1pKJmU9JTIzc29jaWFsLWZhY=
-                        2Vib29rLWVuLXVzJm0lNUJiYW5kaXQtc3ViamVjdCU1RD03QzAyNU0yR01SUFg0Jm0lNUJjYW=
-                        1wYWlnbi1pZCU1RD0yMjMwMSZtJTVCcmVxdWVzdC1rZXklNUQ9MmZlNjU3OTgxYzI1MjAxNSZ=
-                        tJTVCdGVtcGxhdGUtaWQlNUQ9MTUyMzkmbSU1QnRyYW5zbGF0aW9uLWlkJTVEPTc0MTYmbj1l=
-                        bWFpbGNsaWNrJnI9aHR0cHMlM0ElMkYlMkZmYWNlYm9vay5jb20lMkZzcXVhcmU" style=3D=
-                        "text-decoration: none"><img src=3D"https://d1g145x70srn7h.cloudfront.net=
-                        /images/email/misc/2/social-facebook-22.png" width=3D"22" height=3D"22" s=
-                        tyle=3D"display: block" border=3D"0"></a></td>
-                        <td style=3D"padding: 6px 5px 26px"><a id=3D"social-twitter-en-us" href=3D=
-                        "https://squareup.com/subscriptions/r?ee=3D896dd3049ef2c94c6aaeb3e10a49a2=
-                        dcdf1e7341c25ff59a931a2d15--ZD1tSlpvRkFUM0RuVVU1Z1pKJmU9JTIzc29jaWFsLXR3a=
-                        XR0ZXItZW4tdXMmbSU1QmJhbmRpdC1zdWJqZWN0JTVEPTdDMDI1TTJHTVJQWDQmbSU1QmNhbX=
-                        BhaWduLWlkJTVEPTIyMzAxJm0lNUJyZXF1ZXN0LWtleSU1RD0yZmU2NTc5ODFjMjUyMDE1Jm0=
-                        lNUJ0ZW1wbGF0ZS1pZCU1RD0xNTIzOSZtJTVCdHJhbnNsYXRpb24taWQlNUQ9NzQxNiZuPWVt=
-                        YWlsY2xpY2smcj1odHRwcyUzQSUyRiUyRnR3aXR0ZXIuY29tJTJGc3F1YXJl" style=3D"te=
-                        xt-decoration: none"><img src=3D"https://d1g145x70srn7h.cloudfront.net/im=
-                        ages/email/misc/2/social-twitter-22.png" width=3D"22" height=3D"22" style=
-                        =3D"display: block" border=3D"0"></a></td>
-                        <td style=3D"padding: 6px 5px 26px"><a id=3D"social-instagram-en-us" href=
-                        =3D"https://squareup.com/subscriptions/r?ee=3D3cf949ad8b9f71a3870d8ab5bd2=
-                        16a427411543238b45a2fd3b4986a--ZD1tSlpvRkFUM0RuVVU1Z1pKJmU9JTIzc29jaWFsLW=
-                        luc3RhZ3JhbS1lbi11cyZtJTVCYmFuZGl0LXN1YmplY3QlNUQ9N0MwMjVNMkdNUlBYNCZtJTV=
-                        CY2FtcGFpZ24taWQlNUQ9MjIzMDEmbSU1QnJlcXVlc3Qta2V5JTVEPTJmZTY1Nzk4MWMyNTIw=
-                        MTUmbSU1QnRlbXBsYXRlLWlkJTVEPTE1MjM5Jm0lNUJ0cmFuc2xhdGlvbi1pZCU1RD03NDE2J=
-                        m49ZW1haWxjbGljayZyPWh0dHBzJTNBJTJGJTJGaW5zdGFncmFtLmNvbSUyRnNxdWFyZQ" st=
-                        yle=3D"text-decoration: none"><img src=3D"https://d1g145x70srn7h.cloudfro=
-                        nt.net/images/email/misc/2/social-instagram-22.png" width=3D"22" height=3D=
-                        "22" style=3D"display: block" border=3D"0"></a></td>
-                     </tr>
-                  </table>
-               </td>
-            </tr>
-            <tr><td class=3D"p" style=3D"font-size: 11px;line-height: 15px;letter-spa=
-               cing: 1px;text-transform: uppercase;font-family: sqmarket, Helvetica, san=
-               s-serif;font-weight: normal;color: #5f6a7d;text-align: center" align=3D"c=
-               enter" width=3D"420">
-               <a href=3D"https://squareup.com/subscriptions/r?ee=3Ddf4a30dc74990373319b=
-               fd744e04a8eb23bfca35682bde968b1406d6--ZD1tSlpvRkFUM0RuVVU1Z1pKJmU9JTJGaHR=
-               tbCUyRmJvZHklMkZkaXYlNUIyJTVEJTJGdGFibGUlNUIzJTVEJTJGdHIlMkZ0ZCUyRnRhYmxl=
-               JTJGdHIlNUIyJTVEJTJGdGQlMkZhJm0lNUJiYW5kaXQtc3ViamVjdCU1RD03QzAyNU0yR01SU=
-               Fg0Jm0lNUJjYW1wYWlnbi1pZCU1RD0yMjMwMSZtJTVCcmVxdWVzdC1rZXklNUQ9MmZlNjU3OT=
-               gxYzI1MjAxNSZtJTVCdGVtcGxhdGUtaWQlNUQ9MTUyMzkmbSU1QnRyYW5zbGF0aW9uLWlkJTV=
-               EPTc0MTYmbj1lbWFpbGNsaWNrJnI9aHR0cHMlM0ElMkYlMkZzcXVhcmV1cC5jb20lMkY" sty=
-               le=3D"color: #2d394e;text-decoration: none;font-family: sqmarket-medium, =
-               Helvetica, sans-serif;font-weight: bold">=C2=A9 2017 Square, Inc.<br></a>=
-               1455 Market Street, Suite 600<span style=3D"white-space: nowrap"> San Fra=
-               ncisco, CA 94103</span>
-               </td>
-            </tr>
-            <tr><td style=3D"padding-top: 23px;font-size: 11px;line-height: 15px;lett=
-               er-spacing: 1px;text-transform: uppercase;font-family: sqmarket, Helvetic=
-               a, sans-serif;font-weight: normal;color: #5f6a7d;text-align: center" clas=
-               s=3D"p" align=3D"center" width=3D"420">
-               <a id=3D"footer_unsubscribe" href=3D"https://squareup.com/subscriptions/r=
-               ?ee=3Dfcc1b9be0b0334262301388a17b82092be31ecd4113c9e5af2028306--ZD1tSlpvR=
-               kFUM0RuVVU1Z1pKJmU9JTIzZm9vdGVyX3Vuc3Vic2NyaWJlJm0lNUJiYW5kaXQtc3ViamVjdC=
-               U1RD03QzAyNU0yR01SUFg0Jm0lNUJjYW1wYWlnbi1pZCU1RD0yMjMwMSZtJTVCcmVxdWVzdC1=
-               rZXklNUQ9MmZlNjU3OTgxYzI1MjAxNSZtJTVCdGVtcGxhdGUtaWQlNUQ9MTUyMzkmbSU1QnRy=
-               YW5zbGF0aW9uLWlkJTVEPTc0MTYmbj1lbWFpbGNsaWNrJnI9aHR0cHMlM0ElMkYlMkZzcXVhc=
-               mV1cC5jb20lMkZzdWJzY3JpcHRpb25zJTJGUVpkSGh5VE9jT3JMODlhRiUzRmNpZCUzRDQlMj=
-               ZkdCUzRG1KWm9GQVQzRG5VVTVnWko" style=3D"color: #2d394e;text-decoration: n=
-               one;font-family: sqmarket-medium, Helvetica, sans-serif;font-weight: bold=
-               ">Unsubscribe </a><span style=3D"white-space: nowrap">or </span><a id=3D"=
-               footer_subscriptions" href=3D"https://squareup.com/subscriptions/r?ee=3Db=
-               4bdbdde4dcf0908e22755eee4cc8037447d201c81912291f0bd8479--ZD1tSlpvRkFUM0Ru=
-               VVU1Z1pKJmU9JTIzZm9vdGVyX3N1YnNjcmlwdGlvbnMmbSU1QmJhbmRpdC1zdWJqZWN0JTVEP=
-               TdDMDI1TTJHTVJQWDQmbSU1QmNhbXBhaWduLWlkJTVEPTIyMzAxJm0lNUJyZXF1ZXN0LWtleS=
-               U1RD0yZmU2NTc5ODFjMjUyMDE1Jm0lNUJ0ZW1wbGF0ZS1pZCU1RD0xNTIzOSZtJTVCdHJhbnN=
-               sYXRpb24taWQlNUQ9NzQxNiZuPWVtYWlsY2xpY2smcj1odHRwcyUzQSUyRiUyRnNxdWFyZXVw=
-               LmNvbSUyRnN1YnNjcmlwdGlvbnMlMkZRWmRIaHlUT2NPckw4OWFGJTNGZHQlM0RtSlpvRkFUM=
-               0RuVVU1Z1pKJTI2dCUzRHM" style=3D"white-space: nowrap;color: #2d394e;text-=
-               decoration: none;font-family: sqmarket-medium, Helvetica, sans-serif;font=
-               -weight: bold">Manage your preferences </a>
-               </td>
-            </tr>
-            <tr><td align=3D"center" style=3D"padding: 23px 0 0" width=3D"420"><table=
-               cellpadding=3D"0" cellspacing=3D"0">
-            <tr>
-               <td><a id=3D"footer_jewel" href=3D=
-                  "https://squareup.com/subscriptions/r?ee=3Dedae487b9ec9b9fa50e34c5bc4aa84=
-                  6be158039498a3687907752541--ZD1tSlpvRkFUM0RuVVU1Z1pKJmU9JTIzZm9vdGVyX2pld=
-                  2VsJm0lNUJiYW5kaXQtc3ViamVjdCU1RD03QzAyNU0yR01SUFg0Jm0lNUJjYW1wYWlnbi1pZC=
-                  U1RD0yMjMwMSZtJTVCcmVxdWVzdC1rZXklNUQ9MmZlNjU3OTgxYzI1MjAxNSZtJTVCdGVtcGx=
-                  hdGUtaWQlNUQ9MTUyMzkmbSU1QnRyYW5zbGF0aW9uLWlkJTVEPTc0MTYmbj1lbWFpbGNsaWNr=
-                  JnI9aHR0cHMlM0ElMkYlMkZzcXVhcmV1cC5jb20lMkY" style=3D"text-decoration: no=
-                  ne"><img src=3D"https://square-mailstrom-production-s.squarecdn.com/_shar=
-                  ed/jewel/jewel-grey-22.png" width=3D"22" height=3D"22" border=3D"0" style=
-                  =3D"display: block"></a>
-               </td>
-            </tr>
-         </table>
-         </td>
-      </tr>
-      </table></td></tr></table>
-      </div>
-      <img id=3D"sa" style=3D"display:none !important" src=3D"https://squareup.=
-      com/subscriptions/r?ee=3Dd49ac4052db51ccf773395bc2ee09c455e9d758d3a7376fd=
-      486521e2--ZD1tSlpvRkFUM0RuVVU1Z1pKJm0lNUJiYW5kaXQtc3ViamVjdCU1RD03QzAyNU0=
-      yR01SUFg0Jm0lNUJjYW1wYWlnbi1pZCU1RD0yMjMwMSZtJTVCcmVxdWVzdC1rZXklNUQ9MmZl=
-      NjU3OTgxYzI1MjAxNSZtJTVCdGVtcGxhdGUtaWQlNUQ9MTUyMzkmbSU1QnRyYW5zbGF0aW9uL=
-      WlkJTVEPTc0MTYmbj1lbWFpbHZpZXcmcj1odHRwcyUzQSUyRiUyRnNxdWFyZXVwLmNvbQ">
+      <!--preloader-->
+      <!--
+         <div id="spinner-wrapper">
+           <div class="spinner"></div>
+         </div> 
+         -->
+      <!-- Header
+         ================================================= -->
+      <!--
+         ////////////////////////////////////////////////
+          Navigation
+          //////////////////////////////////////////////// 
+         -->
+      <header id="header" class="lazy-load">
+         <nav>
+            <ul class="desktop-menu" id="desktopMenu">
+               <li>
+                  <a id="home" href="/">
+                  <img src="http://likeminds.dev/assets/img/logoh.png" class="" style="width:133px; height:30px;">
+                  </a>
+               </li>
+               <li class="desktop-link">
+                  <a href="http://likeminds.dev/auth/login" class="login-buttons">PROFILE
+                  </a>
+                  <a class="caret login-buttons" href="#" onclick="caretDropdownOne(); return false;">&or;</a>
+                  <ul class="dropdown-menu" id="caretDropdownOne">
+                     @if(Auth::check())
+                     <li>
+                        <a href= "/account/edit" class="login-buttons">EDIT
+                        </a>
+                     </li>
+                     @else
+                     <li>
+                        <a href= "http://likeminds.dev/auth/login" class="login-buttons">LOGIN
+                        </a>
+                     </li>
+                     @endif
+                  </ul>
+               </li>
+               <li class="desktop-link">
+                  <a href="/events" class="login-buttons">EVENTS
+                  </a>
+               </li>
+               @if(Auth::check())
+               <li class="desktop-link">
+                  <a href="/events/create" class="login-buttons">CREATE
+                  </a>
+               </li>
+               <li class="desktop-link">
+                  <a href="http://likeminds.dev/auth/logout" class="login-buttons">LOGOUT
+                  </a>
+               </li>
+               <ul class="desktopMenu hidden-xs desktop-link">
+                  <span class="navbar-text">WELCOME <?= Auth::user()->name; ?></span>
+               </ul>
+               @else
+               <li class="desktop-link">
+                  <a href="http://likeminds.dev/auth/login" class="login-buttons">REGISTER/LOGIN
+                  </a>
+               </li>
+               @endif
+               <li id="mobile-menu">
+                  <a id="home2" href="index.html">
+                  <img src="http://likeminds.dev/assets/img/logoh.png" class="yonsei-logo" alt="Yonsei Univeristy Logo">
+                  </a>
+                  <a id="mobile-icon-container" class="login-buttons" href="#" onclick="responsiveMenu(); return false;">
+                  <img id="mobile-icon" src="https://eliya33.github.io/church/images/mobile-menu-icon-125x125.png" alt="Mobile Menu Icon">
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <br>
+         <br>
+         <br>
+         <!-- ================================================ -->
+         <nav class="navbar navbar-default ">
+            <div class="container-fluid lma-nav-color">
+               <!-- Brand and toggle get grouped for better mobile display -->
+               <div class="navbar-header ">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+               </div>
+               <!-- Collect the nav links, forms, and other content for toggling -->
+               <div class="collapse navbar-collapse" id="defaultNavbar1">
+                  <ul class="nav navbar-nav">
+                     <li class=" navbar-btn "><a href="welcome.html"><img src="http://likeminds.dev/assets/img/logoh.png" class="" style="width:133px; height:30px;"></a></li>
+                     <li class="btn btn-default navbar-btn dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">EVENTS<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                           <li><a href="/events">ALL EVENTS</a></li>
+                           @if(Auth::check()) 
+                           <li><a href="/events/create">CREATE</a></li>
+                           @endif
+                        </ul>
+                     </li>
+                     <li type="button" class="btn btn-default navbar-btn dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">PROFILE<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                           @if(Auth::check())
+                           <li><a href="#">EDIT</a></li>
+                           @else
+                           <li><a href="#">LOGIN</a></li>
+                           @endif
+                        </ul>
+                     </li>
+                     <!-- <li><a href="masterCalendar.html">Opportunities<span class="sr-only">(current)</span></a></li>-->
+                     @if(Auth::check())
+                     <li class="btn btn-default navbar-btn "><a href="/auth/logout">LOG OUT</a></li>
+                     <li  class="btn btn-default navbar-btn navbar-text">WELCOME <?= Auth::user()->name; ?></li>
+                     @else
+                     <li class="btn btn-default navbar-btn " ><a href="/auth/login">REGISTER/LOGIN</a></li>
+                     @endif
+                  </ul>
+               </div>
+               <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+         </nav>
+      </header>
+      <!--Header End-->
    </body>
+   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!--
+      Bootstrap 
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      -->
+   <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed --> 
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </html>
-
-
