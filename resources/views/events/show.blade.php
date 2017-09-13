@@ -5,7 +5,7 @@
 @section('content')
 
 	<!-- THE LOADER -->
-	
+
 <div class="be-loader">
     <div class="spinner">
 		<img src="img/logo-loader.png"  alt="">
@@ -64,7 +64,7 @@
 						<?php endif;  ?>
 
 						<?php if(Auth::check() && Auth::id() == $event['user']['id']): ?>
-						<form method="GET" 
+						<form method="GET"
 							action="{{ action('EventsController@edit', array($event->id)) }}">
 							{!! csrf_field() !!}
 							<button>Edit This Event</button>
@@ -89,7 +89,9 @@
 							About {{ $event['user']['name'] }}
 						</h5>
 						<p class="be-text-userblock">
-						<?php echo $event['user']['bio'] ?> 	
+						<?php echo $event['user']['bio'] ?>
 						</p>
 					</div>
+					</div>
+
 @stop

@@ -182,10 +182,11 @@ section h2.sub-title{
 
   .legality{
     margin: auto;
-    width: 700px;
+    width: 300px;
     text-align: center;
     clear: both;
     font: 10pt Montserrat;
+    font
     line-height: 2em;
     padding: 40px 0 0 0;
   }
