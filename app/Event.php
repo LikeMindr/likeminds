@@ -70,7 +70,7 @@ class Event extends Model
 				return "/assets/img/cat-dance.jpg";
 				break;
 			case  "HAPPY HOURS":
-				return "/assets/img/cat-happyhour.jpeg";
+				return "/assets/img/cat-happyhour2.jpg";
 				break;
 			case "ART":
 				return "/assets/img/cat-art.jpg";
@@ -78,7 +78,7 @@ class Event extends Model
 			case "BOOKS / POETRY / WRITING":
 				return "/assets/img/cat-book.jpg";
 				break;
-			case "BUSINESS / TECH":
+			case "BUSINESS & TECH":
 				return "/assets/img/cat-business.jpg";
 				break;
 			case "CIVIC ENGAGEMENT":
