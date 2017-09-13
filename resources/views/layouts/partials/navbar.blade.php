@@ -107,8 +107,8 @@
                <!-- Collect the nav links, forms, and other content for toggling -->
                <div class="collapse navbar-collapse" id="defaultNavbar1">
                   <ul class="nav navbar-nav">
-                     <li class=" navbar-btn "><a href="welcome.html"><img src="assets/img/logoh.png" class="" style="width:133px; height:30px;"></a></li>
-                     <li class="btn btn-default navbar-btn dropdown">
+                     <li class=" navbar-btn "><a href="/"><img src="assets/img/logoh.png" class="" style="width:133px; height:30px;"></a></li>
+                     <li class=" btn-default navbar-btn dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">EVENTS<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                            <li><a href="/events">ALL EVENTS</a></li>
@@ -117,7 +117,7 @@
                            @endif
                         </ul>
                      </li>
-                     <li type="button" class="btn btn-default navbar-btn dropdown">
+                     <li type="button" class=" btn-default navbar-btn dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">PROFILE<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                            @if(Auth::check())
@@ -130,10 +130,11 @@
                      </li>
                      <!-- <li><a href="masterCalendar.html">Opportunities<span class="sr-only">(current)</span></a></li>-->
                      @if(Auth::check())
-                     <li class="btn btn-default navbar-btn "><a href="/auth/logout">LOG OUT</a></li>
+                     <li class=" btn-default navbar-btn "><a href="/auth/logout">LOG OUT</a></li>
                      <li  class="btn btn-default navbar-btn navbar-text">WELCOME <?= Auth::user()->name; ?></li>
                      @else
-                     <li class="btn btn-default navbar-btn " ><a href="/auth/login">REGISTER/LOGIN</a></li>
+                     <li class=" btn-default navbar-btn " ><a href="/auth/register">REGISTER</a></li>
+                     <li class=" btn-default navbar-btn " ><a href="/auth/login">LOGIN</a></li>
                      @endif
                   </ul>
                </div>
