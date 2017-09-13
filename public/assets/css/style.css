@@ -58,10 +58,10 @@ body{
 
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 @font-face {
-    font-family: 'Grand Hotel', cursive; 
+    font-family: 'Grand Hotel', cursive;
 }
 
 h1, h2, h3, h4, h5, h6{color: black;}
@@ -700,7 +700,7 @@ textarea{
   ==================================================*/
 
 .img-divider{
-  background: url("/assets/img/fireside.jpeg") no-repeat;
+  background: url("/assets/img/fireside.jpg") no-repeat;
   background-size: cover;
   text-align: center;
   min-height: 460px;
