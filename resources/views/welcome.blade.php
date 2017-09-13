@@ -10,7 +10,7 @@
 <!-- Top Banner
    ================================================= -->
 <section id="banner">
-   <!-- <div class="homepage-hero-module"> -->
+   <div class="homepage-hero-module">
     <div class="header-hero">
       <div class="fondo-imag">
          <video class='flexible' autoplay="" loop='' name="media">
@@ -18,13 +18,13 @@
          </video>
       </div>
       </div>
-   <!-- </div> -->
+   </div>
    <div class="container">
       <!-- Sign Up Form
          ================================================= -->
       <div class="sign-up-form">
-         <a href="index.html" class="logo"><img src="/assets/img/logov.png" alt="Friend Finder"/></a>
-         <h1 class="text-white">Find My Friends</h2>
+         <a href="index.html" class="logo"><img src="/assets/img/logov.png" alt="Friend Finder" style="width:65%"></a>
+         <h1 class="text-white">Make new Friends</h2>
          <div class="line-divider"></div>
          <div class="form-wrapper">
             <p class="signup-text">Register now and meet like-minded people in your area</p>
@@ -39,10 +39,10 @@
                	<input type="password" class="form-control" id="example-password" placeholder="Enter a password">
                </fieldset>
                </form> -->
-            <p>*By signing up you agree to the terms and conditions</p>
-            <button class="btn-secondary">Register</button>
+            <!-- <p>*By signing up you agree to the terms and conditions</p>
+            <button class="btn-secondary">Register</button> -->
          </div>
-         <button class="btn-secondary">Login</button>
+         <!-- <button class="btn-secondary">Login</button> -->
          <img class="form-shadow" src="/assets/img/bottom-shadow.png" alt="" />
       </div>
       <!-- Sign Up Form End -->
@@ -62,19 +62,19 @@
       <h1 class="section-title slideDown">like minds</h1>
       <div class="row slideUp">
         <div class="feature-item col-md-2 col-sm-6 col-xs-6 col-md-offset-2">
-						<div class="feature-icon"><i class="icon ion-person-add"></i></div>
+						<a href="events/"><div class="feature-icon"><i class="icon ion-person-add"></i></div></a>
 						<h3>Make Friends</h3>
 					</div>
          <div class="feature-item col-md-2 col-sm-6 col-xs-6">
-            <div class="feature-icon"><i class="icon ion-images"></i></div>
+            <a href="events/create"><div class="feature-icon"><i class="icon ion-images"></i></div></a>
             <h3>Create Events </h3>
          </div>
          <div class="feature-item col-md-2 col-sm-6 col-xs-6">
-            <div class="feature-icon"><i class="con ion-chatbox-working"></i></div>
+            <a href="events/"><div class="feature-icon"><i class="con ion-chatbox-working"></i></div></a>
             <h3>Meet Like-Minded People</h3>
          </div>
          <div class="feature-item col-md-2 col-sm-6 col-xs-6">
-            <div class="feature-icon"><i class="icon ion-compose"></i></div>
+            <a href="events/"><div class="feature-icon"><i class="icon ion-compose"></i></div></a>
             <h3>Connect</h3>
          </div>
       </div>
