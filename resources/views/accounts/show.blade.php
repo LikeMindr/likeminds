@@ -57,8 +57,16 @@
 							</div>
 						</div>
 						<div class="be-user-statistic">
-							<div class="stat-row clearfix"><i class="stat-icon icon-views-b"></i> EVENTS CREATED<span class="stat-counter">218098</span></div>
-							<div class="stat-row clearfix"><i class="stat-icon icon-like-b"></i>EVENTS ATTENDED<span class="stat-counter">14335</span></div>
+							<div class="stat-row clearfix">
+							<i class="stat-icon icon-views-b">
+</i>EVENTS CREATED<span class="stat-counter">
+							{{ count($user->events) }} 
+							</span></div>
+							<div class="stat-row clearfix">
+							<i class="stat-icon icon-like-b">
+</i>EVENTS ATTENDED<span class="stat-counter">
+							{{ count($user->attends) }} 
+							</span></div>
 						</div>
 					</div>
 					<div class="be-desc-block">
@@ -66,14 +74,15 @@
 							<div class="be-desc-label">ABOUT ME</div>
 							<div class="clearfix"></div>
 							<div class="be-desc-text">
-								I like tacos.
+							{{ $user->bio }}
 							</div>
 						</div>
 						<div class="be-desc-author">
 							<div class="be-desc-label">QUESTION</div>
+							{{ $user->question }}
 							<div class="clearfix"></div>
 							<div class="be-desc-text">
-								Sed dignissim scelerisque pretium. Vestibulum vel lacus laoreet nunc fermentum maximus. Proin id sodales sem, at consectetur urna. Proin vestibulum, erat a hendrerit sodales, nulla libero ornare dolor.
+							{{ $user->answer }}
 							</div>
 						</div>
 					</div>										
