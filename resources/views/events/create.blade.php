@@ -92,7 +92,7 @@
 					<div class="form-group">
 						<h2 class="form-label-create">DESCRIPTION</h2>
 						<textarea class="form-control text-form create-event-description"
-						name="description" placeholder="Tell everyone why they should go to your event..." required> {{ old('description') }}</textarea>
+						name="description" placeholder="Tell everyone why they should go to your event..." value="{{ old('description') }}" required> </textarea>
 					</div>
 					<button class="btn color-4 size-2 hover-7 button-event-create" id="submit">Submit</button>
 				</form>
@@ -108,7 +108,7 @@
 
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -33.8688, lng: 151.2195},
+          center: {lat: 37.0902, lng: 95.7129},
           zoom: 13
         });
         var card = document.getElementById('pac-card');

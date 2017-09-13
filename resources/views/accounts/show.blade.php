@@ -19,22 +19,58 @@
 									</div>
 								</div>
 							</div>
-  							<img src="/assets/../assets/img/usericon.png" width="300px" height="300px">
-							<p class="be-use-name">{{$user->name}}</p>
+
+  							<img src=
+								<?php clearstatcache();
+									if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
+									"/assets/img/u-" . $user->id . ".jpg")): ?>
+									"/assets/img/u-{{$user->id}}.jpg"
+								<?php else: ?>
+									"../assets/img/usericon.png"
+								<?php endif; ?>
+							width="300px" height="300px" />
+							<p class="be-use-name">{{ $user->name }}</p>
+
 							<div class="be-user-info">
-								San Antonio, Tx
+								{{ $user->location }}
 							</div>
 							<div class="be-user-social">
-								<a class="social-btn color-1" href="page1.html"><i class="fa fa-facebook"></i></a>
-								<a class="social-btn color-2" href="page1.html"><i class="fa fa-twitter"></i></a>
-								<a class="social-btn color-4" href="page1.html"><i class="fa fa-pinterest-p"></i></a>
-								<a class="social-btn color-5" href="page1.html"><i class="fa fa-instagram"></i></a>
+
+								<?php if($user->facebook != NULL): ?>					
+								<a class="social-btn color-1" 
+									href="{{$user->facebook}}" target="blank">
+									<i class="fa fa-facebook"></i></a>
+								<?php endif; ?>
+								<?php if($user->twitter != NULL): ?>
+								<a class="social-btn color-2" 
+									href="{{$user->twitter}}" target="blank">
+									<i class="fa fa-twitter"></i></a>
+								<?php endif;  ?>
+								<?php if($user->pinterest != NULL): ?>
+								<a class="social-btn color-4" 
+									href="{{$user->pinterest}}" target="blank">
+									<i class="fa fa-pinterest-p"></i></a>
+								<?php endif;  ?>
+								<?php if($user->instagram != NULL): ?>
+								<a class="social-btn color-5" 
+									href="{{$user->instagram}}" target="blank">
+									<i class="fa fa-instagram"></i></a>
+								<?php endif;  ?>
+
 								<a class="btn color-1 size-2 hover-1"><i class="fa fa-plus"></i>MESSAGE</a>
 							</div>
 						</div>
 						<div class="be-user-statistic">
-							<div class="stat-row clearfix"><i class="stat-icon icon-views-b"></i> EVENTS CREATED<span class="stat-counter">218098</span></div>
-							<div class="stat-row clearfix"><i class="stat-icon icon-like-b"></i>EVENTS ATTENDED<span class="stat-counter">14335</span></div>
+							<div class="stat-row clearfix">
+							<i class="stat-icon icon-views-b">
+</i>EVENTS CREATED<span class="stat-counter">
+							{{ count($user->events) }} 
+							</span></div>
+							<div class="stat-row clearfix">
+							<i class="stat-icon icon-like-b">
+</i>EVENTS ATTENDED<span class="stat-counter">
+							{{ count($user->attends) }} 
+							</span></div>
 						</div>
 					</div>
 					<div class="be-desc-block">
@@ -42,14 +78,15 @@
 							<div class="be-desc-label">ABOUT ME</div>
 							<div class="clearfix"></div>
 							<div class="be-desc-text">
-								I like tacos.
+							{{ $user->bio }}
 							</div>
 						</div>
 						<div class="be-desc-author">
 							<div class="be-desc-label">QUESTION</div>
+							{{ $user->question }}
 							<div class="clearfix"></div>
 							<div class="be-desc-text">
-								Sed dignissim scelerisque pretium. Vestibulum vel lacus laoreet nunc fermentum maximus. Proin id sodales sem, at consectetur urna. Proin vestibulum, erat a hendrerit sodales, nulla libero ornare dolor.
+							{{ $user->answer }}
 							</div>
 						</div>
 					</div>
