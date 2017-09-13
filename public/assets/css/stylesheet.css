@@ -38,6 +38,7 @@ body {
   margin: 0; 
   padding: 0; 
   font-family: 'Montserrat', sans-serif;
+  background-color: #FFC517;
 }
 
 h1, h2, h3, h4, h5, p { margin: 0; padding: 0; }
@@ -3781,4 +3782,170 @@ body .behance-style .creative_filds_block a:hover {
 body .login-user-down:hover {
     background: transparent !important;
 }
+
+
+
+.create-event-form-align{
+  max-width: 100%;
+  max-height: 100PX;
+  font-size: 25px;
+  text-align: left;
+  background-color: #b4b7c1;
+  padding-left: 20px;
+  color: white;
+  height: 50px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+form {
+  background-color: white;
+  max-width: 70%;
+  align-content: 30%;
+  margin-top: 30px;
+  padding-bottom: 25px;
+  margin-left: auto;
+  
+}
+
+.create-event-input{
+  margin-left: 10px;
+  font-size: 13px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #b4b7c1;
+    max-width: 80%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #edeff2;
+    border-radius: 3px;
+}
+
+.create-event-input-datetime{
+  margin-left: 10px;
+  font-size: 13px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #b4b7c1;
+    max-width: 45%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 5px;
+    border: 1px solid #edeff2;
+    border-radius: 3px;
+   
+}
+
+.create-event-description {
+  margin-left: 10px;
+  font-size: 13px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #b4b7c1;
+    max-width: 90%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #edeff2;
+    border-radius: 3px;
+}
+
+.form-label-create{
+   font-size: 17px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #383b43;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.button-event-create {
+  margin-left: 50%;
+}
+
+input[type=file] {
+    display: block;
+    padding-left: 20px;
+}
+
+
+#map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+
+      .pac-card {
+        margin: 10px 10px 0 0;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        font-family: Roboto;
+      }
+
+      #pac-container {
+        padding-bottom: 12px;
+        margin-right: 12px;
+      }
+
+      .pac-controls {
+        display: inline-block;
+        padding: 5px 11px;
+      }
+
+      .pac-controls label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      #title {
+        color: #fff;
+        background-color: #4d90fe;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+      }
 
