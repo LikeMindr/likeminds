@@ -91,7 +91,17 @@
 								<a href="/events/{{$event->id}}" class="be-img-block">
 								<img src="img/p1.jpg" alt="Checkout this event">
 								</a>
-								<a href="/events/{{$event->id}}" class="be-post-title">{{ $event->title }}</a>
+								<a href="/events/{{$event->id}}" 
+								class="be-post-title">{{ $event->title }}</a>
+								<img src=
+									<?php clearstatcache();
+									if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
+										"/assets/img/e-" . $event->id . ".jpg")): ?>
+										"/assets/img/e-{{$event->id}}.jpg"
+									<?php else: ?>
+										"{{App\Event::defaultImage($event->category)}}"
+									<?php endif; ?>
+								height="150" width="250"/>
 								<span>
 									<p>	{{ $event->category }} </p>
 									<p>	{{ $event->date }} </p>
