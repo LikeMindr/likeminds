@@ -34,6 +34,15 @@
 					</div>
 					<div class="blog-content  be-large-post-align">
 						<h5 class="be-post-title to">{{ $event->title }}</h5>
+						<img src=
+						<?php clearstatcache();
+						   	if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
+								"/assets/img/e-" . $event->id . ".jpg")): ?>
+								"/assets/img/e-{{$event->id}}.jpg"
+						<?php else: ?>
+							"{{App\Event::defaultImage($event->category)}}"
+						<?php endif; ?>
+							/>
 						<h5>{{ $event->date }} {{ $event->time }}</h5>
 						<h5>{{ $event->location }}</h5>
 						<h5>{{ $event->category }}</h5>
