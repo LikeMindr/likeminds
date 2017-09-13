@@ -11,6 +11,9 @@ use App\Http\Controllers\Input;
 use Auth;
 use App\Attend;
 
+use Storage;
+
+
 class EventsController extends Controller
 {
 	public function __construct() 
@@ -67,6 +70,14 @@ class EventsController extends Controller
 		$event->created_by = Auth::id();
 		$event->save();
 
+		$file = $request->file('file');
+		$filename = "e-" . $event->id . '.' . $file->getClientOriginalExtension();
+		$filepath = '../../../public/assets/img/';
+		Storage::put(
+			'img/' . $filename,
+			file_get_contents($file->getRealPath())
+		);
+
 		return \Redirect::action('EventsController@index');
     }
 
@@ -115,6 +126,14 @@ class EventsController extends Controller
 		$event->created_by = Auth::id();
 		$event->save();
 
+		$file = $request->file('file');
+		$filename = "e-" . $event->id . '.' . $file->getClientOriginalExtension();
+		$filepath = '../../../public/assets/img/';
+		Storage::put(
+			'img/' . $filename,
+			file_get_contents($file->getRealPath())
+		);
+
 		return \Redirect::action('EventsController@index');
     }
 
@@ -132,4 +151,16 @@ class EventsController extends Controller
 
 		return \Redirect::action('EventsController@index');
     }
+
+	public function image($cat) 
+	{
+		switch($cat) {
+			case "MUSIC":
+				return "storage/app/cat-dance.jpg";
+				break;
+			case  "HAPPY HOURS":
+				return "storage/app/cat-happyhour.jpg";
+				break;
+		}
+	}
 }

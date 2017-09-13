@@ -20,7 +20,7 @@
 
 	<!-- MAIN CONTENT -->
 
-<div id="content-block">
+<div id="profile-page-bg">
 	<div class="container custom-container be-detail-container">
 		<div class="row">
 			<div class="col-md-9 col-md-push-3">
@@ -34,6 +34,15 @@
 					</div>
 					<div class="blog-content  be-large-post-align">
 						<h5 class="be-post-title to">{{ $event->title }}</h5>
+						<img src=
+						<?php clearstatcache();
+						   	if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
+								"/assets/img/e-" . $event->id . ".jpg")): ?>
+								"/assets/img/e-{{$event->id}}.jpg"
+						<?php else: ?>
+							"{{App\Event::defaultImage($event->category)}}"
+						<?php endif; ?>
+							/>
 						<h5>{{ $event->date }} {{ $event->time }}</h5>
 						<h5>{{ $event->location }}</h5>
 						<h5>{{ $event->category }}</h5>
@@ -43,12 +52,14 @@
 							<h6>{{ $event->description }}</h6>
 						</div>
 
-						<?php $user = App\User::find(Auth::id());
+						<?php if (Auth::check()) {
+							$user = App\User::find(Auth::id());
 							$attending = false;
 							foreach($user->attends as $element) {
 								if($element['event_id'] == $event->id) {
 									$attending = true;
 								}
+							}
 							}
 							if(Auth::check() && $attending && Auth::id() != $event['user']['id']): ?>
 							<a href="/attends/cancel/{{$event->id}}/{{Auth::id()}}">
@@ -69,7 +80,7 @@
 							{!! csrf_field() !!}
 							<button>Edit This Event</button>
 						</form>
-						<?php endif;  ?>
+						<?php endif; ?>
 					</div>
 				</div>
 </div>

@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Attend;
+use Storage;
 
 class Event extends Model
 {
@@ -60,5 +61,62 @@ class Event extends Model
 		}
 
 		return $trendsArr;
+	}
+
+	public static function defaultImage($cat) {
+		
+		switch($cat) {
+			case "MUSIC":
+				return "/assets/img/cat-dance.jpg";
+				break;
+			case  "HAPPY HOURS":
+				return "/assets/img/cat-happyhour2.jpg";
+				break;
+			case "ART":
+				return "/assets/img/cat-art.jpg";
+				break;
+			case "BOOKS / POETRY / WRITING":
+				return "/assets/img/cat-book.jpg";
+				break;
+			case "BUSINESS & TECH":
+				return "/assets/img/cat-business.jpg";
+				break;
+			case "CIVIC ENGAGEMENT":
+				return "/assets/img/cat-civic.jpg";
+				break;
+			case "COMEDY":
+				return "/assets/img/cat-comedy.jpg";
+				break;
+			case "DANCE":
+				return "/assets/img/cat-dance.jpg";
+				break;
+			case "DEALS":
+				return "/assets/img/cat-deals.jpg";
+				break;
+			case "FASHION":
+				return "/assets/img/cat-fashion.jpg";
+				break;
+			case "FILM & THEATER":
+				return "/assets/img/cat-theater.jpg";
+				break;
+			case "FOOD & DRINK":
+				return "/assets/img/cat-food.jpg";
+				break;
+			case "HEALTH & WELLNESS":
+				return "/assets/img/cat-fitness.jpg";
+				break;
+			case "OUTDOORS & NATURE":
+				return "/assets/img/cat-nature.jpg";
+				break;
+			case "SOCIAL":
+				return "/assets/img/social.jpg";
+				break;
+			case "SPECIAL EVENTS":
+				return "/assets/img/cat-special.jpg";
+				break;
+			case "SPORTS & FITNESS":
+				return "/assets/img/cat-sports.jpg";
+				break;
+		}
 	}
 }

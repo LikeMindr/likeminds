@@ -63,9 +63,9 @@ function caretDropdownFive() {
 
 function statusChangeCallback(response) {
 	if (response.status === 'connected') {
-		alert('You are logged in');
+		
 	} else {
-		alert('You are not logged in');
+		
 	}
 }
 
