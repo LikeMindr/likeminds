@@ -15,10 +15,10 @@
 
 .fondo-imag {
         position:absolute;
-        top:-50%;
-        left:-50%;
-        width:200%;
-        height:130%;
+        /*top:-50%;
+        left:-50%;*/
+        width:100%;
+        height:100%;
 }
 .fondo-imag video {
         position:absolute;
@@ -26,7 +26,9 @@
         left:0;
         right:0;
         bottom:0;
-        margin:auto;
-        min-width:50%;
-        min-height:50%;
+        /*margin: auto;*/
+        max-width:inherit;
+        /*height: inherit;*/
+        /*width: auto;*/
+        /*min-height:50%;*/
 }
