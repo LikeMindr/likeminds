@@ -107,7 +107,7 @@
                <!-- Collect the nav links, forms, and other content for toggling -->
                <div class="collapse navbar-collapse" id="defaultNavbar1">
                   <ul class="nav navbar-nav">
-                     <li class=" navbar-btn "><a href="/"><img src="assets/img/logoh.png" class="" style="width:133px; height:30px;"></a></li>
+                     <li class=" navbar-btn "><a href="/"><img src="../assets/img/logoh.png" class="" style="width:133px; height:30px;"></a></li>
                      <li class=" btn-default navbar-btn dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">EVENTS<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">

@@ -5,7 +5,7 @@
 @section('content')
 <div class="be-loader">
     	<div class="spinner">
-			<img src="img/logo-loader.png"  alt="">
+			<img src="../assets/img/logo-loader.png"  alt="">
 			<p class="circle">
 			  <span class="ouro">
 			    <span class="left"><span class="anim"></span></span>
@@ -197,10 +197,3 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZlOlrDyh3XWlEoMzezxJs3DxhubldJys&libraries=places&callback=initMap"
         async defer></script>
 @stop
-
-
- 
-
-    
-
-
