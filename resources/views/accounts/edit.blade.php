@@ -10,7 +10,7 @@
 		<title>NGRNetwork</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="shortcut icon" href="img/favicon.png">
+		<link rel="shortcut icon" href="../assets/img/favicon.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="style/bootstrap.min.css">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -36,7 +36,7 @@
 
 	<div class="be-loader">
 	    	<div class="spinner">
-				<img src="img/logo-loader.png"  alt="">
+				<img src="../assets/img/logo-loader.png"  alt="">
 				<p class="circle">
 				  <span class="ouro">
 				    <span class="left"><span class="anim"></span></span>
@@ -81,7 +81,7 @@
 								<div class="be-change-ava">
 									<a class="be-ava-user style-2" href="blog-detail-2.html">
 
-										<img src="img/ava_10.jpg" alt="">
+										<img src="../assets/img/ava_10.jpg" alt="">
 
 									</a>
 									<a class="btn color-4 size-2 hover-7">replace image</a>
@@ -240,14 +240,13 @@
 
 	</div>
 	<!-- SCRIPT	-->
-	<script src="script/jquery-2.1.4.min.js"></script>
+	<!-- <script src="script/jquery-2.1.4.min.js"></script>
 	<script src="script/bootstrap.min.js"></script>
 	<script src="script/idangerous.swiper.min.js"></script>
 	<script src="script/isotope.pkgd.min.js"></script>
 	<script src="script/jquery.viewportchecker.min.js"></script>
 	<script src="script/global.js"></script>
-	</body>
+	</body> -->
 </html>
 
 @stop
-

@@ -10,7 +10,7 @@
 		<title>NGRNetwork</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="shortcut icon" href="img/favicon.png">
+		<link rel="shortcut icon" href="../assets/img/favicon.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="style/bootstrap.min.css">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="style/stylesheet.css">
 		<!--[if lt IE 10]>
 			<link rel="stylesheet" type="text/css" href="style/ie-9.css" />
-		<![endif]-->		
+		<![endif]-->
 		<!--[if lt IE 9]>
 		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -29,10 +29,10 @@
 	<body data-spy="scroll" data-target="blog-detail-2.htmlscrollspy">
 
 	<!-- THE LOADER -->
-	
+
 	<div class="be-loader">
 	    	<div class="spinner">
-				<img src="img/logo-loader.png"  alt="">
+				<img src="../assets/img/logo-loader.png"  alt="">
 				<p class="circle">
 				  <span class="ouro">
 				    <span class="left"><span class="anim"></span></span>
@@ -40,7 +40,7 @@
 				  </span>
 				</p>
 			</div>
-	    </div>	
+	    </div>
 
 
 	<!-- MAIN CONTENT -->
@@ -64,7 +64,7 @@
 								<li class="edit-ln"><a href="#web-references">Web References</a></li>
 							</ul>
 						</div>
-						<a class="btn full color-1 size-1 hover-1 add_section"><i class="fa fa-plus"></i>add sections</a>	
+						<a class="btn full color-1 size-1 hover-1 add_section"><i class="fa fa-plus"></i>add sections</a>
 					</div>
 
 				</div>
@@ -77,7 +77,7 @@
 							<div class="be-large-post-align">
 								<div class="be-change-ava">
 									<a class="be-ava-user style-2" href="blog-detail-2.html">
-										<img src="img/ava_10.jpg" alt=""> 
+										<img src="../assets/img/ava_10.jpg" alt="">
 									</a>
 									<a class="btn color-4 size-2 hover-7">replace image</a>
 								</div>
@@ -88,25 +88,25 @@
 										<div class="form-group fg_icon focus-2">
 											<div class="form-label">First Name</div>
 											<input class="form-input" type="text" value="Taylor">
-										</div>							
+										</div>
 									</div>
 									<div class="input-col col-xs-12 col-sm-6">
 										<div class="form-group focus-2">
-											<div class="form-label">Last Name</div>									
+											<div class="form-label">Last Name</div>
 											<input class="form-input" type="text" value="Leight">
-										</div>								
+										</div>
 									</div>
 									<div class="input-col col-xs-12">
 										<div class="form-group focus-2">
-											<div class="form-label">Occupation</div>									
+											<div class="form-label">Occupation</div>
 											<input class="form-input" type="text" value="UI/UX, Web Design, Art Direction">
-										</div>								
+										</div>
 									</div>
 									<div class="input-col col-xs-12">
 										<div class="form-group focus-2">
-											<div class="form-label">Company</div>									
+											<div class="form-label">Company</div>
 											<input class="form-input" type="text" placeholder="">
-										</div>								
+										</div>
 									</div>
 									<div class="input-col col-xs-12 col-sm-6">
 										<div class="form-label">Country</div>
@@ -123,16 +123,16 @@
 									</div>
 									<div class="input-col col-xs-12 col-sm-6">
 										<div class="form-group focus-2">
-											<div class="form-label">City</div>									
+											<div class="form-label">City</div>
 											<input class="form-input" type="text" value="Barnsley">
-										</div>								
+										</div>
 									</div>
 									<div class="input-col col-xs-12">
 										<div class="form-group focus-2">
-											<div class="form-label">Website URL</div>									
+											<div class="form-label">Website URL</div>
 											<input class="form-input" type="text" value="http:// www.phoenix.cool">
-										</div>								
-									</div>								
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -146,25 +146,25 @@
 								<div class="row">
 									<div class="input-col col-xs-12 col-sm-4">
 										<div class="form-group focus-2">
-											<div class="form-label">Old Password</div>									
+											<div class="form-label">Old Password</div>
 											<input class="form-input" type="password" placeholder="">
-										</div>								
+										</div>
 									</div>
 									<div class="input-col col-xs-12 col-sm-4">
 										<div class="form-group focus-2">
-											<div class="form-label">New Password</div>									
+											<div class="form-label">New Password</div>
 											<input class="form-input" type="password" placeholder="">
-										</div>								
+										</div>
 									</div>
 									<div class="input-col col-xs-12 col-sm-4">
 										<div class="form-group focus-2">
-											<div class="form-label">Repeat Password</div>									
+											<div class="form-label">Repeat Password</div>
 											<input class="form-input" type="password" placeholder="">
-										</div>								
+										</div>
 									</div>
 									<div class="col-xs-12">
 										<a class="btn color-1 size-2 hover-1 btn-right">change password</a>
-									</div>																
+									</div>
 								</div>
 							</div>
 						</div>
@@ -219,7 +219,7 @@
 									<div class="s_input">
 										<input class="form-input" type="text" value="http:// instagram.com/taylor">
 									</div>
-								</div>																													
+								</div>
 							</div>
 						</div>
 					</div>
@@ -233,9 +233,9 @@
 								<div class="row">
 									<div class="input-col col-xs-12">
 										<div class="form-group focus-2">
-											<div class="form-label">Section Title</div>									
+											<div class="form-label">Section Title</div>
 											<input class="form-input" type="text" placeholder="About Me">
-										</div>								
+										</div>
 									</div>
 									<div class="input-col col-xs-12">
 										<div class="form-group focus-2">
@@ -244,7 +244,7 @@
 										</div>
 									</div>
 								</div>
-							</div>						
+							</div>
 						</div>
 					</div>
 
@@ -257,40 +257,40 @@
 								<div class="row">
 									<div class="input-col col-xs-12 col-sm-5">
 										<div class="form-group focus-2">
-											<div class="form-label">Link Title</div>									
+											<div class="form-label">Link Title</div>
 											<input class="form-input" type="text" placeholder="Enter title">
-										</div>								
+										</div>
 									</div>
 									<div class="input-col col-xs-12 col-sm-5">
 										<div class="form-group focus-2">
-											<div class="form-label">Link descriprion</div>									
+											<div class="form-label">Link descriprion</div>
 											<input class="form-input" type="text" placeholder="Enter descriprion">
-										</div>								
+										</div>
 									</div>
-									<div class="col-xs-12 col-sm-2">								
+									<div class="col-xs-12 col-sm-2">
 										<a href="blog-detail-2.html" class="btn full btn-input color-1 size-4 hover-1">add</a>
 									</div>
-								</div>							
+								</div>
 							</div>
 						</div>
 					</div>
-					<a class="btn full color-1 size-1 hover-1 add_section"><i class="fa fa-plus"></i>add sections</a>																				
-				</div>				
+					<a class="btn full color-1 size-1 hover-1 add_section"><i class="fa fa-plus"></i>add sections</a>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	
+
 
 	</div>
 	<!-- SCRIPT	-->
-	<script src="script/jquery-2.1.4.min.js"></script>		
-	<script src="script/bootstrap.min.js"></script>	
+	<!-- <script src="script/jquery-2.1.4.min.js"></script>
+	<script src="script/bootstrap.min.js"></script>
 	<script src="script/idangerous.swiper.min.js"></script>
-	<script src="script/isotope.pkgd.min.js"></script>	
-	<script src="script/jquery.viewportchecker.min.js"></script>	
-	<script src="script/global.js"></script>	
-	</body>
+	<script src="script/isotope.pkgd.min.js"></script>
+	<script src="script/jquery.viewportchecker.min.js"></script>
+	<script src="script/global.js"></script>
+	</body> -->
 </html>
 
 @stop

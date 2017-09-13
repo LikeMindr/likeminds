@@ -5,7 +5,7 @@
 @section('content')
 <div class="be-loader">
     	<div class="spinner">
-			<img src="img/logo-loader.png"  alt="">
+			<img src="../assets/img/logo-loader.png"  alt="">
 			<p class="circle">
 			  <span class="ouro">
 			    <span class="left"><span class="anim"></span></span>
@@ -89,15 +89,15 @@
 						<div class="category-1 mix custom-column-5">
 							<div class="be-post">
 								<a href="/events/{{$event->id}}" class="be-img-block">
-								<img src="img/p1.jpg" alt="Checkout this event">
+								<img src="../assets/img/p1.jpg" alt="Checkout this event">
 								</a>
-								<a href="/events/{{$event->id}}" 
+								<a href="/events/{{$event->id}}"
 								class="be-post-title">{{ $event->title }}</a>
 								<img src=
 									<?php clearstatcache();
-									if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
-										"/assets/img/e-" . $event->id . ".jpg")): ?>
-										"/assets/img/e-{{$event->id}}.jpg"
+									if(file_exists($_SERVER['DOCUMENT_ROOT'] .
+										"../assets/img/e-" . $event->id . ".jpg")): ?>
+										"../assets/img/e-{{$event->id}}.jpg"
 									<?php else: ?>
 										"{{App\Event::defaultImage($event->category)}}"
 									<?php endif; ?>
@@ -109,7 +109,7 @@
 									<p>	{{ $event->description }} </p>
 								</span>
 								<div class="author-post">
-									<img src="img/a1.png" alt="" class="ava-author">
+									<img src="../assets/img/a1.png" alt="" class="ava-author">
 									<span>by <a href="/accounts/{{$event['user']['id']}}">{{ $event['user']['name'] }}</a></span>
 								</div>
 								<div class="info-block">
