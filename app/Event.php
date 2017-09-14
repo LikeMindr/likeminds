@@ -35,6 +35,15 @@ class Event extends Model
 		return $events;
 	}
 
+	public static function category($c)
+	{
+		$events = Event::where('category', '=', "$c")
+					->orderBy('id', 'desc')
+					->paginate(20);
+		$events->appends(['c' => $c]);
+		return $events;
+	}
+
 	public static function trends() 
 	{
 		$trends = Event::select('category')
@@ -69,19 +78,19 @@ class Event extends Model
 			case "MUSIC":
 				return "/assets/img/cat-dance.jpg";
 				break;
-			case  "HAPPY HOURS":
+			case  "HAPPYHOURS":
 				return "/assets/img/cat-happyhour2.jpg";
 				break;
 			case "ART":
 				return "/assets/img/cat-art.jpg";
 				break;
-			case "BOOKS / POETRY / WRITING":
+			case "BOOKS/POETRY/WRITING":
 				return "/assets/img/cat-book.jpg";
 				break;
-			case "BUSINESS & TECH":
+			case "BUSINESSTECH":
 				return "/assets/img/cat-business.jpg";
 				break;
-			case "CIVIC ENGAGEMENT":
+			case "CIVICENGAGEMENT":
 				return "/assets/img/cat-civic.jpg";
 				break;
 			case "COMEDY":
@@ -96,27 +105,66 @@ class Event extends Model
 			case "FASHION":
 				return "/assets/img/cat-fashion.jpg";
 				break;
-			case "FILM & THEATER":
+			case "FILMTHEATER":
 				return "/assets/img/cat-theater.jpg";
 				break;
-			case "FOOD & DRINK":
+			case "FOODDRINK":
 				return "/assets/img/cat-food.jpg";
 				break;
-			case "HEALTH & WELLNESS":
+			case "HEALTHWELLNESS":
 				return "/assets/img/cat-fitness.jpg";
 				break;
-			case "OUTDOORS & NATURE":
+			case "OUTDOORSNATURE":
 				return "/assets/img/cat-nature.jpg";
 				break;
 			case "SOCIAL":
 				return "/assets/img/cat-social.jpg";
 				break;
-			case "SPECIAL EVENTS":
+			case "SPECIALEVENTS":
 				return "/assets/img/cat-special.jpg";
 				break;
-			case "SPORTS & FITNESS":
+			case "SPORTSFITNESS":
 				return "/assets/img/cat-sports.jpg";
 				break;
+		}
+	}
+
+	public static function correctName($name) 
+	{
+		switch ($name) {
+			case "SPORTSFITNESS":
+			return "SPORTS & FITNESS";
+			break;
+		case "SPECIALEVENTS":
+			return "SPECIAL EVENTS";
+			break;
+		case "OUTDOORSNATURE":
+			return "OUTDOORS & NATURE";
+			break;
+		case "HEALTHWELLNESS":
+			return "HEALTH & WELLNESS";
+			break;
+		case "FOODDRINK":
+			return "FOOD & DRINK";
+			break;
+		case "FILMTHEATER":
+			return "FILM & THEATER";
+			break;
+		case "CIVICENGAGEMENT":
+			return "CIVIC ENGAGEMENT";
+			break;
+		case "BUSINESSTECH":
+			return "BUSINESS & TECH";
+			break;
+		case "BOOKS/POETRY/WRITING":
+			return "BOOKS / POETRY / WRITING";
+			break;
+		case "HAPPYHOURS":
+			return "HAPPY HOURS";
+			break;
+		default:
+			return $name;
+			break;
 		}
 	}
 }

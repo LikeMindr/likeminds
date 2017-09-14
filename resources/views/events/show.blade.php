@@ -27,9 +27,6 @@
 				<div class="be-large-post">
 					<div class="info-block">
 					<div class="be-large-post-align">
-						<span><i class="fa fa-thumbs-o-up"></i> 253</span>
-						<span><i class="fa fa-eye"></i> 753</span>
-						<span><i class="fa fa-comment-o"></i> 50</span>
 					</div>
 					</div>
 					<div class="blog-content  be-large-post-align">
@@ -45,7 +42,7 @@
 							/>
 						<h5>{{ $event->date }} {{ $event->time }}</h5>
 						<h5>{{ $event->location }}</h5>
-						<h5>{{ $event->category }}</h5>
+						<h5>{{ App\Event::correctName($event->category) }}</h5>
 						<h5>{{ $event->num_people }}</h5>
 						<div class="clear"></div>
 						<div class="post-text">
