@@ -38,17 +38,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #2C4762;
-=======
   background-color: #fff;
->>>>>>> c754f80281470d7ff91da27a5588c43b07685991
-=======
 
-  background-color: #2C4762;
-
->>>>>>> e3e467af311521ac904f392017e291e9b283c04b
 }
 
 h1, h2, h3, h4, h5, p { margin: 0; padding: 0; }
@@ -1291,11 +1282,8 @@ a.social-btn:hover { opacity: 0.6; color: white; }
 
 .be-user-statistic { position: relative; margin-left: -15px; margin-right: -15px; }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e3e467af311521ac904f392017e291e9b283c04b
-.be-user-statistic:before { 
+
+/*.be-user-statistic:before { 
   content: ''; 
   display: block; 
   position: absolute; 
@@ -1305,9 +1293,8 @@ a.social-btn:hover { opacity: 0.6; color: white; }
   width: 0; height: 0; 
   border-style: solid; 
   border-width: 0 11.5px 11px 11.5px; 
-  border-color: transparent transparent #9AE4E8 transparent; }
-<<<<<<< HEAD
-=======
+  border-color: transparent transparent #9AE4E8 transparent; }*/
+
 .be-user-statistic:before {
   content: '';
   display: block;
@@ -1319,32 +1306,27 @@ a.social-btn:hover { opacity: 0.6; color: white; }
   border-style: solid;
   border-width: 0 11.5px 11px 11.5px;
   border-color: transparent transparent #17FFA6 transparent; }
->>>>>>> c754f80281470d7ff91da27a5588c43b07685991
-=======
->>>>>>> e3e467af311521ac904f392017e291e9b283c04b
+
 
 .be-user-statistic .stat-row {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
   color: white;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   padding: 15px 29px 15px 29px; 
   text-align: left; 
   background: #9AE4E8; 
-=======
-  padding: 15px 29px 15px 29px;
+
+ /* padding: 15px 29px 15px 29px;
   text-align: left;
   background: #17FFA6;
->>>>>>> c754f80281470d7ff91da27a5588c43b07685991
-=======
+
 
   padding: 15px 29px 15px 29px; 
   text-align: left; 
-  background: #9AE4E8; 
+  background: #9AE4E8; */
 
->>>>>>> e3e467af311521ac904f392017e291e9b283c04b
   border-bottom: 1px solid white; }
 
 .be-user-statistic .stat-row:last-child { border-bottom: none; }
@@ -1616,23 +1598,21 @@ display: inline-block; float: none; margin: 0 10px;}
 /*buttons*/
 .btn { display: inline-block; font-size: 12px; line-height: 12px; font-weight: 400; color: white; text-transform: uppercase; margin-bottom: 10px; margin-right: 27px; border-radius: 3px; }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 .btn.color-1 { 
   background: #9AE4E8; 
   border: 1px solid #9AE4E8; }
-=======
-.btn.color-1 {
+
+/*.btn.color-1 {
   background: #17FFA6;
   border: 1px solid #17FFA6; }
->>>>>>> c754f80281470d7ff91da27a5588c43b07685991
-=======
+
 
 .btn.color-1 { 
   background: #9AE4E8; 
-  border: 1px solid #9AE4E8; }
+  border: 1px solid #9AE4E8; }*/
 
->>>>>>> e3e467af311521ac904f392017e291e9b283c04b
+
 
 .btn.color-1 .fa { color: white; }
 
@@ -1672,26 +1652,18 @@ display: inline-block; float: none; margin: 0 10px;}
 
 .btn.active { box-shadow: none; }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e3e467af311521ac904f392017e291e9b283c04b
 .btn.hover-1:hover, .btn.hover-1.active { 
   background-color: #5C8DD3; 
   border: 1px solid #5C8DD3; 
   color: white; 
-<<<<<<< HEAD
-=======
-.btn.hover-1:hover, .btn.hover-1.active {
+}
+/*.btn.hover-1:hover, .btn.hover-1.active {
   background-color: #35AD81;
   border: 1px solid #35AD81;
   color: white;
->>>>>>> c754f80281470d7ff91da27a5588c43b07685991
-=======
 
->>>>>>> e3e467af311521ac904f392017e291e9b283c04b
-}
+}*/
 
 .btn.hover-1:hover .fa, .btn.hover-1.active .fa { color: #5C8DD3; }
 
@@ -1705,24 +1677,23 @@ display: inline-block; float: none; margin: 0 10px;}
 
 .btn.hover-6:hover, .btn.hover-6.active { background: transparent; border: 1px solid #5C8DD3; color: white; }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 .btn.hover-7:hover, .btn.hover-7.active { 
   background-color: #5C8DD3; 
   border: 1px solid #5C8DD3; 
-=======
-.btn.hover-7:hover, .btn.hover-7.active {
+}
+
+/*.btn.hover-7:hover, .btn.hover-7.active {
   background-color: #35AD81;
   border: 1px solid #35AD81;
->>>>>>> c754f80281470d7ff91da27a5588c43b07685991
-=======
+
 .btn.hover-7:hover, .btn.hover-7.active { 
   background-color: #5C8DD3; 
   border: 1px solid #5C8DD3; 
 
->>>>>>> e3e467af311521ac904f392017e291e9b283c04b
+
   color: white;
-   }
+   }*/
 
 .btn.hover-8:hover, .btn.hover-8.active { background: transparent; border: 1px solid #edeff2; color: white; }
 
@@ -3907,20 +3878,12 @@ form {
   align-content: 30%;
   margin-top: 30px;
   margin-left: auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   color: #2C4762;
   
-=======
 
->>>>>>> c754f80281470d7ff91da27a5588c43b07685991
 }
-=======
 
-  color: #2C4762;
-  
-
->>>>>>> e3e467af311521ac904f392017e291e9b283c04b
 
 .create-event-input{
   margin-left: 10px;
