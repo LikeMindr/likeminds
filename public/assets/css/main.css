@@ -28,11 +28,11 @@ a.nav-buttons:active {
 
 /* 2. Desktop Nav Menu */
 .desktop-menu {
-  background: #17FFA6; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#35AD81, #17FFA6, #35AD81); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#35AD81, #17FFA6, #35AD81); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#35AD81, #17FFA6, #35AD81); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#35AD81, #17FFA6, #35AD81); /* Standard syntax (must be last) */
+  background: #9AE4E8; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#35AD81, #9AE4E8, #35AD81); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#35AD81, #9AE4E8, #35AD81); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#35AD81, #9AE4E8, #35AD81); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#35AD81, #9AE4E8, #35AD81); /* Standard syntax (must be last) */
   margin: 0;
   padding: .75em 0;
   position: absolute; /* Prevents parent ul from collapsing because of floated children li's. Alternative to overflow: auto/none; */
@@ -98,7 +98,7 @@ a.nav-buttons:active {
   .dropdown-menu a.nav-buttons,
   .dropdown-menu a.nav-buttons:link,
   .dropdown-menu a.nav-buttons:visited {
-    border-top: 1px solid #17FFA6;
+    border-top: 1px solid #9AE4E8;
     color: white;
     font-size: 1.5em;
     font-weight: 600;
@@ -125,7 +125,7 @@ a.nav-buttons:active {
   }
 
   #mobile-menu {
-    background: #17FFA6;
+    background: #9AE4E8;
     display: block; /* Shows mobile-menu on small screen menu */
     position: absolute;
     width: 100%;
@@ -175,8 +175,8 @@ a.nav-buttons:active {
     /* 3.2 Tablet/Mobile Dropdown Menu  */
     a.caret { /* a.caret to beat specificity of styles for general a links */
       background: #193658;
-      border-bottom: 1px solid #17FFA6;
-      border-left: 1px solid #17FFA6;
+      border-bottom: 1px solid #9AE4E8;
+      border-left: 1px solid #9AE4E8;
       bottom: 0;
       color: white;
       display: block; /* Shows caret link on small screen menu */
@@ -203,7 +203,7 @@ a.nav-buttons:active {
     }
 
     #last-desktop-link {
-      border-bottom: 1px solid #17FFA6;
+      border-bottom: 1px solid #9AE4E8;
     }
 
     /* 3.3 Tablet/Mobile Javascript Onclick Menu */
@@ -213,7 +213,7 @@ a.nav-buttons:active {
     }
 
     .responsive .desktop-link {
-      background: #17FFA6;
+      background: #9AE4E8;
       display: block; /* Javascript menu is shown when mobile menu is active */
       width: 100%;
       position: relative;
@@ -296,11 +296,12 @@ div.custom-container {
 
 .clearbtn, .trendbtn {
 	display: inline-block;
-    background-color: #17FFA6;
+    background-color: #9AE4E8;
     color: white;
-    font-size: 13px;
+    font-size: 14px;
     border: none;
     cursor: pointer;
+    margin-top: 
 }
 
 a.clearbtn:hover, a.trendbtn:hover {
@@ -315,7 +316,7 @@ a.clearbtn:hover, a.trendbtn:hover {
 
 
 #profile-page-bg{
-  background-color: #FFC517;
+  background-color: #2C4762;
 
 
 
