@@ -3969,10 +3969,29 @@ input[type=file] {
 }
 
 .column-one-third {
-  max-width: 33%;
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
   
 }
 
+/* Justin testing */
+.verticalAlignParent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+}
+
+.verticalAlignChild {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    padding: 32px 0;
+    margin: 0 5;
+    width: 25%;
+}
 
 
 .row-event{
@@ -3981,6 +4000,27 @@ input[type=file] {
 
 .popcat {
   color: white;
+}
+
+.button-clear {
+      background-color: #FF6417;
+    color: white;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+a.button-clear {
+  color: white;
+}
+
+a.button-clear:hover {
+  color: white;
+}
+
+.button-clear:hover {
+  background-color: #A14040;
 }
 
 

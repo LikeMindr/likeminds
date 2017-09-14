@@ -19,52 +19,67 @@
 	<!-- MAIN CONTENT -->
 
 	<div id="profile-page-bg">
-		
-			<div class="column-one-third">
-				<form method="GET" action="{{ action('EventsController@index') }}" class="input-search">
-					<input type="text" required="" name="q" placeholder="SEARCH EVENTS">
-						<i class="fa fa-search"></i>
-					<input type="submit" value="">
-				</form>
-			</div>
-			<div class="column-one-third cat">
-				<div class="dropdown">
-					<button class="dropbtn dropdown-events"> CATEGORIES </button>
-						<div class="dropdown-content">
-							<a href="/events?q=ART">ART</a>
-							<a href="/events?q=BOOKS / POETRY / WRITING">BOOKS / POETRY / WRITING</a>
-							<a href="/events?q=BUSINESS & TECH">BUSINESS / TECH</a>
-							<a href="/events?q=CIVIC ENAGEMENT">CIVIC ENGAGEMENT</a>
-							<a href="/events?q=COMEDY">COMEDY</a>
-							<a href="/events?q=DANCE">DANCE</a>
-							<a href="/events?q=DEALS">DEALS</a>
-							<a href="/events?q=FASHION">FASHION</a>
-							<a href="/events?q=FILM & THEATER">FILM & THEATER</a>
-							<a href="/events?q=FOOD & DRINK">FOOD & DRINK</a>
-							<a href="/events?q=HAPPY HOURS">HAPPY HOURS</a>
-							<a href="/events?q=HEALTH & WELLNESS">HEALTH & WELLNESS</a>
-							<a href="/events?q=Music">MUSIC</a>
-							<a href="/events?q=OUTDOORS & NATURE">OUTDOORS / NATURE</a>
-							<a href="/events?q=SOCIAL">SOCIAL</a>
-							<a href="/events?q=SPECIAL EVENTS">SPECIAL EVENTS</a>
-							<a href="/events?q=SPORTS & FITNESS">SPORTS & FITNESS</a>
-						</div>
-				</div>
-			</div>
-				<div class="column-one-third clear">
-					<div class="btn-clear btn"><a href="/events">CLEAR</a>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="form-group">
+					<form method="GET" action="{{ action('EventsController@index') }}" class="input-search">
+						<input type="text" required="" name="q" placeholder="SEARCH EVENTS">
+							<i class="fa fa-search"></i>
+						<input type="submit" value="">
+					</form>
+						
 					</div>
 				</div>
-		
-		
+				<div class="col-md-2">
+					<div class="verticalAlignParent">
+						<div class="verticalAlignChild">
+							<div class="dropdown">
+								<button class="dropbtn dropdown-events"> CATEGORIES </button>
+								<div class="dropdown-content">
+									<a href="/events?q=ART">ART</a>
+									<a href="/events?q=BOOKS / POETRY / WRITING">BOOKS / POETRY / WRITING</a>
+									<a href="/events?q=BUSINESS & TECH">BUSINESS / TECH</a>
+									<a href="/events?q=CIVIC ENAGEMENT">CIVIC ENGAGEMENT</a>
+									<a href="/events?q=COMEDY">COMEDY</a>
+									<a href="/events?q=DANCE">DANCE</a>
+									<a href="/events?q=DEALS">DEALS</a>
+									<a href="/events?q=FASHION">FASHION</a>
+									<a href="/events?q=FILM & THEATER">FILM & THEATER</a>
+									<a href="/events?q=FOOD & DRINK">FOOD & DRINK</a>
+									<a href="/events?q=HAPPY HOURS">HAPPY HOURS</a>
+									<a href="/events?q=HEALTH & WELLNESS">HEALTH & WELLNESS</a>
+									<a href="/events?q=Music">MUSIC</a>
+									<a href="/events?q=OUTDOORS & NATURE">OUTDOORS / NATURE</a>
+									<a href="/events?q=SOCIAL">SOCIAL</a>
+									<a href="/events?q=SPECIAL EVENTS">SPECIAL EVENTS</a>
+									<a href="/events?q=SPORTS & FITNESS">SPORTS & FITNESS</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					<div class="col-md-2 verticalAlign">
+						<div class="verticalAlignParent">
+							<div class="verticalAlignChild">
+								<div class="btn-clear button-clear">
+									<a href="/events">CLEAR</a>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			
+			
+		</div>
 		
 
-	</div>
+	
 		<div class="container-fluid custom-container">
 			<div class="row">
 
 				<div class="col-md-2 left-feild">
-					<div class="be-vidget">
+					<div class="be-vidget trending">
 						<h3 class="letf-menu-article popcat">
 							TRENDING CATEGORIES
 						</h3>
