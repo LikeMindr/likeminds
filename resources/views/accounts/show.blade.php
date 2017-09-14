@@ -26,7 +26,7 @@
 									"/assets/img/u-" . $user->id . ".jpg")): ?>
 									"/assets/img/u-{{$user->id}}.jpg"
 								<?php else: ?>
-									"../assets/img/usericon.png"
+									"/assets/img/usericon.png"
 								<?php endif; ?>
 							width="300px" height="300px" />
 							<p class="be-use-name">{{ $user->name }}</p>

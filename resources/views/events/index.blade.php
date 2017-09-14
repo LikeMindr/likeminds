@@ -106,10 +106,17 @@
 									<p>	{{ $event->category }} </p>
 									<p>	{{ $event->date }} </p>
 									<p>	{{ $event->location }} </p>
-									<p>	{{ $event->description }} </p>
 								</span>
 								<div class="author-post">
-									<img src="../assets/img/a1.png" alt="" class="ava-author">
+									<img src=
+									<?php clearstatcache();
+										if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
+										"/assets/img/u-" . $event['user']['id'] . ".jpg")): ?>
+										"/assets/img/u-{{$event['user']['id']}}.jpg"
+									<?php else: ?>
+										"/assets/img/usericon.png"
+									<?php endif; ?>
+									alt="{{ $event['user']['name'] }}" class="ava-author">
 									<span>by <a href="/accounts/{{$event['user']['id']}}">{{ $event['user']['name'] }}</a></span>
 								</div>
 								<div class="info-block">

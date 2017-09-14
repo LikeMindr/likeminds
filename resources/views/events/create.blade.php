@@ -63,7 +63,7 @@
 					<div class="form-group">
 						<h2 class="form-label-create">LOCATION</h2>
 							<div id="pac-container">
-        						<input id="pac-input" type="text" name="location" class="form-control create-event-input" placeholder="Enter a location" value="{{ old('location') }}" required>
+        						<input id="pac-input" type="text" name="location" class="form-control create-event-input" value="{{ old('location') }}" required>
         					</div>
       				</div>
       				<div id="map"></div>
