@@ -47,15 +47,15 @@
 							<option value="FILM & THEATER">FILM & THEATER</option>
 							<option value="DANCE">DANCE</option>
 							<option value="COMEDY">COMEDY</option>
-							<option value="SPORTS &FITNESS">SPORTS & FITNESS</option>
+							<option value="SPORTS & FITNESS">SPORTS & FITNESS</option>
 							<option value="SPECIAL EVENTS">SPECIAL EVENTS</option>
 							<option value="FASHION">FASHION</option>
 							<option value="SOCIAL">SOCIAL</option>
 							<option value="FOOD & DRINK">FOOD & DRINK</option>
 							<option value="BOOKS / POETRY / WRITING">BOOKS / POETRY / WRITING</option>
-							<option value="OUTDOORS / NATURE">OUTDOORS / NATURE</option>
+							<option value="OUTDOORS & NATURE">OUTDOORS / NATURE</option>
 							<option value="HEALTH & WELLNESS">HEALTH & WELLNESS</option>
-							<option value="BUSINESS / TECH">BUSINESS / TECH</option>
+							<option value="BUSINESS & TECH">BUSINESS / TECH</option>
 							<option value="CIVIC ENGAGEMENT">CIVIC ENGAGEMENT</option>
 							<option value="DEALS">DEALS</option>
 						</select>
