@@ -39,21 +39,21 @@
 								<div class="dropdown-content">
 									<a href="/events?c=ART">ART</a>
 									<a href="/events?c=BOOKS/POETRY/WRITING">BOOKS / POETRY / WRITING</a>
-									<a href="/events?c=BUSINESS&TECH">BUSINESS / TECH</a>
+									<a href="/events?c=BUSINESSTECH">BUSINESS & TECH</a>
 									<a href="/events?c=CIVICENGAGEMENT">CIVIC ENGAGEMENT</a>
 									<a href="/events?c=COMEDY">COMEDY</a>
 									<a href="/events?c=DANCE">DANCE</a>
 									<a href="/events?c=DEALS">DEALS</a>
 									<a href="/events?c=FASHION">FASHION</a>
-									<a href="/events?c=FILM&THEATER">FILM & THEATER</a>
-									<a href="/events?c=FOOD&DRINK">FOOD & DRINK</a>
+									<a href="/events?c=FILMTHEATER">FILM & THEATER</a>
+									<a href="/events?c=FOODDRINK">FOOD & DRINK</a>
 									<a href="/events?c=HAPPYHOURS">HAPPY HOURS</a>
-									<a href="/events?c=HEALTH&WELLNESS">HEALTH & WELLNESS</a>
+									<a href="/events?c=HEALTHWELLNESS">HEALTH & WELLNESS</a>
 									<a href="/events?c=MUSIC">MUSIC</a>
-									<a href="/events?c=OUTDOORS&NATURE">OUTDOORS / NATURE</a>
+									<a href="/events?c=OUTDOORSNATURE">OUTDOORS & NATURE</a>
 									<a href="/events?c=SOCIAL">SOCIAL</a>
 									<a href="/events?c=SPECIALEVENTS">SPECIAL EVENTS</a>
-									<a href="/events?c=SPORTS&FITNESS">SPORTS & FITNESS</a>
+									<a href="/events?c=SPORTSFITNESS">SPORTS & FITNESS</a>
 								</div>
 							</div>
 						</div>
@@ -119,7 +119,7 @@
 								<a href="/events/{{$event->id}}"
 								class="be-post-title">{{ $event->title }}</a>
 								<span>
-									<p>	{{ $event->category }} </p>
+									<p>	{{ App\Event::correctName($event->category) }} </p>
 									<p>	{{ $event->date }} </p>
 									<p>	{{ $event->location }} </p>
 								</span>

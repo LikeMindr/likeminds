@@ -15,9 +15,9 @@ class EventTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-		$categories = ["MUSIC", "HAPPYHOURS", "ART", "FILM&THEATER", "DANCE",
-		"COMEDY", "SPORTS&FITNESS", "SPECIALEVENTS", "FASHION", "SOCIAL", "FOOD&DRINK",
-		"BOOKS/POETRY/WRITING", "OUTDOORS&NATURE", "HEALTH&WELLNESS", "BUSINESS&TECH",
+		$categories = ["MUSIC", "HAPPYHOURS", "ART", "FILMTHEATER", "DANCE",
+		"COMEDY", "SPORTSFITNESS", "SPECIALEVENTS", "FASHION", "SOCIAL", "FOODDRINK",
+		"BOOKS/POETRY/WRITING", "OUTDOORSNATURE", "HEALTHWELLNESS", "BUSINESSTECH",
 		"CIVICENGAGEMENT", "DEALS"];
 
         for($i = 0; $i <= 500; $i++) {

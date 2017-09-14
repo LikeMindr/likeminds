@@ -128,7 +128,7 @@
 								<a href="/events/{{$event->id}}" class="be-post-title">
 									{{$event->title}}</a>
 								<span>
-									<p>	{{ $event->category }} </p>
+									<p>	{{ App\Event::correctName($event->category) }} </p>
 									<p>	{{ $event->date }} </p>
 									<p>	{{ $event->location }} </p>
 								</span>
@@ -177,13 +177,13 @@
 								</a>
 								<span>
 									<p>	
-									{{ App\Event::find($event['event_id'])['category'] }} 
+						{{ App\Event::correctName(App\Event::find($event['event_id'])['category']) }} 
 									</p>
 									<p>	
 									{{ App\Event::find($event['event_id'])['date'] }} 
 									</p>
 									<p>	
-									{{ App\Event::find($event['event_id'])['category'] }} 
+									{{ App\Event::find($event['event_id'])['location'] }} 
 									</p>
 								</span>
 								<div class="author-post">
