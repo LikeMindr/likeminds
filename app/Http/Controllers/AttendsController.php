@@ -42,7 +42,7 @@ class AttendsController extends Controller
 		$attend->user_id = $request->user_id;
 		$attend->event_id = $request->event_id;
 		$attend->save();
-		return \Redirect::action('EventsController@index');
+		return \Redirect::action('EventsController@show', $request->event_id);
     }
 
     /**
@@ -92,7 +92,7 @@ class AttendsController extends Controller
 
 	public function cancel(Request $request) {
 		Attend::cancel($request->event_id, $request->user_id);
-		return \Redirect::action('EventsController@index');
+		return \Redirect::action('EventsController@show', $request->event_id);
 	}
 
 }
