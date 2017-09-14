@@ -95,7 +95,7 @@
                     <div class="tab-wrapper style-1">
                         <div class="tab-nav-wrapper">
                             <div  class="nav-tab  clearfix">
-                            	@if(Auth::check())
+                            	@if(Auth::check() && Auth::id() == $user->id)
                                 <div class="nav-tab-item ">
                                     <span>MY EVENTS</span>
                                 </div>
@@ -103,10 +103,10 @@
                                     <a href="/accounts/{{Auth::id()}}/edit" ><span>EDIT PROFILE</span></a>
                                 </div>
                             	@else
-                                <div class="nav-tab-item active">
+								<div class="nav-tab-item">
                                     <span>EVENTS</span>
                                 </div>
-                                @endif
+								@endif
                             </div>
                         </div>
                         <div class="tabs-content clearfix">
