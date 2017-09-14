@@ -1,9 +1,10 @@
-<footer style="font: 10pt Montserrat"id="footer">
+
+<footer style="font: 10pt Montserrat; background: #fdc52d;"id="footer">
   <div class="container">
     <div class="row">
       <div class="footer-wrapper">
         <div class="col-md-3 col-sm-3">
-          <a href=""><img src="../img/logo-black.png" alt="" class="footer-logo" /></a>
+          <a href=""><img src="../assets/img/logohd.png" alt="" class="footer-logo" /></a>
           <ul class="list-inline social-icons">
             <li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
             <li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
