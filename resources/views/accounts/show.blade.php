@@ -57,7 +57,6 @@
 									<i class="fa fa-instagram"></i></a>
 								<?php endif;  ?>
 
-								<a class="btn color-1 size-2 hover-1"><i class="fa fa-plus"></i>MESSAGE</a>
 							</div>
 						</div>
 						<div class="be-user-statistic">
