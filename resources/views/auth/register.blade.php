@@ -25,12 +25,12 @@
       <div class="col-sm-6 col-sm-offset-1" class="center">
          <div class="reg-form-container" class="center">
             <!-- Register/Login Tabs-->
-            <div class="reg-options">
-                            <ul class="nav nav-tabs">
-                              <li class="active"><a href="#register" data-toggle="tab">Register</a></li>
-                              <li><a href="#login" data-toggle="tab">Login</a></li>
-                            </ul><!--Tabs End-->
-                          </div>
+            <!-- <div class="reg-options"> -->
+                            <!-- <ul class="nav nav-tabs">
+                              <!- <li class="active"><a href="#register" data-toggle="tab">Register</a></li>
+                              <li><a href="#login" data-toggle="tab">Login</a></li> -->
+                            <!-- </ul><!-Tabs End-->
+                          <!-- </div> -->
             <style>
                #inner {
                display: table;
