@@ -44,18 +44,18 @@
 							<option value="MUSIC">MUSIC</option>
 							<option value="HAPPYHOURS">HAPPY HOURS</option>
 							<option value="ART">ART</option>
-							<option value="FILM&THEATER">FILM & THEATER</option>
+							<option value="FILMTHEATER">FILM & THEATER</option>
 							<option value="DANCE">DANCE</option>
 							<option value="COMEDY">COMEDY</option>
-							<option value="SPORTS&FITNESS">SPORTS & FITNESS</option>
+							<option value="SPORTSFITNESS">SPORTS & FITNESS</option>
 							<option value="SPECIALEVENTS">SPECIAL EVENTS</option>
 							<option value="FASHION">FASHION</option>
 							<option value="SOCIAL">SOCIAL</option>
-							<option value="FOOD&DRINK">FOOD & DRINK</option>
+							<option value="FOODDRINK">FOOD & DRINK</option>
 							<option value="BOOKS/POETRY/WRITING">BOOKS / POETRY / WRITING</option>
-							<option value="OUTDOORS&NATURE">OUTDOORS / NATURE</option>
-							<option value="HEALTH&WELLNESS">HEALTH & WELLNESS</option>
-							<option value="BUSINESS&TECH">BUSINESS / TECH</option>
+							<option value="OUTDOORSNATURE">OUTDOORS / NATURE</option>
+							<option value="HEALTHWELLNESS">HEALTH & WELLNESS</option>
+							<option value="BUSINESSTECH">BUSINESS / TECH</option>
 							<option value="CIVICENGAGEMENT">CIVIC ENGAGEMENT</option>
 							<option value="DEALS">DEALS</option>
 						</select>

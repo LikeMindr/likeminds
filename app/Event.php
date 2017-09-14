@@ -87,7 +87,7 @@ class Event extends Model
 			case "BOOKS/POETRY/WRITING":
 				return "/assets/img/cat-book.jpg";
 				break;
-			case "BUSINESS&TECH":
+			case "BUSINESSTECH":
 				return "/assets/img/cat-business.jpg";
 				break;
 			case "CIVICENGAGEMENT":
@@ -105,16 +105,16 @@ class Event extends Model
 			case "FASHION":
 				return "/assets/img/cat-fashion.jpg";
 				break;
-			case "FILM&THEATER":
+			case "FILMTHEATER":
 				return "/assets/img/cat-theater.jpg";
 				break;
-			case "FOOD&DRINK":
+			case "FOODDRINK":
 				return "/assets/img/cat-food.jpg";
 				break;
-			case "HEALTH&WELLNESS":
+			case "HEALTHWELLNESS":
 				return "/assets/img/cat-fitness.jpg";
 				break;
-			case "OUTDOORS&NATURE":
+			case "OUTDOORSNATURE":
 				return "/assets/img/cat-nature.jpg";
 				break;
 			case "SOCIAL":
@@ -123,9 +123,48 @@ class Event extends Model
 			case "SPECIALEVENTS":
 				return "/assets/img/cat-special.jpg";
 				break;
-			case "SPORTS&FITNESS":
+			case "SPORTSFITNESS":
 				return "/assets/img/cat-sports.jpg";
 				break;
+		}
+	}
+
+	public static function correctName($name) 
+	{
+		switch ($name) {
+			case "SPORTSFITNESS":
+			return "SPORTS & FITNESS";
+			break;
+		case "SPECIALEVENTS":
+			return "SPECIAL EVENTS";
+			break;
+		case "OUTDOORSNATURE":
+			return "OUTDOORS & NATURE";
+			break;
+		case "HEALTHWELLNESS":
+			return "HEALTH & WELLNESS";
+			break;
+		case "FOODDRINK":
+			return "FOOD & DRINK";
+			break;
+		case "FILMTHEATER":
+			return "FILM & THEATER";
+			break;
+		case "CIVICENGAGEMENT":
+			return "CIVIC ENGAGEMENT";
+			break;
+		case "BUSINESSTECH":
+			return "BUSINESS & TECH";
+			break;
+		case "BOOKS/POETRY/WRITING":
+			return "BOOKS / POETRY / WRITING";
+			break;
+		case "HAPPYHOURS":
+			return "HAPPY HOURS";
+			break;
+		default:
+			return $name;
+			break;
 		}
 	}
 }

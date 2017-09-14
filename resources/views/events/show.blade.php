@@ -42,7 +42,7 @@
 							/>
 						<h5>{{ $event->date }} {{ $event->time }}</h5>
 						<h5>{{ $event->location }}</h5>
-						<h5>{{ $event->category }}</h5>
+						<h5>{{ App\Event::correctName($event->category) }}</h5>
 						<h5>{{ $event->num_people }}</h5>
 						<div class="clear"></div>
 						<div class="post-text">
