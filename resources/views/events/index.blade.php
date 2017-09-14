@@ -119,11 +119,6 @@
 									alt="{{ $event['user']['name'] }}" class="ava-author">
 									<span>by <a href="/accounts/{{$event['user']['id']}}">{{ $event['user']['name'] }}</a></span>
 								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
 							</div>
 						</div>
 						@endforeach
