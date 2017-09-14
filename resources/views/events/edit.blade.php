@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-<title> Create Event </title>
+<title> Edit Event </title>
 @stop
 @section('content')
 <div class="be-loader">
@@ -35,11 +35,18 @@
 						value="{{$event->title}}" autofocus required>
 					</div>
 					
-          <div class="form-group">
+				    <div class="row">
+					<div class="form-group input-col col-xs-12 col-sm-6">
 						<h2 class="form-label-create ">IMAGE</h2>
 						<input type="file" name="file" id="file" class="select-file-button">
 					</div>
 					
+					<div class="form-group input-col col-xs-12 col-sm-6">
+					<h2 class="form-label-create">DEFAULT IMAGE</h2>
+					<input type="checkbox" name="default_img" value="yes">
+					Check this box to revert to the default image
+				</div>
+				</div>
           <div class="form-group">
 						<h2 class="form-label-create">CATEGORY</h2>
 						<select class="form-control create-event-input" type="text" name="category"
@@ -66,7 +73,7 @@
 					<div class="form-group">
 						<h2 class="form-label-create">LOCATION</h2>
 							<div id="pac-container">
-        						<input id="pac-input" type="text" name="location" class="form-control create-event-input" placeholder="Enter a location" value="{{ $event->location }}" required>
+        						<input id="pac-input" type="text" name="location" class="form-control create-event-input" value="{{ $event->location }}" required>
         					</div>
       				</div>
       				<div id="map"></div>
@@ -98,8 +105,15 @@
 						name="description" placeholder="Tell everyone why they should go to your event..." required>
             {{ $event->description }} </textarea>
 					</div>
+					{{ method_field('PUT') }}
 					<button class="btn color-4 size-2 hover-7 button-event-create" id="submit">Submit</button>
 				</form>
+				<form method="POST" 
+					action="{{ action('EventsController@destroy', $event->id) }}">
+					{!! csrf_field() !!}
+					<button class="btn btn-danger">Delete Event</button>
+					{{ method_field('DELETE') }}
+				</form>	
 			</div>
 		</div>
 	</div>

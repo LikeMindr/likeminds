@@ -70,13 +70,15 @@ class EventsController extends Controller
 		$event->created_by = Auth::id();
 		$event->save();
 
-		$file = $request->file('file');
-		$filename = "e-" . $event->id . '.' . $file->getClientOriginalExtension();
-		$filepath = '../../../public/assets/img/';
-		Storage::put(
-			'img/' . $filename,
-			file_get_contents($file->getRealPath())
-		);
+		if($request->file('file') != NULL) {
+			$file = $request->file('file');
+			$filename = "e-" . $event->id . '.' . $file->getClientOriginalExtension();
+			$filepath = '../../../public/assets/img/';
+			Storage::put(
+				'img/' . $filename,
+				file_get_contents($file->getRealPath())
+			);
+		}
 
 		return \Redirect::action('EventsController@index');
     }
@@ -126,13 +128,20 @@ class EventsController extends Controller
 		$event->created_by = Auth::id();
 		$event->save();
 
-		$file = $request->file('file');
-		$filename = "e-" . $event->id . '.' . $file->getClientOriginalExtension();
-		$filepath = '../../../public/assets/img/';
-		Storage::put(
-			'img/' . $filename,
-			file_get_contents($file->getRealPath())
-		);
+		if($request->file('file') != NULL) {
+			$file = $request->file('file');
+			$filename = "e-" . $event->id . '.' . $file->getClientOriginalExtension();
+			$filepath = '../../../public/assets/img/';
+			Storage::put(
+				'img/' . $filename,
+				file_get_contents($file->getRealPath())
+			);
+		}
+
+		if($request->default_img == "yes" && 
+			Storage::disk('local')->has('/img/e-' . $event->id . '.jpg')) {
+			Storage::delete("/img/e-" . $event->id . ".jpg");
+		}
 
 		return \Redirect::action('EventsController@index');
     }
