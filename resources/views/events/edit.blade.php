@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-<title> Create Event </title>
+<title> Edit Event </title>
 @stop
 @section('content')
 <div class="be-loader">
@@ -43,7 +43,7 @@
 					
 					<div class="form-group input-col col-xs-12 col-sm-6">
 					<h2 class="form-label-create">DEFAULT IMAGE</h2>
-					<input type="checkbox" name="default_img">
+					<input type="checkbox" name="default_img" value="yes">
 					Check this box to revert to the default image
 				</div>
 				</div>
@@ -108,6 +108,12 @@
 					{{ method_field('PUT') }}
 					<button class="btn color-4 size-2 hover-7 button-event-create" id="submit">Submit</button>
 				</form>
+				<form method="POST" 
+					action="{{ action('EventsController@destroy', $event->id) }}">
+					{!! csrf_field() !!}
+					<button class="btn btn-danger">Delete Event</button>
+					{{ method_field('DELETE') }}
+				</form>	
 			</div>
 		</div>
 	</div>

@@ -15,6 +15,7 @@ use Auth;
 
 class AuthController extends Controller
 {
+	protected $redirectTo = '/events';
 	/**
      * Redirect the user to the Facebook authentication page.
      *
