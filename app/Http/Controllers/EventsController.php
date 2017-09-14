@@ -31,6 +31,10 @@ class EventsController extends Controller
 			$q = Input::escape($request->q);
 			$events = Event::search($q);
 		}
+		elseif ($request->has('c')) {
+			$c = $request->c;
+			$events = Event::category($c);
+		}
 		else {
 			$events = Event::with('user')->orderBy('id', 'desc')->paginate(20);
 		}
@@ -80,7 +84,7 @@ class EventsController extends Controller
 			);
 		}
 
-		return \Redirect::action('EventsController@index');
+		return \Redirect::action('EventsController@show', $event->id);
     }
 
     /**
@@ -143,7 +147,7 @@ class EventsController extends Controller
 			Storage::delete("/img/e-" . $event->id . ".jpg");
 		}
 
-		return \Redirect::action('EventsController@index');
+		return \Redirect::action('EventsController@show', $event->id);
     }
 
     /**
