@@ -35,6 +35,15 @@ class Event extends Model
 		return $events;
 	}
 
+	public static function category($c)
+	{
+		$events = Event::where('category', '=', "$c")
+					->orderBy('id', 'desc')
+					->paginate(20);
+		$events->appends(['c' => $c]);
+		return $events;
+	}
+
 	public static function trends() 
 	{
 		$trends = Event::select('category')
@@ -69,19 +78,19 @@ class Event extends Model
 			case "MUSIC":
 				return "/assets/img/cat-dance.jpg";
 				break;
-			case  "HAPPY HOURS":
+			case  "HAPPYHOURS":
 				return "/assets/img/cat-happyhour2.jpg";
 				break;
 			case "ART":
 				return "/assets/img/cat-art.jpg";
 				break;
-			case "BOOKS / POETRY / WRITING":
+			case "BOOKS/POETRY/WRITING":
 				return "/assets/img/cat-book.jpg";
 				break;
-			case "BUSINESS & TECH":
+			case "BUSINESS&TECH":
 				return "/assets/img/cat-business.jpg";
 				break;
-			case "CIVIC ENGAGEMENT":
+			case "CIVICENGAGEMENT":
 				return "/assets/img/cat-civic.jpg";
 				break;
 			case "COMEDY":
@@ -96,25 +105,25 @@ class Event extends Model
 			case "FASHION":
 				return "/assets/img/cat-fashion.jpg";
 				break;
-			case "FILM & THEATER":
+			case "FILM&THEATER":
 				return "/assets/img/cat-theater.jpg";
 				break;
-			case "FOOD & DRINK":
+			case "FOOD&DRINK":
 				return "/assets/img/cat-food.jpg";
 				break;
-			case "HEALTH & WELLNESS":
+			case "HEALTH&WELLNESS":
 				return "/assets/img/cat-fitness.jpg";
 				break;
-			case "OUTDOORS & NATURE":
+			case "OUTDOORS&NATURE":
 				return "/assets/img/cat-nature.jpg";
 				break;
 			case "SOCIAL":
 				return "/assets/img/cat-social.jpg";
 				break;
-			case "SPECIAL EVENTS":
+			case "SPECIALEVENTS":
 				return "/assets/img/cat-special.jpg";
 				break;
-			case "SPORTS & FITNESS":
+			case "SPORTS&FITNESS":
 				return "/assets/img/cat-sports.jpg";
 				break;
 		}

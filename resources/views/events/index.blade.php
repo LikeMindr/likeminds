@@ -37,23 +37,23 @@
 							<div class="dropdown">
 								<button class="dropbtn dropdown-events"> CATEGORIES </button>
 								<div class="dropdown-content">
-									<a href="/events?q=ART">ART</a>
-									<a href="/events?q=BOOKS / POETRY / WRITING">BOOKS / POETRY / WRITING</a>
-									<a href="/events?q=BUSINESS & TECH">BUSINESS / TECH</a>
-									<a href="/events?q=CIVIC ENAGEMENT">CIVIC ENGAGEMENT</a>
-									<a href="/events?q=COMEDY">COMEDY</a>
-									<a href="/events?q=DANCE">DANCE</a>
-									<a href="/events?q=DEALS">DEALS</a>
-									<a href="/events?q=FASHION">FASHION</a>
-									<a href="/events?q=FILM & THEATER">FILM & THEATER</a>
-									<a href="/events?q=FOOD & DRINK">FOOD & DRINK</a>
-									<a href="/events?q=HAPPY HOURS">HAPPY HOURS</a>
-									<a href="/events?q=HEALTH & WELLNESS">HEALTH & WELLNESS</a>
-									<a href="/events?q=Music">MUSIC</a>
-									<a href="/events?q=OUTDOORS & NATURE">OUTDOORS / NATURE</a>
-									<a href="/events?q=SOCIAL">SOCIAL</a>
-									<a href="/events?q=SPECIAL EVENTS">SPECIAL EVENTS</a>
-									<a href="/events?q=SPORTS & FITNESS">SPORTS & FITNESS</a>
+									<a href="/events?c=ART">ART</a>
+									<a href="/events?c=BOOKS/POETRY/WRITING">BOOKS / POETRY / WRITING</a>
+									<a href="/events?c=BUSINESS&TECH">BUSINESS / TECH</a>
+									<a href="/events?c=CIVICENGAGEMENT">CIVIC ENGAGEMENT</a>
+									<a href="/events?c=COMEDY">COMEDY</a>
+									<a href="/events?c=DANCE">DANCE</a>
+									<a href="/events?c=DEALS">DEALS</a>
+									<a href="/events?c=FASHION">FASHION</a>
+									<a href="/events?c=FILM&THEATER">FILM & THEATER</a>
+									<a href="/events?c=FOOD&DRINK">FOOD & DRINK</a>
+									<a href="/events?c=HAPPYHOURS">HAPPY HOURS</a>
+									<a href="/events?c=HEALTH&WELLNESS">HEALTH & WELLNESS</a>
+									<a href="/events?c=MUSIC">MUSIC</a>
+									<a href="/events?c=OUTDOORS&NATURE">OUTDOORS / NATURE</a>
+									<a href="/events?c=SOCIAL">SOCIAL</a>
+									<a href="/events?c=SPECIALEVENTS">SPECIAL EVENTS</a>
+									<a href="/events?c=SPORTS&FITNESS">SPORTS & FITNESS</a>
 								</div>
 							</div>
 						</div>
@@ -84,7 +84,7 @@
 							TRENDING CATEGORIES
 						</h3>
 								@foreach($trends as $trend)
-								<a href="/events?q={{$trend}}" class="trendbtn">{{ $trend }}</a>
+								<a href="/events?c={{$trend}}" class="trendbtn">{{ $trend }}</a>
 								@endforeach
 					</div>
 					<div class="be-vidget">

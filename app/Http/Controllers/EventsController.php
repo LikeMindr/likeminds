@@ -31,6 +31,10 @@ class EventsController extends Controller
 			$q = Input::escape($request->q);
 			$events = Event::search($q);
 		}
+		elseif ($request->has('c')) {
+			$c = $request->c;
+			$events = Event::category($c);
+		}
 		else {
 			$events = Event::with('user')->orderBy('id', 'desc')->paginate(20);
 		}
