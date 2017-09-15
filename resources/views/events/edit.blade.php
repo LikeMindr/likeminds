@@ -97,17 +97,22 @@
 						name="description" placeholder="Tell everyone why they should go to your event..." required>
             {{ $event->description }} </textarea>
 					</div>
+
 					<div class="row">
 					<div class="col-sm-6 col-md-4 col-md-offset-3">
 					{{ method_field('PUT') }}
 					<button class="btn color-4 size-2 hover-7 button-event-edit" id="submit">Submit</button>
+
 				</div>
+			
 				<div class="col-sm-6 col-md-4 ">
 					<form method="POST" 
 					action="{{ action('EventsController@destroy', $event->id) }}">
 					{!! csrf_field() !!}
 					<button class="btn color-4 size-2 hover-7 button-event-edit">Delete Event</button>
 					{{ method_field('DELETE') }}
+				
+
 					</div>
 				</div>
 				</div>
