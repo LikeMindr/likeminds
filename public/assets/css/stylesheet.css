@@ -653,7 +653,20 @@ form.input-search {
   border-width: 0 15px 15px 15px; 
   border-color: transparent transparent white transparent; }
 
-.be-post-title { position: relative; display: block; font-size: 13px; line-height: 20px; font-family: 'Montserrat', sans-serif; color: #262626; border-bottom: 1px solid #edeff2; margin: 0 15px 10px 15px; cursor: pointer; min-height: 52px; padding-bottom: 11px; overflow: hidden; text-overflow: ellipsis; }
+.be-post-title { 
+  position: relative; 
+  display: block; 
+  font-size: 13px; 
+  line-height: 20px; 
+  font-family: 'Montserrat', sans-serif; 
+  color: #2C4762; 
+  border-bottom: 1px solid #edeff2; 
+  margin: 0 15px 10px 15px; 
+  cursor: pointer; 
+  min-height: 52px; 
+  padding-bottom: 11px; 
+  overflow: hidden; 
+  text-overflow: ellipsis; }
 
 a.be-post-title:hover { color: #FF6417; }
 
@@ -1202,7 +1215,7 @@ span.right { float: right; }
   position: relative;
   padding: 30px 20px;
   border: 1px solid white;
-  background-color: white;
+  background-color: #EAEEF6;
   border-radius: 2px;
   margin-bottom: 20px;
 }
@@ -1482,7 +1495,7 @@ a.social-btn:hover { opacity: 0.6; color: white; }
   border-radius: 2px;
   padding-bottom: 50px;
   margin-bottom: 50px;
-  background-color: white; }
+  background-color: #EAEEF6 }
 
 .be-largepost-iframe { margin-bottom: 50px !important; padding-left: 0; }
 
@@ -3875,6 +3888,12 @@ form {
 
 }
 
+form.sign-up-event-cal {
+
+margin: auto;
+
+}
+
 
 .create-event-input{
   margin-left: 10px;
@@ -4080,6 +4099,43 @@ a.button-clear:hover {
 .button-clear:hover {
   background-color: #7CAE27;
 }
+
+element.style {
+    visibility: visible;
+    z-index: auto;
+}
+.addeventatc {
+    display: inline-block;
+    zoom: 1;
+    position: relative;
+    z-index: 1;
+    font-family: 'Montserrat', sans-serif;
+
+    color: #000!important;
+    font-weight: 300;
+    line-height: 100%!important;
+    background-color: #9AE4E8;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 13px 12px 12px 43px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased!important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background-image: url(https://www.addevent.com/gfx/icon-calendar-t5.png), url(https://www.addevent.com/gfx/icon-calendar-t1.svg), url(https://www.addevent.com/gfx/icon-apple-t1.svg), url(https://www.addevent.com/gfx/icon-facebook-t1.svg), url(https://www.addevent.com/gfx/icon-google-t1.svg), url(https://www.addevent.com/gfx/icon-outlook-t1.svg), url(https://www.addevent.com/gfx/icon-yahoo-t1.svg);
+    background-position: -9999px -9999px;
+    background-repeat: no-repeat;
+
 
 
 
