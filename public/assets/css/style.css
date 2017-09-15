@@ -212,7 +212,7 @@ section .wrapper{
 }
 
 .btn-primary{
-	background: #fc652a;
+	background: #89c12a;
 	padding: 7px 25px;
 	border: none;
 	font-size: 14px;
@@ -2049,7 +2049,7 @@ input:checked + .slider:before{
 
 #footer::before{
   content: "";
-  background: linear-gradient(to right, #fc652a 0%,#9f4142 50%,#fc652a 100%);
+  background: linear-gradient(to right, #2c4762 0%,#89c12a 50%,#2c4762 100%);
   height: 20px;
   width: 100%;
   position: absolute;
@@ -2095,7 +2095,7 @@ ul.footer-links li{
 }
 
 ul.footer-links li a{
-  color: #6d6e71;
+  color: white;
 }
 
 ul.footer-links li a:hover{

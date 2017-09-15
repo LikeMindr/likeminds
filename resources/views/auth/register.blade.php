@@ -3,15 +3,7 @@
 <title> Like Minds At </title>
 @stop
 @section('content')
-<!-- Header
-   ================================================= -->
-<!--Header End-->
-<!-- Landing Page Contents
-   ================================================= -->
-<!--  ====================google=============================-->
-   <!-- <meta name="google-signin-client_id" content="870368124925-17i31m6r9tehnf9tua7e3fdmut59cojh.apps.googleusercontent.com">
-   <script src="https://apis.google.com/js/platform.js" async defer></script> -->
-  <!--  ====================google=============================-->
+
 <div id="lp-register">
 <div class="container wrapper">
    <div class="row">
@@ -24,13 +16,7 @@
       </div>
       <div class="col-sm-6 col-sm-offset-1" class="center">
          <div class="reg-form-container" class="center">
-            <!-- Register/Login Tabs-->
-            <!-- <div class="reg-options"> -->
-                            <!-- <ul class="nav nav-tabs">
-                              <!- <li class="active"><a href="#register" data-toggle="tab">Register</a></li>
-                              <li><a href="#login" data-toggle="tab">Login</a></li> -->
-                            <!-- </ul><!-Tabs End-->
-                          <!-- </div> -->
+
             <style>
                #inner {
                display: table;
