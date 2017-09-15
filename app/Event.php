@@ -167,4 +167,11 @@ class Event extends Model
 			break;
 		}
 	}
+
+	public static function appendQuery($href)
+	{
+		$query = isset($_SERVER['QUERY_STRING']) ? '&' . $_SERVER['QUERY_STRING'] : '';
+		
+		return $href . $query;
+	}
 }
