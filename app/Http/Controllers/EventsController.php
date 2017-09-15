@@ -31,11 +31,11 @@ class EventsController extends Controller
 			$q = Input::escape($request->q);
 			$events = Event::search($q);
 		}
-		elseif ($request->has('c')) {
+		if ($request->has('c')) {
 			$c = $request->c;
 			$events = Event::category($c);
 		}
-		else {
+		if (!$request->has('q') && !$request->has('c')) {
 			$events = Event::with('user')->orderBy('id', 'desc')->paginate(20);
 		}
 		
