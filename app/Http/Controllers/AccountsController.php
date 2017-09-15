@@ -93,7 +93,7 @@ class AccountsController extends Controller
 
 		if($request->file('file') != NULL) {
 			$file = $request->file('file');
-			$filename = "e-" . $user->id . '.' . $file->getClientOriginalExtension();
+			$filename = "u-" . $user->id . '.' . $file->getClientOriginalExtension();
 			Storage::put(
 				'img/' . $filename,
 				file_get_contents($file->getRealPath())
