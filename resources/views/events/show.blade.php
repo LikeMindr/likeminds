@@ -102,7 +102,15 @@
 					<div class="be-user-block">
 						<div class="be-user-detail">
 							<a class="be-ava-user" href="/accounts/{{$event['user']['id']}}">
-								<img src="/assets/img/default-avatar.jpg" alt="">
+								<img src=
+									<?php clearstatcache();
+										if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
+										"/assets/img/u-" . $event['user']['id'] . ".jpg")): ?>
+										"/assets/img/u-{{$event['user']['id']}}.jpg"
+									<?php else: ?>
+										"/assets/img/usericon.png"
+									<?php endif; ?>
+									alt="{{ $event['user']['name'] }}" class="img-responsive">
 							</a>
 							<a href="/accounts/{{$event['user']['id']}}">
 							<p class="be-use-name">{{ $event['user']['name'] }}</p></a>
