@@ -63,11 +63,28 @@
 								<button>Cancel</button>
 							</a>
 							<?php elseif(Auth::check() && Auth::id() != $event['user']['id']): ?>
-						<form method="POST" action="{{ action('AttendsController@store') }}">
+						<form class="sign-up-event-cal" method="POST" action="{{ action('AttendsController@store') }}">
 							{!! csrf_field() !!}
 							<input type="hidden" value="{{Auth::id()}}" name="user_id">
 							<input type="hidden" value="{{$event->id}}" name="event_id">
-							<button>Sign Up For This Event</button>
+							
+								<button class="btn color-4 size-2 hover-7 " id="submit">REGISTER</button> 
+							
+								<div title="Add to Calendar" class="addeventatc">
+								    ADD TO CALENDAR
+								    <span class="start">09/29/2017 09:00 AM</span>
+								    <span class="end">09/29/2017 11:00 AM</span>
+								    <span class="timezone">Europe/Paris</span>
+								    <span class="title">Summary of the event</span>
+								    <span class="description">Description of the event<br>Example of a new line</span>
+								    <span class="location">{{ $event->location }}</span>
+								    <span class="organizer">Organizer</span>
+								    <span class="organizer_email">Organizer e-mail</span>
+								    <span class="facebook_event">https://www.facebook.com/events/703782616363133</span>
+								    <span class="all_day_event">false</span>
+								    <span class="date_format">{{ $event->date }}</span>
+								    <span class="client">arhvfcwBtzTYjbzlSmIF31075</span>
+								</div>
 						</form>
 						<?php endif;  ?>
 
@@ -75,7 +92,7 @@
 						<form method="GET"
 							action="{{ action('EventsController@edit', array($event->id)) }}">
 							{!! csrf_field() !!}
-							<button>Edit This Event</button>
+							<button class="btn color-4 size-2 hover-7 button-event-create" id="submit">Edit This Event</button>
 						</form>
 						<?php endif; ?>
 					</div>
@@ -101,5 +118,7 @@
 						</p>
 					</div>
 					</div>
+<!-- AddEvent -->
+<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 
 @stop
