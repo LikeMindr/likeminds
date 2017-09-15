@@ -1,5 +1,5 @@
 
-<footer style="font: 10pt Montserrat; background: #fdc52d;"id="footer">
+<footer style="font: 10pt Montserrat; background: #5c8dd3;"id="footer">
   <div class="container">
     <div class="row">
       <div class="footer-wrapper">
@@ -52,8 +52,8 @@
       </div>
     </div>
   </div>
-  <div style="clear:both; color:black;" class="legality">
-     <img src="/assets/img/logohd.png" alt="Likeminds.at" style="width:50%"><br>
+  <div style="clear:both;  text-white; color:white;" class="legality">
+     <img src="/assets/img/logoh.png" alt="Likeminds.at" style="width:50%"><br>
      <p> © Copyright 2017 LikeMinds.At </p>
   </div>
 </footer>

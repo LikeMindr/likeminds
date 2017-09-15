@@ -86,7 +86,7 @@ a.nav-buttons:active {
   }
 
   .dropdown-menu {
-    background: #35AD81;
+    background: #5c8dd3;
     box-shadow: 2px 2px 10px #777;
     font-size: .7em;
     padding: 0;
@@ -301,7 +301,7 @@ div.custom-container {
     font-size: 14px;
     border: none;
     cursor: pointer;
-    margin-top: 
+    margin-top:
 }
 
 a.clearbtn:hover, a.trendbtn:hover {
@@ -317,6 +317,3 @@ a.clearbtn:hover, a.trendbtn:hover {
 
 #profile-page-bg{
   background-color: #2C4762;
-
-
-
