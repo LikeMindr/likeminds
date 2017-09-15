@@ -39,6 +39,7 @@ body {
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
+  color: #2C4762;
 
 }
 
@@ -667,10 +668,11 @@ a.be-post-title:hover { color: #FF6417; }
 .be-post > span { color: #b4b7c1; display: block; font-size: 11px; line-height: 20px; padding: 0 15px; margin-bottom: 15px; }
 
 .info-block {
-  background-color: white;
+  background-color: #b4b7c1;;
   padding: 20px 15px;
   font-size: 10px;
-  color: #b4b7c1 !important; }
+  color: white;
+   }
 
 .info-block-label { font-size: 14px; line-height: 18px; font-family: 'Montserrat', sans-serif; color: #383b43; }
 
@@ -1354,7 +1356,7 @@ a.social-btn:hover { opacity: 0.6; color: white; }
 
 .be-user-block.style-2, .be-user-block.style-3 { padding: 30px 15px 15px 15px; text-align: center; }
 
-.be-user-block.style-2 .be-use-name, .be-user-block.style-3 .be-use-name { font-size: 20px; line-height: 26px; font-weight: 400; margin-bottom: 5px; height: 26px; }
+.be-user-block.style-2 .be-use-name, .be-user-block.style-3 .be-use-name { font-size: 20px; line-height: 26px; font-weight: 400; margin-bottom: 5px; height: 26px; color: #2C4762; }
 
 .be-user-block.style-2 .be-user-info, .be-user-block.style-3 .be-user-info { font-size: 13px; line-height: 18px; font-weight: 400; margin-bottom: 10px; }
 
@@ -1414,8 +1416,9 @@ a.social-btn:hover { opacity: 0.6; color: white; }
 .be-desc-author {
   position: relative;
   padding: 20px 30px;
-  border: 1px solid white;
-  background-color: white; }
+  border: 1px solid #EAEEF6;
+  background-color: #EAEEF6;
+  color: #2C4762; }
 
 .be-desc-img { float: left; width: 70px; height: 70px; margin-bottom: 15px; border-radius: 70px; }
 
@@ -1683,13 +1686,13 @@ display: inline-block; float: none; margin: 0 10px;}
   color: white;
    }*/
 
-.btn.hover-8:hover, .btn.hover-8.active { background: transparent; border: 1px solid #edeff2; color: white; }
+.btn.hover-8:hover, .btn.hover-8.active { background: transparent; border: 1px solid ##5C8DD3; color: white; }
 
 .btn.hover-9:hover, .btn.hover-9.active { background: #5C8DD3; border: 1px solid #5C8DD3; color: white; }
 
 .btn.hover-9:hover .fa, .btn.hover-9.active .fa { color: white; }
 
-.btn.hover-10:hover, .btn.hover-10.active { background: transparent; border: 1px solid #7A8192; color: #7A8192; }
+.btn.hover-10:hover, .btn.hover-10.active { background: transparent; border: 1px solid #5C8DD3; color: #7A8192; }
 
 .btn.hover-10:hover .fa, .btn.hover-10.active .fa { color: #7A8192; }
 
@@ -3930,6 +3933,10 @@ form {
   margin-left: 50%;
 }
 
+.button-event-edit {
+  margin-left: 25%;
+}
+
 input[type=file] {
     display: block;
     padding-left: 20px;
@@ -4054,7 +4061,7 @@ input[type=file] {
 }
 
 .button-clear {
-      background-color: #FF6417;
+    background-color: #89C12A;
     color: white;
     padding: 10px 10px;
     font-size: 16px;
@@ -4071,7 +4078,7 @@ a.button-clear:hover {
 }
 
 .button-clear:hover {
-  background-color: #A14040;
+  background-color: #7CAE27;
 }
 
 
