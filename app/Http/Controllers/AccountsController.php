@@ -89,7 +89,6 @@ class AccountsController extends Controller
 		$user->twitter = $request->twitter;
 		$user->pinterest = $request->pinterest;
 		$user->instagram = $request->instagram;
-		$user->save();
 
 		if($request->file('file') != NULL) {
 			$file = $request->file('file');
@@ -98,7 +97,10 @@ class AccountsController extends Controller
 				'img/' . $filename,
 				file_get_contents($file->getRealPath())
 			);
+			$user->image = '/img/' . $filename;
 		}
+		$user->save();
+
 		return \Redirect::action('AccountsController@show', $user->id);
     }
 

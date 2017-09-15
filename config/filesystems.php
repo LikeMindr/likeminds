@@ -45,7 +45,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root'   => '/srv/www/likeminds.at/public/assets',
+            'root'   => '/vagrant/sites/likeminds.dev/public/assets',
         ],
 
         'ftp' => [

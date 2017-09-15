@@ -104,14 +104,16 @@
 					<button class="btn color-4 size-2 hover-7 button-event-edit" id="submit">Submit</button>
 
 				</div>
-			
+
+				</form>
+
 				<div class="col-sm-6 col-md-4 ">
 					<form method="POST" 
 					action="{{ action('EventsController@destroy', $event->id) }}">
 					{!! csrf_field() !!}
-					<button class="btn color-4 size-2 hover-7 button-event-edit">Delete Event</button>
 					{{ method_field('DELETE') }}
-				
+
+					<button class="btn color-4 size-2 hover-7 button-event-edit">Delete Event</button>
 
 					</div>
 				</div>

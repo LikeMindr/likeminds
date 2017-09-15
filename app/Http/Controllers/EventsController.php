@@ -72,17 +72,17 @@ class EventsController extends Controller
 		$event->category = $request->category;
 		$event->num_people = $request->num_people;
 		$event->created_by = Auth::id();
-		$event->save();
 
 		if($request->file('file') != NULL) {
 			$file = $request->file('file');
 			$filename = "e-" . $event->id . '.' . $file->getClientOriginalExtension();
-			$filepath = '../../../public/assets/img/';
 			Storage::put(
 				'img/' . $filename,
 				file_get_contents($file->getRealPath())
 			);
+			$event->image = '/img/' . $filename;	
 		}
+		$event->save();
 
 		return \Redirect::action('EventsController@show', $event->id);
     }
@@ -130,22 +130,25 @@ class EventsController extends Controller
 		$event->category = $request->category;
 		$event->num_people = $request->num_people;
 		$event->created_by = Auth::id();
-		$event->save();
 
 		if($request->file('file') != NULL) {
 			$file = $request->file('file');
 			$filename = "e-" . $event->id . '.' . $file->getClientOriginalExtension();
-			$filepath = '../../../public/assets/img/';
 			Storage::put(
 				'img/' . $filename,
 				file_get_contents($file->getRealPath())
 			);
+			$event->image = '/img/' . $filename;
 		}
 
-		if($request->default_img == "yes" && 
-			Storage::disk('local')->has('/img/e-' . $event->id . '.jpg')) {
-			Storage::delete("/img/e-" . $event->id . ".jpg");
+		if($request->default_img == "yes") {
+			$image = $event->image;
+			if (Storage::disk('local')->has($image)) {
+				Storage::delete($image);
+				$event->image = NULL;
+			}
 		}
+		$event->save();
 
 		return \Redirect::action('EventsController@show', $event->id);
     }
