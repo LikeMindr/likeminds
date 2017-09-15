@@ -66,7 +66,8 @@ class AccountsController extends Controller
      */
     public function edit($id)
     {
-        return view('/accounts.edit');
+		$user = User::findOrFail($id);
+        return view('/accounts.edit', ['user' => $user]);
     }
 
     /**
@@ -78,7 +79,26 @@ class AccountsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+		$user = User::findOrFail($id);
+
+		$user->name = $request->name;
+		$user->location = $request->location;
+		$user->bio = $request->bio;
+		$user->facebook = $request->facebook;
+		$user->twitter = $request->twitter;
+		$user->pinterest = $request->pinterest;
+		$user->instagram = $request->instagram;
+		$user->save();
+
+		if($request->file('file') != NULL) {
+			$file = $request->file('file');
+			$filename = "e-" . $user->id . '.' . $file->getClientOriginalExtension();
+			Storage::put(
+				'img/' . $filename,
+				file_get_contents($file->getRealPath())
+			);
+		}
+		return \Redirect::action('AccountsController@show', $user->id);
     }
 
     /**

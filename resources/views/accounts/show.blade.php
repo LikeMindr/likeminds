@@ -36,22 +36,22 @@
 							</div>
 							<div class="be-user-social">
 
-								<?php if($user->facebook != NULL): ?>					
+								<?php if($user->facebook != "https://facebook.com/"): ?>					
 								<a class="social-btn color-1" 
 									href="{{$user->facebook}}" target="blank">
 									<i class="fa fa-facebook"></i></a>
 								<?php endif; ?>
-								<?php if($user->twitter != NULL): ?>
+								<?php if($user->twitter != "https://twitter.com/"): ?>
 								<a class="social-btn color-2" 
 									href="{{$user->twitter}}" target="blank">
 									<i class="fa fa-twitter"></i></a>
 								<?php endif;  ?>
-								<?php if($user->pinterest != NULL): ?>
+								<?php if($user->pinterest != "https://pinterest.com/"): ?>
 								<a class="social-btn color-4" 
 									href="{{$user->pinterest}}" target="blank">
 									<i class="fa fa-pinterest-p"></i></a>
 								<?php endif;  ?>
-								<?php if($user->instagram != NULL): ?>
+								<?php if($user->instagram != "https://instagram.com/"): ?>
 								<a class="social-btn color-5" 
 									href="{{$user->instagram}}" target="blank">
 									<i class="fa fa-instagram"></i></a>
@@ -80,14 +80,6 @@
 							{{ $user->bio }}
 							</div>
 						</div>
-						<div class="be-desc-author">
-							<div class="be-desc-label">QUESTION</div>
-							{{ $user->question }}
-							<div class="clearfix"></div>
-							<div class="be-desc-text">
-							{{ $user->answer }}
-							</div>
-						</div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-md-8">
@@ -99,7 +91,8 @@
                                     <span>MY EVENTS</span>
                                 </div>
                                 <div class="nav-tab-item ">
-                                    <a href="/accounts/{{Auth::id()}}/edit" ><span>EDIT PROFILE</span></a>
+                                    <a href="{{action('AccountsController@edit', $user->id)}}" >
+									<span>EDIT PROFILE</span></a>
                                 </div>
                             	@else
 								<div class="nav-tab-item">
