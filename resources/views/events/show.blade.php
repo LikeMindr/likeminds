@@ -22,15 +22,16 @@
 
 <div id="profile-page-bg">
 	<div class="container custom-container be-detail-container">
+		<!-- <div class="container"> -->
 		<div class="row">
 			<div class="col-md-9 col-md-push-3">
 				<div class="be-large-post">
 					<div class="info-block">
-					<div class="be-large-post-align">
-					</div>
+						<!-- <div class="row"> -->
+								<!-- <div class=".col-md-12"> --><h5 class="be-post-title to">{{ $event->title }}</h5><!-- </div> -->
+						<!-- </div> -->
 					</div>
 					<div class="blog-content  be-large-post-align">
-						<h5 class="be-post-title to">{{ $event->title }}</h5>
 						<img src=
 						<?php clearstatcache();
 						   	if($event->image != NULL): ?>
@@ -39,10 +40,12 @@
 							"{{App\Event::defaultImage($event->category)}}"
 						<?php endif; ?>
 							/>
-						<h5>{{ $event->date }} {{ $event->time }}</h5>
-						<h5>{{ $event->location }}</h5>
-						<h5>{{ App\Event::correctName($event->category) }}</h5>
-						<h5>{{ $event->num_people }}</h5>
+						<div>
+						<h5>DATE & TIME: {{ $event->date }} at {{ $event->time }}</h5>
+					</div>
+						<h5>LOCATION: {{ $event->location }}</h5>
+						<h5>EVENT CATEGORY: {{ App\Event::correctName($event->category) }}</h5>
+						<h5>NUMBER OF PEOPLE:{{ $event->num_people }}</h5>
 						<div class="clear"></div>
 						<div class="post-text">
 							<h6>{{ $event->description }}</h6>
@@ -95,7 +98,8 @@
 						</form>
 						<?php endif; ?>
 					</div>
-				</div>
+				<!-- </div> -->
+			</div>
 </div>
 				<div class="col-md-3 col-md-pull-9 left-feild">
 					<div class="be-user-block">
