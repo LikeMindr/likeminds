@@ -22,9 +22,8 @@
 
   							<img src=
 								<?php clearstatcache();
-									if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
-									"/assets/img/u-" . $user->id . ".jpg")): ?>
-									"/assets/img/u-{{$user->id}}.jpg"
+									if($user->image != NULL): ?>
+									"/assets{{$user->image}}"
 								<?php else: ?>
 									"/assets/img/usericon.png"
 								<?php endif; ?>
@@ -110,9 +109,8 @@
 								<a href="/events/{{$event->id}}" class="be-img-block">
 								<img src=
 									<?php clearstatcache();
-									if(file_exists($_SERVER['DOCUMENT_ROOT'] .
-										"/assets/img/e-" . $event->id . ".jpg")): ?>
-										"../assets/img/e-{{$event->id}}.jpg"
+									if($event->image != NULL): ?>
+										"../assets{{$event->image}}"
 									<?php else: ?>
 										"{{App\Event::defaultImage($event->category)}}"
 									<?php endif; ?>
@@ -128,9 +126,8 @@
 								<div class="author-post">
 								<img src=
 									<?php clearstatcache();
-										if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
-										"/assets/img/u-" . $event['user']['id'] . ".jpg")): ?>
-										"/assets/img/u-{{$event['user']['id']}}.jpg"
+										if($user->image != NULL): ?>
+										"/assets{{$user->image}}"
 									<?php else: ?>
 										"/assets/img/usericon.png"
 									<?php endif; ?>
@@ -150,13 +147,10 @@
 									class="be-img-block">
 								<img src=
 									<?php clearstatcache();
-									if(file_exists($_SERVER['DOCUMENT_ROOT'] .
-										"/assets/img/e-" . 
-										App\Event::find($event['event_id'])['id'] 
-										. ".jpg")): ?>
-										"../assets/img/e-{{
-										App\Event::find($event['event_id'])['id']
-										}}.jpg"
+									if(App\Event::find($event['event_id'])['image'] != NULL ): ?>
+										"../assets{{
+										App\Event::find($event['event_id'])['image']
+										}}"
 									<?php else: ?>
 										"{{App\Event::defaultImage(
 										App\Event::find($event['event_id'])['category'])}}"
@@ -182,12 +176,10 @@
 								<div class="author-post">
 								<img src=
 									<?php clearstatcache();
-										if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
-										"/assets/img/u-" . 
-										App\Event::find($event['event_id'])['created_by']
-										. ".jpg")): ?>
-										"/assets/img/u-{{
-										App\Event::find($event['event_id'])['created_by']
+										if(App\User::find(App\Event::find($event['event_id'])
+											['created_by'])->image != NULL): ?>
+										"/assets{{
+							App\User::find(App\Event::find($event['event_id'])['created_by'])->image
 										}}.jpg"
 									<?php else: ?>
 										"/assets/img/usericon.png"

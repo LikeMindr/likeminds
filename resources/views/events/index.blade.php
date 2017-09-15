@@ -109,9 +109,8 @@
 								<a href="/events/{{$event->id}}" class="be-img-block">
 								<img src=
 									<?php clearstatcache();
-									if(file_exists($_SERVER['DOCUMENT_ROOT'] .
-										"/assets/img/e-" . $event->id . ".jpg")): ?>
-										"../assets/img/e-{{$event->id}}.jpg"
+									if($event->image != NULL): ?>
+										"/assets{{$event->image}}"
 									<?php else: ?>
 										"{{App\Event::defaultImage($event->category)}}"
 									<?php endif; ?>
@@ -127,9 +126,9 @@
 								<div class="author-post">
 									<img src=
 									<?php clearstatcache();
-										if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
-										"/assets/img/u-" . $event['user']['id'] . ".jpg")): ?>
-										"/assets/img/u-{{$event['user']['id']}}.jpg"
+										$user = App\User::find($event['user']['id']);
+										if($user->image != NULL): ?> 
+										"/assets{{App\User::find($event['user']['id'])->image}}"
 									<?php else: ?>
 										"/assets/img/usericon.png"
 									<?php endif; ?>

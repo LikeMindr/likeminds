@@ -20,7 +20,6 @@ class UserTableSeeder extends Seeder
         	$user->password = $faker->password;
         	$user->email = $faker->safeEmail;
 			$user->location = $faker->city .", " . $faker->stateAbbr;
-			$user->avatar = $faker->imageUrl;
 			$user->bio = $faker->text;
 			$user->question = "If you were stranded on a desert island, what item would you need?";
 			$user->answer = "My teddy bear and blanky.";

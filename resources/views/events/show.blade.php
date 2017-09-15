@@ -33,9 +33,8 @@
 						<h5 class="be-post-title to">{{ $event->title }}</h5>
 						<img src=
 						<?php clearstatcache();
-						   	if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
-								"/assets/img/e-" . $event->id . ".jpg")): ?>
-								"/assets/img/e-{{$event->id}}.jpg"
+						   	if($event->image != NULL): ?>
+								"/assets{{$event->image}}"
 						<?php else: ?>
 							"{{App\Event::defaultImage($event->category)}}"
 						<?php endif; ?>
