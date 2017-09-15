@@ -15,7 +15,7 @@
 		</div>
     </div>
 	<!-- MAIN CONTENT -->
-<div id="profile-page-bg-container">
+<div id="profile-page-bg">
 
 <div class="col-xs-12 col-md-9 _editor-content_">
 	<div class="sec"  data-sec="basic-information">
