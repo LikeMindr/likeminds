@@ -107,9 +107,8 @@
 							<a class="be-ava-user" href="/accounts/{{$event['user']['id']}}">
 								<img src=
 									<?php clearstatcache();
-										if(file_exists($_SERVER['DOCUMENT_ROOT'] . 
-										"/assets/img/u-" . $event['user']['id'] . ".jpg")): ?>
-										"/assets/img/u-{{$event['user']['id']}}.jpg"
+										if($event['user']['image'] != NULL): ?>
+										"/assets{{$event['user']['image']}}"
 									<?php else: ?>
 										"/assets/img/usericon.png"
 									<?php endif; ?>
