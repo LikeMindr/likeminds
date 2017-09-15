@@ -3,7 +3,7 @@
 <title> Like Minds At </title>
 @stop
 @section('content')
-
+<?php clearstatcache(); ?>
 
 	<!-- MAIN CONTENT -->
 	<div id="profile-page-bg">
@@ -36,22 +36,22 @@
 							</div>
 							<div class="be-user-social">
 
-								<?php if($user->facebook != "https://facebook.com/"): ?>					
+								<?php if(strlen($user->facebook) > 21): ?>					
 								<a class="social-btn color-1" 
 									href="{{$user->facebook}}" target="blank">
 									<i class="fa fa-facebook"></i></a>
 								<?php endif; ?>
-								<?php if($user->twitter != "https://twitter.com/"): ?>
+								<?php if(strlen($user->twitter) > 20): ?>
 								<a class="social-btn color-2" 
 									href="{{$user->twitter}}" target="blank">
 									<i class="fa fa-twitter"></i></a>
 								<?php endif;  ?>
-								<?php if($user->pinterest != "https://pinterest.com/"): ?>
+								<?php if(strlen($user->pinterest) > 22): ?>
 								<a class="social-btn color-4" 
 									href="{{$user->pinterest}}" target="blank">
 									<i class="fa fa-pinterest-p"></i></a>
 								<?php endif;  ?>
-								<?php if($user->instagram != "https://instagram.com/"): ?>
+								<?php if(strlen($user->instagram) > 22): ?>
 								<a class="social-btn color-5" 
 									href="{{$user->instagram}}" target="blank">
 									<i class="fa fa-instagram"></i></a>
