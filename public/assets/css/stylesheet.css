@@ -1495,7 +1495,8 @@ a.social-btn:hover { opacity: 0.6; color: white; }
   border-radius: 2px;
   padding-bottom: 50px;
   margin-bottom: 50px;
-  background-color: #EAEEF6 }
+  background-color: #EAEEF6;
+  text-align: center; }
 
 .be-largepost-iframe { margin-bottom: 50px !important; padding-left: 0; }
 
@@ -4152,7 +4153,7 @@ element.style {
     background-image: url(https://www.addevent.com/gfx/icon-calendar-t5.png), url(https://www.addevent.com/gfx/icon-calendar-t1.svg), url(https://www.addevent.com/gfx/icon-apple-t1.svg), url(https://www.addevent.com/gfx/icon-facebook-t1.svg), url(https://www.addevent.com/gfx/icon-google-t1.svg), url(https://www.addevent.com/gfx/icon-outlook-t1.svg), url(https://www.addevent.com/gfx/icon-yahoo-t1.svg);
     background-position: -9999px -9999px;
     background-repeat: no-repeat;
-
+}
 
 
 
