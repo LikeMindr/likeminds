@@ -62,7 +62,7 @@
 					<div class="col-md-2 verticalAlign">
 						<div class="verticalAlignParent">
 							<div class="verticalAlignChild">
-								<div class="btn-clear button-clear">
+								<div class="button-clear">
 									<a href="/events">CLEAR</a>
 								</div>
 							</div>

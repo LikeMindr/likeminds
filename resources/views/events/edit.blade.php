@@ -83,18 +83,18 @@
 				      <span id="place-address"></span>
 				    </div>
 				    <div class="row">
-					<div class="form-group input-col col-xs-12 col-sm-6">
+					<div class="form-group input-col col-md-4 col-lg-4">
 						<h2 class="form-label-create">DATE</h2>
 						<input class="form-control create-event-input-datetime" type="date" name="date"
 						value="{{ $event->date }}" required>
 					</div>
-					<div class="form-group input-col col-xs-12 col-sm-6">
+					<div class="form-group input-col col-md-4 col-lg-4">
 						<h2 class="form-label-create">TIME</h2>
 						<input class="form-control create-event-input-datetime" type="time" name="time"
 						value="{{ $event->time }}" required>
 					</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group input-col col-md-4 col-lg-4">
 						<h2 class="form-label-create">NUMBER OF GUESTS</h2>
 						<input class="form-control create-event-input" type="number" min="0" name="num_people"
 						value="{{ $event->num_people }}" required>

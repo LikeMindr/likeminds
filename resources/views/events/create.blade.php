@@ -15,18 +15,17 @@
 		</div>
     </div>
 	<!-- MAIN CONTENT -->
-<div id="profile-page-bg">
-
+<body class="edit-create-event">
+<div id="pagewrap">
 <div class="col-xs-12 col-md-9 _editor-content_">
 	<div class="sec"  data-sec="basic-information">
 		<div class="create-event-page">
 			<div class="create-event-form">
-				<form method="POST" action="{{ action('EventsController@store') }}"
+				<form class="create-edit-event-form" method="POST" action="{{ action('EventsController@store') }}"
 					enctype="multipart/form-data">
 					{!! csrf_field() !!}
 					<div class="form-group">
-
-					<div class="create-event-form-align">
+          <div class="create-event-form-align">
 					<p>CREATE YOUR EVENT</p>
 					</div>
 						<h2 class="form-label-create">TITLE</h2>
@@ -61,7 +60,7 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<h2 class="form-label-create">LOCATION</h2>
+						<h2 class="form-label-create-location">LOCATION</h2>
 							<div id="pac-container">
         						<input id="pac-input" type="text" name="location" class="form-control create-event-input" required>
         					</div>
@@ -73,22 +72,22 @@
 				      <span id="place-address"></span>
 				    </div>
 				    <div class="row">
-					<div class="form-group input-col col-xs-12 col-sm-6">
-						<h2 class="form-label-create">DATE</h2>
-						<input class="form-control create-event-input-datetime" type="date" name="date"
-						value="{{ old('date') }}" required>
-					</div>
-					<div class="form-group input-col col-xs-12 col-sm-6">
-						<h2 class="form-label-create">TIME</h2>
-						<input class="form-control create-event-input-datetime" type="time" name="time"
-						value="{{ old('time') }}" required>
-					</div>
-					</div>
-					<div class="form-group">
-						<h2 class="form-label-create">NUMBER OF GUESTS</h2>
-						<input class="form-control create-event-input" type="number" min="0" name="num_people"
+					     <div class="form-group  col-md-4">
+						      <h2 class="form-label-create">DATE</h2>
+						        <input class="form-control create-event-input-datetime" type="date" name="date"
+						          value="{{ old('date') }}" required>
+					     </div>
+					     <div class="form-group  col-md-4">
+						      <h2 class="form-label-create">TIME</h2>
+						        <input class="form-control create-event-input-datetime" type="time" name="time"
+						          value="{{ old('time') }}" required>
+					     </div>
+					<div class="form-group  col-md-4">
+						<h2 class="form-label-create"># OF GUESTS</h2>
+						<input class="form-control create-event-input-datetime" type="number" min="0" name="num_people"
 						value="{{ old('num_people') }}" required>
 					</div>
+        </div>
 					<div class="form-group">
 						<h2 class="form-label-create">DESCRIPTION</h2>
 						<textarea class="form-control text-form create-event-description"
@@ -101,4 +100,5 @@
 	</div>
 </div>
 </div>
+</body>
 @stop

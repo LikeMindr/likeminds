@@ -316,4 +316,12 @@ a.clearbtn:hover, a.trendbtn:hover {
 
 
 #profile-page-bg{
+    background-color: #2C4762;
+    margin-top: -80px;
+}
+
+#edit-create-container{
   background-color: #2C4762;
+  max-width: 100%;
+  max-height: 100%;
+}

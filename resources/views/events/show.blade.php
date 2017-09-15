@@ -92,7 +92,7 @@
 						<form method="GET"
 							action="{{ action('EventsController@edit', array($event->id)) }}">
 							{!! csrf_field() !!}
-							<button class="btn color-4 size-2 hover-7 button-event-create" id="submit">Edit This Event</button>
+							<button class="btn color-4 size-2 hover-7 button-event-create" id="submit">EDIT</button>
 						</form>
 						<?php endif; ?>
 					</div>
