@@ -105,15 +105,18 @@
 						name="description" placeholder="Tell everyone why they should go to your event..." required>
             {{ $event->description }} </textarea>
 					</div>
+					<div>
 					{{ method_field('PUT') }}
-					<button class="btn color-4 size-2 hover-7 button-event-create" id="submit">Submit</button>
-				</form>
-				<form method="POST" 
+					<button class="btn color-4 size-2 hover-7 button-event-edit" id="submit">Submit</button>
+					<form method="POST" 
 					action="{{ action('EventsController@destroy', $event->id) }}">
 					{!! csrf_field() !!}
-					<button class="btn btn-danger">Delete Event</button>
+					<button class="btn color-4 size-2 hover-7 button-event-edit">Delete Event</button>
 					{{ method_field('DELETE') }}
-				</form>	
+					</div>
+				</form>
+				</form>
+				
 			</div>
 		</div>
 	</div>
