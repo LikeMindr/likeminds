@@ -84,7 +84,8 @@
 							TRENDING CATEGORIES
 						</h3>
 								@foreach($trends as $trend)
-								<a href="/events?c={{$trend}}" class="trendbtn">{{ $trend }}</a>
+								<a href="/events?c={{$trend}}" class="trendbtn">
+									{{ App\Event::correctName($trend) }}</a>
 								@endforeach
 					</div>
 					<div class="be-vidget">
