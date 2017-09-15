@@ -17,7 +17,7 @@
 	<!-- MAIN CONTENT -->
 <body class="edit-create-event">
 <div id="pagewrap">
-<div class="col-xs-12 col-md-9 _editor-content_">
+<div class="col-xs-12 col-md-9 col-lg-4 col-lg-offset-4 _editor-content_">
 	<div class="sec"  data-sec="basic-information">
 		<div class="create-event-page">
 			<div class="create-event-form">
@@ -100,5 +100,8 @@
 	</div>
 </div>
 </div>
+<br>
+<br>
+<br>
 </body>
 @stop

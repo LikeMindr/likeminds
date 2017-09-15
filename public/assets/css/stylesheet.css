@@ -3867,17 +3867,20 @@ body.edit-create-event{
 form.create-edit-event-form {
   background-color: #EAEEF6;
   color: #2C4762;
-  position: block;
+  
+  
+
+}
    
    
   }
 
 #pagewrap {
-  max-width:1200px;
-  width:100%;
-  margin:35% auto;
+  max-width:500px;
+  width:80%;
+  margin:-5px auto;
   position:relative;
-  margin-bottom: 20px;
+  margin-left: 30%;
 }
 
 
