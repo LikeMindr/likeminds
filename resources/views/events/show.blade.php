@@ -65,11 +65,28 @@
 							<a href="/attends/cancel/{{$event->id}}/{{Auth::id()}}">
 								<button>Cancel</button>
 							</a>
+								<?php 
+								echo date('m/d/Y', strtotime($event->date))
+									. ' ' .
+									date('g:i A', strtotime($event->time));
+										?>
 								<div title="Add to Calendar" class="addeventatc">
 								    ADD TO CALENDAR
-								    <span class="start"></span>
-								    <span class="end"></span>
-								    <span class="timezone">US/Chicago</span>
+								    <span class="start">
+								<?php 
+								echo date('m/d/Y', strtotime($event->date))
+									. ' ' .
+									date('g:i A', strtotime($event->time));
+										?>
+									</span>
+								    <span class="end">
+								<?php 
+								echo date('m/d/Y', strtotime($event->date))
+									. ' ' .
+									date('g:i A', strtotime($event->time)+3600);
+										?>
+									</span>
+								    <span class="timezone">America/Chicago</span>
 								    <span class="title">{{$event->title}}</span>
 								    <span class="description">{{$event->description}}</span>
 								    <span class="location">{{ $event->location }}</span>
@@ -81,7 +98,7 @@
 									</span>
 								    <span class="facebook_event">https://www.facebook.com/events/703782616363133</span>
 								    <span class="all_day_event">false</span>
-								    <span class="date_format">{{ $event->date }}</span>
+								    <span class="date_format">MM/DD/YYY</span>
 								    <span class="client">arhvfcwBtzTYjbzlSmIF31075</span>
 								</div>
 							<?php elseif(Auth::check() && Auth::id() != $event['user']['id']): ?>
@@ -143,7 +160,7 @@
 				<div class="tab-info active">
 					<div class="row">
 					@foreach($event->attends as $user)	
-						<div class="col-ml-12 col-xs-6 col-sm-4">
+						<div class="category-1 mix custom-column-5">
 							<div class="be-post">
 							<a href="/accounts/{{$user['user_id']}}" class="be-img-block">
 							<img src=

@@ -87,9 +87,18 @@
 										<div class="form-group focus-2">
 
 											<div class="form-label">LOCATION</div>
-											<input class="form-input" name="location"
-											type="text" value="{{$user->location}}">
+											<div id="pac-container">
+												<input id="pac-input" type="text"
+												name="location" class="form-control 
+												create-event-input">
+											</div>
 										</div>
+									</div>
+									<div id="map"></div>
+									<div id="infowindow-content">
+									<img src="" width="16" height="16" id="place-icon">
+									<span id="place-name"  class="title"></span><br>
+									<span id="place-address"></span>
 									</div>
 
 								</div>

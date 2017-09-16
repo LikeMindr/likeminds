@@ -18,8 +18,8 @@
       <div class="col-sm-5">
          <div class="intro-texts">
             <h1 class="text-white">Make Cool Friends !!!</h1>
-            <p>LIKE MINDS . AT is a social network that can be used to connect people. Why do things alone when you can go with like minded friends! <br /> <br />Why are you waiting for? Sign up now.</p>
-            <button class="btn btn-primary">Learn More</button>
+			<p>LIKE MINDS . AT is a social network that can be used to connect
+people. Why do things alone when you can go with like minded friends! <br />
          </div>
       </div>
       <div class="col-sm-6 col-sm-offset-1" class="center">
@@ -57,6 +57,7 @@
 						</div>
 					</section>
 				</form>
+				<a href="/auth/register">Don't have an account? Register!</a>
 
                <!-- button  -->
 
