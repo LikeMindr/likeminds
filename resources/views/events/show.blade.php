@@ -65,11 +65,6 @@
 							<a href="/attends/cancel/{{$event->id}}/{{Auth::id()}}">
 								<button>Cancel</button>
 							</a>
-								<?php 
-								echo date('m/d/Y', strtotime($event->date))
-									. ' ' .
-									date('g:i A', strtotime($event->time));
-										?>
 								<div title="Add to Calendar" class="addeventatc">
 								    ADD TO CALENDAR
 								    <span class="start">
