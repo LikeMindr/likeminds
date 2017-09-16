@@ -232,6 +232,18 @@ a.nav-buttons:active {
     }
 }
 
+@media screen and (max-width: 1200px) {
+	nav.navbar.navbar-default {
+		position: relative;
+		top: -80px;
+		margin-bottom: 0px;
+	}
+
+	div.container.custom-container.be-detail-container {
+		margin-top: 0;
+	}
+}
+
 /*/////////////////////////////////////////////////////////////////////////
                              Events Index Page
 /////////////////////////////////////////////////////////////////////////*/
