@@ -14,7 +14,7 @@ class AttendTableSeeder extends Seeder
      */
     public function run()
     {
-		for($i = 0; $i < 100; $i++) {
+		for($i = 0; $i < 10000; $i++) {
 			$attend = new Attend();
 			$attend->user_id = User::all()->random()->id;
 			$attend->event_id = Event::all()->random()->id;
