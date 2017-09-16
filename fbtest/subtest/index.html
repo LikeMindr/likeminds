@@ -1,19 +1,11 @@
-<!-- @extends('layouts.master') -->
-@include('layouts.partials.navbar')
-<!-- @section('title') -->
-<title> Like Minds At </title>
-<!-- @stop -->
-<!-- @section('content') -->
-<!--preloader-->
-<div id="spinner-wrapper">
-   <div class="spinner"></div>
-</div>
+<!DOCTYPE>
+<HTML>
 <head>
-
+    
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://startbootstrap.com/templates/agency/font-awesome-4.1.0/css/font-awesome.min.css">
-
+    
     <style>
 
 body {
@@ -618,16 +610,20 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #1ee2e7;
 }
-
+        
        .line-hieght {
     line-height: 60px;
             }
 
 </style>
+</head>
+ 
+
+
 <body style="color:white;" id="page-top" class="index" data-pinterest-extension-installed="cr1.3.4">
 
     <!-- Navigation -->
-
+    
 
     <!-- Header -->
 <!--
@@ -640,13 +636,13 @@ body {
             </div>
         </div>
     </header>
-
+    
 -->
-
+    
     <div class="video">
 	<video id="InformationVideo" class="information__video information__video--visible" preload="auto" autobuffer="" autoload="" autoplay="" loop="">
 		<source src="https://likeminds.at/assets/video/sadrone5.mp4" type="video/mp4">
-
+					
 	</video>
 </div>
 <header>
@@ -655,27 +651,27 @@ body {
 	<h3 class="line-hieght">Make new Friends</h3><br>
 	<hr />
 	<h4>
-
-
+	
+		
 
 Do things together
 	</h4>
 </header>
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <!-- Services Section -->
 
-
-
+   
+    
     <section>
     <div style="color:white;" class="container">
             <div class="row">
@@ -713,7 +709,7 @@ Do things together
     </section>
 
     <!-- Portfolio Grid Section -->
-
+   
 
     <!-- About Section -->
     <section id="about">
@@ -797,20 +793,20 @@ Do things together
     </section>
 
     <!-- Team Section -->
-
+   
 
     <!-- Clients Aside -->
+   
 
+    
 
-
-
-
+   
 
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
 
     <!-- Portfolio Modal 1 -->
-
+    
     <!-- Portfolio Modal 6 -->
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -852,14 +848,9 @@ Do things together
     <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/classie.js"></script>
     <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/cbpAnimatedHeader.js"></script>
 
-
+    
 
 <span style="height: 20px; width: 40px; min-height: 20px; min-width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=);">
     </span>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-@stop
+    </body>
+</HTML>
