@@ -143,7 +143,7 @@
 				<div class="tab-info active">
 					<div class="row">
 					@foreach($event->attends as $user)	
-						<div class="col-ml-12 col-xs-6 col-sm-4">
+						<div class="category-1 mix custom-column-5">
 							<div class="be-post">
 							<a href="/accounts/{{$user['user_id']}}" class="be-img-block">
 							<img src=

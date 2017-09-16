@@ -68,6 +68,7 @@
 	</section>
 	</fieldset>
 </form>
+<a href="/auth/login">Already registered? Login!</a>
             </div>
          </div>
       </div>
