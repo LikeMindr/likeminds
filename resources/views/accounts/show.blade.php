@@ -60,12 +60,10 @@
 						</div>
 						<div class="be-user-statistic">
 							<div class="stat-row clearfix">
-							<i class="stat-icon icon-views-b">
 </i>EVENTS CREATED<span class="stat-counter">
 							{{ count($user->events) }} 
 							</span></div>
 							<div class="stat-row clearfix">
-							<i class="stat-icon icon-like-b">
 </i>EVENTS ATTENDED<span class="stat-counter">
 							{{ count($user->attends) }} 
 							</span></div>
