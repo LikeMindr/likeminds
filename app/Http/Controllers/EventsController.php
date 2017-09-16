@@ -66,8 +66,8 @@ class EventsController extends Controller
 
 		$event->title = $request->title;
 		$event->description = $request->description;
-		$event->date = $request->date;
-		$event->time = $request->time;
+		$event->date = date('F jS Y', strtotime($request->date));
+		$event->time = date('g:i a', strtotime($request->time));
 		$event->location = $request->location;
 		$event->category = $request->category;
 		$event->num_people = $request->num_people;

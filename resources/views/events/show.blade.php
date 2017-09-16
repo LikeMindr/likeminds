@@ -45,7 +45,8 @@
 					</div>
 						<h5>LOCATION: {{ $event->location }}</h5>
 						<h5>EVENT CATEGORY: {{ App\Event::correctName($event->category) }}</h5>
-						<h5>NUMBER OF PEOPLE:{{ $event->num_people }}</h5>
+						<h5>{{ $event->num_people - count($event->attends)}} SPOTS LEFT</h5>
+						<h5>{{ count($event->attends) }} CURRENTLY SIGNED UP</h5>
 						<div class="clear"></div>
 						<div class="post-text">
 							<h6>{{ $event->description }}</h6>
@@ -64,6 +65,25 @@
 							<a href="/attends/cancel/{{$event->id}}/{{Auth::id()}}">
 								<button>Cancel</button>
 							</a>
+								<div title="Add to Calendar" class="addeventatc">
+								    ADD TO CALENDAR
+								    <span class="start"></span>
+								    <span class="end"></span>
+								    <span class="timezone">US/Chicago</span>
+								    <span class="title">{{$event->title}}</span>
+								    <span class="description">{{$event->description}}</span>
+								    <span class="location">{{ $event->location }}</span>
+								    <span class="organizer">
+									{{App\User::find($event->created_by)->name}}
+									</span>
+								    <span class="organizer_email">
+									{{App\User::find($event->created_by)->email}}
+									</span>
+								    <span class="facebook_event">https://www.facebook.com/events/703782616363133</span>
+								    <span class="all_day_event">false</span>
+								    <span class="date_format">{{ $event->date }}</span>
+								    <span class="client">arhvfcwBtzTYjbzlSmIF31075</span>
+								</div>
 							<?php elseif(Auth::check() && Auth::id() != $event['user']['id']): ?>
 						<form class="sign-up-event-cal" method="POST" action="{{ action('AttendsController@store') }}">
 							{!! csrf_field() !!}
@@ -72,21 +92,6 @@
 							
 								<button class="btn color-4 size-2 hover-7 " id="submit">REGISTER</button> 
 							
-								<div title="Add to Calendar" class="addeventatc">
-								    ADD TO CALENDAR
-								    <span class="start">09/29/2017 09:00 AM</span>
-								    <span class="end">09/29/2017 11:00 AM</span>
-								    <span class="timezone">Europe/Paris</span>
-								    <span class="title">Summary of the event</span>
-								    <span class="description">Description of the event<br>Example of a new line</span>
-								    <span class="location">{{ $event->location }}</span>
-								    <span class="organizer">Organizer</span>
-								    <span class="organizer_email">Organizer e-mail</span>
-								    <span class="facebook_event">https://www.facebook.com/events/703782616363133</span>
-								    <span class="all_day_event">false</span>
-								    <span class="date_format">{{ $event->date }}</span>
-								    <span class="client">arhvfcwBtzTYjbzlSmIF31075</span>
-								</div>
 						</form>
 						<?php endif;  ?>
 
@@ -128,6 +133,43 @@
 						</p>
 					</div>
 					</div>
+<div class="row">
+	<div class="col-md-9 col-md-push-3">
+		<div class="be-large-post">
+			<div class="info-block">
+				<h5 class="be-post-title to">Cool People You Can Meet</h5>
+			</div>
+			<div class="tabs-content clearfix">
+				<div class="tab-info active">
+					<div class="row">
+					@foreach($event->attends as $user)	
+						<div class="col-ml-12 col-xs-6 col-sm-4">
+							<div class="be-post">
+							<a href="/accounts/{{$user['user_id']}}" class="be-img-block">
+							<img src=
+								<?php clearstatcache();
+								if(App\User::find($user['user_id'])->image != NULL): ?>
+									"../assets{{App\User::find($user['user_id'])->image}}"
+								<?php else: ?>
+									"/assets/img/usericon.png"
+								<?php endif; ?>
+							class="img-responsive" alt="{{App\User::find($user['$user_id'])['name']}}">
+							</a>
+							<a href="/accounts/{{$user['user_id']}}">
+							{{App\User::find($user['user_id'])['name']}}
+							</a>
+							</div>
+						</div>
+					@endforeach
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</div>
 <!-- AddEvent -->
 <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 
