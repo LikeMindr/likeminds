@@ -1,15 +1,4 @@
-<!-- @extends('layouts.master') -->
-@include('layouts.partials.navbar')
-<!-- @section('title') -->
-<title> Like Minds At </title>
-<!-- @stop -->
-<!-- @section('content') -->
-<!--preloader-->
-<div id="spinner-wrapper">
-   <div class="spinner"></div>
-</div>
-<head>
-
+<!DOCTYPE html>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://startbootstrap.com/templates/agency/font-awesome-4.1.0/css/font-awesome.min.css">
@@ -862,4 +851,3 @@ Do things together
 <br>
 <br>
 
-@stop
