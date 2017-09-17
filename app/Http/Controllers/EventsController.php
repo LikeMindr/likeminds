@@ -27,17 +27,28 @@ class EventsController extends Controller
      */
     public function index(Request $request)
     {   
-		if ($request->has('q')) {
+		if ($request->has('q') && !$request->has('c')) {
 			$q = Input::escape($request->q);
-			$events = Event::search($q);
+			$c = '';
+			$events = Event::search($q, $c);
 		}
-		if ($request->has('c')) {
-			$c = $request->c;
-			$events = Event::category($c);
+
+		if ($request->has('c') && !$request->has('q')) {
+			$c = Input::escape($request->c);
+			$q = '';
+			$events = Event::search($q, $c);
 		}
-		if (!$request->has('q') && !$request->has('c')) {
+
+		if ($request->has('q') && $request->has('c')) {
+			$q = Input::escape($request->q);
+			$c = Input::escape($request->c);
+			$events = Event::search($q, $c);
+		}
+
+		if (!$request->has('c') && !$request->has('q')) {
 			$events = Event::with('user')->orderBy('id', 'desc')->paginate(20);
 		}
+
 		
 		$trends = Event::trends();
 
