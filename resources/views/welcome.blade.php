@@ -673,7 +673,7 @@ body {
     </header>
 
 -->
-
+<div id="welcome-wrapper">
     <div class="video">
 	<video id="InformationVideo" class="information__video information__video--visible" preload="auto" autobuffer="" autoload="" autoplay="" loop="">
 		<source src="https://likeminds.at/assets/video/sadrone5.mp4" type="video/mp4">
@@ -890,7 +890,7 @@ body {
             </div>
         </div>
     </div>
-
+</div>
 
 
 
