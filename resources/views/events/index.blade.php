@@ -31,7 +31,7 @@
 						
 					</div>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-2 col-xs-6">
 					<div class="verticalAlignParent">
 						<div class="verticalAlignChild">
 							<div class="dropdown">
@@ -59,7 +59,7 @@
 						</div>
 					</div>
 				</div>
-					<div class="col-md-2 verticalAlign">
+					<div class="col-md-2 col-xs-6 verticalAlign">
 						<div class="verticalAlignParent">
 							<div class="verticalAlignChild">
 								<div class="button-clear">

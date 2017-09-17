@@ -16,6 +16,7 @@
     </div>
 	<!-- MAIN CONTENT -->
 <body class="edit-create-event">
+<div class="body-container">
 <div id="pagewrap">
 <div class="col-xs-12 col-md-9 col-lg-4 col-lg-offset-4 _editor-content_">
 	<div class="sec"  data-sec="basic-information">
@@ -98,6 +99,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 </div>
 <br>
