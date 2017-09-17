@@ -31,7 +31,9 @@
 								<!-- <div class=".col-md-12"> --><h5 class="be-post-title to">{{ $event->title }}</h5><!-- </div> -->
 						<!-- </div> -->
 					</div>
+					
 					<div class="blog-content  be-large-post-align">
+						
 						<img src=
 						<?php clearstatcache();
 						   	if($event->image != NULL): ?>
@@ -41,16 +43,24 @@
 						<?php endif; ?>
 							/>
 						<div>
+					<div class="event-datails-show">
+						<div class="event-details-top">Event Details</div>
 						<h5>DATE & TIME: {{ $event->date }} at {{ $event->time }}</h5>
 					</div>
 						<h5>LOCATION: {{ $event->location }}</h5>
 						<h5>EVENT CATEGORY: {{ App\Event::correctName($event->category) }}</h5>
-						<h5>{{ $event->num_people - count($event->attends)}} SPOTS LEFT</h5>
-						<h5>{{ count($event->attends) }} CURRENTLY SIGNED UP</h5>
 						<div class="clear"></div>
 						<div class="post-text">
 							<h6>{{ $event->description }}</h6>
 						</div>
+				<div class="event-stats">
+				<div class="event-details-top">Additional Details</div>		
+					<h5>{{ $event->num_people - count($event->attends)}} SPOTS LEFT</h5>
+						<h5>{{ count($event->attends) }} CURRENTLY SIGNED UP</h5>
+					</div>
+						
+					</div>
+				
 
 						<?php if (Auth::check()) {
 							$user = App\User::find(Auth::id());
@@ -65,6 +75,7 @@
 							<a href="/attends/cancel/{{$event->id}}/{{Auth::id()}}">
 								<button>Cancel</button>
 							</a>
+					</div>
 								<div title="Add to Calendar" class="addeventatc">
 								    ADD TO CALENDAR
 								    <span class="start"></span>
@@ -137,7 +148,7 @@
 	<div class="col-md-9 col-md-push-3">
 		<div class="be-large-post">
 			<div class="info-block">
-				<h5 class="be-post-title to">Cool People You Can Meet</h5>
+				<h5 class="be-post-title to">Like-Minds Attending</h5>
 			</div>
 			<div class="tabs-content clearfix">
 				<div class="tab-info active">
