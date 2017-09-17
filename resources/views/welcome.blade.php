@@ -1,4 +1,4 @@
-<!-- @extends('layouts.master') -->
+@extends('layouts.master')
 @include('layouts.partials.navbar')
 <!-- @section('title') -->
 <title> Like Minds At </title>
