@@ -1,9 +1,27 @@
 
 <!DOCTYPE html>
 
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://startbootstrap.com/templates/agency/font-awesome-4.1.0/css/font-awesome.min.css">
+     <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"> -->
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://startbootstrap.com/templates/agency/font-awesome-4.1.0/css/font-awesome.min.css"> -->
+
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="stylesheet" href="/assets/css/idangerous.swiper.css">
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Montserrat" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 
     <style>
 
@@ -49,6 +67,7 @@ p {
   width: 100%;
   overflow: hidden;
   z-index: 2;
+
 }
 .video:before {
   content: '';
@@ -74,10 +93,13 @@ header {
   text-align: center;
   color: white;
   padding: 12em 0 5em;
+
+
 }
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+
 }
 
 .text-muted {
@@ -243,7 +265,7 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-        padding: 25px 0;
+        padding: 0px 20;
         border: 0;
         background-color: transparent;
         -webkit-transition: padding .3s;
@@ -614,11 +636,27 @@ body {
     line-height: 60px;
             }
 
+            .paralax {
+          background:url(assets/img/people.jpg) 50% 0 no-repeat fixed;
+          margin:0 auto;
+          padding:50px 0;
+          background-position:center center;
+          background-size:cover;
+          }
+
+.service-icon{
+  display: block;
+    margin: 0 auto;
+}
+
 </style>
-<body style="color:white;" id="page-top" class="index" data-pinterest-extension-installed="cr1.3.4">
+<!-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> -->
+
+
+<body style="color:white; margin-top: 0;" id="page-top" class="index" data-pinterest-extension-installed="cr1.3.4">
 
     <!-- Navigation -->
-
+@include('layouts.partials.navbar')
 
     <!-- Header -->
 <!--
@@ -643,14 +681,9 @@ body {
 <header>
 	<h1></h1>
     <img src="https://likeminds.at/assets/img/logov.png" alt="Friend Finder" style="width:20%">
-	<h3 class="line-hieght">Make new Friends</h3><br>
+	<h3 style="color: #9ae4e8;"class="line-hieght">Make new Friends</h3><br>
 	<hr />
-	<h4>
-
-
-
-Do things together
-	</h4>
+	<h4 style="color: #fff;">Do things together</h4>
 </header>
 
 
@@ -658,60 +691,87 @@ Do things together
 
 
 
+<div class="container">
+			<div class="block">
+				<!-- <h3 class="block-title">Services</h3> -->
+				<!-- <div class="block-subtitle">Nulla id risus urna. Ut commodo leo quis </div> -->
 
+				<div class="swiper-container" data-autoplay="3000" data-loop="1" data-speed="400" data-center="0" data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3" data-lg-slides="3" data-add-slides="3">
+                    <div class="swiper-wrapper">
+                    	<div class="swiper-slide" data-val="0">
+							<div class="service-entry">
+								<img class="service-icon" src="assets/img/service_1.png" alt="">
+								<h4 style="text-align: center; color: #9ae4e8;"     class="service-title"> Discover new events</h4>
+								<div class="service-text">Morbi efficitur feugiat erat a efficitur. Donec interdum, nunc ac elementum auctor, dui nisl placerat odio</div>
 
+							</div>
+                        </div>
+                    	<div class="swiper-slide" data-val="1">
+							<div class="service-entry">
+								<img  class="service-icon" src="assets/img/service_2.png" alt="">
+								<h4 style="text-align: center; color: #9ae4e8;"     class="service-title">Search for events</h4>
+								<div class="service-text">Fusce id euismod diam, quis venenatis ipsum. Quisque lacinia non dui id fermentum. Ut libero nulla, auctor nec</div>
 
+							</div>
+                        </div>
+                    	<div class="swiper-slide" data-val="2">
+							<div class="service-entry">
+								<img class="service-icon" src="assets/img/service_3.png" alt="">
+								<h4 style="text-align: center; color: #9ae4e8;"     class="service-title">Sign up for events</h4>
+								<div class="service-text">Curabitur tincidunt eros et felis eleifend, sed pharetra leo scelerisque. In accumsa</div>
 
+							</div>
+                        </div>
+                    	<div class="swiper-slide" data-val="3">
+							<div class="service-entry">
+								<img class="service-icon" src="assets/img/service_1.png" alt="">
+								<h4 style="text-align: center; color: #9ae4e8;"     class="service-title"> Discover new events</h4>
+								<div class="service-text">Morbi efficitur feugiat erat a efficitur. Donec interdum, nunc ac elementum auctor, dui nisl placerat odio</div>
 
+							</div>
+                        </div>
+                    	<div class="swiper-slide" data-val="4">
+							<div class="service-entry">
+								<img class="service-icon" src="assets/img/service_2.png" alt="">
+								<h4 style="text-align: center; color: #9ae4e8;"     class="service-title">Search for events</h4>
+								<div class="service-text">Fusce id euismod diam, quis venenatis ipsum. Quisque lacinia non dui id fermentum. Ut libero nulla, auctor nec</div>
+
+							</div>
+                        </div>
+                    	<div class="swiper-slide" data-val="5">
+							<div class="service-entry">
+								<img class="service-icon" src="assets/img/service_3.png" alt="">
+								<h4 style="text-align: center; color: #9ae4e8;"     class="service-title">Sign up for events</h4>
+								<div class="service-text">Curabitur tincidunt eros et felis eleifend, sed pharetra leo scelerisque. In accumsa</div>
+
+							</div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+
+                    </div>
+                </div>
+			</div>
+		</div>
     <!-- Services Section -->
 
 
 
-    <section>
-    <div style="color:white;" class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 style="color:white;"  class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-           </div>
-            <div style="color:white;" class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="glyphicon glyphicon-tree-conifer"></i>
-                    </span>
-                    <h4 class="service-heading">Here is a pokok</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="glyphicon glyphicon-heart"></i>
-                    </span>
-                    <h4 class="service-heading">Here's a heart</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="glyphicon glyphicon-tint"></i>
-                    </span>
-                    <h4 class="service-heading">Waterfall maybe?</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Portfolio Grid Section -->
-
+    <div data-type="background" data-speed="2" class="paralax">
+          <div style="padding:100px;  text-transform:uppercase; " >
+             <h2 style="text-align:center; color:white; letter-spacing: 15px; " > I am an epic parallax </h2>
+          </div>
+       </div>
 
     <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
+                    <h2 style="color: #9ae4e8;" class="section-heading">About</h2>
                     <h3 class="section-subheading text-muted">Ajmal, I need help to learn how to tweak this part. I don't want this timeline crap. Haha.</h3>
                 </div>
             </div>
@@ -720,7 +780,7 @@ Do things together
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                                <img class="img-circle img-responsive" src="http://www.megajustice.com/wp-content/uploads/2017/05/CellPhone-200x200.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -734,7 +794,7 @@ Do things together
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                                <img class="img-circle img-responsive" src="https://media.giphy.com/media/xT8qBdemIGlrdIEr1S/giphy.gif" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -776,9 +836,9 @@ Do things together
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
+                                <h4>FIND
+                                    <br>LIKE
+                                    <br>MINDS!</h4>
                             </div>
                         </li>
                     </ul>
@@ -829,19 +889,45 @@ Do things together
         </div>
     </div>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <!-- jQuery Version 1.11.0 -->
-    <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/jquery-1.11.0.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/classie.js"></script>
-    <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/cbpAnimatedHeader.js"></script>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="/assets/js/jquery-2.1.4.min.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+<script src="/assets/js/jquery.viewportchecker.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.appear.min.js"></script>
+<script src="/assets/js/jquery.incremental-counter.js"></script>
+<script src="/assets/js/jquery.mixitup.js"></script>
+<script src="/assets/js/idangerous.swiper.min.js"></script>
+<script src="/assets/js/filters.js"></script>
+<script src="/assets/js/global.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/herohead.js"></script>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmMMlFhy_THlzLJwFcbN_bF5n--tWyv5s&libraries=places&callback=initMap"
+  async defer></script>
+<script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-106000460-1', 'auto');
+   ga('send', 'pageview');
+</script>
+<script src="/assets/js/main.js"></script>
+
+
+
+
+
 
 
 
@@ -849,7 +935,5 @@ Do things together
     </span>
 <br>
 <br>
-<br>
-<br>
-<br>
 
+@include('layouts.partials.footer')
