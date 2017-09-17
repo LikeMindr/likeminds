@@ -1444,7 +1444,7 @@ a.social-btn:hover { opacity: 0.6; color: white; }
 
 .be-desc-img { float: left; width: 70px; height: 70px; margin-bottom: 15px; border-radius: 70px; }
 
-.be-desc-label { font-size: 16px; line-height: 21px; font-family: 'Montserrat', sans-serif; color: #383b43; margin-bottom: 20px; }
+.be-desc-label { font-size: 16px; line-height: 21px; font-family: 'Grand Hotel', cursive; color: #383b43; margin-bottom: 20px; }
 
 .be-desc-text { font-size: 13px; line-height: 22px; font-weight: 400; color: #a1a5b1; }
 
@@ -1504,7 +1504,7 @@ a.social-btn:hover { opacity: 0.6; color: white; }
 }
 
 .be-large-post .be-post-title { 
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 20px; 
   margin-left: 0px; 
   font-family: 'Grand Hotel', cursive;
