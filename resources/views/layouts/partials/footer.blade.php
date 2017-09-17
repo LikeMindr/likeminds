@@ -1,5 +1,5 @@
 
-<footer style="font: 10pt Montserrat; background: #5c8dd3;"id="footer">
+<footer style="font: 10pt Montserrat; background: #9ae4e8;"id="footer">
   <div class="container">
     <div class="row">
       <div class="footer-wrapper">
