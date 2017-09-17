@@ -134,15 +134,14 @@
 					<div class="be-user-block">
 						<div class="be-user-detail">
 							<a class="be-img-block" href="/accounts/{{$event['user']['id']}}">
-								<img src=
+								<img id="host-img" src=
 									<?php clearstatcache();
 										if($event['user']['image'] != NULL): ?>
 										"/assets{{$event['user']['image']}}"
 									<?php else: ?>
 										"/assets/img/usericon.png"
 									<?php endif; ?>
-									alt="{{ $event['user']['name'] }}" 
-									max-height="200px" class="img-responsive">
+									alt="{{ $event['user']['name'] }}" class="img-responsive">
 							</a>
 							<a href="/accounts/{{$event['user']['id']}}">
 							<p class="be-use-name">{{ $event['user']['name'] }}</p></a>
