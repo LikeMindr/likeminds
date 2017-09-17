@@ -27,7 +27,7 @@
 								<?php else: ?>
 									"/assets/img/usericon.png"
 								<?php endif; ?>
-							width="300px" height="300px" />
+							class="img-responsive" />
 							<p class="be-use-name">{{ $user->name }}</p>
 
 							<div class="be-user-info">

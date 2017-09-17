@@ -31,6 +31,10 @@ Route::get('/privacy', function() {
 	return view('privacypolicy');
 });
 
+Route::get('/about', function() {
+	return view('about');
+});
+
 Route::resource('events', 'EventsController');
 
 Route::resource('accounts', 'AccountsController');
