@@ -663,7 +663,7 @@ form.input-search {
   line-height: 20px; 
   font-family: 'Montserrat', sans-serif; 
   color: #2C4762; 
-  border-bottom: 1px solid #edeff2; 
+  
   margin: 0 15px 10px 15px; 
   cursor: pointer; 
   min-height: 52px; 
@@ -685,7 +685,7 @@ a.be-post-title:hover { color: #FF6417; }
 
 .info-block {
   background-color: #b4b7c1;;
-  padding: 20px 15px;
+  padding: 5px 15px;
   font-size: 10px;
   color: white;
    }
@@ -756,7 +756,12 @@ transition: all ease-out 0.3s;}
 
 .be-post.style-5 .rowline-icon { font-size: 13px; float: right; }
 
-.be-post.style-5 .author-post { font-size: 10px; line-height: 20px; font-weight: 400; padding: 10px; background: #f6f6f7; }
+.be-post.style-5 .author-post { 
+  font-size: 10px; 
+  line-height: 20px; 
+  font-weight: 400; 
+  padding: 10px; 
+  background: #f6f6f7; }
 
 .be-post.style-5 .author-post .fa { font-size: 14px; position: relative; top: 1px; margin-right: 3px; }
 
@@ -1237,13 +1242,14 @@ span.right { float: right; }
 
 .be-use-name {
   color: #262626;
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 15px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: block;}
+      font-size: 25px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    font-family: 'Grand Hotel', cursive;
+  }
 
 .be-user-info { color: #a1a5b1; font-size: 12px; }
 
@@ -1454,9 +1460,18 @@ a.social-btn:hover { opacity: 0.6; color: white; }
   .share-buttons { height: auto; top: 100%; left: 17px; width: 35px; }
   .share-buttons a { display: block; } }
 
-.be-title { margin-bottom: 15px; color: #383b43; font-size: 13px; font-family: 'Montserrat', sans-serif; }
+.be-title { 
+  margin-bottom: 15px; 
+  color: #383b43; 
+  font-size: 20px;
+  font-family: 'Grand Hotel', cursive;
+  text-align: center;
+}
 
-.be-text-userblock { color: #a1a5b1; }
+.be-text-userblock { 
+  color: #a1a5b1; 
+  text-align: center;
+}
 
 .be-button-vidget { display: block; border-radius: 2px; text-align: center; margin-bottom: 20px; padding: 15px 0; }
 
@@ -1479,9 +1494,22 @@ a.social-btn:hover { opacity: 0.6; color: white; }
 
 .be-large-post .be-post-title:hover { text-decoration: none; cursor: pointer; }
 
-.be-text-tags { color: #b4b7c1; display: block; font-size: 12px; padding: 0px; margin-bottom: 35px; }
+.be-text-tags { 
+  color: #b4b7c1; 
+  display: block; f
+  font-size: 12px; 
+  padding: 0px; 
+  margin-bottom: 35px; 
 
-.be-large-post .be-post-title { font-size: 24px; margin-bottom: 20px; padding-bottom: 20px; margin-left: 0px; }
+}
+
+.be-large-post .be-post-title { 
+  font-size: 40px;
+  margin-top: 20px; 
+  margin-left: 0px; 
+  font-family: 'Grand Hotel', cursive;
+  color: white;
+  }
 
 .be-large-post-img { width: 100%; }
 
@@ -4158,6 +4186,21 @@ element.style {
     background-repeat: no-repeat;
 }
 
+.create-event-page{
+  margin-top: 5px
+
+}
+
+.event-stats{
+  margin-top: 20px;
+
+}
+
+.event-details-top{
+  font-family: 'Grand Hotel', cursive;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
 
 
 

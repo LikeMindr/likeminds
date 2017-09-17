@@ -33,10 +33,15 @@
                         <a href="blog-detail-2.html">
                             <img class="img-responsive img-full" src="alex-hs.jpg" alt="">
                         </a>                         
-                        <h4 class="team-name" style="font-size: 25px;font-family: 'Montserrat', sans-serif;font-weight: bold;color: #2C4762;">Alex Endacott</h4> 
+						<h4 class="team-name" style="font-size:
+						25px;font-family: 'Montserrat', sans-serif;font-weight: bold;color:
+						#2C4762;">Alex Endacott</h4> 
                         <div class="team-position">
-                            <p style="font-size: 20px;font-weight: bold;"><b>B</b><b style="font-family: 'Montserrat', sans-serif;">Back-End Architect</b></p>
-                            <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;">(PHP &amp; MySQL)</p>
+							<p style="font-size: 20px;font-weight:
+							bold;">Full stack web development, framework implementation, and object-oriented programming. Relational database management, CRUD operations, cloud computing, version control, trend analytics, and data visualization. Front-end templating, mobile responsiveness, integration with 3rd-party APIs.</p>
+                            <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Fun Fact</p>
+							<p style="font-size: 20px;font-family:
+							'Montserrat', sans-serif;">I had my first pint of beer when I was 13. I was in England and I was tall enough to reach the bar, no one even asked me for ID.</p>
                             <p style="font-size: 16px;"></p>
                         </div>                         
                         <div class="team-social"> 
