@@ -403,7 +403,8 @@ header .header-menu > #ad-work-li {position: static; float: right;margin-top: 20
 
 form.input-search { 
   position: relative; 
-  margin-left: 1%;
+  margin-left: 1%
+
 }
 
 
@@ -412,7 +413,9 @@ form.input-search {
   border: 1px solid #edeff2; 
   width: 100%; 
   padding: 10px 10px; 
-  color: #b4b7c1; }
+  color: #b4b7c1;
+  margin-top: 33px;
+   }
 
 .icon-search { position: absolute; border: 2px solid #000; top: 0; overflow: hidden; }
 
@@ -1496,7 +1499,7 @@ a.social-btn:hover { opacity: 0.6; color: white; }
   padding-bottom: 50px;
   margin-bottom: 50px;
   background-color: #EAEEF6;
-  text-align: center; }
+      text-align: center; }
 
 .be-largepost-iframe { margin-bottom: 50px !important; padding-left: 0; }
 
@@ -4068,26 +4071,26 @@ input[type=file] {
   
 }
 
-/* Justin testing */
 .verticalAlignParent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-}
-
-.verticalAlignChild {
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-    padding: 32px 0;
-    margin: 0 5;
-    width: 25%;
-}
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     height: 100%;
+ }
+ 
+ .verticalAlignChild {
+     -ms-flex-item-align: center;
+     -ms-grid-row-align: center;
+     align-self: center;
+     padding: 32px 0;
+     margin: 0 5;
+     width: 25%;
+ }
 
 
 .row-event{
-  margin-top: 20px;
+ 
+  margin-top: 33px;
 }
 
 .popcat {
