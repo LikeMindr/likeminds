@@ -130,7 +130,8 @@
 									<?php else: ?>
 										"/assets/img/usericon.png"
 									<?php endif; ?>
-									alt="{{ $event['user']['name'] }}" class="img-responsive">
+									alt="{{ $event['user']['name'] }}" 
+									max-height="200px" class="img-responsive">
 							</a>
 							<a href="/accounts/{{$event['user']['id']}}">
 							<p class="be-use-name">{{ $event['user']['name'] }}</p></a>
