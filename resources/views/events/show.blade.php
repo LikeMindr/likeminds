@@ -96,7 +96,8 @@
 								    <span class="date_format">MM/DD/YYY</span>
 								    <span class="client">arhvfcwBtzTYjbzlSmIF31075</span>
 								</div>
-							<?php elseif(Auth::check() && Auth::id() != $event['user']['id']): ?>
+							<?php elseif(Auth::check() && Auth::id() != $event['user']['id']
+										&& $event->num_people - count($event->attends) > 0): ?>
 						<form class="sign-up-event-cal" method="POST" action="{{ action('AttendsController@store') }}">
 							{!! csrf_field() !!}
 							<input type="hidden" value="{{Auth::id()}}" name="user_id">
@@ -121,7 +122,7 @@
 				<div class="col-md-3 col-md-pull-9 left-feild">
 					<div class="be-user-block">
 						<div class="be-user-detail">
-							<a class="be-ava-user" href="/accounts/{{$event['user']['id']}}">
+							<a class="be-img-block" href="/accounts/{{$event['user']['id']}}">
 								<img src=
 									<?php clearstatcache();
 										if($event['user']['image'] != NULL): ?>
