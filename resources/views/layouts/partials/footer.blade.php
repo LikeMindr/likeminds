@@ -45,7 +45,7 @@
           <ul class="footer-links">
             <li><a href="">ABOUT</a></li>
             <li><a href="">TESTIMONIALS</a></li>
-            <li><a href="">THE TEAM  </a></li>
+            <li><a href="/about">THE TEAM  </a></li>
 
           </ul>
         </div>
