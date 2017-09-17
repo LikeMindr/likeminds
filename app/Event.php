@@ -20,29 +20,46 @@ class Event extends Model
 		return $this->hasMany('App\Attend', 'event_id');
 	}
 
-	public static function search($q) 
+	public static function search($q = '', $c = '') 
 	{
-		$events =  Event::where('title', 'like', "%$q%")
-					->orWhere('category', 'like', "%$q%")
-					->orWhere('description', 'like', "%$q%")
-					->orWhere('location', 'like', "%$q%")
-					->orWhereHas('user', function($query) use ($q) {
-						$query->where('name', 'like', "%$q%");
-					})
+		if($q != '' && $c == '') {
+			$events =  Event::where('title', 'like', "%$q%")
+						->orWhere('category', 'like', "%$q%")
+						->orWhere('description', 'like', "%$q%")
+						->orWhere('location', 'like', "%$q%")
+						->orWhere('date', 'like', "%$q%")
+						->orWhereHas('user', function($query) use ($q) {
+							$query->where('name', 'like', "%$q%");
+						})
+						->orderBy('id', 'desc')
+						->paginate(20);
+			$events->appends(['q' => $q, $_SERVER['QUERY_STRING']]);
+		}
+		elseif($q == '' && $c != '') {
+			$events = Event::where('category', '=', "$c")
 					->orderBy('id', 'desc')
 					->paginate(20);
-		$events->appends(['q' => $q]);
+			$events->appends(['c' => $c, $_SERVER['QUERY_STRING']]);
+		}
+		elseif($q != '' && $c != '') {
+			$events =  Event::where('category', '=', "$c")
+						->where( function($query) use ($q) {
+							$query->where('title', 'like', "%$q%")
+							->orWhere('category', 'like', "%$q%")
+							->orWhere('description', 'like', "%$q%")
+							->orWhere('location', 'like', "%$q%")
+							->orWhere('date', 'like', "%$q%")
+							->orWhereHas('user', function($query) use ($q) {
+								$query->where('name', 'like', "%$q%");
+							});
+						})
+						->orderBy('id', 'desc')
+						->paginate(20);
+			$events->appends(['q' => $q, 'c' => $c, $_SERVER['QUERY_STRING']]);
+		}
 		return $events;
 	}
 
-	public static function category($c)
-	{
-		$events = Event::where('category', '=', "$c")
-					->orderBy('id', 'desc')
-					->paginate(20);
-		$events->appends(['c' => $c]);
-		return $events;
-	}
 
 	public static function trends() 
 	{

@@ -23,10 +23,11 @@
 			<div class="row">
 				<div class="col-md-2">
 					<div class="form-group">
-					<form method="GET" action="{{ action('EventsController@index') }}" class="input-search">
+					<form method="GET" action="{{ action('EventsController@index') }}" 
+					class="input-search">
 						<input type="text" required="" name="q" placeholder="SEARCH EVENTS">
-							<i class="fa fa-search"></i>
-						<input type="submit" value="">
+						<i class="fa fa-search"></i>
+						<input type="submit">
 					</form>
 						
 					</div>
@@ -63,7 +64,7 @@
 						<div class="verticalAlignParent">
 							<div class="verticalAlignChild">
 								<div class="button-clear">
-									<a href="/events">CLEAR</a>
+									<a href="/events" id="clrBtn">CLEAR</a>
 								</div>
 							</div>
 						</div>
