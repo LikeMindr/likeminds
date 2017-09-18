@@ -3,6 +3,25 @@
 <title> Edit Event </title>
 @stop
 @section('content')
+<?php
+  $bg = array('/assets/img/bg-01.jpeg', '/assets/img/bg-02.jpeg', '/assets/img/bg-03.jpeg', '/assets/img/bg-04.jpeg', '/assets/img/bg-05.jpeg', '/assets/img/bg-06.jpeg'); // array of filenames
+
+  $i = rand(0, count($bg)-1); // generate random number size of the array
+  $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+?>
+
+
+
+<style>
+body {
+  background: linear-gradient(to right, rgba(0,0,0, 0.5) , rgba(0,0,0, 0.5)), url(<?php echo "$selectedBg"; ?>) fixed no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+</style>
 <div class="be-loader">
     	<div class="spinner">
 			<img src="img/logo-loader.png"  alt="">
