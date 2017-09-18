@@ -27,7 +27,8 @@
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">PROFILE<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                            @if(Auth::check())
-													 <li class="btn"><a href="/accounts/{{Auth::id()}}/">VIEW</a></li>
+						<li class="btn"><a
+		href="{{action('AccountsController@show', Auth::id())}}">VIEW</a></li>
 													 <li class="btn"><a href="/accounts/{{Auth::id()}}/edit">EDIT</a></li>
                            @else
                            <li class="btn"><a href="/auth/login">LOGIN</a></li>
