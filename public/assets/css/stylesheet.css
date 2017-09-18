@@ -3909,8 +3909,8 @@ form.create-edit-event-form {
   }
 
 #pagewrap {
-  max-width:500px;
-  width:80%;
+  max-width:700px;
+  width:100%;
   margin:-5px auto;
   position:relative;
   margin-left: 30%;
@@ -4232,13 +4232,7 @@ a.button {
   color: white;
 }
 
-#edit-create-bg{
-  background: linear-gradient(to right, rgba(0,0,0, 0.5) , rgba(0,0,0, 0.5)), url("/assets/img/jugg.jpg") fixed no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
+
+
 
 
