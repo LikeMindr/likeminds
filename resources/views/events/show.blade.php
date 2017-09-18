@@ -53,13 +53,13 @@
 						<div class="post-text">
 							<h6>{{ $event->description }}</h6>
 						</div>
-				<div class="event-stats">
-				<div class="event-details-top">Additional Details</div>		
-					<h5>{{ $event->num_people - count($event->attends)}} SPOTS LEFT</h5>
-						<h5>{{ count($event->attends) }} CURRENTLY SIGNED UP</h5>
-					</div>
+						<div class="event-stats">
+							<div class="event-details-top">Additional Details</div>		
+								<h5>{{ $event->num_people - count($event->attends)}} SPOTS LEFT</h5>
+								<h5>{{ count($event->attends) }} CURRENTLY SIGNED UP</h5>
+							</div>
 						
-					</div>
+						</div>
 				
 
 						<?php if (Auth::check()) {
@@ -75,7 +75,7 @@
 							<a href="/attends/cancel/{{$event->id}}/{{Auth::id()}}">
 								<button>Cancel</button>
 							</a>
-					</div>
+					
 								<div title="Add to Calendar" class="addeventatc">
 								    ADD TO CALENDAR
 								    <span class="start">
@@ -127,28 +127,32 @@
 						</form>
 						<?php endif; ?>
 					</div>
+				</div>
 				<!-- </div> -->
 			</div>
-</div>
-				<div class="col-md-3 col-md-pull-9 left-feild">
-					<div class="be-user-block">
-						<div class="be-user-detail">
-							<a class="be-img-block" href="/accounts/{{$event['user']['id']}}">
-								<img id="host-img" src=
-									<?php clearstatcache();
-										if($event['user']['image'] != NULL): ?>
+
+			<div class="col-md-3 col-md-pull-9 left-feild">
+				<div class="be-large-post">
+					<div class="info-block">
+						<h5 class="be-post-title to">The Organizer</h5>
+					</div>
+					<div class="be-user-detail">
+						<a class="be-img-block" href="/accounts/{{$event['user']['id']}}">
+							<img id="host-img" src=
+								<?php clearstatcache();
+									if($event['user']['image'] != NULL): ?>
 										"/assets{{$event['user']['image']}}"
-									<?php else: ?>
+								<?php else: ?>
 										"/assets/img/usericon.png"
-									<?php endif; ?>
-									alt="{{ $event['user']['name'] }}" class="img-responsive">
-							</a>
-							<a href="/accounts/{{$event['user']['id']}}">
-							<p class="be-use-name">{{ $event['user']['name'] }}</p></a>
-							<span class="be-user-info">
-								{{ $event->location }}
-							</span>
-						</div>
+								<?php endif; ?>
+								alt="{{ $event['user']['name'] }}" class="img-responsive">
+						</a>
+						<a href="/accounts/{{$event['user']['id']}}">
+						<p class="be-use-name">{{ $event['user']['name'] }}</p></a>
+						<span class="be-user-info">
+							{{ $event->location }}
+						</span>
+						
 						<h5 class="be-title">
 							About {{ $event['user']['name'] }}
 						</h5>
@@ -156,35 +160,39 @@
 						<?php echo $event['user']['bio'] ?>
 						</p>
 					</div>
-					</div>
-<div class="row">
-	<div class="col-md-9 col-md-push-3">
-		<div class="be-large-post">
-			<div class="info-block">
-				<h5 class="be-post-title to">Like-Minds Attending</h5>
+				</div>
 			</div>
-			<div class="tabs-content clearfix">
-				<div class="tab-info active">
-					<div class="row">
-					@foreach($event->attends as $user)	
-						<div class="category-1 mix custom-column-5">
-							<div class="be-post">
-							<a href="/accounts/{{$user['user_id']}}" class="be-img-block">
-							<img src=
-								<?php clearstatcache();
-								if(App\User::find($user['user_id'])->image != NULL): ?>
-									"../assets{{App\User::find($user['user_id'])->image}}"
-								<?php else: ?>
-									"/assets/img/usericon.png"
-								<?php endif; ?>
+		</div>
+		<div class="row">
+			<div class="col-md-9 col-md-push-3">
+				<div class="be-large-post">
+					<div class="info-block">
+						<h5 class="be-post-title to">Like-Minds Attending</h5>
+					</div>
+					<div class="tabs-content clearfix">
+						<div class="tab-info active">
+							<div class="row">
+							@foreach($event->attends as $user)	
+								<div class="category-1 mix custom-column-5">
+									<div class="be-post">
+										<a href="/accounts/{{$user['user_id']}}" class="be-img-block">
+											<img src=
+											<?php clearstatcache();
+												if(App\User::find($user['user_id'])->image != NULL): ?>
+												"../assets{{App\User::find($user['user_id'])->image}}"
+											<?php else: ?>
+												"/assets/img/usericon.png"
+											<?php endif; ?>
 							class="img-responsive" alt="{{App\User::find($user['$user_id'])['name']}}">
-							</a>
-							<a href="/accounts/{{$user['user_id']}}">
-							{{App\User::find($user['user_id'])['name']}}
-							</a>
+										</a>
+										<a href="/accounts/{{$user['user_id']}}">
+										{{App\User::find($user['user_id'])['name']}}
+										</a>
+									</div>
+								</div>
+							@endforeach
 							</div>
 						</div>
-					@endforeach
 					</div>
 				</div>
 			</div>
@@ -192,8 +200,6 @@
 	</div>
 </div>
 
-</div>
-</div>
 <!-- AddEvent -->
 <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 

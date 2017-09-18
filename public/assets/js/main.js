@@ -194,31 +194,31 @@ FB.getLoginStatus(function(response) {
 /*/////////////////////////////////////////////////////////////////////////
                              Events Index Queries
 /////////////////////////////////////////////////////////////////////////*/
-$( document ).ready(function() {
-
-	$(function() {
-		$('a').each(function() {
-		link = $(this).attr('href');
-		query = location.search;
-		if (link.indexOf('?') !== -1 && query !== '') {
-			query = query.replace('?','&');
-		}
-		$(this).attr('href',link+query);
-		});
-	});
-
-	$('#clrBtn').on("click", function() {
-		$(this).attr("href", "/events");
-	});
-
-	$('#srchBtn').on("click", function() {
-		$('a').each(function() {
-		link = $(this).attr('href');
-		query = location.search;
-		if (link.indexOf('?') !== -1 && query !== '') {
-			query = query.replace('?','&');
-		}
-		$(this).attr('href',link+query);
-		});
-	});
-});
+//$( document ).ready(function() {
+//
+//	$(function() {
+//		$('a').each(function() {
+//		link = $(this).attr('href');
+//		query = location.search;
+//		if (link.indexOf('?') !== -1 && query !== '') {
+//			query = query.replace('?','&');
+//		}
+//		$(this).attr('href',link+query);
+//		});
+//	});
+//
+//	$('#clrBtn').on("click", function() {
+//		$(this).attr("href", "/events");
+//	});
+//
+//	$('#srchBtn').on("click", function() {
+//		$('a').each(function() {
+//		link = $(this).attr('href');
+//		query = location.search;
+//		if (link.indexOf('?') !== -1 && query !== '') {
+//			query = query.replace('?','&');
+//		}
+//		$(this).attr('href',link+query);
+//		});
+//	});
+//});
