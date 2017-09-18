@@ -1507,7 +1507,7 @@ a.social-btn:hover { opacity: 0.6; color: white; }
   font-size: 30px;
   margin-top: 20px; 
   margin-left: 0px; 
-  font-family: 'Grand Hotel', cursive;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   }
 
@@ -3899,6 +3899,7 @@ body.edit-create-event{
 form.create-edit-event-form {
   background-color: #EAEEF6;
   color: #2C4762;
+  margin-bottom: 50px;
   
   
 
@@ -4202,5 +4203,29 @@ element.style {
   margin-bottom: 10px;
 }
 
+
+button {
+  background-color: #89C12A; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+button.form-button{
+   margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+button:hover {
+  background-color: #96D42D;
+
+}
 
 

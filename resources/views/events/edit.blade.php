@@ -99,9 +99,9 @@
 					</div>
 
 					<div class="row">
-					<div class="col-sm-6 col-md-4 col-md-offset-3">
+					<div class="col-sm-6 col-md-4 col-md-offset-2">
 					{{ method_field('PUT') }}
-					<button class="btn color-4 size-2 hover-7 button-event-edit" id="submit">Submit</button>
+					<button class="form-button" id="submit">SUBMIT</button>
 
 				</div>
 
@@ -113,7 +113,7 @@
 					{!! csrf_field() !!}
 					{{ method_field('DELETE') }}
 
-					<button class="btn color-4 size-2 hover-7 button-event-edit">Delete Event</button>
+					<button class="form-button">DELETE EVENT</button>
 
 					</div>
 				</div>
