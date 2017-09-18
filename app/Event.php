@@ -191,4 +191,9 @@ class Event extends Model
 		
 		return $href . $query;
 	}
+
+	public static function allCats() 
+	{
+		return Event::select('category')->groupBy('category')->get();
+	}
 }
