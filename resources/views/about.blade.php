@@ -43,8 +43,8 @@
                         <h4 class="team-name" style="font-size: 30px;font-family: 'Montserrat', sans-serif;font-weight: bold;color: #2C4762;">Alex Endacott</h4> 
                         <div class="team-position">
                             <h5 style="margin-bottom: 20px;margin-top: -20px;font-weight: bold;">Team Nickname: Back-End and Boujee</h5>
-                            <p style="font-size: 20px;font-weight: bold;"><b style="font-family: 'Montserrat', sans-serif;">Back-End Architect</b></p>
-                            <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;">Primary architect &nbsp;of the back-end responsible for framework implementation, object-oriented programming, relational database management, CRUD operations, cloud computing, version control, trend analytics, and data visualization, front-end templating, mobile responsiveness, and integration with 3rd-party APIs.</p>
+                            <p style="font-size: 20px;font-weight: bold;"><b style="font-family: 'Montserrat', sans-serif;">Full Stack Web Developer</b></p>
+                            <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;">Responsible for framework implementation, object-oriented programming, relational database management, CRUD operations, cloud computing, version control, trend analytics, and data visualization, front-end templating, mobile responsiveness, and integration with 3rd-party APIs.</p>
                             <p style="font-size: 16px;"></p>
                         </div>                         
                         <div class="team-social"> 
