@@ -98,11 +98,13 @@ body {
 				    <div class="row">
 					<div class="form-group col-md-4">
 						<h2 class="form-label-create">DATE</h2>
-						<input class="form-control create-event-input-datetime" type="date" name="date" value="{{ $event->date }}" required>
+						<input class="form-control create-event-input-datetime"
+		type="date" name="date" value="{{ date('Y-m-d', strtotime($event->date)) }}" required>
 					</div>
 					<div class="form-group col-md-4 ">
 						<h2 class="form-label-create">TIME</h2>
-						<input class="form-control create-event-input-datetime" type="time" name="time" value="{{ $event->time }}" required>
+						<input class="form-control create-event-input-datetime"
+		type="time" name="time" value="{{ date('H:i', strtotime($event->time)) }}" required>
 					</div>
 					
 					<div class="form-group col-md-4 ">
