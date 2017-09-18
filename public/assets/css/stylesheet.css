@@ -4228,4 +4228,17 @@ button:hover {
 
 }
 
+a.button {
+  color: white;
+}
+
+#edit-create-bg{
+  background: linear-gradient(to right, rgba(0,0,0, 0.5) , rgba(0,0,0, 0.5)), url("/assets/img/jugg.jpg") fixed no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 
