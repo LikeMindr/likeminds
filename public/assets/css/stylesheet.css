@@ -1444,7 +1444,7 @@ a.social-btn:hover { opacity: 0.6; color: white; }
 
 .be-desc-img { float: left; width: 70px; height: 70px; margin-bottom: 15px; border-radius: 70px; }
 
-.be-desc-label { font-size: 16px; line-height: 21px; font-family: 'Montserrat', sans-serif; color: #383b43; margin-bottom: 20px; }
+.be-desc-label { font-size: 16px; line-height: 21px; font-family: 'Grand Hotel', cursive; color: #383b43; margin-bottom: 20px; }
 
 .be-desc-text { font-size: 13px; line-height: 22px; font-weight: 400; color: #a1a5b1; }
 
@@ -1504,10 +1504,10 @@ a.social-btn:hover { opacity: 0.6; color: white; }
 }
 
 .be-large-post .be-post-title { 
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 20px; 
   margin-left: 0px; 
-  font-family: 'Grand Hotel', cursive;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   }
 
@@ -3899,6 +3899,7 @@ body.edit-create-event{
 form.create-edit-event-form {
   background-color: #EAEEF6;
   color: #2C4762;
+  margin-bottom: 50px;
   
   
 
@@ -4202,5 +4203,29 @@ element.style {
   margin-bottom: 10px;
 }
 
+
+button {
+  background-color: #89C12A; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+button.form-button{
+   margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+button:hover {
+  background-color: #96D42D;
+
+}
 
 

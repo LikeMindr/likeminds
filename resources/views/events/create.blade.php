@@ -94,7 +94,7 @@
 						<textarea class="form-control text-form create-event-description"
 						name="description" placeholder="Tell everyone why they should go to your event..." value="{{ old('description') }}" required> </textarea>
 					</div>
-					<button class="btn color-4 size-2 hover-7 button-event-create" id="submit">Submit</button>
+					<CENTER><button class="form-button" id="submit">SUBMIT</button></CENTER>
 				</form>
 			</div>
 		</div>

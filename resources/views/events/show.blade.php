@@ -73,7 +73,9 @@
 							}
 							if(Auth::check() && $attending && Auth::id() != $event['user']['id']): ?>
 							<a href="/attends/cancel/{{$event->id}}/{{Auth::id()}}">
-								<button>Cancel</button>
+								
+								<button >CANCEL</button>
+								
 							</a>
 					
 								<div title="Add to Calendar" class="addeventatc">
@@ -114,7 +116,7 @@
 							<input type="hidden" value="{{Auth::id()}}" name="user_id">
 							<input type="hidden" value="{{$event->id}}" name="event_id">
 							
-								<button class="btn color-4 size-2 hover-7 " id="submit">REGISTER</button> 
+								<button class="form-button" id="submit">REGISTER</button> 
 							
 						</form>
 						<?php endif;  ?>
@@ -123,7 +125,7 @@
 						<form method="GET"
 							action="{{ action('EventsController@edit', array($event->id)) }}">
 							{!! csrf_field() !!}
-							<button class="btn color-4 size-2 hover-7 button-event-create" id="submit">EDIT</button>
+							<button class="form-button" id="submit">EDIT</button>
 						</form>
 						<?php endif; ?>
 					</div>
