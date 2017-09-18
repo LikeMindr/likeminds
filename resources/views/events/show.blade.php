@@ -30,6 +30,7 @@
 						<!-- <div class="row"> -->
 								<!-- <div class=".col-md-12"> -->
 						<h5 class="be-post-title to">The Event</h5><!-- </div> -->
+						<h5>{{ $event->title }}</h5>
 						<!-- </div> -->
 					</div>
 					
@@ -45,7 +46,6 @@
 						<div>
 					<div class="event-datails-show">
 						<div class="event-details-top">Event Details</div>
-						<h5>{{ $event->title }}</h5>
 						<h5>DATE & TIME: {{ $event->date }} at {{ $event->time }}</h5>
 					</div>
 						<h5>LOCATION: {{ $event->location }}</h5>
@@ -153,15 +153,16 @@
 						<a href="/accounts/{{$event['user']['id']}}">
 						<p class="be-use-name">{{ $event['user']['name'] }}</p></a>
 						<span class="be-user-info">
-							{{ $event->location }}
+							{{ $event['user']['location'] }}
 						</span>
-						
+						@if($event['user']['bio'] != NULL)
 						<h5 class="be-title">
 							About {{ $event['user']['name'] }}
 						</h5>
 						<p class="be-text-userblock">
 						<?php echo $event['user']['bio'] ?>
 						</p>
+						@endif
 					</div>
 				</div>
 			</div>
