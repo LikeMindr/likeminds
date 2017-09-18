@@ -2190,15 +2190,16 @@ span.num-data{font-size: 11px;}
 
 .service-entry .btn { margin-right: 0px; }
 
-.counters-block { position: relative; background-size: cover; background-position: center center; padding: 100px 0px; margin-bottom: 85px; }
+.counters-block { position: relative; background-size: cover; background-position: center center; padding: 100px 0px; }
 
-.counters-block:before { content: ""; display: block; position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; background: rgba(24, 29, 39, 0.8); }
+.counters-block:before { content: ""; display: block; position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; background: rgba(24, 29, 39, 0.8); 
+    margin-bottom: -90px;}
 
 .counter-entry { text-align: center; }
 
 .counter-entry .stat-number { font-size: 50px; line-height: 60px; font-family: 'Montserrat', sans-serif; color: white; }
 
-.counter-label { display: inline-block; font-size: 14px; line-height: 20px; font-family: 'Montserrat', sans-serif; color: white; padding-bottom: 5px; border-bottom: 5px solid #5C8DD3; margin-bottom: 25px; }
+.counter-label { display: inline-block; font-size: 14px; line-height: 20px; font-family: 'Montserrat', sans-serif; color: white; padding-bottom: 5px; border-bottom: 5px solid #9AE4E8; margin-bottom: 25px; }
 
 .counter-text { font-size: 13px; line-height: 22px; font-weight: 400; color: white; opacity: 0.5; margin-bottom: 25px; }
 
