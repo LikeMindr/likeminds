@@ -88,6 +88,7 @@
                                                     <img src="img/p1.jpg" alt="omg"> 
                                                 </a>                                                 
 
+
                                                 <div class="row"> 
                                                     <h1 style="margin-left: 15px;font-family: 'Montserrat', sans-serif;;;">Event Name </h1>
                                                 </div>                                                 
@@ -101,11 +102,13 @@
                                                     </div>
                                                 </div>                                                 
 
+
                                                 <div class="row"> 
                                                     <div class="col-md-4"> 
                                                         <h3 style="font-family: 'Montserrat', sans-serif;;;">Location:</h3> 
                                                     </div>                                                     
 
+		
                                                     <div class="col-md-4"> 
                                                         <h3 style="font-family: 'Montserrat', sans-serif;;;">Column title</h3> 
                                                     </div>

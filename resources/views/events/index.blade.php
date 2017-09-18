@@ -38,23 +38,10 @@
 							<div class="dropdown">
 								<button class="dropbtn "> CATEGORIES </button>
 								<div class="dropdown-content">
-							<a href="/events?c=ART">ART</a>
-							<a href="/events?c=BOOKS/POETRY/WRITING">BOOKS / POETRY / WRITING</a>
-							<a href="/events?c=BUSINESSTECH">BUSINESS & TECH</a>
-							<a href="/events?c=CIVICENGAGEMENT">CIVIC ENGAGEMENT</a>
-							<a href="/events?c=COMEDY">COMEDY</a>
-							<a href="/events?c=DANCE">DANCE</a>
-							<a href="/events?c=DEALS">DEALS</a>
-							<a href="/events?c=FASHION">FASHION</a>
-							<a href="/events?c=FILMTHEATER">FILM & THEATER</a>
-							<a href="/events?c=FOODDRINK">FOOD & DRINK</a>
-							<a href="/events?c=HAPPYHOURS">HAPPY HOURS</a>
-							<a href="/events?c=HEALTHWELLNESS">HEALTH & WELLNESS</a>
-							<a href="/events?c=MUSIC">MUSIC</a>
-							<a href="/events?c=OUTDOORSNATURE">OUTDOORS & NATURE</a>
-							<a href="/events?c=SOCIAL">SOCIAL</a>
-							<a href="/events?c=SPECIALEVENTS">SPECIAL EVENTS</a>
-							<a href="/events?c=SPORTSFITNESS">SPORTS & FITNESS</a>
+							@foreach(App\Event::allCats() as $cat)
+							<a href="/events?c={{$cat['category']}}">
+								{{App\Event::correctName($cat['category'])}}</a>
+							@endforeach
 								</div>
 							</div>
 						</div>
