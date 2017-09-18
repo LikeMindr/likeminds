@@ -36,7 +36,7 @@
 					<div class="verticalAlignParent">
 						<div class="verticalAlignChild">
 							<div class="dropdown">
-								<button class="dropbtn dropdown-events"> CATEGORIES </button>
+								<button class="dropbtn "> CATEGORIES </button>
 								<div class="dropdown-content">
 							<a href="/events?c=ART">ART</a>
 							<a href="/events?c=BOOKS/POETRY/WRITING">BOOKS / POETRY / WRITING</a>
@@ -63,9 +63,10 @@
 					<div class="col-md-2 col-xs-6 verticalAlign">
 						<div class="verticalAlignParent">
 							<div class="verticalAlignChild">
-								<div class="button-clear">
+									<BUTTON>
 									<a href="/events" id="clrBtn">CLEAR</a>
-								</div>
+								</BUTTON>
+								
 							</div>
 						</div>
 					</div>
