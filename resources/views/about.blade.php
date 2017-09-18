@@ -8,7 +8,7 @@
 }</style>
 <html> 
        
-    <body> 
+    <body style="background-color: #2C4762;"> 
         <!-- THE LOADER -->         
         <div class="be-loader"> 
             <div class="spinner"> 
@@ -38,12 +38,12 @@
                 <div class="col-md-4"> 
                     <div class="team-entry" style="background: #EAEEF6;"> 
                         <a href="blog-detail-2.html">
-                            <img class="img-responsive img-full" src="alex-hs.jpg" alt="">
+                            <img class="img-responsive img-full" src="/assets/img/alex-hs.jpg" alt="">
                         </a>                         
                         <h4 class="team-name" style="font-size: 30px;font-family: 'Montserrat', sans-serif;font-weight: bold;color: #2C4762;">Alex Endacott</h4> 
                         <div class="team-position">
-                            <h5 style="margin-bottom: 20px;margin-top: -20px;font-weight: bold;">Team Nickname: Back-End and Boujee</h5>
-                            <p style="font-size: 20px;font-weight: bold;"><b style="font-family: 'Montserrat', sans-serif;">Full Stack Web Developer</b></p>
+                            <h5 style="margin-bottom: 20px;margin-top: -20px;font-weight: bold; color: #2C4762">Team Nickname: Back-End and Boujee</h5>
+                            <p style="font-size: 20px;font-weight: bold;"><b style="font-family: 'Montserrat', sans-serif;">Full-Stack Web Developer</b></p>
                             <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;">Responsible for framework implementation, object-oriented programming, relational database management, CRUD operations, cloud computing, version control, trend analytics, and data visualization, front-end templating, mobile responsiveness, and integration with 3rd-party APIs.</p>
                             <p style="font-size: 16px;"></p>
                         </div>                         
@@ -57,12 +57,12 @@
                 <div class="col-md-4"> 
                     <div class="team-entry" style="background: #EAEEF6;"> 
                         <a href="blog-detail-2.html">
-                            <img class="img-responsive img-full" src="chloe-hs.jpg" alt="">
+                            <img class="img-responsive img-full" src="/assets/img/chloe-hs.jpg" alt="">
                         </a>                         
                         <h4 class="team-name" style="font-size: 30px;font-family: 'Montserrat', sans-serif;font-weight: bold;color: #2C4762;">Chloe Adams</h4> 
                         <div class="team-position">
-                            <h5 style="margin-bottom: 20px;margin-top: -20px;font-weight: bold;">Team Nickname: Chlonce´</h5>
-                            <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Front-End Development</p>
+                            <h5 style="margin-bottom: 20px;margin-top: -20px;font-weight: bold;color: #2C4762">Team Nickname: Chlonce´</h5>
+                            <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Full-Stack Web Developer</p>
                             <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;">Designed project concept &amp; brand strategy, implemented SEO &amp; Google Analytics, incorporated the Google places and calendar API, wrote custom javascript, primarily responsible for the look and mobile-responsiveness of the: profile/edit profile pages, events index, create/edit event pages, and the about page.&nbsp;</p>
                         </div>                         
                         <div>
@@ -77,12 +77,12 @@
                 <div class="col-md-4"> 
                     <div class="team-entry" style="background: #EAEEF6;"> 
                         <a href="blog-detail-2.html">
-                            <img class="img-responsive img-full" src="gonzo-hs.jpg" alt="">
+                            <img class="img-responsive img-full" src="/assets/img/gonzo-hs.jpg" alt="">
                         </a>                         
                         <h4 class="team-name" style="font-size: 30px;font-family: 'Montserrat', sans-serif;font-weight: bold;color: #2C4762;">Gonzalo Rodriguez</h4> 
                         <div class="team-position" style="font-size: 16px;">
-                            <h5 style="margin-bottom: 20px;margin-top: -20px;font-weight: bold;">Team Nickname: Z-Man</h5>
-                            <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Front-End Development</p>
+                            <h5 style="margin-bottom: 20px;margin-top: -20px;font-weight: bold; color: #2C4762">Team Nickname: Z-Man</h5>
+                            <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Full-Stack Web Developer</p>
                             <p style="font-size: 20px;font-family: 'Montserrat', sans-serif;">Designed the custom graphics for the website, consulted on brand strategy, front-end templating, overall mobile-responsivneness for the project, wrote custom javascript, primarily responsible for the look and mobile-responsiveness of the, landing-page, navigation bar, and footer.&nbsp;</p>
                         </div>                         
                         <div class="team-social"> 
@@ -97,48 +97,43 @@
             </div>             
         </div>
     </div>     
-    <div class="counters-block number-counters"> 
-        <img class="center-image" src="img/bg-5.jpg" alt=""> 
-        <div class="container"> 
-            <div class="row"> 
-                <div class="col-xs-12 col-sm-6 col-md-3"> 
-                    <div class="counter-entry"> 
-                        <div class="stat-number" data-to="135" data-speed="3000">
-                            <p>50,000</p>
-                        </div>                         
-                        <div class="counter-label">LINES OF CODE</div>                         
-                    </div>                     
-                </div>                 
-                <div class="col-xs-12 col-sm-6 col-md-3"> 
-                    <div class="counter-entry">
-                        <div class="stat-number" data-to="75" data-speed="3000">
-                            <p>455</p>
-                        </div>                         
-                        <div class="counter-label">COMMITS</div>                         
-                    </div>                     
-                </div>                 
-                <div class="col-xs-12 col-sm-6 col-md-3" style="margin-top: -10px;"> 
-                    <div class="counter-entry"> 
-                        <div class="stat-number" data-to="41" data-speed="3000" style="margin-top: 15px;">
-                            <p>135</p>
-                        </div>                         
-                        <div class="counter-label">PULL REQUESTS</div>                         
-                    </div>                     
-                </div>                 
-                <div class="col-xs-12 col-sm-6 col-md-3"> 
-                    <div class="counter-entry" style="margin-top: -10px;"> 
-                        <div class="stat-number" data-to="66" data-speed="3000" style="margin-top: 15px;">
-                            <p>568</p>
-                        </div>                         
-                        <div class="counter-label">CUPS OF COFFEE</div>                         
-                    </div>                     
-                </div>                 
+<div class="counters-block number-counters">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3"> 
+                        <div class="counter-entry">
+                                <div class="stat-number" data-to="300" data-speed="3000">0</div>
+                                <div class="counter-label">Lines of Code</div>
+                        </div>                    
+                    </div>              
+                    <div class="col-xs-12 col-sm-6 col-md-3"> 
+                       <div class="counter-entry">
+                                <div class="stat-number" data-to="154" data-speed="3000">0</div>
+                                <div class="counter-label">Pull Requests</div>
+                        </div>                      
+                    </div>                 
+                    <div class="col-xs-12 col-sm-6 col-md-3" style="margin-top: -10px;"> 
+                        <div class="counter-entry">
+                                <div class="stat-number" data-to="345" data-speed="3000">0</div>
+                                <div class="counter-label">Commits</div>
+                        </div>                    
+                    </div>                 
+                    <div class="col-xs-12 col-sm-6 col-md-3"> 
+                        <div class="counter-entry">
+                                <div class="stat-number" data-to="315" data-speed="3000">0</div>
+                                <div class="counter-label">Cups of Coffee</div>
+                        </div> 
+                    </div>                 
             </div>             
         </div>         
     </div>     
 </div> 
 <div>
 </div>
+   
 
 
 @stop
+
+
+
