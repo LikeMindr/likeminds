@@ -15,7 +15,7 @@
 		</div>
     </div>
 	<!-- MAIN CONTENT -->
-<body class="edit-create-event">
+<body id="edit-create-bg" >
 <div class="body-container">
 <div id="pagewrap">
 <div class="col-xs-12 col-md-9 col-lg-4 col-lg-offset-4 _editor-content_">
