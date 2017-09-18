@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://startbootstrap.com/templates/agency/font-awesome-4.1.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/assets/css/main.css">
 <body>
-   <div id="lp-register">
+   <div class="log" id="lp-register">
    @include('layouts.partials.navbar')
    <div class="container wrapper">
       <div class="row">
