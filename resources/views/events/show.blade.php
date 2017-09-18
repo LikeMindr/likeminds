@@ -28,12 +28,12 @@
 				<div class="be-large-post">
 					<div class="info-block">
 						<!-- <div class="row"> -->
-								<!-- <div class=".col-md-12"> --><h5 class="be-post-title to">{{ $event->title }}</h5><!-- </div> -->
+								<!-- <div class=".col-md-12"> -->
+						<h5 class="be-post-title to">The Event</h5><!-- </div> -->
 						<!-- </div> -->
 					</div>
 					
 					<div class="blog-content  be-large-post-align">
-						
 						<img src=
 						<?php clearstatcache();
 						   	if($event->image != NULL): ?>
@@ -41,10 +41,11 @@
 						<?php else: ?>
 							"{{App\Event::defaultImage($event->category)}}"
 						<?php endif; ?>
-							/>
+						/>
 						<div>
 					<div class="event-datails-show">
 						<div class="event-details-top">Event Details</div>
+						<h5>{{ $event->title }}</h5>
 						<h5>DATE & TIME: {{ $event->date }} at {{ $event->time }}</h5>
 					</div>
 						<h5>LOCATION: {{ $event->location }}</h5>

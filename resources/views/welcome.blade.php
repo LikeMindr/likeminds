@@ -35,6 +35,29 @@
       </header>
 
       -->
+
+      <script>
+      var lastScrollTop = 0;
+var backgroundImages = $('.backgroundImage');
+
+$(window).scroll(function(e){
+  var st = $(this).scrollTop();
+  var ah = $(this).height();
+  backgroundImages.each(function(i){
+    var img = $(this);
+    var pos = img.position().top;
+    var hei = img.height();
+    if ((st + ah) > pos && st < (pos + hei)){
+      var p = ((pos - st)/ah) + 0.25;
+      if(i == 1) console.log(p);
+      img.css('background-position', '50%'+(p*100)+'%');
+    }
+  });
+  lastScrollTop = st;
+});
+
+$(window).scroll();
+      </script>
    <div id="welcome-wrapper">
       <div class="video">
          <video id="InformationVideo" class="information__video information__video--visible" preload="auto" autobuffer="" autoload="" autoplay="" loop="">
@@ -59,28 +82,28 @@
                      <div class="service-entry">
                         <img class="service-icon" src="assets/img/service_2.png" alt="Search">
                         <h4 style="text-align: center; color: #9ae4e8;"     class="service-title">Search</h4>
-                        <div class="service-text">Search amongst hundreds of events in your area.</div>
+                        <div style="text-align: center;" class="service-text">Search amongst hundreds of events in your area.</div>
                      </div>
                   </div>
                   <div class="swiper-slide" data-val="1">
                      <div class="service-entry">
                         <img  class="service-icon" src="assets/img/service_1.png" alt="Discover">
                         <h4 style="text-align: center; color: #9ae4e8;"     class="service-title">Discover</h4>
-                        <div class="service-text">Discover new local events and interesting people.</div>
+                        <div style="text-align: center;" class="service-text">Discover new local events and interesting people.</div>
                      </div>
                   </div>
                   <div class="swiper-slide" data-val="2">
                      <div class="service-entry">
                         <img class="service-icon" src="assets/img/service_3.png" alt="Sign Up">
                         <h4 style="text-align: center; color: #9ae4e8;"     class="service-title">Sign up</h4>
-                        <div class="service-text">Sign up and make new like minded friends.</div>
+                        <div style="text-align: center;" class="service-text">Sign up and make new like minded friends.</div>
                      </div>
                   </div>
                   <div class="swiper-slide" data-val="3">
                      <div class="service-entry">
                         <img class="service-icon" src="assets/img/service_2.png" alt="Search">
                         <h4 style="text-align: center; color: #9ae4e8;"     class="service-title">Search</h4>
-                        <div class="service-text">Search amongst hundreds of events in your area.</div>
+                        <div style="text-align: center;" class="service-text">Search amongst hundreds of events in your area.</div>
                      </div>
                   </div>
                   <div class="swiper-slide" data-val="4">
@@ -107,7 +130,7 @@
       <!-- Portfolio Grid Section -->
       <div data-type="background" data-speed="2" class="paralax">
          <div style="padding:100px;  text-transform:uppercase; " >
-            <h2 style="text-align:center; color:white; letter-spacing: 15px; " > I am an epic parallax </h2>
+            <h2 style="text-align:center; color:white; letter-spacing: 15px; " > Find other like minds </h2>
          </div>
       </div>
       <!-- About Section -->
@@ -116,7 +139,10 @@
             <div class="row">
                <div class="col-lg-12 text-center">
                   <h2 style="color: #9ae4e8;" class="section-heading">Its as Easy as...</h2>
-                  <h3 class="section-subheading text-muted">Ajmal, I need help to learn how to tweak this part. I don't want this timeline crap. Haha.</h3>
+                  <br>
+                  <br>
+                  <br>
+                  <!-- <h3 class="section-subheading text-muted">Ajmal, I need help to learn how to tweak this part. I don't want this timeline crap. Haha.</h3> -->
                </div>
             </div>
             <div class="row">
@@ -174,7 +200,7 @@
                               <h4 class="subheading">Never forget</h4>
                            </div>
                            <div class="timeline-body">
-                              <p class="text-muted">Add it to the callendar or your choice so you'll always be in the know of all your new events.</p>
+                              <p class="text-muted">Add it to the calendar or your choice so you'll always be in the know of all your new events.</p>
                            </div>
                         </div>
                      </li>

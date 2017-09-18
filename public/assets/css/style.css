@@ -811,8 +811,16 @@ textarea{
   Landing Page: V2 | Register/Login
   ==================================================*/
 
-#lp-register{
-  background: linear-gradient(to right, rgba(0,0,0, 0.5) , rgba(0,0,0, 0.5)), url("/assets/img/loginback2.gif") fixed no-repeat;
+.reg{
+  background: linear-gradient(to right, rgba(0,0,0, 0.5) , rgba(0,0,0, 0.5)), url("/assets/img/reg.gif") fixed no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.log{
+  background: linear-gradient(to right, rgba(0,0,0, 0.5) , rgba(0,0,0, 0.5)), url("/assets/img/login.gif") fixed no-repeat;
   background-size: cover;
   background-position: center;
   position: absolute;
