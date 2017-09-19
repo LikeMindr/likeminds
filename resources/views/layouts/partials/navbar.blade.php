@@ -38,7 +38,7 @@
                      <!-- <li><a href="masterCalendar.html">Opportunities<span class="sr-only">(current)</span></a></li> -->
                       @if(Auth::check())
                      <li class=""><a href="/auth/logout">LOG OUT</a></li>
-                     <li class=""><a href="/accounts/{{Auth::id()}}/">WELCOME <?= Auth::user()->name; ?></a> </li>
+                     <li class=""><a href="{{action('AccountsController@show', Auth::id())}}">WELCOME <?= Auth::user()->name; ?></a> </li>
                      @else
                      <li class="" ><a href="/auth/register">REGISTER</a></li>
                      <li class="" ><a href="/auth/login">LOGIN</a></li>
