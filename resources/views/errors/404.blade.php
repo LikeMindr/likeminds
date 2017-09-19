@@ -1,145 +1,135 @@
 @extends('layouts.master')
 @section('title')
-<title> Like Minds At </title>
+<title>Oops</title>
 @stop
 @section('content')
-<!-- Header
-   ================================================= -->
-<!--Header End-->
-<style>
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+   <link rel="stylesheet" href="css/futuriste.css">
+   <title>404 pages</title>
+	 <style>
+     *{
+ 	padding:0px;
+ 	margin:0px;
+ }
+ body{
+ 		background:#2c4762;
+ 	}
+ .st0{font-family:'FootlightMTLight';}
+ .st1{font-size:83.0285px;}
+ .st2{fill:gray;}
 
+ svg{
+   width: 500px;
+     height: 400px;
+     text-align: center;
+     fill: #5c8dd3;
+ }
+ path#XMLID_5_ {
 
+     fill: #5c8dd3;
+     filter: url(#blurFilter4);
+ }
+ path#XMLID_11_ ,path#XMLID_2_ {
+     fill: #5c8dd3;
+ }
+ .circle{
+   animation: out 2s infinite ease-out;
+   fill: #5c8dd3;
+ }
 
-html {
-  background: radial-gradient(#fec434, #fec434);
-  color: white;
-  overflow: hidden;
-  height: 100%;
-  user-select: none;
-}
+ #container{
+   text-align:center;
+ }
+ .message{
+ 	color:#5c8dd3;
+ }
+ .message:after{
+ 	content:"]";
+ }
+ .message:before{
+ 	content:"[";
+ }
 
-.static {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  top: -100px;
-  opacity: 0.05;
-  z-index: 230;
-  user-select: none;
-  user-drag: none;
-}
+ .message:after, .message:before {
 
-.error {
-  text-align: center;
-  font-family: 'Montserrat', serif;
-  font-size: 95px;
-/*   font-style: italic; */
-  text-align: center;
-  width: 100px;
-  height: 60px;
-  line-height: 60px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -60px;
-  right: 0;
-  animation: noise 2s linear infinite;
-  overflow: default;
-}
+   color: #5c8dd3;
+   font-size: 20px;
+   -webkit-animation-name: opacity;
+   -webkit-animation-duration: 2s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-name: opacity;
+           animation-name: opacity;
+   -webkit-animation-duration: 2s;
+           animation-duration: 2s;
+   -webkit-animation-iteration-count: infinite;
+           animation-iteration-count: infinite;
+           margin:0 50px;
+ }
 
-.error:after {
-  content: '404';
-  font-family: 'Montserrat', serif;
-  font-size: 100px;
-/*   font-style: italic; */
-  text-align: center;
-  width: 150px;
-  height: 60px;
-  line-height: 60px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  color: blue;
-  animation: noise-1 .2s linear infinite;
-}
+ @-webkit-keyframes opacity {
+   0%, 100% {
+     opacity: 0;
+   }
+   50% {
+     opacity: 1;
+   }
+ }
 
-.info {
-  text-align: center;
-  font-family: 'Montserrat', serif;
-  font-size: 15px;
-  font-style: italic;
-  text-align: center;
-  width: 200px;
-  height: 60px;
-  line-height: 60px;
-  margin: auto;
-  position: absolute;
-  top: 140px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  animation: noise-3 1s linear infinite;
-}
+ @keyframes opacity {
+   0%, 100% {
+     opacity: 0;
+   }
+   50% {
+     opacity: 1;
+   }
+ }
 
-.error:before {
-  content: '404';
-  font-family: 'Montserrat', serif;
-  font-size: 100px;
-/*   font-style: italic; */
-  text-align: center;
-  width: 100px;
-  height: 60px;
-  line-height: 60px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  color: red;
-  animation: noise-2 .2s linear infinite;
-}
-
-@keyframes noise-1 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; left: -6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; left: 2px;}
-}
-
-@keyframes noise-2 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; left: 6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; left: -2px;}
-}
-
-@keyframes noise {
-  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}
-  4.3% {opacity: 1; transform: scaleY(1.7);}
-  43% {opacity: 1; transform: scaleX(1.5);}
-}
-
-@keyframes noise-3 {
-  0%,3%,5%,42%,44%,100% {opacity: 1; transform: scaleY(1);}
-  4.3% {opacity: 1; transform: scaleY(4);}
-  43% {opacity: 1; transform: scaleX(10) rotate(60deg);}
-}
+ @keyframes out {
+   0% {r:1;  opacity: 0.9 ;}
+   25%{r:5;  opacity: 0.3 ;}
+   50%{r:10; opacity: 0.2 ;}
+   75%{r:15;opacity:0.1;}
+  	100% {r:20;opacity:0;}
+ }
 </style>
-
-<div style="@import url(https://fonts.googleapis.com/css?family=Montserrat);.static,html{height:100%;user-select:none}.error:after,.error:before{content:'404'}html{background:radial-gradient(#fec434,#fec434);color:#fff;overflow:hidden}.static{width:100%;position:relative;margin:0;padding:0;top:-100px;opacity:.05;z-index:230;user-drag:none}.error{font-family:Montserrat,serif;font-size:95px;text-align:center;width:100px;height:60px;line-height:60px;margin:auto;position:absolute;top:0;bottom:0;left:-60px;right:0;animation:noise 2s linear infinite;overflow:default}.error:after,.error:before,.info{font-family:Montserrat,serif;text-align:center;height:60px;line-height:60px;margin:auto;position:absolute;bottom:0;left:0;right:0}.error:after{font-size:100px;width:150px;top:0;opacity:0;color:#00f;animation:noise-1 .2s linear infinite}.info{font-size:15px;font-style:italic;width:200px;top:140px;animation:noise-3 1s linear infinite}.error:before{font-size:100px;width:100px;top:0;opacity:0;color:red;animation:noise-2 .2s linear infinite}@keyframes noise-1{0%,20%,40%,60%,70%,90%{opacity:0}10%{opacity:.1}50%{opacity:.5;left:-6px}80%{opacity:.3}100%{opacity:.6;left:2px}}@keyframes noise-2{0%,20%,40%,60%,70%,90%{opacity:0}10%{opacity:.1}50%{opacity:.5;left:6px}80%{opacity:.3}100%{opacity:.6;left:-2px}}@keyframes noise{0%,100%,3%,42%,44%,5%{opacity:1;transform:scaleY(1)}4.3%{opacity:1;transform:scaleY(1.7)}43%{opacity:1;transform:scaleX(1.5)}}@keyframes noise-3{0%,100%,3%,42%,44%,5%{opacity:1;transform:scaleY(1)}4.3%{opacity:1;transform:scaleY(4)}43%{opacity:1;transform:scaleX(10) rotate(60deg)}}"class="error">404</div>
-<br /><br />
-<span class="info">Whoops! File not found</span>
-<img src="http://images2.layoutsparks.com/1/160030/too-much-tv-static.gif" class="static" />
+</head>
+<body>
+   <div id="container">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 200 82.7" style="enable-background:new 0 0 200 82.7;" xml:space="preserve">
+         <g id="Calque_1">
+            <text id="XMLID_3_" transform="matrix(1.2187 0 0 1 13 75.6393)" class="st0 st1">4</text>
+            <text id="XMLID_4_" transform="matrix(1.2187 0 0 1 133.0003 73.6393)" class="st0 st1">4</text>
+         </g>
+         <g id="Calque_2">
+            <g>
+               <path id="XMLID_11_" d="M81.8,29.2c4.1-5.7,10.7-9.4,18.3-9.4c6.3,0,12.1,2.7,16.1,6.9c0.6-0.4,1.1-0.7,1.7-1.1
+                  c-4.4-4.8-10.8-7.9-17.8-7.9c-8.3,0-15.6,4.2-20,10.6C80.7,28.5,81.3,28.8,81.8,29.2z"/>
+               <path id="XMLID_2_" d="M118.1,53.7c-4,5.7-10.7,9.5-18.2,9.5c-6.3,0-12.1-2.6-16.2-6.8c-0.6,0.4-1.1,0.7-1.7,1.1
+                  c4.4,4.8,10.8,7.8,17.9,7.8c8.3,0,15.6-4.3,19.9-10.7C119.2,54.5,118.6,54.1,118.1,53.7z"/>
+               <animateTransform attributeName="transform" type="rotate" from="360 100 41.3" to="0 100 41.3" dur="10s" repeatCount="indefinite" />
+            </g>
+            <g id="XMLID_6_">
+               <g  id="XMLID_18_">
+                  <circle class="circle"  cx="100" cy="41" r="1"></circle>
+               </g>
+            </g>
+            <defs>
+               <filter id="blurFilter4" x="-20" y="-20" width="200" height="200">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+               </filter>
+            </defs>
+            <path    id="XMLID_5_" class="st2" d="M103.8,16.7c0.1,0.3,0.1,0.6,0.1,0.9c11.6,1.9,20.4,11.9,20.4,24.1c0,13.5-10.9,24.4-24.4,24.4
+               S75.6,55.1,75.6,41.7c0-3.2,0.6-6.3,1.7-9.1c-0.3-0.2-0.5-0.3-0.7-0.5c-1.2,3-1.9,6.2-1.9,9.6c0,14,11.3,25.3,25.3,25.3
+               s25.3-11.3,25.3-25.3C125.3,29,115.9,18.5,103.8,16.7z"/>
+         </g>
+      </svg>
+      <div class="message">
+         Page not found
+      </div>
+   </div>
+</body>
 @stop
