@@ -48,7 +48,7 @@ body {
 .container {
 	font-family: 'Varela Round', sans-serif;
 	color: #9b9b9b;
-	position: relative;
+	position: relative; 
 	height: 100vh;
 	text-align: center;
 	font-size: 16px;
@@ -141,18 +141,19 @@ body {
 }
 </style>
 <div class="container">
-  <div class="boo-wrapper">
-    <div class="boo">
-      <div class="face"></div>
-    </div>
-    <div class="shadow"></div>
-
-    <h1>Whoops!</h1>
-    <p>
-      We couldn't find the page you
-      <br />
-      were looking for.
-    </p>
-  </div>
+	<div class="boo-wrapper">
+		<div class="boo">
+			<div class="face"></div>
+			</div>
+			<div class="shadow"></div>
+				<h1>Whoops!</h1>
+				<p>
+					We couldn't find the page you
+			   	<br>
+					were looking for.
+				</p>
+			</div>
+		</div>
+	</div>
 </div>
 @stop
