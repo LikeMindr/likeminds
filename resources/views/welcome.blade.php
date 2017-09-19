@@ -96,7 +96,7 @@ $(window).scroll();
                      <div class="service-entry">
                         <img class="service-icon" src="assets/img/service_3.png" alt="Sign Up">
                         <h4 style="text-align: center; color: #9ae4e8;"     class="service-title">Sign up</h4>
-                        <div style="text-align: center;" class="service-text">Sign up and make new like minded friends.</div>
+                        <div style="text-align: center;" class="service-text">Sign up and make new like-minded friends.</div>
                      </div>
                   </div>
                   <div class="swiper-slide" data-val="3">
@@ -117,7 +117,7 @@ $(window).scroll();
                      <div class="service-entry">
                         <img class="service-icon" src="assets/img/service_3.png" alt="Sign Up">
                         <h4 style="text-align: center; color: #9ae4e8;"     class="service-title">Sign up</h4>
-                        <div class="service-text">Sign up and make new like minded friends.</div>
+                        <div class="service-text">Sign up and make new like-minded friends.</div>
                      </div>
                   </div>
                </div>
@@ -138,7 +138,7 @@ $(window).scroll();
          <div class="container">
             <div class="row">
                <div class="col-lg-12 text-center">
-                  <h2 style="color: #9ae4e8;" class="section-heading">Its as Easy as...</h2>
+                  <h2 style="color: #9ae4e8;" class="section-heading">It's as Easy as...</h2>
                   <br>
                   <br>
                   <br>
@@ -158,7 +158,7 @@ $(window).scroll();
                               <h4 class="subheading">Open that new Tab</h4>
                            </div>
                            <div class="timeline-body">
-                              <p class="text-muted">Who needs a phone full of apps? Just use those thumbs to visit us anytime.</p>
+                              <p class="text-muted">Who needs a phone full of apps? Just use your thumbs to visit us anytime.</p>
                            </div>
                         </div>
                      </li>
@@ -186,7 +186,7 @@ $(window).scroll();
                               <h4 class="subheading">Dont get left out</h4>
                            </div>
                            <div class="timeline-body">
-                              <p class="text-muted">RSVP to events by cliking the Register button. You're almost done</p>
+                              <p class="text-muted">RSVP to events by clicking the Register button. You're almost done.</p>
                            </div>
                         </div>
                      </li>
@@ -200,7 +200,7 @@ $(window).scroll();
                               <h4 class="subheading">Never forget</h4>
                            </div>
                            <div class="timeline-body">
-                              <p class="text-muted">Add it to the calendar or your choice so you'll always be in the know of all your new events.</p>
+                              <p class="text-muted">Add it to the calendar of your choice so you'll always be in the know of all your new events.</p>
                            </div>
                         </div>
                      </li>

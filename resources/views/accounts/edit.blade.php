@@ -90,7 +90,7 @@
 											<div id="pac-container">
 												<input id="pac-input" type="text"
 												name="location" class="form-control 
-												create-event-input">
+												create-event-input" value="{{$user->location}}">
 											</div>
 										</div>
 									</div>

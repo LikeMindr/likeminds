@@ -174,11 +174,10 @@
 								<div class="author-post">
 								<img src=
 									<?php clearstatcache();
-										if(App\User::find(App\Event::find($event['event_id'])
-											['created_by'])->image != NULL): ?>
+								if(App\Event::find($event['event_id'])['user']['image'] != NULL): ?>
 										"/assets{{
-							App\User::find(App\Event::find($event['event_id'])['created_by'])->image
-										}}.jpg"
+									App\Event::find($event['event_id'])['user']['image']
+										}}"
 									<?php else: ?>
 										"/assets/img/usericon.png"
 									<?php endif; ?>

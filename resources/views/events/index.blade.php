@@ -50,10 +50,7 @@
 					<div class="col-md-2 col-xs-6 verticalAlign">
 						<div class="verticalAlignParent">
 							<div class="verticalAlignChild">
-									<BUTTON>
-									<a href="/events" id="clrBtn">CLEAR</a>
-								</BUTTON>
-								
+									<a href="/events"><button>CLEAR</button></a>
 							</div>
 						</div>
 					</div>
