@@ -2193,7 +2193,7 @@ span.num-data{font-size: 11px;}
 .counters-block { position: relative; background-size: cover; background-position: center center; padding: 100px 0px; }
 
 .counters-block:before { content: ""; display: block; position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; background: rgba(24, 29, 39, 0.8); 
-    margin-bottom: -90px;}
+        margin-top: -75px;}
 
 .counter-entry { text-align: center; }
 
