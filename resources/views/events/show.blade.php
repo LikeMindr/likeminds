@@ -36,7 +36,7 @@
 								<?php endif; ?>
 								alt="{{ $event['user']['name'] }}" class="img-responsive">
 						</a>
-                                <p class="be-use-name" style="color: #2C4762;">Leigh Taylor</p> 
+                                <p class="be-use-name" style="color: #2C4762;">{{$event['user']['name']}}</p> 
                                 <div class="be-user-info" style="font-family: 'Montserrat', sans-serif;;;"> 
 								{{ $event['user']['location'] }}
 </div>                                                                  
