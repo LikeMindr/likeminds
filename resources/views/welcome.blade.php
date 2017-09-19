@@ -36,28 +36,7 @@
 
       -->
 
-      <script>
-      var lastScrollTop = 0;
-var backgroundImages = $('.backgroundImage');
 
-$(window).scroll(function(e){
-  var st = $(this).scrollTop();
-  var ah = $(this).height();
-  backgroundImages.each(function(i){
-    var img = $(this);
-    var pos = img.position().top;
-    var hei = img.height();
-    if ((st + ah) > pos && st < (pos + hei)){
-      var p = ((pos - st)/ah) + 0.25;
-      if(i == 1) console.log(p);
-      img.css('background-position', '50%'+(p*100)+'%');
-    }
-  });
-  lastScrollTop = st;
-});
-
-$(window).scroll();
-      </script>
    <div id="welcome-wrapper">
       <div class="video">
          <video id="InformationVideo" class="information__video information__video--visible" preload="auto" autobuffer="" autoload="" autoplay="" loop="">
@@ -70,7 +49,7 @@ $(window).scroll();
          <h3 style="color: #9ae4e8;"class="line-hieght">Make new Friends</h3>
          <br>
          <hr />
-         <h4 style="color: #fff;">Do things together</h4>
+         <h4 style="color: #fff;">You're not the only one</h4>
       </header>
       <div class="container">
          <div class="block">
@@ -249,6 +228,9 @@ $(window).scroll();
          </div>
       </div>
    </div>
+   <script>
+var lastScrollTop=0;var backgroundImages=$(".backgroundImage");$(window).scroll(function(c){var b=$(this).scrollTop();var a=$(this).height();backgroundImages.each(function(e){var d=$(this);var h=d.position().top;var g=d.height();if((b+a)>h&&b<(h+g)){var f=((h-b)/a)+0.25;if(e==1){console.log(f)}d.css("background-position","50%"+(f*100)+"%")}});lastScrollTop=b});$(window).scroll();
+   </script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
