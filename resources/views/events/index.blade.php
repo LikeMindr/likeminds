@@ -51,7 +51,7 @@
 						<div class="verticalAlignParent">
 							<div class="verticalAlignChild">
 									<BUTTON>
-									<a href="/events" id="clrBtn">CLEAR</a>
+									<a href="/events">CLEAR</a>
 								</BUTTON>
 								
 							</div>
