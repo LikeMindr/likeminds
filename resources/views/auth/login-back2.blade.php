@@ -70,19 +70,8 @@
                      <a href="/auth/register">Don't have an account? Register!</a>
                      <!-- button  -->
                      <!--=====================facebook code==============-->
-                     <!-- <div id="fb-root"></div>
-                        <script>(function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=214631275274336";
-                        fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script> -->
-                     <!--
-                        Below we include the Login Button social plugin. This button uses
-                        the JavaScript SDK to present a graphical Login button that triggers
-                        the FB.login() function when clicked.
-                        -->
+
+                      
                      <!-- <div class="fb-login-button" data-width="300" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div> -->
                      <!--=====================facebook code==============-->
                      <!--  ====================google=============================-->
