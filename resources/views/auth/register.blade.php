@@ -3,7 +3,31 @@
 	<title>Register</title>
 @stop
 @section('content')
-<form method="POST" action="/auth/register" class="form-horizontal">
+<div style="margin-top:-100px;" class="reg" id="lp-register">
+
+   <div class="container wrapper">
+      <div class="row">
+         <div class="col-sm-5">
+            <div class="intro-texts">
+               <h1 class="text-white">Make Cool Friends !!!</h1>
+               <p>LIKE MINDS . AT is a social network that can be used to connect people. Why do things alone when you can go with like minded friends! <br /> <br />Why are you waiting for? Sign up now.</p>
+            </div>
+         </div>
+         <div class="col-sm-6 col-sm-offset-1" class="center">
+            <div class="reg-form-container" class="center">
+               <style>
+                  #inner {
+                  display: table;
+                  margin: 0 auto;
+                  }
+                  .center{
+                  margin-top: 50%;
+                  text-align:center;
+                  }
+               </style>
+               <div id="inner" class="center">
+                  <!--Registration Form Contents-->
+                  <form method="POST" action="/auth/register" class="form-horizontal">
                      <fieldset>
                         {!! csrf_field() !!}
                         <section class="form-group">
@@ -43,4 +67,16 @@
                      </fieldset>
                   </form>
                   <a href="/auth/login">Already registered? Login!</a>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-6 col-sm-offset-6">
+               <!--Social Icons-->
+            </div>
+         </div>
+      </div>
+   </div>
+
+ </div>
 @stop
