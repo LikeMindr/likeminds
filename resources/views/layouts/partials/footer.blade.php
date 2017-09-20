@@ -33,7 +33,7 @@
         <div class="col-md-3 col-sm-3">
           <h6>ABOUT US</h6>
           <ul class="footer-links">
-            <li><a href="">THE TEAM</a></li>
+            <li><a href="/about">THE TEAM</a></li>
             <li><a href="https://github.com/LikeMindr/likeminds">OUR GITHUB</a></li>
 
 
