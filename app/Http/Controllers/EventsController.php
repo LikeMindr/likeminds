@@ -94,6 +94,7 @@ class EventsController extends Controller
 			);
 			$event->image = '/img/' . $filename;	
 		}
+        $event->save();
 
 		return \Redirect::action('EventsController@show', $event->id);
     }
