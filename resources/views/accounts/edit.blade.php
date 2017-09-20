@@ -191,8 +191,7 @@
 									<div class="input-col col-xs-12">
 										<div class="form-group focus-2">
 											<div class="form-label">DESCRIPTION</div>
-											<textarea class="form-input" name="bio" 
-											value="{{$user->bio}}"></textarea>
+								<textarea class="form-input" name="bio">{{$user->bio}}</textarea>
 										</div>
 									</div>
 								</div>
