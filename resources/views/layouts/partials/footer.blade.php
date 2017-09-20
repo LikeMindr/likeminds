@@ -7,14 +7,17 @@
           <!-- <a href=""><img src="../assets/img/logohd.png" alt="" class="footer-logo" /></a> -->
           <ul class="list-inline social-icons">
 
-            <li style="float:right;"><a href="https://github.com/LikeMindr/likeminds"><i class="icon ion-social-github"></i></a></li>
           </ul>
         </div>
         <div class="col-md-2 col-sm-2">
           <h6>PROFILE</h6>
           <ul class="footer-links">
+			@if(Auth::check())
+			<li><a href="/auth/logout">LOGOUT</a>
+			@else
             <li><a href="/auth/register">REGISTER</a></li>
             <li><a href="/auth/login">LOGIN</a></li>
+			@endif
 
 
           </ul>
