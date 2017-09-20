@@ -115,8 +115,7 @@ body {
 					<div class="form-group">
 						<h2 class="form-label-create">DESCRIPTION</h2>
 						<textarea class="form-control text-form create-event-description"
-						name="description" placeholder="Tell everyone why they should go to your event..." required>
-            {{ $event->description }} </textarea>
+						name="description" required>{{ $event->description }}</textarea>
 					</div>
 
 					<div class="row">
