@@ -89,7 +89,7 @@
             <div class="row" style="font-size: 20px;font-family: 'Montserrat', sans-serif;"> 
                 <div class="col-md-4"> 
                     <div class="team-entry" style="background: #EAEEF6;"> 
-                        <a href="blog-detail-2.html">
+                        <a href="https://github.com/grim102" target="blank">
                             <img class="img-responsive img-full" src="/assets/img/alex-hs.jpg" alt="">
                         </a>                         
                         <h4 class="team-name" style="font-size: 30px;font-family: 'Montserrat', sans-serif;font-weight: bold;color: #2C4762;">Alex Endacott</h4> 
@@ -103,8 +103,8 @@
                         </div> 
                                               
                         <div class="team-social"> 
-                            <a href="https://github.com/Grim102"><i class="fa fa-github"></i></a> 
-                            <a href="blog-detail-2.html"><i class="fa fa-desktop"></i></a> 
+                            <a href="https://github.com/Grim102" target="blank"><i class="fa fa-github"></i></a> 
+                            <a href="http://www.alexendacott.io" target="blank"><i class="fa fa-desktop"></i></a> 
                             <a href=""><i class="fa fa-file"></i></a> 
                         </div>                         
                     </div>                     
