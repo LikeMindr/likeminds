@@ -61,7 +61,7 @@
                         </section>
                         <section class="form-group">
                            <div class="col-lg-10 col-lg-offset-3">
-                              <button type="submit" class="btn btn-primary right">Register</button>
+                              <button style="margin-left:-120px" type="submit" class="btn btn-primary">Register</button>
                            </div>
                         </section>
                      </fieldset>
