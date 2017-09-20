@@ -47,8 +47,5 @@
         </div>
       </div>
     </div>
-  <div style="clear:both;  text-white; color:white;" class="legality">
-     <img src="/assets/img/logohd.png" alt="Likeminds.at" style="width:50%"><br>
-     <p> © Copyright 2017 LikeMinds.At </p>
-  </div>
+  
 </footer>
