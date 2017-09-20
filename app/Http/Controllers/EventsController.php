@@ -83,6 +83,7 @@ class EventsController extends Controller
 		$event->category = $request->category;
 		$event->num_people = $request->num_people;
 		$event->created_by = Auth::id();
+		$event->save();
 
 		if($request->file('file') != NULL) {
 			$file = $request->file('file');
@@ -93,7 +94,6 @@ class EventsController extends Controller
 			);
 			$event->image = '/img/' . $filename;	
 		}
-		$event->save();
 
 		return \Redirect::action('EventsController@show', $event->id);
     }
