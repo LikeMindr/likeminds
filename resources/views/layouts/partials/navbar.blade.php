@@ -6,7 +6,7 @@
    margin-top: 0.3cm;
    }
 </style>
-<header>
+<!-- <header> -->
 <nav class="navbar navbar-default ">
    <font size="4">
       <div class="container-fluid lma-nav-color">
