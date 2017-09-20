@@ -16,7 +16,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
       <!-- <link rel="stylesheet" href="/assets/css/font-awesome.min.css"> -->
-      https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+     
       <link rel="stylesheet" href="/assets/css/ionicons.min.css">
       <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
       <link rel="stylesheet" href="/assets/css/herohead.css">
