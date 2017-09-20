@@ -22,9 +22,9 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <body>
    <div class="log" id="lp-register">
-     @include('layouts.partials.navbar')
-   <div class="container wrapper">
-      <div class="row">
+      @include('layouts.partials.navbar')
+      <div class="container wrapper">
+         <div class="row">
             <div class="col-sm-5">
                <div class="intro-texts">
                   <h1 class="text-white">Make Cool Friends !!!</h1>
@@ -68,7 +68,38 @@
                         </section>
                      </form>
                      <a href="/auth/register">Don't have an account? Register!</a>
+                     <!-- button  -->
+                     <!--=====================facebook code==============-->
+                     <!-- <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=214631275274336";
+                        fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script> -->
+                     <!--
+                        Below we include the Login Button social plugin. This button uses
+                        the JavaScript SDK to present a graphical Login button that triggers
+                        the FB.login() function when clicked.
+                        -->
+                     <!-- <div class="fb-login-button" data-width="300" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div> -->
+                     <!--=====================facebook code==============-->
+                     <!--  ====================google=============================-->
+                     <!-- <script type="text/javascript">
+                        function onSignIn(googleUser) {
+                          var profile = googleUser.getBasicProfile();
+                          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                          console.log('Name: ' + profile.getName());
+                          console.log('Image URL: ' + profile.getImageUrl());
+                          console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                        }
 
+                        </script> -->
+                     <!--  ==========google button==============-->
+                     <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+                     <!--  ==========google button==============-->
+                     <!--  ====================google=============================-->
                      <!--Registration Form Contents-->
                   </div>
                </div>
@@ -80,9 +111,8 @@
             </div>
          </div>
       </div>
-@include('layouts.partials.footer')
+      @include('layouts.partials.footer')
    </div>
-
    <!--preloader-->
    <div id="spinner-wrapper">
       <div class="spinner"></div>
