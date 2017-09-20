@@ -27,7 +27,7 @@
 								<?php else: ?>
 									"/assets/img/usericon.png"
 								<?php endif; ?>
-							width="300px" height="300px" />
+							class="img-responsive" />
 							<p class="be-use-name">{{ $user->name }}</p>
 
 							<div class="be-user-info">
@@ -58,12 +58,12 @@
 
 							</div>
 						</div>
-						 <div class="stat-row clearfix" style="font-family: 'Montserrat', sans-serif;background: #89C12A;;;">
-							
+						<div class="be-user-statistic">
+							<div class="stat-row clearfix">
 </i>EVENTS CREATED<span class="stat-counter">
 							{{ count($user->events) }} 
 							</span></div>
-							 <div class="stat-row clearfix" style="font-family: 'Montserrat', sans-serif;background: #89C12A;;;">
+							<div class="stat-row clearfix">
 </i>EVENTS ATTENDED<span class="stat-counter">
 							{{ count($user->attends) }} 
 							</span></div>
@@ -174,11 +174,10 @@
 								<div class="author-post">
 								<img src=
 									<?php clearstatcache();
-										if(App\User::find(App\Event::find($event['event_id'])
-											['created_by'])->image != NULL): ?>
+								if(App\Event::find($event['event_id'])['user']['image'] != NULL): ?>
 										"/assets{{
-							App\User::find(App\Event::find($event['event_id'])['created_by'])->image
-										}}.jpg"
+									App\Event::find($event['event_id'])['user']['image']
+										}}"
 									<?php else: ?>
 										"/assets/img/usericon.png"
 									<?php endif; ?>
