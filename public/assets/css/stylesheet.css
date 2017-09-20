@@ -1330,6 +1330,8 @@ a.social-btn:hover { opacity: 0.6; color: white; }
 }
 
 
+
+
 .be-user-statistic .stat-row {
   font-size: 13px;
   line-height: 18px;
@@ -1450,7 +1452,7 @@ a.social-btn:hover { opacity: 0.6; color: white; }
 
 .be-desc-author + .be-desc-author { border-top: none; }
 
-.be-desc-author + .be-desc-author:before { content: ''; display: block; position: absolute; top: -12px; left: 30px; width: 24px; height: 12px; background: url(../img/be-desc.jpg) no-repeat; }
+.be-desc-author + .be-desc-author:before { content: ''; display: block; position: absolute; top: -12px; left: 30px; width: 24px; height: 12px; no-repeat; }
 
 #content-block .be-change-ava { margin-bottom: 20px; }
 

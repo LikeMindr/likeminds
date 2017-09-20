@@ -20,7 +20,7 @@
         </div>         
         <!-- THE HEADER -->                  
         <!-- MAIN CONTENT -->         
-        <div id="content-block" style="background: #2C4762;"> 
+        <div id="content-block" style="background: #2C4762; margin-top: -80px;"> 
             <div class="container be-detail-container"> 
                 <div class="row"> 
                     <div class="col-xs-12 col-md-4 left-feild"> 
@@ -64,11 +64,11 @@
                                 </div>                                                                  
                             </div>                             
                             <div class="be-user-statistic"> 
-                                <div class="stat-row clearfix" style="font-family: 'Montserrat', sans-serif;background: #89C12A;;;">
+                                <div class="stat-row clearfix" style="font-family: 'Montserrat', sans-serif;background: #9AE4E8;;;">
                                      Events Created
                                     <span class="stat-counter">{{count($event['user']->events)}}</span>
                                 </div>                                 
-                                <div class="stat-row clearfix" style="font-family: 'Montserrat', sans-serif;background: #89C12A;;;">
+                                <div class="stat-row clearfix" style="font-family: 'Montserrat', sans-serif;background: #9AE4E8;;;">
                                     Events Attended
                                     <span class="stat-counter">{{count($event['user']->attends)}}</span>
                                 </div>                                                                                                   
@@ -121,14 +121,14 @@
                             <div class="tab-nav-wrapper"> 
                                 <div class="nav-tab  clearfix"> 
                                     <div class="nav-tab-item active"> 
-                                        <span style="font-family: 'Grand Hotel', cursive;font-size: 20px;color: #2C4762;;;cursive;;">The Event</span> 
+                                        <span style="font-family: 'Grand Hotel', cursive;font-size: 18px;color: #2C4762;;;cursive;;">The Event</span> 
                                     </div>                                     
                                 </div>                                 
                             </div>                             
                             <div class="tabs-content clearfix"> 
                                 <div class="tab-info active"> 
                                     <div class="row"> 
-                                        <div class="col-ml-12 col-xs-6 col-sm-4" style="width: 100%;background: #EAEEF6;padding-top: 20px;margin-left: 10px;"> 
+                                        <div class="col-ml-12 col-xs-6 col-sm-4" style="width: 100%;background: #EAEEF6;padding-top: 17px;"> 
                                             <div class="be-post" style="color: #2C4762;"> 
 											<img src=
 											<?php clearstatcache();
@@ -138,66 +138,68 @@
 												"{{App\Event::defaultImage($event->category)}}"
 											<?php endif; ?>
 											/>
-                                                <div class="row"> 
+												<div class="row"
+>                                                <div class="col-md-12"> 
 													<h1 style="margin-left:
 													15px;font-family: 'Montserrat', sans-serif;;;">
 													{{$event->title}} </h1>
-                                                </div>                                                 
+                                                </div> 
+                                                </div>                                                
                                                 <div class="row"> 
                                                     <div class="col-md-4"> 
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">Date &amp; Time:</h3> 
+                                                        <h3 style="font-size: 15px;font-family: 'Montserrat', sans-serif;;;">Date &amp; Time:</h3> 
                                                     </div>                                                     
 
-                                                    <div class="col-md-4"> 
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">On {{$event->date}} at {{$event->time}}</h3> 
+                                                    <div class="col-md-8"> 
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">On {{$event->date}} at {{$event->time}}</h3> 
                                                     </div>
                                                 </div>                                                 
 
 
                                                 <div class="row"> 
                                                     <div class="col-md-4"> 
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">Location:</h3> 
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">Location:</h3> 
                                                     </div>                                                     
 
 		
-                                                    <div class="col-md-4"> 
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">{{$event->location}}</h3> 
+                                                    <div class="col-md-8"> 
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">{{$event->location}}</h3> 
                                                     </div>
                                                 </div>                                                 
 
                                                 <div class="row"> 
                                                     <div class="col-md-4"> 
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">Category:</h3> 
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">Category:</h3> 
                                                     </div>                                                     
 
-                                                    <div class="col-md-4"> 
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">{{$event->category}}</h3> 
+                                                    <div class="col-md-8"> 
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">{{$event->category}}</h3> 
                                                     </div>
                                                 </div>                                                 
                                                 <div class="row"> 
                                                     <div class="col-md-4">
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">Description:</h3> 
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">Description:</h3> 
                                                     </div>                                                     
-                                                    <div class="col-md-4">
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">{{$event->description}}</h3> 
+                                                    <div class="col-md-8">
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">{{$event->description}}</h3> 
                                                         <p> <br></p> 
                                                     </div>
                                                 </div>                                                 
                                                 <div class="row"> 
                                                     <div class="col-md-4">
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">Spots left:</h3> 
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">Spots left:</h3> 
                                                     </div>                                                     
-                                                    <div class="col-md-4">
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">{{ $event->num_people - count($event->attends)}}</h3> 
+                                                    <div class="col-md-8">
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">{{ $event->num_people - count($event->attends)}}</h3> 
                                                         <p> <br></p> 
                                                     </div>
                                                 </div>                                                 
                                                 <div class="row"> 
                                                     <div class="col-md-4">
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">Currently signed up:</h3> 
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">Signed up:</h3> 
                                                     </div>                                                     
-                                                    <div class="col-md-4">
-                                                        <h3 style="font-family: 'Montserrat', sans-serif;;;">{{ count($event->attends) }}</h3> 
+                                                    <div class="col-md-8">
+                                                        <h3 style="font-size: 15px; font-family: 'Montserrat', sans-serif;;;">{{ count($event->attends) }}</h3> 
                                                         <p> <br></p> 
                                                     </div>
                                                 </div>                                                 
