@@ -23,12 +23,12 @@
                   margin: 0 auto;
                   }
                   .center{
-                  margin-top: 75%;
+                  margin-top: 50%;
                   text-align:center;
                   }
                </style>
-               <div id="inner" class="center">
-                  <form method="POST" action="/auth/login" class="form-horizontal">
+               <div id="inner" >
+                  <form  method="POST" action="/auth/login" class="form-horizontal">
                      {!! csrf_field() !!}
                      <section class="form-group">
                         <label for="email" class="col-lg-3 control-label">Email</label>
@@ -45,7 +45,7 @@
                      </section>
                      <section class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
-                           <button type="submit" class="btn btn-primary right">Login</button>
+                           <button style="margin-left:20px" type="submit" class="btn btn-primary">Login</button>
                         </div>
                      </section>
                   </form>
