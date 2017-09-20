@@ -6,46 +6,36 @@
         <div class="col-md-3 col-sm-3">
           <!-- <a href=""><img src="../assets/img/logohd.png" alt="" class="footer-logo" /></a> -->
           <ul class="list-inline social-icons">
-            <!-- <li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
-            <li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
-            <li><a href="#"><i class="icon ion-social-googleplus"></i></a></li>
-            <li><a href="#"><i class="icon ion-social-pinterest"></i></a></li> -->
+
             <li style="float:right;"><a href="https://github.com/LikeMindr/likeminds"><i class="icon ion-social-github"></i></a></li>
           </ul>
         </div>
         <div class="col-md-2 col-sm-2">
-          <h6>SUPPORT</h6>
+          <h6>PROFILE</h6>
           <ul class="footer-links">
-            <li><a href="">FAQS</a></li>
-            <li><a href="">CONTACT US</a></li>
-            <li><a href="/privacy">PRIVACY POLICY</a></li>
+            <li><a href="/auth/register">REGISTER</a></li>
+            <li><a href="/auth/login">LOGIN</a></li>
+
 
           </ul>
         </div>
         <div class="col-md-2 col-sm-2">
           <h6>EVENTS</h6>
           <ul class="footer-links">
-            <li><a href="/events">EVENTS PAGE</a></li>
-            <li><a href="auth/register">REGISTER/LOGIN</a></li>
-            <li><a href="">PROFILES</a></li>
+            <li><a href="/events">VIEW</a></li>
+            <li><a href="/events/create">CREATE</a></li>
+
 
           </ul>
         </div>
-        <div class="col-md-2 col-sm-2">
-          <h6>FOLLOW US</h6>
-          <ul class="footer-links">
-            <li><a href="">FACEBOOK</a></li>
-            <li><a href="">TWITTER BLOG</a></li>
 
-          </ul>
-        </div>
 
         <div class="col-md-3 col-sm-3">
           <h6>ABOUT US</h6>
           <ul class="footer-links">
-            <li><a href="">ABOUT</a></li>
+            <li><a href="">THE TEAM</a></li>
             <li><a href="https://github.com/LikeMindr/likeminds">OUR GITHUB</a></li>
-            <li><a href="/about">THE TEAM  </a></li>
+
 
           </ul>
         </div>
@@ -54,6 +44,3 @@
      <p> © Copyright 2017 LikeMinds.At </p>
   </div>
 </footer>
-      </div>
-    </div>
-  </div>
