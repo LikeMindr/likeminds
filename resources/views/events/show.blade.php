@@ -36,7 +36,7 @@
 								<?php endif; ?>
 								alt="{{ $event['user']['name'] }}" class="img-responsive">
 						</a>
-                                <p class="be-use-name" style="color: #2C4762;">Leigh Taylor</p> 
+                                <p class="be-use-name" style="color: #2C4762;">{{$event['user']['name']}}</p> 
                                 <div class="be-user-info" style="font-family: 'Montserrat', sans-serif;;;"> 
 								{{ $event['user']['location'] }}
 </div>                                                                  
@@ -277,7 +277,9 @@
                             </div>                             
                         </div>                         
                     </div>                     
-                </div>                 
+                </div>
+			</div>
+		</div>					
 </body>
 <!-- AddEvent -->
 <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>

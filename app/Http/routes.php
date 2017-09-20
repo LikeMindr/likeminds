@@ -35,6 +35,10 @@ Route::get('/about', function() {
 	return view('about');
 });
 
+Route::get('/test', function() {
+	return view('auth.test');
+});
+
 Route::resource('events', 'EventsController');
 
 Route::resource('accounts', 'AccountsController');
